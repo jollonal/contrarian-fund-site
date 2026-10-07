@@ -1,18 +1,43 @@
-"""Structured extraction via GitHub Models (free, OpenAI-compatible, auth with GITHUB_TOKEN)."""
+"""Structured extraction via Cloudflare Workers AI (free tier: 10,000 neurons/day, resets 00:00 UTC)."""
 from __future__ import annotations
 
 import json
 import os
+import re
 import time
 
 import requests
 
-ENDPOINT = os.environ.get("LLM_ENDPOINT", "https://models.github.ai/inference/chat/completions")
-MODEL = os.environ.get("LLM_MODEL", "openai/gpt-4.1-mini")
-MAX_CALLS = int(os.environ.get("LLM_MAX_CALLS", "120"))  # free tier: 150/day on low-tier models
-SPACING = 4.5  # free tier: 15 requests/minute
+ACCOUNT_ID = os.environ.get("CF_ACCOUNT_ID", "")
+API_TOKEN = os.environ.get("CF_API_TOKEN", "")
+MODEL = os.environ.get("LLM_MODEL", "@cf/meta/llama-3.3-70b-instruct-fp8-fast")
+ENDPOINT = f"https://api.cloudflare.com/client/v4/accounts/{ACCOUNT_ID}/ai/run/{MODEL}"
+# About 250 neurons per listing call on this model, so ~35 calls stays inside the free 10,000.
+# A first run may need two nights to fill the cache; after that only changed pages cost anything.
+MAX_CALLS = int(os.environ.get("LLM_MAX_CALLS", "35"))
+SPACING = 1.0
 
-PROMPT_VERSION = "2026-10-07.1"  # bump to invalidate cached extractions
+PROMPT_VERSION = "2026-10-08.1"  # bump to invalidate cached extractions
+
+_S = {"type": ["string", "null"]}
+OPENING_SCHEMA = {"type": "object", "properties": {
+    "date": _S, "start_time": _S, "end_time": _S, "text": _S}}
+LISTING_SCHEMA = {"type": "object", "properties": {"exhibitions": {"type": "array", "items": {
+    "type": "object",
+    "properties": {
+        "title": {"type": "string"}, "artists": {"type": "array", "items": {"type": "string"}},
+        "start_date": _S, "end_date": _S, "city": _S,
+        "kind": {"type": "string", "enum": ["exhibition", "fair", "event", "other"]},
+        "detail_url": _S, "opening": OPENING_SCHEMA,
+        "access": {"type": "string", "enum": ["public", "invite", "unknown"]},
+        "confidence": {"type": "number"},
+    },
+    "required": ["title", "start_date", "end_date", "kind", "opening", "confidence"],
+}}}, "required": ["exhibitions"]}
+DETAIL_SCHEMA = {"type": "object", "properties": {
+    "opening": OPENING_SCHEMA,
+    "access": {"type": "string", "enum": ["public", "invite", "unknown"]},
+    "confidence": {"type": "number"}}, "required": ["opening"]}
 
 LISTING_SYSTEM = """You extract art exhibition listings from the text of a Stockholm gallery web page.
 Return a single JSON object and nothing else. Never invent facts that are not in the text."""
@@ -65,55 +90,68 @@ class LLMUnavailable(Exception):
     pass
 
 
+def _parse(resp) -> dict:
+    """Workers AI returns either a parsed object or a JSON string in result.response."""
+    if isinstance(resp, dict):
+        return resp
+    if isinstance(resp, str):
+        m = re.search(r"\{.*\}", resp, re.S)
+        if m:
+            return json.loads(m.group(0))
+    raise ValueError("no JSON object in model output")
+
+
 class LLM:
     def __init__(self) -> None:
-        self.token = os.environ.get("GITHUB_TOKEN")
+        self.token = API_TOKEN if ACCOUNT_ID else ""
         self.calls = 0
+        self.exhausted = False
         self._last = 0.0
 
     @property
     def available(self) -> bool:
-        return bool(self.token) and self.calls < MAX_CALLS
+        return bool(self.token) and not self.exhausted and self.calls < MAX_CALLS
 
     def json(self, system: str, user: str, max_tokens: int = 2500) -> dict:
         if not self.available:
-            raise LLMUnavailable("no token or call budget exhausted")
+            raise LLMUnavailable("no credentials, daily allocation used, or run budget reached")
+        schema = DETAIL_SCHEMA if "EXCERPTS:" in user else LISTING_SCHEMA
+        use_schema = True
         for attempt in range(3):
             wait = self._last + SPACING - time.monotonic()
             if wait > 0:
                 time.sleep(wait)
             self._last = time.monotonic()
             self.calls += 1
-            r = requests.post(
-                ENDPOINT,
-                headers={"Authorization": f"Bearer {self.token}", "Content-Type": "application/json"},
-                json={
-                    "model": MODEL,
-                    "temperature": 0,
-                    "max_tokens": max_tokens,
-                    "response_format": {"type": "json_object"},
-                    "messages": [
-                        {"role": "system", "content": system},
-                        {"role": "user", "content": user},
-                    ],
-                },
-                timeout=120,
-            )
-            if r.status_code == 429:
-                if attempt == 2:
-                    raise LLMUnavailable("rate limited")
-                time.sleep(int(r.headers.get("Retry-After", "60")) if r.headers.get("Retry-After", "").isdigit() else 60)
-                continue
-            if r.status_code == 413 or (r.status_code == 400 and "token" in r.text.lower()):
-                # input too large for the free tier: halve the page text and retry
-                head, sep, page = user.rpartition("TEXT:\n") if "TEXT:\n" in user else user.rpartition("EXCERPTS:\n")
-                user = head + sep + page[: len(page) // 2]
-                continue
-            if r.status_code >= 400:
-                raise LLMUnavailable(f"HTTP {r.status_code}: {r.text[:200]}")
-            content = r.json()["choices"][0]["message"]["content"]
+            body = {
+                "messages": [{"role": "system", "content": system}, {"role": "user", "content": user}],
+                "max_tokens": max_tokens,
+                "temperature": 0,
+            }
+            if use_schema:
+                body["response_format"] = {"type": "json_schema", "json_schema": schema}
             try:
-                return json.loads(content)
-            except json.JSONDecodeError:
+                r = requests.post(ENDPOINT, headers={"Authorization": f"Bearer {self.token}"},
+                                  json=body, timeout=120)
+            except requests.RequestException as e:
+                raise LLMUnavailable(f"network: {e}") from e
+            try:
+                data = r.json()
+            except ValueError:
+                raise LLMUnavailable(f"HTTP {r.status_code}, non-JSON body: {r.text[:200]!r}")
+
+            if r.status_code == 429 or "neuron" in r.text.lower() and r.status_code >= 400:
+                self.exhausted = True  # daily free allocation used; stop calling until tomorrow
+                raise LLMUnavailable(f"HTTP {r.status_code}: {r.text[:200]}")
+            if not data.get("success", r.ok):
+                msg = json.dumps(data.get("errors", []))[:300]
+                if use_schema and "json mode" in msg.lower():
+                    use_schema = False  # schema could not be met; retry as plain text and parse
+                    continue
+                raise LLMUnavailable(f"HTTP {r.status_code}: {msg}")
+            try:
+                return _parse((data.get("result") or {}).get("response"))
+            except (ValueError, json.JSONDecodeError):
+                use_schema = False
                 continue
         raise LLMUnavailable("no valid JSON after retries")

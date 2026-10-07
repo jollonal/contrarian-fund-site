@@ -49,7 +49,7 @@ def main() -> int:
 
         llm = LLM()
         if not llm.token and not a.dry_run:
-            log.error("GITHUB_TOKEN not set; use --dry-run or --no-fetch")
+            log.error("CF_ACCOUNT_ID / CF_API_TOKEN not set; use --dry-run or --no-fetch")
             return 2
         fetcher = Fetcher()
         try:

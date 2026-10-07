@@ -8,7 +8,7 @@ Static site for [www.contrarian.fund](https://www.contrarian.fund), plus **Stock
 venues.yaml ──► fetch (robots.txt, 4 s/host) ──► HTML to text ──► content hash
                                                                      │ unchanged: reuse cached extraction
                                                                      ▼ changed
-                                                   LLM extraction to JSON (GitHub Models, free)
+                                                   LLM extraction to JSON (Cloudflare Workers AI, free tier)
                                                                      │
           show page mentions "vernissage"/"opening"? ──► second, smaller extraction
                                                                      ▼
@@ -29,10 +29,10 @@ Repository secrets required:
 
 | Secret | Value |
 |---|---|
-| `CLOUDFLARE_API_TOKEN` | API token with Account, Cloudflare Pages, Edit |
+| `CLOUDFLARE_API_TOKEN` | API token with Cloudflare Pages Edit, Workers AI Read, Workers AI Edit |
 | `CLOUDFLARE_ACCOUNT_ID` | Cloudflare account ID |
 
-The model call uses the workflow's built-in `GITHUB_TOKEN` (`permissions: models: read`). No model API key is needed.
+The same Cloudflare token also calls Workers AI (`@cf/meta/llama-3.3-70b-instruct-fp8-fast`, JSON mode). It needs Workers AI Read and Edit in addition to Pages Edit. The free allocation is 10,000 neurons a day; a run is capped at 35 model calls, so a first run may take two nights to fill the cache.
 
 ## Local use
 
@@ -41,10 +41,10 @@ cd scraper
 pip install -r requirements.txt && python -m playwright install chromium
 python -m pytest -q                       # unit tests
 python -m vernissage --dry-run            # fetch only, report page sizes
-GITHUB_TOKEN=<fine-grained PAT with Models: read> python -m vernissage
+CF_ACCOUNT_ID=<id> CF_API_TOKEN=<token> python -m vernissage
 python -m vernissage --no-fetch           # rebuild page from cache
 ```
 
 ## Adding a venue
 
-Add an entry to `scraper/venues.yaml`, then run `python -m vernissage --dry-run --only <id>` to check the page fetches and fits the model's input limit.
+Add an entry to `scraper/venues.yaml`, then run `python -m vernissage --dry-run --only <id>` to check the page fetches and its text size.

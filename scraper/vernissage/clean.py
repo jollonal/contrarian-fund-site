@@ -9,7 +9,7 @@ from bs4 import BeautifulSoup
 DROP_TAGS = ["script", "style", "noscript", "svg", "iframe", "form", "nav", "footer", "button"]
 BLOCK_TAGS = ["p", "div", "li", "h1", "h2", "h3", "h4", "h5", "h6", "br", "tr", "section", "article"]
 NOISE = re.compile(r"cookie|consent|newsletter|subscribe|gdpr", re.I)
-MAX_CHARS = 18_000  # about 5k tokens; GitHub Models free tier caps input at 8k
+MAX_CHARS = 12_000  # about 3.5k tokens; keeps each call near 250 neurons on the free tier
 
 OPENING_WORDS = re.compile(
     r"vernissage|öppning|öppnar|opening|opens|reception|invigning|release", re.I
