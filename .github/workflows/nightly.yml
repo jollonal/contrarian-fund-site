@@ -52,12 +52,20 @@ jobs:
 
       - name: Commit data
         if: github.event_name != 'push'
+        continue-on-error: true      # a failed push must not block the deploy
         run: |
           git config user.name "vernissage-bot"
           git config user.email "actions@users.noreply.github.com"
           git add scraper/state site/projects/vernissage
-          git diff --cached --quiet || git commit -m "data: nightly refresh $(date -u +%F)"
-          git push
+          git diff --cached --quiet && exit 0
+          git commit -m "data: nightly refresh $(date -u +%F)"
+          for i in 1 2 3 4; do
+            git push && exit 0
+            echo "push failed (attempt $i), retrying"
+            sleep $((i * 15))
+            git pull --rebase -q origin main || true
+          done
+          exit 1
 
       - name: Deploy to Cloudflare Pages
         uses: cloudflare/wrangler-action@v3
