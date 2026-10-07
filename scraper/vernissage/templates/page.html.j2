@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Stockholm Vernissages</title>
+<meta name="description" content="Exhibition openings at Stockholm galleries over the next {{ window }} days. Updated nightly.">
+<link rel="icon" href="/favicon.png">
+<link rel="alternate" type="text/calendar" title="Stockholm Vernissages" href="events.ics">
+<style>
+  :root {
+    --bg: #FAFAF7; --ink: #111111; --muted: #6B6B66; --rule: #DADAD4;
+    --font: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  }
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body { margin: 0; background: var(--bg); color: var(--ink); font: 16px/1.45 var(--font); }
+  a { color: inherit; text-decoration-thickness: 1px; text-underline-offset: 3px; }
+  .wrap { max-width: 960px; margin: 0 auto; padding: 56px 24px 80px; }
+  header h1 { font-size: 32px; font-weight: 400; letter-spacing: -0.01em; margin: 0 0 8px; }
+  header p { color: var(--muted); margin: 0; max-width: 560px; }
+  .filters { display: flex; flex-wrap: wrap; gap: 6px 18px; align-items: baseline;
+             margin: 40px 0 0; padding: 0 0 16px; border-bottom: 1px solid var(--ink); font-size: 14px; }
+  .filters button { font: inherit; color: var(--muted); background: none; border: 0; padding: 0; cursor: pointer; }
+  .filters button[aria-pressed="true"] { color: var(--ink); text-decoration: underline; text-underline-offset: 3px; }
+  .filters label { margin-left: auto; color: var(--muted); cursor: pointer; }
+  .day { display: grid; grid-template-columns: 200px 1fr; gap: 24px; padding: 28px 0; border-bottom: 1px solid var(--rule); }
+  .day h2 { font-size: 15px; font-weight: 400; margin: 2px 0 0; }
+  .day h2 span { display: block; color: var(--muted); }
+  .ev { padding: 0 0 24px; }
+  .ev:last-child { padding-bottom: 0; }
+  .ev .venue { font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; margin: 0 0 4px; }
+  .ev h3 { font-size: 22px; font-weight: 400; line-height: 1.25; margin: 0; }
+  .ev .artists { margin: 2px 0 0; }
+  .ev .when { margin: 8px 0 0; font-size: 15px; }
+  .ev .when.unconfirmed { color: var(--muted); }
+  .ev .meta { margin: 2px 0 0; font-size: 14px; color: var(--muted); }
+  .ev .links { margin: 8px 0 0; font-size: 14px; display: flex; gap: 18px; }
+  .empty { padding: 40px 0; color: var(--muted); }
+  footer { margin-top: 48px; font-size: 13px; color: var(--muted); }
+  footer p { margin: 0 0 4px; }
+  [hidden] { display: none !important; }
+  @media (max-width: 640px) {
+    .wrap { padding: 32px 16px 56px; }
+    header h1 { font-size: 26px; }
+    .day { grid-template-columns: 1fr; gap: 12px; }
+    .filters label { margin-left: 0; width: 100%; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <h1>Stockholm Vernissages</h1>
+    <p>Exhibition openings at {{ n_venues }} Stockholm galleries over the next {{ window }} days. Updated nightly.</p>
+  </header>
+
+  {% if districts %}
+  <nav class="filters" aria-label="Filter">
+    <button type="button" data-district="" aria-pressed="true">All</button>
+    {% for d in districts %}<button type="button" data-district="{{ d }}" aria-pressed="false">{{ d }}</button>
+    {% endfor %}
+    <label><input type="checkbox" id="confirmed"> Confirmed vernissages only</label>
+  </nav>
+  {% endif %}
+
+  <main>
+  {% for day, events in days %}
+    <section class="day">
+      <h2>{{ day.strftime("%A") }}<span>{{ day.day }} {{ day.strftime("%B") }}</span></h2>
+      <div>
+      {% for e in events %}
+        <article class="ev" data-district="{{ e.district or '' }}" data-confirmed="{{ 1 if e.opening.confirmed else 0 }}">
+          <p class="venue">{{ e.venue }}</p>
+          <h3>{{ e.title }}</h3>
+          {% set artists = e.artists | join(", ") %}
+          {% if artists and artists != e.title %}<p class="artists">{{ artists }}</p>{% endif %}
+          {% if e.opening.confirmed %}
+            <p class="when">Vernissage{% if e.opening.start_time %} {{ e.opening.start_time }}{% if e.opening.end_time %} to {{ e.opening.end_time }}{% endif %}{% endif %}{% if e.access == "invite" %}, by invitation{% endif %}</p>
+          {% else %}
+            <p class="when unconfirmed">Exhibition opens. Reception details not published.</p>
+          {% endif %}
+          <p class="meta">{% if e.end_date %}Until {{ e.end_date | longdate }}. {% endif %}{{ e.address or "" }}</p>
+          <p class="links"><a href="{{ e.url }}" rel="noopener">Gallery page</a><a href="ics/{{ e.id }}.ics">Add to calendar</a></p>
+        </article>
+      {% endfor %}
+      </div>
+    </section>
+  {% else %}
+    <p class="empty">No openings found for the next {{ window }} days.</p>
+  {% endfor %}
+  <p class="empty" id="none" hidden>No openings match this filter.</p>
+  </main>
+
+  <footer>
+    <p>{{ n_events }} openings, {{ n_confirmed }} with confirmed reception times. Last updated {{ updated }}.</p>
+    <p><a href="events.ics">Subscribe to the calendar</a>{% if repo_url %} · <a href="{{ repo_url }}">Source code</a>{% endif %} · Built by <a href="/">Alfred J. Jollon</a></p>
+  </footer>
+</div>
+<script>
+(function () {
+  var district = "", confirmedOnly = false;
+  var btns = document.querySelectorAll(".filters button");
+  var box = document.getElementById("confirmed");
+  function apply() {
+    var shown = 0;
+    document.querySelectorAll(".day").forEach(function (day) {
+      var any = false;
+      day.querySelectorAll(".ev").forEach(function (ev) {
+        var ok = (!district || ev.dataset.district === district) && (!confirmedOnly || ev.dataset.confirmed === "1");
+        ev.hidden = !ok; any = any || ok;
+      });
+      day.hidden = !any; if (any) shown++;
+    });
+    var none = document.getElementById("none");
+    if (none) none.hidden = shown > 0 || !document.querySelector(".day");
+  }
+  btns.forEach(function (b) {
+    b.addEventListener("click", function () {
+      district = b.dataset.district;
+      btns.forEach(function (x) { x.setAttribute("aria-pressed", x === b ? "true" : "false"); });
+      apply();
+    });
+  });
+  if (box) box.addEventListener("change", function () { confirmedOnly = box.checked; apply(); });
+})();
+</script>
+</body>
+</html>

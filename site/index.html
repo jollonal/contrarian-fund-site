@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Alfredo Jollon, CFA: Fair Globe</title>
+<meta name="description" content="Strategic CFO. Capital markets advisory for founders, scaleups, and pre-IPO companies.">
+<meta property="og:title" content="Fair Globe · Strategic CFO & Capital Markets Advisory">
+<meta property="og:description" content="Three decades allocating and raising capital. For founders. For corporates.">
+<meta property="og:image" content="https://www.contrarian.fund/logos/fairglobe.png">
+<link rel="icon" href="/favicon.png" type="image/png">
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&display=swap');
+  :root{--bg:#0a0c0d;--line:#1c2123;--fg:#dad7cc;--dim:#c8a060;--hot:#e4533a;--cool:#2c9c4d}
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:var(--bg);color:var(--fg);font-family:'JetBrains Mono',monospace;font-size:18px;line-height:1.7;min-height:100vh;background-image:repeating-linear-gradient(0deg,transparent,transparent 31px,rgba(255,255,255,.012) 31px,rgba(255,255,255,.012) 32px)}
+  .scr{max-width:920px;margin:0 auto;padding:clamp(2rem,5vw,4rem) clamp(1.2rem,5vw,3rem)}
+  .bar{display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid var(--line);padding-bottom:.7rem;margin-bottom:2.6rem;color:var(--fg);font-size:20px;letter-spacing:.08em;text-transform:uppercase}
+  .bar .fglogo img{height:72px;width:auto;display:block}
+  .bar-li{color:#0a66c2;display:inline-flex;align-items:center;border:1px solid var(--line);padding:.35rem .5rem}
+  .bar-li:hover{border-color:#378fe9;color:#378fe9}
+  .bar .live{color:var(--cool)}
+  .bar .live::before{content:"";display:inline-block;width:7px;height:7px;border-radius:50%;background:var(--cool);margin-right:.5rem;animation:blink 2.4s infinite;vertical-align:middle}
+  @keyframes blink{0%,70%{opacity:1}85%{opacity:.2}100%{opacity:1}}
+  h1{font-size:clamp(2rem,5.5vw,3rem);font-weight:700;letter-spacing:-.01em;margin-bottom:.25rem;text-align:center}
+  h1 .cfa{font-size:.85em;font-variant:small-caps}
+  h1 .cfa a{color:var(--dim);text-decoration:none}
+  h1 .cfa a:hover{text-decoration:underline}
+  .sub{color:var(--dim);font-size:22px;letter-spacing:.06em;margin-bottom:2.4rem;text-transform:uppercase;text-align:center}
+  .ident{display:flex;flex-direction:column;align-items:center;gap:.6rem;font-size:14px;color:var(--fg);margin-bottom:3rem;border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:1.1rem 0;text-align:center}
+  .ident b{color:var(--fg);font-weight:500;margin-right:.8rem;font-size:18px;letter-spacing:.1em;text-transform:uppercase}
+  .ident .flag{font-size:18px;vertical-align:middle}
+  .lede{margin:0 0 3.2rem;font-size:clamp(1.25rem,3.2vw,1.7rem);line-height:1.5;color:#fff}
+  .lede .c{color:var(--hot)}
+  .cursor::after{content:"_";color:var(--hot);animation:cur .9s steps(1) infinite}
+  @keyframes cur{50%{opacity:0}}
+  .tiers{margin:0 0 3rem;border-top:1px solid var(--line)}
+  .tier{display:grid;grid-template-columns:auto 1fr;gap:1.6rem;padding:1.6rem 0;border-bottom:1px solid var(--line);align-items:start}
+  .tier .num{font-size:clamp(1.6rem,4vw,2.3rem);font-weight:700;color:var(--hot);line-height:1}
+  .tier .who{font-size:clamp(1.3rem,3.4vw,1.8rem);font-weight:700;color:#fff;margin-bottom:.35rem;line-height:1.2}
+  .tier .what{font-size:clamp(1rem,2.4vw,1.18rem);color:var(--fg);line-height:1.55}
+  .scope{color:#fff;font-size:clamp(1.25rem,3.2vw,1.7rem);line-height:1.5;margin:0 0 3.2rem}
+  .scope .c{color:var(--hot)}
+  .sec{font-size:18px;letter-spacing:.12em;text-transform:uppercase;color:var(--hot);font-weight:700;margin:2.8rem 0 1.1rem;padding-bottom:.5rem;border-bottom:1px solid var(--line)}
+  .reg{border-top:1px solid var(--line)}
+  .reg .r{display:grid;grid-template-columns:1fr auto;gap:1.4rem;padding:.85rem 0;border-bottom:1px solid var(--line);font-size:1.05rem;align-items:baseline}
+  .reg .r .role b{color:#fff;font-weight:500}
+  .reg .r .where{color:var(--dim);font-size:1.05rem;text-align:right;white-space:nowrap}
+  .reg .r .where a{color:var(--fg);text-decoration:none;border-bottom:1px dotted var(--line)}
+  .reg .r .where a:hover{color:var(--hot);border-color:var(--hot)}
+  .reg .r .where .subdesc{display:block;font-size:.95rem;font-weight:normal}
+  .arr{font-size:1.2em;display:inline-block;vertical-align:baseline}
+  .ext{font-size:.75em;color:var(--dim);margin-left:.15em;vertical-align:super}
+  .reg .r .role a{color:var(--fg);text-decoration:none;border-bottom:1px dotted var(--line)}
+  .reg .r .role a:hover{color:var(--hot);border-color:var(--hot)}
+  .feat .r .role{font-size:1.02rem}
+  .feat .r .where{font-size:1rem}
+  .feat .r .role a{color:var(--fg);font-weight:700}
+  .feat .r .where a{color:#8a8e93}
+  .feat .r .role a:hover, .feat .r .where a:hover{color:var(--hot);border-color:var(--hot)}
+  .pedline{font-size:1.05rem;color:var(--fg);line-height:1.6;margin:1rem 0 2rem}
+  .pedline a{color:var(--fg);text-decoration:none;border-bottom:1px dotted var(--line)}
+  .pedline a:hover{color:var(--hot);border-color:var(--hot)}
+  .pedline .group{color:var(--dim);font-size:18px;letter-spacing:.1em;text-transform:uppercase;margin-right:1.6rem}
+  .logo{height:28px;width:auto;vertical-align:middle;margin-right:.4rem;display:inline-block}
+  .logo-pill{background:#fff;padding:3px 6px;border-radius:3px;height:22px;box-sizing:content-box}
+  .logo-pill-dark{background:#000;padding:0;height:28px}
+  .logo-screen{mix-blend-mode:screen}
+  .logo-lg{height:68px}
+  .logo-md{height:45px}
+  .logo-sm{height:17px}
+  .logo-ms{height:22px}
+  .logo-lazard{height:18px}
+  .logo-levels{height:34px}
+  .logo-invert{filter:invert(1) brightness(2)}
+  .logo-white{filter:brightness(0) invert(1)}
+  .cta{margin:2.5rem 0 3.2rem;text-align:center}
+  .cta-btn{display:inline-block;border:1px solid var(--hot);color:var(--hot);padding:.55rem 1.4rem;font-family:inherit;font-size:.95rem;letter-spacing:.08em;text-transform:uppercase;text-decoration:none}
+  .cta-btn:hover{background:var(--hot);color:#000}
+  .mobile-mentoring{display:none}
+  .foot{margin-top:3.4rem;border-top:1px solid var(--line);padding-top:1.1rem;display:flex;justify-content:space-between;align-items:center;color:var(--fg);font-size:14px;letter-spacing:.06em;text-transform:uppercase;flex-wrap:wrap;gap:.8rem}
+  .foot .copyright{color:var(--fg)}
+  .foot .email{color:var(--fg);text-decoration:none;border-bottom:1px solid var(--hot)}
+  .foot .email:hover{color:var(--hot)}
+  .foot .li{border:1px solid var(--line);padding:.35rem .5rem;display:inline-flex;align-items:center;color:#0a66c2}
+  .foot .li:hover{border-color:#378fe9;color:#378fe9}
+  @media (max-width:600px){
+    .reg .r{grid-template-columns:1fr;gap:.2rem;padding:.9rem 0}
+    .reg .r .where{text-align:left;white-space:normal;font-size:.9rem}
+    .ident{gap:.9rem;font-size:13px}
+    .ident .flag{font-size:16px}
+    .ident span{white-space:nowrap}
+    .foot{flex-direction:column;align-items:flex-start;gap:.8rem}
+    .bar{font-size:14px}
+    .bar .fglogo img{height:42px}
+    .pedline{line-height:2.2}
+    .buyside-row{display:flex;flex-direction:column;gap:.8rem;align-items:flex-start}
+    .mobile-hide{display:none !important}
+    .mobile-mentoring{display:flex;flex-direction:column;gap:.6rem;align-items:flex-start}
+    .buyside-row .dot{display:none}
+    h1 .cfa{white-space:nowrap}
+    .sub .dot{display:none}
+    .work-rights{display:flex;flex-direction:column;align-items:center;gap:.3rem}
+    .work-rights b{margin-right:0}
+    .pedline-stack{display:flex;flex-direction:column;gap:.6rem;align-items:flex-start}
+    .pedline-stack .dot{display:none}
+  }
+</style>
+</head>
+<body>
+<div class="scr">
+
+  <div class="bar"><a href="https://contrarian.fund" class="fglogo"><img src="logos/fairglobe.png" alt="Fair Globe"></a><a class="bar-li" href="https://www.linkedin.com/in/jollon/" target="_blank" rel="noopener" aria-label="LinkedIn"><svg viewBox="0 0 24 24" width="30" height="30" fill="currentColor" style="vertical-align:middle"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.13 1.45-2.13 2.94v5.67H9.35V9h3.42v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 110-4.13 2.06 2.06 0 010 4.13zM7.12 20.45H3.55V9h3.57v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.72V1.72C24 .77 23.2 0 22.22 0z"/></svg></a><span class="live">SESSION OPEN</span></div>
+
+  <!-- NAME & TITLE -->
+  <h1>Alfredo Jollon<span class="cfa">, <a href="logos/cfa-member.png" target="_blank" rel="noopener">CFA</a><!-- When live credentials page updates, replace href above with: https://credentials.cfainstitute.org/11527177-3213-40cc-8066-2378865b0990#acc.pMVCTx3c --></span></h1>
+  <div class="sub">Capital Markets <span class="dot">·</span> Strategic Finance</div>
+
+  <!-- IDENTITY BAR -->
+  <div class="ident">
+    <span><b>Citizenship</b><span class="flag">🇺🇸 🇪🇺/🇮🇪 🇧🇷</span></span>
+    <span><b>Languages</b><span class="flag">🇬🇧 🇵🇹 🇪🇸 🇫🇷 🇮🇹 🇩🇪 🇸🇪 🇯🇵</span></span>
+    <span class="work-rights"><b>Unrestricted Work Rights</b><span class="flag">🇺🇸 🇪🇺 🇬🇧 🇨🇭 🇳🇴 🇮🇸 🇦🇷 🇨🇱 🇺🇾 🇧🇷</span></span>
+  </div>
+
+  <!-- LEDE -->
+  <p class="lede"><span class="c">More than three decades allocating and raising capital.</span> For founders. For corporates.<span class="cursor"></span></p>
+
+  <!-- TIERS -->
+  <div class="tiers">
+    <div class="tier"><span class="num">01</span><span>
+      <div class="who">Founders</div>
+      <div class="what">Hacks and templates to bring order to startup chaos. Build a repeatable finance function before you invest in a full-time CFO.</div>
+    </span></div>
+    <div class="tier"><span class="num">02</span><span>
+      <div class="who">Scaleups</div>
+      <div class="what">Sharper, more granular capital strategy; managing responsible growth through resource planning and expense control; and a compelling, investor-ready investment thesis ahead of the next lettered round.</div>
+    </span></div>
+    <div class="tier"><span class="num">03</span><span>
+      <div class="who">Pre-IPO &amp; corporates</div>
+      <div class="what">Cost of capital, valuation scenarios, and capital-markets fitness, drawing on 25 years on the institutional side of the IPO roadshow table, plus currently active relationships with the listing teams at Nasdaq Nordic, the NYSE, and the LSE.</div>
+    </span></div>
+  </div>
+
+  <p class="scope"><span class="c">Not managing large finance &amp; accounting teams.</span> That's an entirely different job.<span class="cursor"></span></p>
+
+  <!-- CTA -->
+  <div class="cta">
+    <a href="mailto:office@contrarian.fund" class="cta-btn">Open a session</a>
+  </div>
+
+  <!-- NOW -->
+  <div class="sec">// NOW</div>
+  <div class="reg">
+    <div class="r"><span class="role"><b>Fractional CFO &amp; Capital Markets Advisor</b></span><span class="where">Fair Globe GP, LLC<br><span class="subdesc">[early-stage founders to pre-IPO]</span></span></div>
+    <div class="r"><span class="role"><b>Managing General Partner &amp; CFO</b></span><span class="where">Fair Globe Fund, LP<br><span class="subdesc">[private investment partnership]</span></span></div>
+  </div>
+
+  <!-- THEN -->
+  <div class="sec">// THEN</div>
+  <div class="reg">
+    <div class="r"><span class="role"><b>Fractional CFO</b> [Series A <span class="arr">&rarr;</span> Series B]</span><span class="where"><a href="https://atlant3d.com" target="_blank" rel="noopener"><img class="logo" src="logos/atlant3d.png" alt="Atlant 3D" style="height:13px">[atomic layer deep tech]</a></span></div>
+    <div class="r"><span class="role"><b>CFO</b> [seed <span class="arr">&rarr;</span> Series A]</span><span class="where"><a href="https://www.limina.com" target="_blank" rel="noopener"><img class="logo logo-invert" src="logos/limina.svg" alt="Limina">[SaaS fintech]</a></span></div>
+    <div class="r"><span class="role"><b>Managing Director, Stockholm Accelerator</b></span><span class="where"><a href="https://www.techstars.com/portfolio?q=stockholm&program_names=Stockholm+Techstars+Accelerator" target="_blank" rel="noopener"><img class="logo" src="logos/techstars.svg" alt="Techstars" style="margin-right:0;height:54px"><span style="margin-left:-12px">[funded 22 portcos]</span></a></span></div>
+    <div class="r"><span class="role"><b>Deputy CEO &amp; Interim CFO</b></span><span class="where"><a href="https://web.archive.org/web/20250714085817/https://www.wearelevels.com/news/alfredo-jollon-former-md-of-techstars-stockholm-joins-levels" target="_blank" rel="noopener"><img class="logo logo-levels" src="logos/levels.png" alt="Levels">[venture studio &middot; restructuring &amp; recap]</a></span></div>
+  </div>
+
+  <!-- BUY-SIDE & SELL-SIDE -->
+  <div class="sec">// BUY-SIDE &amp; SELL-SIDE ROLES:<span style="display:block;padding-left:2.25em">PORTFOLIO MANAGEMENT/EQUITY RESEARCH</span></div>
+  <p class="pedline buyside-row">
+    <span class="group">Investment Banks</span><a href="https://www.morganstanley.com" target="_blank" rel="noopener"><img class="logo logo-ms logo-invert" src="logos/morgan-stanley.svg" alt="Morgan Stanley"></a> <span class="dot">·</span> <a href="https://www.lazard.com" target="_blank" rel="noopener"><img class="logo logo-lazard logo-invert" src="logos/lazard.svg" alt="Lazard" style="position:relative;top:-2px"></a>
+  </p>
+  <p class="pedline buyside-row">
+    <span class="group">Investment Funds</span><a href="https://www.deshaw.com" target="_blank" rel="noopener"><img class="logo logo-invert" src="logos/deshaw.svg" alt="D. E. Shaw" style="position:relative;top:-7px"></a> <span class="dot">·</span> <a href="https://www.janushenderson.com" target="_blank" rel="noopener"><img class="logo" src="logos/janus.svg" alt="Janus Henderson"></a> <span class="dot">·</span> <a href="http://scoggincapital.com/login.asp?redirpage=http://scoggincapital.com/Default.asp?" target="_blank" rel="noopener"><img class="logo logo-sm" src="logos/scoggin.png" alt="Scoggin" style="position:relative;top:-2px"></a>
+  </p>
+
+  <!-- PROFESSIONAL CREDENTIALS -->
+  <div class="sec">// PROFESSIONAL CREDENTIALS</div>
+  <p class="pedline" style="line-height:2.2"><img class="logo" src="logos/columbia-college-crown.svg" alt="Columbia College" style="margin-left:-5px"><a href="https://www.college.columbia.edu" target="_blank" rel="noopener">Columbia University</a>: Bachelor of Arts, History<br><span style="padding-left:2.25em"><i>summa cum laude</i></span><br><span style="padding-left:2.25em"><img class="logo" src="logos/pbk.jpg" alt="Phi Beta Kappa" style="margin-right:1.45rem;position:relative;left:0.25rem"><a href="https://www.pbk.org" target="_blank" rel="noopener">Phi Beta Kappa</a> (early election)</span><br><span style="padding-left:2.25em"><a href="https://beineckescholarship.org" target="_blank" rel="noopener"><img class="logo" src="logos/beinecke.png" alt="The Sperry Fund" style="margin-right:.9rem"></a><a href="https://beineckescholarship.org" target="_blank" rel="noopener">Beinecke Scholar</a></span><br><span style="padding-left:2.25em"><img class="logo" src="logos/columbia-shield.svg" alt="Columbia GSAS" style="margin-left:-3px;margin-right:.51rem"><a href="https://en.wikipedia.org/wiki/Richard_Hofstadter#:~:text=Columbia%20University%20annually%20awards%20the%20Richard%20Hofstadter%20Fellowship%20to%20an%20entering%20graduate%20student" target="_blank" rel="noopener">Richard Hofstadter Fellowship</a> (fully funded PhD; declined)</span><br><span style="padding-left:2.25em"><img class="logo" src="logos/neh.png" alt="NEH" style="margin-right:.75rem"><a href="https://awardsearch.neh.gov/AwardDetail.aspx?gn=FI-26096-93" target="_blank" rel="noopener">NEH Younger Scholar</a></span><br><img class="logo" src="logos/oxford.svg" alt="University of Oxford" style="margin-right:.9rem"><a href="https://www.ox.ac.uk" target="_blank" rel="noopener">University of Oxford</a>: <img class="logo" src="logos/st-peters.svg" alt="St Peter's College, Oxford" style="margin-right:.9rem"><a href="https://www.spc.ox.ac.uk" target="_blank" rel="noopener">St Peter's College</a><br><a href="https://www.andover.edu" target="_blank" rel="noopener"><img class="logo" src="logos/andover.png" alt="Phillips Academy Andover" style="margin-left:-3px;margin-right:.9rem"></a><a href="https://www.andover.edu" target="_blank" rel="noopener">Phillips Academy</a><br><a href="https://www.greenvaleschool.org" target="_blank" rel="noopener"><img class="logo" src="logos/greenvaleschool.png" alt="The Green Vale School" style="margin-left:0px;margin-right:0.95rem"></a><a href="https://www.greenvaleschool.org" target="_blank" rel="noopener">Green Vale School</a><br><img class="logo" src="logos/cfa.svg" alt="CFA Institute" style="margin-left:-9px"><a href="logos/cfa-charter.png" target="_blank" rel="noopener">CFA Charter No. 39,901</a><!-- When live credentials page updates, replace href above with: https://credentials.cfainstitute.org/11527177-3213-40cc-8066-2378865b0990#acc.pMVCTx3c --></p>
+
+  <!-- BUSINESS SCHOOL GUEST LECTURES -->
+  <div class="sec">// BUSINESS SCHOOL GUEST LECTURES</div>
+  <p class="pedline pedline-stack"><img class="logo logo-pill" src="logos/georgetown.svg" alt="Georgetown McDonough" style="margin-right:.9rem"><a href="https://msb.georgetown.edu" target="_blank" rel="noopener">McDonough</a> <span class="dot">·</span> <img class="logo" src="logos/cu-boulder.svg" alt="CU Boulder Leeds" style="margin-right:.9rem"><a href="https://www.colorado.edu/business/" target="_blank" rel="noopener">Leeds</a> <span class="dot">·</span> <img class="logo" src="logos/american.svg" alt="American University Kogod" style="margin-right:.9rem"><a href="https://kogod.american.edu" target="_blank" rel="noopener">Kogod</a> <span class="dot">·</span> <img class="logo" src="logos/oklahoma.svg" alt="University of Oklahoma Price" style="margin-right:.9rem"><a href="https://www.ou.edu/price" target="_blank" rel="noopener">Price</a></p>
+
+  <!-- STARTUP MENTORING & SELECTION -->
+  <div class="sec">// STARTUP MENTORING &amp; SELECTION</div>
+  <p class="pedline mobile-hide"><span style="display:block;margin-bottom:.4rem"><img class="logo" src="logos/shibuya.svg" alt="Shibuya Startup Support" style="margin-right:.9rem"><a href="https://www.shibuya-startup-support.jp" target="_blank" rel="noopener">Shibuya Startup Support</a> 🇯🇵 <span class="dot" style="margin:0 .8rem">&middot;</span> <a href="https://startsmartcee.org/startups/mit-ef-for-startups/#stage" target="_blank" rel="noopener"><img class="logo" src="logos/start-smart.svg" alt="StartSmart CEE" style="margin-right:.9rem"></a> 🇵🇱</span><span style="display:block;margin-top:.4rem"><img class="logo" src="logos/amcham.jpg" alt="AmCham Sweden" style="margin-right:.9rem;border-radius:50%;object-fit:cover;height:28px;width:28px"><a href="https://www.amcham.se" target="_blank" rel="noopener">American Chamber of Commerce in Sweden</a> 🇸🇪 <span class="dot" style="margin:0 .8rem">&middot;</span> <span style="position:relative;left:-6px"><img class="logo" src="logos/venture-cup.jpg" alt="Venture Cup Sweden" style="margin-right:.9rem;position:relative;top:4px"><a href="https://www.venturecup.se" target="_blank" rel="noopener">Venture Cup Sweden</a> 🇸🇪</span></span></p>
+  <p class="pedline mobile-mentoring"><span><img class="logo" src="logos/shibuya.svg" alt="Shibuya Startup Support" style="margin-right:.9rem"><a href="https://www.shibuya-startup-support.jp" target="_blank" rel="noopener">Shibuya Startup Support</a> 🇯🇵</span><span><a href="https://startsmartcee.org/startups/mit-ef-for-startups/#stage" target="_blank" rel="noopener"><img class="logo" src="logos/start-smart.svg" alt="StartSmart CEE" style="margin-right:.9rem"></a> 🇵🇱</span><span><img class="logo" src="logos/amcham.jpg" alt="AmCham Sweden" style="margin-left:4px;margin-right:.9rem;border-radius:50%;object-fit:cover;height:28px;width:28px"><a href="https://www.amcham.se" target="_blank" rel="noopener">American Chamber of Commerce in Sweden</a> 🇸🇪</span><span><img class="logo" src="logos/venture-cup.jpg" alt="Venture Cup Sweden" style="margin-left:-2px;margin-right:.9rem;position:relative;top:4px"><a href="https://www.venturecup.se" target="_blank" rel="noopener">Venture Cup Sweden</a> 🇸🇪</span></p>
+
+  <!-- SELECTED SPEAKING ROLES & INTERVIEWS-->
+  <div class="sec">// SELECTED SPEAKING ENGAGEMENTS &amp; INTERVIEWS</div>
+  <div class="reg feat">
+    <div class="r"><span class="role"><a href="https://bit.ly/NoCFOSlushdBilbao" target="_blank" rel="noopener">"No CFO? No Problem!" (speaker)</a></span><span class="where"><a href="https://www.one.gob.es/en/diary/bilbao-slushd-2025" target="_blank" rel="noopener">Bilbao Slush'D (Bilbao, Spain)</a></span></div>
+    <div class="r"><span class="role"><a href="https://www.youtube.com/watch?v=B7538Dv727c" target="_blank" rel="noopener">"Value Proposition Beyond Money" (panelist)</a></span><span class="where"><a href="https://www.techchill.co" target="_blank" rel="noopener">TechChill (Riga, Latvia)</a></span></div>
+    <div class="r"><span class="role"><a href="https://www.youtube.com/watch?v=-WlixKWV6Tc&t=32s" target="_blank" rel="noopener">"The Future of Impact Investments" (panelist)</a></span><span class="where"><a href="https://innovationskane.com/start-page/" target="_blank" rel="noopener">Startup Live! (Helsingborg, Sweden)</a></span></div>
+    <div class="r"><span class="role"><a href="https://www.youtube.com/watch?v=vFh8lvimCO0&t=0s" target="_blank" rel="noopener">"Unleashing Your Potential" (interview)</a></span><span class="where"><a href="https://www.startupgrind.com/stockholm/" target="_blank" rel="noopener">Startup Grind (Stockholm, Sweden)</a></span></div>
+    <div class="r"><span class="role"><a href="https://www.techstars.com/the-line/5-questions/5-questions-with-alfredo-jollon-managing-director-of-stockholm-accelerator" target="_blank" rel="noopener">"5 Questions" (interview)</a></span><span class="where"><a href="https://www.techstars.com" target="_blank" rel="noopener">Techstars (Boulder, Colorado)</a></span></div>
+    <div class="r"><span class="role"><a href="https://www.techarenan.news/2023/02/07/startups-goteborg-vastsverige-gowest-event-investors-gu-ventures/" target="_blank" rel="noopener">"Diversity in Venture Capital" (moderator)</a></span><span class="where"><a href="https://www.gowest.capital" target="_blank" rel="noopener">GoWest (Gothenburg, Sweden)</a></span></div>
+  </div>
+
+  <!-- FINALLY -->
+  <div class="sec">// FINALLY</div>
+  <p class="pedline" style="color:var(--fg);font-size:1.05rem">6x marathoner (PR: <a href="https://results.nyrr.org/event/931114/result/14675" target="_blank" rel="noopener">3:26:42<span class="ext">↗</span></a>). Olympic-distance triathlete (PR: <a href="https://www.athlinks.com/event/30745/results/Event/60480/Course/579089/Bib/487" target="_blank" rel="noopener">2:58:12<span class="ext">↗</span></a>). Swimmer. Cyclist. Rower. Sailor.<br>Married 24 years. Four kids.</p>
+
+  <!-- BOTTOM CTA -->
+  <div class="cta">
+    <a href="mailto:office@contrarian.fund" class="cta-btn">Open a session</a>
+  </div>
+
+  <!-- FOOTER -->
+  <div class="foot">
+    <span class="copyright">&copy; 2026 Fair Globe GP, LLC</span>
+    <a class="email" href="mailto:office@contrarian.fund">office@contrarian.fund</a>
+  </div>
+
+</div>
+</body>
+</html>

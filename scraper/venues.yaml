@@ -1,0 +1,322 @@
+# Stockholm venue registry. Hand-curated. Verified 2026-10-07.
+#
+# adapter:
+#   artlogic   Artlogic CMS. Fetch /exhibitions/current/ and /exhibitions/forthcoming/.
+#   wordpress  WordPress. Try /feed/ first, fall back to HTML.
+#   squarespace, shopify, static  Fetch HTML, LLM extraction.
+#   headless   Needs Playwright to render before extraction.
+# status: active | paused | excluded
+# opening_text: does the site publish vernissage times in HTML (yes/no)
+
+venues:
+
+  # ---------- Artlogic (one adapter covers all) ----------
+  - id: magnus-karlsson
+    name: Galleri Magnus Karlsson
+    homepage: https://www.gallerimagnuskarlsson.com/
+    exhibitions_urls:
+      - https://www.gallerimagnuskarlsson.com/exhibitions/current/
+      - https://www.gallerimagnuskarlsson.com/exhibitions/forthcoming/
+    address: Fredsgatan 12, 111 52 Stockholm
+    district: Norrmalm
+    type: commercial
+    adapter: artlogic
+    opening_text: yes
+    status: active
+
+  - id: andrehn-schiptjenko
+    name: Andréhn-Schiptjenko
+    homepage: https://www.andrehn-schiptjenko.com/
+    exhibitions_urls:
+      - https://www.andrehn-schiptjenko.com/exhibitions/current/
+      - https://www.andrehn-schiptjenko.com/exhibitions/forthcoming/
+    address: Linnégatan 31, 114 47 Stockholm
+    district: Östermalm
+    type: commercial
+    adapter: artlogic
+    opening_text: yes
+    city_filter: Stockholm   # also lists Paris shows
+    status: active
+
+  - id: belenius
+    name: Belenius
+    homepage: https://belenius.com/
+    exhibitions_urls:
+      - https://belenius.com/
+      - https://belenius.com/exhibitions/
+    address: Ulrikagatan 13, 115 23 Stockholm
+    district: Östermalm
+    type: commercial
+    adapter: artlogic
+    opening_text: yes   # on homepage, not exhibitions page
+    status: active
+
+  - id: wetterling
+    name: Wetterling Gallery
+    homepage: https://www.wetterlinggallery.com/
+    exhibitions_urls:
+      - https://www.wetterlinggallery.com/exhibitions/current/
+    address: Nybrogatan 20, 114 39 Stockholm
+    district: Östermalm
+    type: commercial
+    adapter: artlogic
+    opening_text: no
+    status: active
+
+  - id: duerr
+    name: Galleri Duerr
+    homepage: https://www.galleriduerr.com/
+    exhibitions_urls:
+      - https://www.galleriduerr.com/exhibitions/current/
+    address: Hudiksvallsgatan 6, 113 30 Stockholm
+    district: Vasastan
+    type: commercial
+    adapter: artlogic
+    opening_text: no
+    status: active
+
+  - id: gerdman
+    name: Gerdman Gallery
+    homepage: https://gerdmangallery.com/
+    exhibitions_urls:
+      - https://gerdmangallery.com/exhibitions/
+    address: Sturegatan 32, 114 36 Stockholm
+    district: Östermalm
+    type: commercial
+    adapter: artlogic
+    opening_text: no
+    status: active
+
+  - id: stance
+    name: STANCE Gallery
+    homepage: https://stancegallery.com/
+    exhibitions_urls:
+      - https://stancegallery.com/exhibitions/
+    address: Storgatan 25, 114 55 Stockholm
+    district: Östermalm
+    type: commercial
+    adapter: artlogic
+    opening_text: no
+    status: active
+
+  - id: cecilia-hillstrom
+    name: Cecilia Hillström Gallery
+    homepage: https://chgallery.se/
+    exhibitions_urls:
+      - https://chgallery.se/exhibitions/
+    address: Hudiksvallsgatan 8, 113 30 Stockholm
+    district: Vasastan
+    type: commercial
+    adapter: artlogic
+    opening_text: no
+    notes: Ignore /events/ (off-site artist events).
+    status: active
+
+  - id: berg
+    name: Berg Gallery
+    homepage: https://www.berggallery.se/
+    exhibitions_urls:
+      - https://www.berggallery.se/exhibitions/
+    address: Hudiksvallsgatan 8, 113 30 Stockholm
+    district: Vasastan
+    type: commercial
+    adapter: artlogic
+    opening_text: no
+    status: active
+
+  - id: galleri-glas
+    name: Galleri Glas
+    homepage: https://www.galleriglas.se/
+    exhibitions_urls:
+      - https://www.galleriglas.se/exhibitions/current/
+      - https://www.galleriglas.se/exhibitions/forthcoming/
+    address: Nybrogatan 34, 114 39 Stockholm
+    district: Östermalm
+    type: commercial
+    adapter: artlogic
+    opening_text: no
+    status: active
+
+  # ---------- WordPress ----------
+  - id: bjorkholmen
+    name: Björkholmen Gallery
+    homepage: https://www.bjorkholmengallery.com/
+    exhibitions_urls:
+      - https://bjorkholmengallery.com/exhibitions/
+    address: Rödbodtorget 2, 111 52 Stockholm
+    district: Norrmalm
+    type: commercial
+    adapter: wordpress
+    opening_text: yes
+    status: active
+
+  - id: flach
+    name: Galleri Flach
+    homepage: https://www.galleriflach.com/
+    exhibitions_urls:
+      - https://www.galleriflach.com/category/exhibitions/
+    address: Karlavägen 9, 114 24 Stockholm
+    district: Östermalm
+    type: commercial
+    adapter: wordpress
+    opening_text: no
+    notes: Fairs share the category. Dates only in post titles.
+    status: active
+
+  # ---------- Other static platforms ----------
+  - id: hedenius
+    name: Galleri Hedenius
+    homepage: https://www.gallerihedenius.com/
+    exhibitions_urls:
+      - https://www.gallerihedenius.com/
+      - https://www.gallerihedenius.com/utstllningar
+    address: Sturegatan 36, 114 36 Stockholm
+    district: Östermalm
+    type: commercial
+    adapter: squarespace
+    opening_text: yes
+    notes: Returned HTTP 429 on repeat fetch. Crawl slowly.
+    status: active
+
+  - id: helle-knudsen
+    name: Galleri Helle Knudsen
+    homepage: https://gallerihelle.com/
+    exhibitions_urls:
+      - https://gallerihelle.com/blogs/aktuell
+      - https://gallerihelle.com/blogs/utstallningar
+    address: Hantverkargatan 18-20, 112 21 Stockholm
+    district: Kungsholmen
+    type: commercial
+    adapter: shopify
+    opening_text: no
+    status: active
+
+  - id: steinsland-berliner
+    name: Gallery Steinsland Berliner
+    homepage: https://www.steinslandberliner.com/
+    exhibitions_urls:
+      - https://steinslandberliner.com/shows
+    address: Bondegatan 70, 116 33 Stockholm
+    district: Södermalm
+    type: commercial
+    adapter: static
+    opening_text: no
+    notes: Fair presentations mixed in. Dates as DD.MM-DD.MM.YY.
+    status: active
+
+  - id: carling-dalenson
+    name: Carling Dalenson
+    homepage: https://www.carlingdalenson.com/
+    exhibitions_urls:
+      - https://www.carlingdalenson.com/exhibitions
+    address: Sibyllegatan 49, 114 42 Stockholm
+    district: Östermalm
+    type: commercial
+    adapter: static
+    opening_text: no
+    status: active
+
+  - id: issues
+    name: ISSUES
+    homepage: https://www.issues.gallery/
+    exhibitions_urls:
+      - https://www.issues.gallery/exhibitions
+    address: Vattugatan 13, 111 52 Stockholm
+    district: Norrmalm
+    type: commercial
+    adapter: static
+    opening_text: no
+    notes: Stale "Current" entry from 2015. Validate dates hard.
+    status: active
+
+  # ---------- Needs headless browser ----------
+  - id: nordenhake
+    name: Galerie Nordenhake
+    homepage: https://nordenhake.com/
+    exhibitions_urls:
+      - https://nordenhake.com/exhibitions
+    address: Lützengatan 1, 115 20 Stockholm
+    district: Östermalm
+    type: commercial
+    adapter: headless
+    opening_text: no
+    city_filter: Stockholm   # also Berlin, Mexico City
+    status: active
+
+  - id: cfhill
+    name: CFHILL
+    homepage: https://www.cfhill.com/
+    exhibitions_urls:
+      - https://www.cfhill.com/exhibitions
+    address: Riddargatan 13, 114 51 Stockholm
+    district: Östermalm
+    type: commercial
+    adapter: headless
+    opening_text: no
+    status: active
+
+  - id: saskia-neuman
+    name: Saskia Neuman Gallery
+    homepage: https://www.saskianeumangallery.com/
+    exhibitions_urls:
+      - https://www.saskianeumangallery.com/
+    address: Linnégatan 19, 114 47 Stockholm
+    district: Östermalm
+    type: commercial
+    adapter: headless
+    opening_text: no
+    status: active
+
+  - id: kostyal
+    name: Carl Kostyál
+    homepage: https://kostyal.com/
+    exhibitions_urls:
+      - https://kostyal.com/
+    address: Sjökvarnsbacken 15, 131 71 Nacka
+    district: Danvikstull
+    type: commercial
+    adapter: headless
+    opening_text: no
+    city_filter: Stockholm   # also London, Milan, Hong Kong
+    status: active
+
+  - id: coulisse
+    name: Coulisse Gallery
+    homepage: https://www.coulisse-gallery.com/
+    exhibitions_urls:
+      - https://www.coulisse-gallery.com/
+    address: Gävlegatan 10 B, 113 30 Stockholm
+    district: Vasastan
+    type: commercial
+    adapter: headless
+    opening_text: no
+    notes: Fully client-rendered. No exhibitions URL found.
+    status: paused
+
+  # ---------- Not scraped ----------
+  - id: larsen-warner
+    name: Larsen / Warner
+    homepage: https://larsenwarner.com/
+    address: Hudiksvallsgatan 8, 113 30 Stockholm
+    district: Vasastan
+    type: commercial
+    notes: robots.txt disallows all paths. Newsletter or manual entry only.
+    status: excluded
+
+  - id: gsa
+    name: Galleri Andersson/Sandström
+    homepage: https://gsa.se/
+    address: Hudiksvallsgatan 6, 113 30 Stockholm
+    district: Vasastan
+    type: commercial
+    notes: Stockholm page stale since mid-2025. Base is Umeå.
+    status: paused
+
+  - id: cornelia-sojdelius
+    name: Cornelia Sojdelius Gallery
+    homepage: https://corneliasojdeliusgallery.com/
+    address: Cardellgatan 6, 114 36 Stockholm
+    district: Östermalm
+    type: commercial
+    notes: Temporarily closed 2026-09-01 to 2026-12-31. Recheck January.
+    status: paused

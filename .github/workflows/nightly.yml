@@ -1,0 +1,67 @@
+name: nightly
+
+on:
+  schedule:
+    - cron: "17 2 * * *"        # 02:17 UTC daily (04:17 CEST / 03:17 CET)
+  workflow_dispatch:             # manual "Run workflow" button
+  push:
+    branches: [main]
+    paths: ["site/**"]           # edits to the main site deploy immediately
+
+permissions:
+  contents: write                # commit refreshed data back to the repo
+  models: read                   # free GitHub Models inference via GITHUB_TOKEN
+
+concurrency:
+  group: deploy
+  cancel-in-progress: false
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        if: github.event_name != 'push'
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+          cache-dependency-path: scraper/requirements.txt
+
+      - name: Install
+        if: github.event_name != 'push'
+        run: |
+          pip install -r scraper/requirements.txt
+          python -m playwright install --with-deps chromium
+
+      - name: Test
+        if: github.event_name != 'push'
+        working-directory: scraper
+        run: python -m pytest -q
+
+      - name: Scrape and build
+        if: github.event_name != 'push'
+        working-directory: scraper
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          REPO_URL: ${{ github.server_url }}/${{ github.repository }}
+        run: python -m vernissage
+
+      - name: Commit data
+        if: github.event_name != 'push'
+        run: |
+          git config user.name "vernissage-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add scraper/state site/projects/vernissage
+          git diff --cached --quiet || git commit -m "data: nightly refresh $(date -u +%F)"
+          git push
+
+      - name: Deploy to Cloudflare Pages
+        uses: cloudflare/wrangler-action@v3
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          command: pages deploy site --project-name=contrarian-fund --branch=main --commit-dirty=true
