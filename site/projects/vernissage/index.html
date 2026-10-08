@@ -1,0 +1,285 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Stockholm Vernissages</title>
+<meta name="description" content="Exhibition openings at Stockholm galleries over the next 60 days. Updated nightly.">
+<link rel="icon" href="/favicon.png">
+<link rel="alternate" type="text/calendar" title="Stockholm Vernissages" href="events.ics">
+<style>
+  :root {
+    --bg: #FAFAF7; --ink: #111111; --muted: #6B6B66; --rule: #DADAD4;
+    --font: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  }
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body { margin: 0; background: var(--bg); color: var(--ink); font: 16px/1.45 var(--font); }
+  a { color: inherit; text-decoration-thickness: 1px; text-underline-offset: 3px; }
+  .wrap { max-width: 960px; margin: 0 auto; padding: 56px 24px 80px; }
+  header h1 { font-size: 32px; font-weight: 400; letter-spacing: -0.01em; margin: 0 0 8px; }
+  header p { color: var(--muted); margin: 0; max-width: 560px; }
+  .filters { display: flex; flex-wrap: wrap; gap: 6px 18px; align-items: baseline;
+             margin: 40px 0 0; padding: 0 0 16px; border-bottom: 1px solid var(--ink); font-size: 14px; }
+  .filters button { font: inherit; color: var(--muted); background: none; border: 0; padding: 0; cursor: pointer; }
+  .filters button[aria-pressed="true"] { color: var(--ink); text-decoration: underline; text-underline-offset: 3px; }
+  .filters label { margin-left: auto; color: var(--muted); cursor: pointer; }
+  .day { display: grid; grid-template-columns: 200px 1fr; gap: 24px; padding: 28px 0; border-bottom: 1px solid var(--rule); }
+  .day h2 { font-size: 15px; font-weight: 400; margin: 2px 0 0; }
+  .day h2 span { display: block; color: var(--muted); }
+  .ev { padding: 0 0 24px; }
+  .ev:last-child { padding-bottom: 0; }
+  .ev .venue { font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; margin: 0 0 4px; }
+  .ev h3 { font-size: 22px; font-weight: 400; line-height: 1.25; margin: 0; }
+  .ev .artists { margin: 2px 0 0; }
+  .ev .when { margin: 8px 0 0; font-size: 15px; }
+  .ev .when.unconfirmed { color: var(--muted); }
+  .ev .meta { margin: 2px 0 0; font-size: 14px; color: var(--muted); }
+  .ev .links { margin: 8px 0 0; font-size: 14px; display: flex; gap: 18px; }
+  .empty { padding: 40px 0; color: var(--muted); }
+  footer { margin-top: 48px; font-size: 13px; color: var(--muted); }
+  footer p { margin: 0 0 4px; }
+  [hidden] { display: none !important; }
+  @media (max-width: 640px) {
+    .wrap { padding: 32px 16px 56px; }
+    header h1 { font-size: 26px; }
+    .day { grid-template-columns: 1fr; gap: 12px; }
+    .filters label { margin-left: 0; width: 100%; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <h1>Stockholm Vernissages</h1>
+    <p>Exhibition openings at 21 Stockholm galleries over the next 60 days. Updated nightly.</p>
+  </header>
+
+  
+  <nav class="filters" aria-label="Filter">
+    <button type="button" data-district="" aria-pressed="true">All</button>
+    <button type="button" data-district="Kungsholmen" aria-pressed="false">Kungsholmen</button>
+    <button type="button" data-district="Norrmalm" aria-pressed="false">Norrmalm</button>
+    <button type="button" data-district="Södermalm" aria-pressed="false">Södermalm</button>
+    <button type="button" data-district="Östermalm" aria-pressed="false">Östermalm</button>
+    
+    <label><input type="checkbox" id="confirmed"> Confirmed vernissages only</label>
+  </nav>
+  
+
+  <main>
+  
+    <section class="day">
+      <h2>Thursday<span>8 October</span></h2>
+      <div>
+      
+        <article class="ev" data-district="Kungsholmen" data-confirmed="1">
+          <p class="venue">Galleri Helle Knudsen</p>
+          <h3>Tomas Gustavsson: En plats i solen</h3>
+          
+          <p class="artists">Tomas Gustavsson</p>
+          
+            <p class="when">Vernissage 17:00</p>
+          
+          <p class="meta">Until 30 October. Hantverkargatan 18-20, 112 21 Stockholm</p>
+          <p class="links"><a href="https://gallerihelle.com/blogs/aktuell/tomas-gustavsson-en-plats-i-solen" rel="noopener">Gallery page</a><a href="ics/c11bd021df7c.ics">Add to calendar</a></p>
+        </article>
+      
+      </div>
+    </section>
+  
+    <section class="day">
+      <h2>Friday<span>9 October</span></h2>
+      <div>
+      
+        <article class="ev" data-district="Södermalm" data-confirmed="0">
+          <p class="venue">Gallery Steinsland Berliner</p>
+          <h3>Hanna Hansdotter Kalypso</h3>
+          
+          <p class="artists">Hanna Hansdotter</p>
+          
+            <p class="when unconfirmed">Exhibition opens. Reception details not published.</p>
+          
+          <p class="meta">Until 31 October. Bondegatan 70, 116 33 Stockholm</p>
+          <p class="links"><a href="https://steinslandberliner.com/shows/hanna-hansdotter-kalypso-2026" rel="noopener">Gallery page</a><a href="ics/f2690f6559c9.ics">Add to calendar</a></p>
+        </article>
+      
+      </div>
+    </section>
+  
+    <section class="day">
+      <h2>Saturday<span>10 October</span></h2>
+      <div>
+      
+        <article class="ev" data-district="Norrmalm" data-confirmed="1">
+          <p class="venue">Björkholmen Gallery</p>
+          <h3>Anders Widoff</h3>
+          
+          
+          
+            <p class="when">Vernissage 12:00 to 16:00</p>
+          
+          <p class="meta">Until 8 November. Rödbodtorget 2, 111 52 Stockholm</p>
+          <p class="links"><a href="https://bjorkholmengallery.com/exhibition/den-har-dagen-och-den-har-dagen/" rel="noopener">Gallery page</a><a href="ics/834adcc6811a.ics">Add to calendar</a></p>
+        </article>
+      
+      </div>
+    </section>
+  
+    <section class="day">
+      <h2>Thursday<span>15 October</span></h2>
+      <div>
+      
+        <article class="ev" data-district="Norrmalm" data-confirmed="1">
+          <p class="venue">Galleri Magnus Karlsson</p>
+          <h3>Between Hidden and Almost Revealed</h3>
+          
+          <p class="artists">Alejandro Sintura</p>
+          
+            <p class="when">Vernissage 17:00 to 19:00</p>
+          
+          <p class="meta">Until 21 November. Fredsgatan 12, 111 52 Stockholm</p>
+          <p class="links"><a href="https://www.gallerimagnuskarlsson.com/exhibitions/408-alejandro-sintura-between-hidden-and-almost-revealed/" rel="noopener">Gallery page</a><a href="ics/cd19592ae54f.ics">Add to calendar</a></p>
+        </article>
+      
+      </div>
+    </section>
+  
+    <section class="day">
+      <h2>Wednesday<span>21 October</span></h2>
+      <div>
+      
+        <article class="ev" data-district="Östermalm" data-confirmed="0">
+          <p class="venue">Galleri Glas</p>
+          <h3>Tusen sjöars glöd</h3>
+          
+          <p class="artists">Karsikas, Koskinen, Schirm, Suppanen</p>
+          
+            <p class="when unconfirmed">Exhibition opens. Reception details not published.</p>
+          
+          <p class="meta">Until 13 November. Nybrogatan 34, 114 39 Stockholm</p>
+          <p class="links"><a href="https://www.galleriglas.se/exhibitions/82-tusen-sjoars-glod-karsikas-koskinen-schirm-suppanen/overview/" rel="noopener">Gallery page</a><a href="ics/eba1d820963f.ics">Add to calendar</a></p>
+        </article>
+      
+      </div>
+    </section>
+  
+    <section class="day">
+      <h2>Thursday<span>22 October</span></h2>
+      <div>
+      
+        <article class="ev" data-district="Östermalm" data-confirmed="1">
+          <p class="venue">Galleri Hedenius</p>
+          <h3>Juri Markkula: Valv”,</h3>
+          
+          <p class="artists">Juri Markkula</p>
+          
+            <p class="when">Vernissage 17:00 to 19:00</p>
+          
+          <p class="meta">Until 21 November. Sturegatan 36, 114 36 Stockholm</p>
+          <p class="links"><a href="https://www.gallerihedenius.com/" rel="noopener">Gallery page</a><a href="ics/dddff574216c.ics">Add to calendar</a></p>
+        </article>
+      
+      </div>
+    </section>
+  
+    <section class="day">
+      <h2>Friday<span>6 November</span></h2>
+      <div>
+      
+        <article class="ev" data-district="Kungsholmen" data-confirmed="1">
+          <p class="venue">Galleri Helle Knudsen</p>
+          <h3>Våra ...</h3>
+          
+          <p class="artists">Britta Marakatt-Labba, Tomas Colbengtson</p>
+          
+            <p class="when">Vernissage 16:00</p>
+          
+          <p class="meta">Until 5 December. Hantverkargatan 18-20, 112 21 Stockholm</p>
+          <p class="links"><a href="https://gallerihelle.com/blogs/utstallningar/vara-historier" rel="noopener">Gallery page</a><a href="ics/de781fd4d68d.ics">Add to calendar</a></p>
+        </article>
+      
+        <article class="ev" data-district="Norrmalm" data-confirmed="1">
+          <p class="venue">Galleri Magnus Karlsson</p>
+          <h3>Nya målningar / New Paintings</h3>
+          
+          <p class="artists">Anna Bjerger</p>
+          
+            <p class="when">Vernissage 17:00 to 19:00</p>
+          
+          <p class="meta">Until 5 December. Fredsgatan 12, 111 52 Stockholm</p>
+          <p class="links"><a href="https://www.gallerimagnuskarlsson.com/exhibitions/410-anna-bjerger-nya-malningar-new-paintings-the-inner-room-of-the-gallery-galleriets/" rel="noopener">Gallery page</a><a href="ics/8289226dd3ee.ics">Add to calendar</a></p>
+        </article>
+      
+        <article class="ev" data-district="Östermalm" data-confirmed="0">
+          <p class="venue">Galerie Nordenhake</p>
+          <h3>Ayan Farah</h3>
+          
+          
+          
+            <p class="when unconfirmed">Exhibition opens. Reception details not published.</p>
+          
+          <p class="meta">Until 28 November. Lützengatan 1, 115 20 Stockholm</p>
+          <p class="links"><a href="https://nordenhake.com/exhibitions/2026/ayan-farah" rel="noopener">Gallery page</a><a href="ics/a3e63ac6887a.ics">Add to calendar</a></p>
+        </article>
+      
+      </div>
+    </section>
+  
+    <section class="day">
+      <h2>Saturday<span>28 November</span></h2>
+      <div>
+      
+        <article class="ev" data-district="Norrmalm" data-confirmed="0">
+          <p class="venue">Galleri Magnus Karlsson</p>
+          <h3>Hålet i väggen</h3>
+          
+          <p class="artists">Jockum Nordström</p>
+          
+            <p class="when unconfirmed">Exhibition opens. Reception details not published.</p>
+          
+          <p class="meta">Until 23 January. Fredsgatan 12, 111 52 Stockholm</p>
+          <p class="links"><a href="https://www.gallerimagnuskarlsson.com/exhibitions/409-jockum-nordstrom-halet-i-vaggen/" rel="noopener">Gallery page</a><a href="ics/1f6ed3574640.ics">Add to calendar</a></p>
+        </article>
+      
+      </div>
+    </section>
+  
+  <p class="empty" id="none" hidden>No openings match this filter.</p>
+  </main>
+
+  <footer>
+    <p>10 openings, 6 with confirmed reception times. Last updated 8 October 2026, 11:09.</p>
+    <p><a href="events.ics">Subscribe to the calendar</a> · <a href="https://github.com/jollonal/contrarian-fund-site">Source code</a> · Built by <a href="/">Alfred J. Jollon</a></p>
+  </footer>
+</div>
+<script>
+(function () {
+  var district = "", confirmedOnly = false;
+  var btns = document.querySelectorAll(".filters button");
+  var box = document.getElementById("confirmed");
+  function apply() {
+    var shown = 0;
+    document.querySelectorAll(".day").forEach(function (day) {
+      var any = false;
+      day.querySelectorAll(".ev").forEach(function (ev) {
+        var ok = (!district || ev.dataset.district === district) && (!confirmedOnly || ev.dataset.confirmed === "1");
+        ev.hidden = !ok; any = any || ok;
+      });
+      day.hidden = !any; if (any) shown++;
+    });
+    var none = document.getElementById("none");
+    if (none) none.hidden = shown > 0 || !document.querySelector(".day");
+  }
+  btns.forEach(function (b) {
+    b.addEventListener("click", function () {
+      district = b.dataset.district;
+      btns.forEach(function (x) { x.setAttribute("aria-pressed", x === b ? "true" : "false"); });
+      apply();
+    });
+  });
+  if (box) box.addEventListener("change", function () { confirmedOnly = box.checked; apply(); });
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,231 @@
+{
+ "generated_at": "2026-10-08T09:09:57+00:00",
+ "window_days": 60,
+ "venues_tracked": 21,
+ "events": [
+  {
+   "id": "c11bd021df7c",
+   "venue_id": "helle-knudsen",
+   "venue": "Galleri Helle Knudsen",
+   "address": "Hantverkargatan 18-20, 112 21 Stockholm",
+   "district": "Kungsholmen",
+   "title": "Tomas Gustavsson: En plats i solen",
+   "artists": [
+    "Tomas Gustavsson"
+   ],
+   "start_date": "2026-10-08",
+   "end_date": "2026-10-30",
+   "date": "2026-10-08",
+   "opening": {
+    "confirmed": true,
+    "start_time": "17:00",
+    "end_time": null,
+    "text": "Vernissage i konstnärens närvaro, torsdagen den 8 oktober kl. 17-19”, "
+   },
+   "access": "unknown",
+   "url": "https://gallerihelle.com/blogs/aktuell/tomas-gustavsson-en-plats-i-solen"
+  },
+  {
+   "id": "f2690f6559c9",
+   "venue_id": "steinsland-berliner",
+   "venue": "Gallery Steinsland Berliner",
+   "address": "Bondegatan 70, 116 33 Stockholm",
+   "district": "Södermalm",
+   "title": "Hanna Hansdotter Kalypso",
+   "artists": [
+    "Hanna Hansdotter"
+   ],
+   "start_date": "2026-10-09",
+   "end_date": "2026-10-31",
+   "date": "2026-10-09",
+   "opening": {
+    "confirmed": false,
+    "start_time": null,
+    "end_time": null,
+    "text": null
+   },
+   "access": "unknown",
+   "url": "https://steinslandberliner.com/shows/hanna-hansdotter-kalypso-2026"
+  },
+  {
+   "id": "834adcc6811a",
+   "venue_id": "bjorkholmen",
+   "venue": "Björkholmen Gallery",
+   "address": "Rödbodtorget 2, 111 52 Stockholm",
+   "district": "Norrmalm",
+   "title": "Anders Widoff",
+   "artists": [
+    "Anders Widoff"
+   ],
+   "start_date": "2026-10-10",
+   "end_date": "2026-11-08",
+   "date": "2026-10-10",
+   "opening": {
+    "confirmed": true,
+    "start_time": "12:00",
+    "end_time": "16:00",
+    "text": "Opening Saturday 10 October 12-16"
+   },
+   "access": "unknown",
+   "url": "https://bjorkholmengallery.com/exhibition/den-har-dagen-och-den-har-dagen/"
+  },
+  {
+   "id": "cd19592ae54f",
+   "venue_id": "magnus-karlsson",
+   "venue": "Galleri Magnus Karlsson",
+   "address": "Fredsgatan 12, 111 52 Stockholm",
+   "district": "Norrmalm",
+   "title": "Between Hidden and Almost Revealed",
+   "artists": [
+    "Alejandro Sintura"
+   ],
+   "start_date": "2026-10-15",
+   "end_date": "2026-11-21",
+   "date": "2026-10-15",
+   "opening": {
+    "confirmed": true,
+    "start_time": "17:00",
+    "end_time": "19:00",
+    "text": "Vernissage och drink torsdag 15 oktober, 17–19 Reception and drink Thursday October 15, 5–7 pm"
+   },
+   "access": "unknown",
+   "url": "https://www.gallerimagnuskarlsson.com/exhibitions/408-alejandro-sintura-between-hidden-and-almost-revealed/"
+  },
+  {
+   "id": "eba1d820963f",
+   "venue_id": "galleri-glas",
+   "venue": "Galleri Glas",
+   "address": "Nybrogatan 34, 114 39 Stockholm",
+   "district": "Östermalm",
+   "title": "Tusen sjöars glöd",
+   "artists": [
+    "Karsikas",
+    "Koskinen",
+    "Schirm",
+    "Suppanen"
+   ],
+   "start_date": "2026-10-21",
+   "end_date": "2026-11-13",
+   "date": "2026-10-21",
+   "opening": {
+    "confirmed": false,
+    "start_time": null,
+    "end_time": null,
+    "text": null
+   },
+   "access": "unknown",
+   "url": "https://www.galleriglas.se/exhibitions/82-tusen-sjoars-glod-karsikas-koskinen-schirm-suppanen/overview/"
+  },
+  {
+   "id": "dddff574216c",
+   "venue_id": "hedenius",
+   "venue": "Galleri Hedenius",
+   "address": "Sturegatan 36, 114 36 Stockholm",
+   "district": "Östermalm",
+   "title": "Juri Markkula: Valv”,",
+   "artists": [
+    "Juri Markkula"
+   ],
+   "start_date": "2026-10-22",
+   "end_date": "2026-11-21",
+   "date": "2026-10-22",
+   "opening": {
+    "confirmed": true,
+    "start_time": "17:00",
+    "end_time": "19:00",
+    "text": "VERNISSAGE 22 OKTOBER KL. 17 - 19"
+   },
+   "access": "unknown",
+   "url": "https://www.gallerihedenius.com/"
+  },
+  {
+   "id": "de781fd4d68d",
+   "venue_id": "helle-knudsen",
+   "venue": "Galleri Helle Knudsen",
+   "address": "Hantverkargatan 18-20, 112 21 Stockholm",
+   "district": "Kungsholmen",
+   "title": "Våra ...",
+   "artists": [
+    "Britta Marakatt-Labba",
+    "Tomas Colbengtson"
+   ],
+   "start_date": "2026-11-06",
+   "end_date": "2026-12-05",
+   "date": "2026-11-06",
+   "opening": {
+    "confirmed": true,
+    "start_time": "16:00",
+    "end_time": null,
+    "text": "Vernissage: 16–19 (konstnärerna närvarar)', "
+   },
+   "access": "unknown",
+   "url": "https://gallerihelle.com/blogs/utstallningar/vara-historier"
+  },
+  {
+   "id": "8289226dd3ee",
+   "venue_id": "magnus-karlsson",
+   "venue": "Galleri Magnus Karlsson",
+   "address": "Fredsgatan 12, 111 52 Stockholm",
+   "district": "Norrmalm",
+   "title": "Nya målningar / New Paintings",
+   "artists": [
+    "Anna Bjerger"
+   ],
+   "start_date": "2026-11-06",
+   "end_date": "2026-12-05",
+   "date": "2026-11-06",
+   "opening": {
+    "confirmed": true,
+    "start_time": "17:00",
+    "end_time": "19:00",
+    "text": "Vernissage fredag 6 november, 17–19 Reception Friday November 6, 5–7 pm"
+   },
+   "access": "unknown",
+   "url": "https://www.gallerimagnuskarlsson.com/exhibitions/410-anna-bjerger-nya-malningar-new-paintings-the-inner-room-of-the-gallery-galleriets/"
+  },
+  {
+   "id": "a3e63ac6887a",
+   "venue_id": "nordenhake",
+   "venue": "Galerie Nordenhake",
+   "address": "Lützengatan 1, 115 20 Stockholm",
+   "district": "Östermalm",
+   "title": "Ayan Farah",
+   "artists": [
+    "Ayan Farah"
+   ],
+   "start_date": "2026-11-06",
+   "end_date": "2026-11-28",
+   "date": "2026-11-06",
+   "opening": {
+    "confirmed": false,
+    "start_time": null,
+    "end_time": null,
+    "text": null
+   },
+   "access": "unknown",
+   "url": "https://nordenhake.com/exhibitions/2026/ayan-farah"
+  },
+  {
+   "id": "1f6ed3574640",
+   "venue_id": "magnus-karlsson",
+   "venue": "Galleri Magnus Karlsson",
+   "address": "Fredsgatan 12, 111 52 Stockholm",
+   "district": "Norrmalm",
+   "title": "Hålet i väggen",
+   "artists": [
+    "Jockum Nordström"
+   ],
+   "start_date": "2026-11-28",
+   "end_date": "2027-01-23",
+   "date": "2026-11-28",
+   "opening": {
+    "confirmed": false,
+    "start_time": null,
+    "end_time": null,
+    "text": null
+   },
+   "access": "unknown",
+   "url": "https://www.gallerimagnuskarlsson.com/exhibitions/409-jockum-nordstrom-halet-i-vaggen/"
+  }
+ ]
+}

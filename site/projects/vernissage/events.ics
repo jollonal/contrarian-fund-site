@@ -1,0 +1,134 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//contrarian.fund//vernissage//EN
+CALSCALE:GREGORIAN
+X-WR-CALNAME:Stockholm Vernissages
+BEGIN:VTIMEZONE
+TZID:Europe/Stockholm
+BEGIN:DAYLIGHT
+TZOFFSETFROM:+0100
+TZOFFSETTO:+0200
+TZNAME:CEST
+DTSTART:19700329T020000
+RRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=-1SU
+END:DAYLIGHT
+BEGIN:STANDARD
+TZOFFSETFROM:+0200
+TZOFFSETTO:+0100
+TZNAME:CET
+DTSTART:19701025T030000
+RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU
+END:STANDARD
+END:VTIMEZONE
+BEGIN:VEVENT
+UID:c11bd021df7c@contrarian.fund
+DTSTAMP:20261008T090957Z
+DTSTART;TZID=Europe/Stockholm:20261008T170000
+DTEND;TZID=Europe/Stockholm:20261008T190000
+SUMMARY:Vernissage: Tomas Gustavsson: En plats i solen at Galleri Helle Knu
+ dsen
+LOCATION:Hantverkargatan 18-20\, 112 21 Stockholm
+DESCRIPTION:Tomas Gustavsson\nOn view until 2026-10-30.
+URL:https://gallerihelle.com/blogs/aktuell/tomas-gustavsson-en-plats-i-sole
+ n
+END:VEVENT
+BEGIN:VEVENT
+UID:f2690f6559c9@contrarian.fund
+DTSTAMP:20261008T090957Z
+DTSTART;VALUE=DATE:20261009
+DTEND;VALUE=DATE:20261010
+SUMMARY:Opens: Hanna Hansdotter Kalypso at Gallery Steinsland Berliner
+LOCATION:Bondegatan 70\, 116 33 Stockholm
+DESCRIPTION:Hanna Hansdotter\nOn view until 2026-10-31.
+URL:https://steinslandberliner.com/shows/hanna-hansdotter-kalypso-2026
+END:VEVENT
+BEGIN:VEVENT
+UID:834adcc6811a@contrarian.fund
+DTSTAMP:20261008T090957Z
+DTSTART;TZID=Europe/Stockholm:20261010T120000
+DTEND;TZID=Europe/Stockholm:20261010T160000
+SUMMARY:Vernissage: Anders Widoff at Björkholmen Gallery
+LOCATION:Rödbodtorget 2\, 111 52 Stockholm
+DESCRIPTION:Anders Widoff\nOn view until 2026-11-08.
+URL:https://bjorkholmengallery.com/exhibition/den-har-dagen-och-den-har-dag
+ en/
+END:VEVENT
+BEGIN:VEVENT
+UID:cd19592ae54f@contrarian.fund
+DTSTAMP:20261008T090957Z
+DTSTART;TZID=Europe/Stockholm:20261015T170000
+DTEND;TZID=Europe/Stockholm:20261015T190000
+SUMMARY:Vernissage: Between Hidden and Almost Revealed at Galleri Magnus Ka
+ rlsson
+LOCATION:Fredsgatan 12\, 111 52 Stockholm
+DESCRIPTION:Alejandro Sintura\nOn view until 2026-11-21.
+URL:https://www.gallerimagnuskarlsson.com/exhibitions/408-alejandro-sintura
+ -between-hidden-and-almost-revealed/
+END:VEVENT
+BEGIN:VEVENT
+UID:eba1d820963f@contrarian.fund
+DTSTAMP:20261008T090957Z
+DTSTART;VALUE=DATE:20261021
+DTEND;VALUE=DATE:20261022
+SUMMARY:Opens: Tusen sjöars glöd at Galleri Glas
+LOCATION:Nybrogatan 34\, 114 39 Stockholm
+DESCRIPTION:Karsikas\, Koskinen\, Schirm\, Suppanen\nOn view until 2026-11-
+ 13.
+URL:https://www.galleriglas.se/exhibitions/82-tusen-sjoars-glod-karsikas-ko
+ skinen-schirm-suppanen/overview/
+END:VEVENT
+BEGIN:VEVENT
+UID:dddff574216c@contrarian.fund
+DTSTAMP:20261008T090957Z
+DTSTART;TZID=Europe/Stockholm:20261022T170000
+DTEND;TZID=Europe/Stockholm:20261022T190000
+SUMMARY:Vernissage: Juri Markkula: Valv”\, at Galleri Hedenius
+LOCATION:Sturegatan 36\, 114 36 Stockholm
+DESCRIPTION:Juri Markkula\nOn view until 2026-11-21.
+URL:https://www.gallerihedenius.com/
+END:VEVENT
+BEGIN:VEVENT
+UID:de781fd4d68d@contrarian.fund
+DTSTAMP:20261008T090957Z
+DTSTART;TZID=Europe/Stockholm:20261106T160000
+DTEND;TZID=Europe/Stockholm:20261106T180000
+SUMMARY:Vernissage: Våra ... at Galleri Helle Knudsen
+LOCATION:Hantverkargatan 18-20\, 112 21 Stockholm
+DESCRIPTION:Britta Marakatt-Labba\, Tomas Colbengtson\nOn view until 2026-1
+ 2-05.
+URL:https://gallerihelle.com/blogs/utstallningar/vara-historier
+END:VEVENT
+BEGIN:VEVENT
+UID:8289226dd3ee@contrarian.fund
+DTSTAMP:20261008T090957Z
+DTSTART;TZID=Europe/Stockholm:20261106T170000
+DTEND;TZID=Europe/Stockholm:20261106T190000
+SUMMARY:Vernissage: Nya målningar / New Paintings at Galleri Magnus Karlss
+ on
+LOCATION:Fredsgatan 12\, 111 52 Stockholm
+DESCRIPTION:Anna Bjerger\nOn view until 2026-12-05.
+URL:https://www.gallerimagnuskarlsson.com/exhibitions/410-anna-bjerger-nya-
+ malningar-new-paintings-the-inner-room-of-the-gallery-galleriets/
+END:VEVENT
+BEGIN:VEVENT
+UID:a3e63ac6887a@contrarian.fund
+DTSTAMP:20261008T090957Z
+DTSTART;VALUE=DATE:20261106
+DTEND;VALUE=DATE:20261107
+SUMMARY:Opens: Ayan Farah at Galerie Nordenhake
+LOCATION:Lützengatan 1\, 115 20 Stockholm
+DESCRIPTION:Ayan Farah\nOn view until 2026-11-28.
+URL:https://nordenhake.com/exhibitions/2026/ayan-farah
+END:VEVENT
+BEGIN:VEVENT
+UID:1f6ed3574640@contrarian.fund
+DTSTAMP:20261008T090957Z
+DTSTART;VALUE=DATE:20261128
+DTEND;VALUE=DATE:20261129
+SUMMARY:Opens: Hålet i väggen at Galleri Magnus Karlsson
+LOCATION:Fredsgatan 12\, 111 52 Stockholm
+DESCRIPTION:Jockum Nordström\nOn view until 2027-01-23.
+URL:https://www.gallerimagnuskarlsson.com/exhibitions/409-jockum-nordstrom-
+ halet-i-vaggen/
+END:VEVENT
+END:VCALENDAR
