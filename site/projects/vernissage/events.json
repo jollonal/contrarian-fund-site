@@ -1,7 +1,7 @@
 {
- "generated_at": "2026-10-08T11:08:09+00:00",
+ "generated_at": "2026-10-08T21:51:22+00:00",
  "window_days": 60,
- "venues_tracked": 21,
+ "venues_tracked": 41,
  "events": [
   {
    "id": "c11bd021df7c",
@@ -26,7 +26,8 @@
     "text": "Vernissage i konstnärens närvaro, torsdagen den 8 oktober kl. 17-19”, "
    },
    "access": "unknown",
-   "url": "https://gallerihelle.com/blogs/aktuell/tomas-gustavsson-en-plats-i-solen"
+   "url": "https://gallerihelle.com/blogs/aktuell/tomas-gustavsson-en-plats-i-solen",
+   "source": "web"
   },
   {
    "id": "f2690f6559c9",
@@ -51,7 +52,8 @@
     "text": null
    },
    "access": "unknown",
-   "url": "https://steinslandberliner.com/shows/hanna-hansdotter-kalypso-2026"
+   "url": "https://steinslandberliner.com/shows/hanna-hansdotter-kalypso-2026",
+   "source": "web"
   },
   {
    "id": "834adcc6811a",
@@ -76,7 +78,8 @@
     "text": "Opening Saturday 10 October 12-16"
    },
    "access": "unknown",
-   "url": "https://bjorkholmengallery.com/exhibition/den-har-dagen-och-den-har-dagen/"
+   "url": "https://bjorkholmengallery.com/exhibition/den-har-dagen-och-den-har-dagen/",
+   "source": "web"
   },
   {
    "id": "cd19592ae54f",
@@ -101,7 +104,8 @@
     "text": "Vernissage och drink torsdag 15 oktober, 17–19 Reception and drink Thursday October 15, 5–7 pm"
    },
    "access": "unknown",
-   "url": "https://www.gallerimagnuskarlsson.com/exhibitions/408-alejandro-sintura-between-hidden-and-almost-revealed/"
+   "url": "https://www.gallerimagnuskarlsson.com/exhibitions/408-alejandro-sintura-between-hidden-and-almost-revealed/",
+   "source": "web"
   },
   {
    "id": "eba1d820963f",
@@ -129,32 +133,8 @@
     "text": null
    },
    "access": "unknown",
-   "url": "https://www.galleriglas.se/exhibitions/82-tusen-sjoars-glod-karsikas-koskinen-schirm-suppanen/overview/"
-  },
-  {
-   "id": "dddff574216c",
-   "venue_id": "hedenius",
-   "venue": "Galleri Hedenius",
-   "address": "Sturegatan 36, 114 36 Stockholm",
-   "district": "Östermalm",
-   "title": "Juri Markkula: Valv”,",
-   "title_en": null,
-   "gloss": null,
-   "gloss_source": null,
-   "artists": [
-    "Juri Markkula"
-   ],
-   "start_date": "2026-10-22",
-   "end_date": "2026-11-21",
-   "date": "2026-10-22",
-   "opening": {
-    "confirmed": true,
-    "start_time": "17:00",
-    "end_time": "19:00",
-    "text": "VERNISSAGE 22 OKTOBER KL. 17 - 19"
-   },
-   "access": "unknown",
-   "url": "https://www.gallerihedenius.com/"
+   "url": "https://www.galleriglas.se/exhibitions/82-tusen-sjoars-glod-karsikas-koskinen-schirm-suppanen/overview/",
+   "source": "web"
   },
   {
    "id": "de781fd4d68d",
@@ -180,7 +160,8 @@
     "text": "Vernissage: 16–19 (konstnärerna närvarar)', "
    },
    "access": "unknown",
-   "url": "https://gallerihelle.com/blogs/utstallningar/vara-historier"
+   "url": "https://gallerihelle.com/blogs/utstallningar/vara-historier",
+   "source": "web"
   },
   {
    "id": "8289226dd3ee",
@@ -205,7 +186,8 @@
     "text": "Vernissage fredag 6 november, 17–19 Reception Friday November 6, 5–7 pm"
    },
    "access": "unknown",
-   "url": "https://www.gallerimagnuskarlsson.com/exhibitions/410-anna-bjerger-nya-malningar-new-paintings-the-inner-room-of-the-gallery-galleriets/"
+   "url": "https://www.gallerimagnuskarlsson.com/exhibitions/410-anna-bjerger-nya-malningar-new-paintings-the-inner-room-of-the-gallery-galleriets/",
+   "source": "web"
   },
   {
    "id": "a3e63ac6887a",
@@ -230,7 +212,8 @@
     "text": null
    },
    "access": "unknown",
-   "url": "https://nordenhake.com/exhibitions/2026/ayan-farah"
+   "url": "https://nordenhake.com/exhibitions/2026/ayan-farah",
+   "source": "web"
   },
   {
    "id": "1f6ed3574640",
@@ -255,7 +238,8 @@
     "text": null
    },
    "access": "unknown",
-   "url": "https://www.gallerimagnuskarlsson.com/exhibitions/409-jockum-nordstrom-halet-i-vaggen/"
+   "url": "https://www.gallerimagnuskarlsson.com/exhibitions/409-jockum-nordstrom-halet-i-vaggen/",
+   "source": "web"
   }
  ]
 }
