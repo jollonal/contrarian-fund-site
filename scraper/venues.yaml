@@ -7,6 +7,9 @@
 #   headless   Needs Playwright to render before extraction.
 # status: active | paused | excluded
 # opening_text: does the site publish vernissage times in HTML (yes/no)
+# mail_domains: sender domains for newsletters when they differ from the website's.
+#   Newsletters are matched to every venue except excluded ones; newsletter: true
+#   keeps an excluded venue (e.g. one that blocks scrapers) in the newsletter reader.
 
 venues:
 
@@ -167,6 +170,7 @@ venues:
   - id: hedenius
     name: Galleri Hedenius
     homepage: https://www.gallerihedenius.com/
+    mail_domains: [hedenius.se]
     exhibitions_urls:
       - https://www.gallerihedenius.com/utstllningar/currentexhibition
       - https://www.gallerihedenius.com/utstllningar/new-portfolio-item   # upcoming shows
@@ -258,6 +262,7 @@ venues:
   - id: saskia-neuman
     name: Saskia Neuman Gallery
     homepage: https://www.saskianeumangallery.com/
+    mail_domains: [saskianeuman.com]
     exhibitions_urls:
       - https://www.saskianeumangallery.com/
     address: Linnégatan 19, 114 47 Stockholm
@@ -283,6 +288,7 @@ venues:
   - id: coulisse
     name: Coulisse Gallery
     homepage: https://www.coulisse-gallery.com/
+    mail_domains: [coulissegallery.com]
     exhibitions_urls:
       - https://www.coulisse-gallery.com/
     address: Gävlegatan 10 B, 113 30 Stockholm
@@ -293,6 +299,106 @@ venues:
     notes: Fully client-rendered. No exhibitions URL found.
     status: paused
 
+  # ---------- Added from Svenska Galleriförbundet (verified 2026-10-08) ----------
+  - id: anna-bohman
+    name: Anna Bohman Gallery
+    homepage: https://www.annabohmangallery.com/
+    exhibitions_urls:
+      - https://www.annabohmangallery.com/
+      - https://www.annabohmangallery.com/exhibitions
+    address: Karlavägen 15 B, 114 31 Stockholm
+    district: Östermalm
+    type: commercial
+    adapter: squarespace
+    opening_text: no
+    notes: /exhibitions returned HTTP 429 during checks. Crawl slowly.
+    status: active
+
+  - id: hera
+    name: Galleri Hera
+    homepage: https://gallerihera.se/
+    exhibitions_urls:
+      - https://gallerihera.se/
+      - https://gallerihera.se/sasongens-program/
+    address: Hornsgatan 36, 118 20 Stockholm
+    district: Södermalm
+    type: commercial
+    adapter: wordpress
+    opening_text: yes   # "Välkommen på Vernissage Lördag kl. 11.00 -16.00" (weekday, no date)
+    notes: Season programme page lists the whole autumn in mixed Swedish date formats.
+    status: active
+
+  - id: jan-wallmark
+    name: Galleri Jan Wallmark
+    homepage: https://www.janwallmark.se/
+    exhibitions_urls:
+      - https://www.janwallmark.se/vernissage/
+    address: Frihamnsgatan 60, Magasin 6, 115 56 Stockholm
+    district: Frihamnen
+    type: commercial
+    adapter: wordpress
+    opening_text: yes
+    notes: One rolling page mixing years without stating them; some vernissages held off-site.
+    status: active
+
+  - id: susanne-pettersson
+    name: Susanne Pettersson Gallery
+    homepage: https://spgallery.se/
+    exhibitions_urls:
+      - https://spgallery.se/
+      - https://spgallery.se/exhibitions/
+    address: Gävlegatan 10 B, 113 30 Stockholm
+    district: Vasastan
+    type: commercial
+    adapter: wordpress
+    opening_text: no
+    notes: Site looks dormant (archive stops at 2024, contact page errors). Scraped in case it revives; costs an AI call only when a page changes.
+    status: active
+
+  - id: abante
+    name: ABANTE Gallery
+    homepage: https://abantegallery.se/
+    exhibitions_urls:
+      - https://abantegallery.se/
+    mail_domains: [abante.se]
+    address: Hornsgatan 44, 118 21 Stockholm
+    district: Södermalm
+    type: commercial
+    adapter: static
+    opening_text: no
+    notes: Site says closed after 28 years on Hornsgatan (Oct 2026). Homepage scraped in case it revives; costs an AI call only when the page changes.
+    status: active
+
+  - id: ekvall-tornblom
+    name: Galleri Ekvall + Törnblom
+    homepage: https://www.ekvalltornblom.se/
+    exhibitions_urls:
+      - https://www.ekvalltornblom.se/
+    address: Åkersberga 2 b, 184 50 Åkersberga
+    district: Åkersberga
+    type: commercial
+    adapter: wordpress
+    opening_text: no
+    notes: Moved from Hornsgatan 36 to Åkersberga (Österåker, reachable from Stockholm). Site says call before visiting.
+    status: active
+
+  - id: loyal
+    name: Loyal Gallery
+    homepage: https://www.loyalgallery.com/
+    address: Sandgatan 7, 223 50 Lund
+    type: commercial
+    notes: Moved from Odengatan to Lund in March 2026.
+    status: excluded
+
+  - id: ed-art
+    name: ed. art
+    homepage: https://ed-art.se/
+    address: Timmermansgatan 40, 118 55 Stockholm
+    district: Södermalm
+    type: commercial
+    notes: Editions shop and showroom; no exhibition programme.
+    status: excluded
+
   # ---------- Not scraped ----------
   - id: larsen-warner
     name: Larsen / Warner
@@ -300,7 +406,8 @@ venues:
     address: Hudiksvallsgatan 8, 113 30 Stockholm
     district: Vasastan
     type: commercial
-    notes: robots.txt disallows all paths. Newsletter or manual entry only.
+    notes: robots.txt disallows all paths. Newsletter only.
+    newsletter: true
     status: excluded
 
   - id: gsa
@@ -310,6 +417,7 @@ venues:
     district: Vasastan
     type: commercial
     notes: Stockholm page stale since mid-2025. Base is Umeå.
+    city_filter: Stockholm
     status: paused
 
   - id: cornelia-sojdelius

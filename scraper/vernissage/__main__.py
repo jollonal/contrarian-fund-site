@@ -43,6 +43,9 @@ def main() -> int:
     if a.no_fetch:
         found = {v["id"]: [x for u in v.get("exhibitions_urls", [])
                            for x in cache["pages"].get(u, {}).get("result", [])] for v in active}
+        for e in cache.get("mail", {}).values():
+            if e.get("venue"):
+                found.setdefault(e["venue"], []).extend(e.get("result", []))
         llm = None
     else:
         from .pipeline import scrape
@@ -58,6 +61,10 @@ def main() -> int:
             fetcher.close()
         if a.dry_run:
             return 0
+        if not a.only:
+            from .mail import read_newsletters
+            for vid, items in read_newsletters(venues, cache, today, llm).items():
+                found.setdefault(vid, []).extend(items)
         cache_path.write_text(json.dumps(cache, ensure_ascii=False, indent=1, sort_keys=True), encoding="utf-8")
 
     ov_path = ROOT / "overrides.yaml"

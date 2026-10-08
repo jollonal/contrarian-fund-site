@@ -31,6 +31,8 @@ Repository secrets required:
 |---|---|
 | `CLOUDFLARE_API_TOKEN` | API token with Cloudflare Pages Edit, Workers AI Read, Workers AI Edit |
 | `CLOUDFLARE_ACCOUNT_ID` | Cloudflare account ID |
+| `GMAIL_ADDRESS` | Inbox that receives the gallery newsletters |
+| `GMAIL_APP_PASSWORD` | Gmail app password for that inbox |
 
 The same Cloudflare token also calls Workers AI (`@cf/meta/llama-3.3-70b-instruct-fp8-fast`, JSON mode). It needs Workers AI Read and Edit in addition to Pages Edit. The free allocation is 10,000 neurons a day; a run is capped at 35 model calls, so a first run may take two nights to fill the cache.
 
@@ -44,6 +46,12 @@ python -m vernissage --dry-run            # fetch only, report page sizes
 CF_ACCOUNT_ID=<id> CF_API_TOKEN=<token> python -m vernissage
 python -m vernissage --no-fetch           # rebuild page from cache
 ```
+
+## Gallery newsletters
+
+Many galleries announce vernissage times only by email. The nightly run reads the Gmail label `vernissage` over IMAP (read-only, with an app password stored as `GMAIL_ADDRESS` and `GMAIL_APP_PASSWORD` secrets), matches each email to a gallery by sender domain (`mail_domains` in `venues.yaml`) or gallery name, and extracts exhibitions with the same model call as the web pages. A newsletter's opening time is merged into the website's listing of the same show.
+
+Because the repo and its logs are public, nothing from an email is logged or committed except the extracted exhibition facts: message ids are hashed, and senders, subjects and links are dropped. Events found only by email link to the gallery's homepage.
 
 ## English titles
 

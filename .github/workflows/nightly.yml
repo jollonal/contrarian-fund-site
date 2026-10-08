@@ -45,6 +45,8 @@ jobs:
         env:
           CF_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
           CF_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          GMAIL_ADDRESS: ${{ secrets.GMAIL_ADDRESS }}
+          GMAIL_APP_PASSWORD: ${{ secrets.GMAIL_APP_PASSWORD }}
           REPO_URL: ${{ github.server_url }}/${{ github.repository }}
         run: |
           if [ "${{ github.event_name }}" = "push" ]; then

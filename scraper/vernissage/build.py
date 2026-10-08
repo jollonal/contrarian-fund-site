@@ -73,6 +73,36 @@ def english_title(title: str, title_en, gloss, overrides: dict | None = None):
     return None, g, "machine"
 
 
+def same_show(a: dict, b: dict) -> bool:
+    """The same exhibition seen twice (website and newsletter, or two pages of one site):
+    same gallery, same start (or opening) date, and a shared artist or overlapping title."""
+    if a["venue_id"] != b["venue_id"]:
+        return False
+    if (a["start_date"] or a["date"]) != (b["start_date"] or b["date"]):
+        return False
+    arts = lambda e: {x.lower() for x in e["artists"]}
+    if arts(a) & arts(b):
+        return True
+    ta, tb = _slug(a["title"]), _slug(b["title"])
+    return bool(ta and tb) and (ta in tb or tb in ta)
+
+
+def merge_events(a: dict, b: dict) -> dict:
+    """Keep the website's title and link; take a confirmed opening from whichever has one."""
+    web, other = (a, b) if a.get("source") != "newsletter" or b.get("source") == "newsletter" else (b, a)
+    out = dict(web)
+    out["artists"] = sorted(set(a["artists"]) | set(b["artists"]))
+    if not web["opening"]["confirmed"] and other["opening"]["confirmed"]:
+        out["opening"] = other["opening"]
+        out["date"] = other["date"]
+    if out["access"] == "unknown":
+        out["access"] = other["access"]
+    out["end_date"] = out["end_date"] or other["end_date"]
+    if a.get("source") != b.get("source"):
+        out["source"] = "web+newsletter"
+    return out
+
+
 def normalize(found: dict[str, list[dict]], venues: list[dict], today: dt.date, window: int,
               overrides: dict | None = None):
     """Return (events, review). Events are deduped, in-window, sorted."""
@@ -138,12 +168,14 @@ def normalize(found: dict[str, list[dict]], venues: list[dict], today: dt.date, 
                 },
                 "access": x.get("access") if x.get("access") in ("public", "invite") else "unknown",
                 "url": x.get("detail_url") or v["homepage"],
+                "source": "newsletter" if x.get("source") == "newsletter" else "web",
             }
-            prev = merged.get(ev["id"])
-            if prev is None or (ev["opening"]["confirmed"] and not prev["opening"]["confirmed"]):
-                if prev:
-                    ev["artists"] = sorted(set(prev["artists"]) | set(ev["artists"]))
+            prev_id = ev["id"] if ev["id"] in merged else next(
+                (k for k, e in merged.items() if same_show(e, ev)), None)
+            if prev_id is None:
                 merged[ev["id"]] = ev
+            else:
+                merged[prev_id] = merge_events(merged[prev_id], ev)
 
     events = sorted(merged.values(), key=lambda e: (e["date"], e["opening"]["start_time"] or "99", e["venue"]))
     return events, review
