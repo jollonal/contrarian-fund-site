@@ -14,7 +14,14 @@ MODEL = os.environ.get("LLM_MODEL", "@cf/meta/llama-3.3-70b-instruct-fp8-fast")
 ENDPOINT = f"https://api.cloudflare.com/client/v4/accounts/{ACCOUNT_ID}/ai/run/{MODEL}"
 # About 250 neurons per listing call on this model, so ~35 calls stays inside the free 10,000.
 # A first run may need two nights to fill the cache; after that only changed pages cost anything.
-MAX_CALLS = int(os.environ.get("LLM_MAX_CALLS", "35"))
+MAX_CALLS = int(os.environ.get("LLM_MAX_CALLS", "200"))  # backstop only; the neuron budget governs
+# Free Workers AI allocation is 10,000 neurons per UTC day. Stop each run at this many.
+NEURON_BUDGET = int(os.environ.get("LLM_NEURON_BUDGET", "9500"))
+# Published rates for llama-3.3-70b-instruct-fp8-fast, neurons per million tokens.
+# Update both if LLM_MODEL changes.
+NEURONS_PER_M_IN = 26_668
+NEURONS_PER_M_OUT = 204_805
+RESERVE = 400  # headroom kept for the next call (about 4,000 tokens in, 1,500 out)
 SPACING = 1.0
 
 PROMPT_VERSION = "2026-10-09.2"  # bump to invalidate cached extractions
@@ -111,16 +118,35 @@ class LLM:
     def __init__(self) -> None:
         self.token = API_TOKEN if ACCOUNT_ID else ""
         self.calls = 0
+        self.neurons = 0.0
         self.exhausted = False
         self._last = 0.0
 
     @property
     def available(self) -> bool:
-        return bool(self.token) and not self.exhausted and self.calls < MAX_CALLS
+        return (bool(self.token) and not self.exhausted and self.calls < MAX_CALLS
+                and self.neurons + RESERVE <= NEURON_BUDGET)
+
+    def _why_unavailable(self) -> str:
+        if not self.token:
+            return "no credentials"
+        if self.exhausted:
+            return "daily allocation used"
+        return f"run budget reached ({self.neurons:,.0f} of {NEURON_BUDGET:,} neurons, {self.calls} calls)"
+
+    def _charge(self, data, prompt: str, reply) -> None:
+        """Add this call's neurons, from the token counts Workers AI returns (else a length estimate)."""
+        result = data.get("result") if isinstance(data, dict) else None
+        usage = (result.get("usage") if isinstance(result, dict) else None) or {}
+        tin = usage.get("prompt_tokens") or len(prompt) / 3.5
+        tout = usage.get("completion_tokens")
+        if tout is None:
+            tout = len(json.dumps(reply, ensure_ascii=False)) / 3.5 if reply else 0
+        self.neurons += tin * NEURONS_PER_M_IN / 1e6 + tout * NEURONS_PER_M_OUT / 1e6
 
     def json(self, system: str, user: str, max_tokens: int = 2500) -> dict:
         if not self.available:
-            raise LLMUnavailable("no credentials, daily allocation used, or run budget reached")
+            raise LLMUnavailable(self._why_unavailable())
         schema = DETAIL_SCHEMA if "EXCERPTS:" in user else LISTING_SCHEMA
         use_schema = True
         for attempt in range(3):
@@ -145,6 +171,8 @@ class LLM:
                 data = r.json()
             except ValueError:
                 raise LLMUnavailable(f"HTTP {r.status_code}, non-JSON body: {r.text[:200]!r}")
+            if r.ok:
+                self._charge(data, system + user, (data.get("result") or {}).get("response"))
 
             if r.status_code == 429 or "neuron" in r.text.lower() and r.status_code >= 400:
                 self.exhausted = True  # daily free allocation used; stop calling until tomorrow

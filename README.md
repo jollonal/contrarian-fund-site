@@ -34,7 +34,7 @@ Repository secrets required:
 | `GMAIL_ADDRESS` | Inbox that receives the gallery newsletters |
 | `GMAIL_APP_PASSWORD` | Gmail app password for that inbox |
 
-The same Cloudflare token also calls Workers AI (`@cf/meta/llama-3.3-70b-instruct-fp8-fast`, JSON mode). It needs Workers AI Read and Edit in addition to Pages Edit. The free allocation is 10,000 neurons a day; a run is capped at 35 model calls, so a first run may take two nights to fill the cache.
+The same Cloudflare token also calls Workers AI (`@cf/meta/llama-3.3-70b-instruct-fp8-fast`, JSON mode). It needs Workers AI Read and Edit in addition to Pages Edit. The free allocation is 10,000 neurons per UTC day. Each run counts the neurons it spends (from the token counts Workers AI returns) and stops at 9,500 (`LLM_NEURON_BUDGET`). At roughly 110 neurons per call, that is about 85 calls; once pages are cached, a typical night needs only a few.
 
 ## Local use
 

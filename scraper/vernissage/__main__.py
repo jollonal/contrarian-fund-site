@@ -73,9 +73,9 @@ def main() -> int:
     (ROOT / "state" / "glosses.md").write_text(gloss_report(events), encoding="utf-8")
     (ROOT / "state" / "review.json").write_text(json.dumps(review, ensure_ascii=False, indent=1), encoding="utf-8")
     write_outputs(events, venues, SITE, today, a.window, os.environ.get("REPO_URL"))
-    log.info("%d events (%d confirmed openings), %d for review, %s LLM calls",
+    log.info("%d events (%d confirmed openings), %d for review, %s LLM calls, ~%s neurons",
              len(events), sum(e["opening"]["confirmed"] for e in events), len(review),
-             llm.calls if llm else 0)
+             llm.calls if llm else 0, f"{llm.neurons:,.0f}" if llm else 0)
     return 0
 
 

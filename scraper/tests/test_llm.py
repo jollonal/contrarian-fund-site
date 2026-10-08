@@ -57,3 +57,32 @@ def test_non_json_body_and_quota(monkeypatch):
     with pytest.raises(L.LLMUnavailable):
         m.json("s", "x")
     assert m.exhausted and not m.available
+
+
+def ok(usage=None):
+    result = {"response": {"exhibitions": []}}
+    if usage:
+        result["usage"] = usage
+    return Resp(200, {"success": True, "result": result})
+
+
+def test_neurons_counted_from_usage(monkeypatch):
+    m, _ = make(monkeypatch, [ok({"prompt_tokens": 2000, "completion_tokens": 300})])
+    m.json("s", "u")
+    assert abs(m.neurons - (2000 * 26668 + 300 * 204805) / 1e6) < 0.01
+
+
+def test_neurons_estimated_without_usage(monkeypatch):
+    m, _ = make(monkeypatch, [ok()])
+    m.json("s", "x" * 3500)
+    assert 25 < m.neurons < 40
+
+
+def test_stops_at_neuron_budget(monkeypatch):
+    monkeypatch.setattr(L, "NEURON_BUDGET", 1000)
+    big = {"prompt_tokens": 4000, "completion_tokens": 1000}   # about 312 neurons a call
+    m, calls = make(monkeypatch, [ok(big), ok(big), ok(big), ok(big)])
+    m.json("s", "u"); m.json("s", "u")
+    assert not m.available and len(calls) == 2
+    with pytest.raises(L.LLMUnavailable, match="run budget reached"):
+        m.json("s", "u")
