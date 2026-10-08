@@ -2,7 +2,7 @@ BEGIN:VCALENDAR
 VERSION:2.0
 PRODID:-//contrarian.fund//vernissage//EN
 CALSCALE:GREGORIAN
-X-WR-CALNAME:Hålet i väggen
+X-WR-CALNAME:den här dagen. Och den här dagen.
 BEGIN:VTIMEZONE
 TZID:Europe/Stockholm
 BEGIN:DAYLIGHT
@@ -21,15 +21,15 @@ RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU
 END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
-UID:1f6ed3574640@contrarian.fund
+UID:11ac02581fe4@contrarian.fund
 DTSTAMP:20261008T222253Z
-DTSTART;VALUE=DATE:20261128
-DTEND;VALUE=DATE:20261129
-SUMMARY:Opens: Hålet i väggen [The Hole in the Wall] at Galleri Magnus Ka
- rlsson
-LOCATION:Fredsgatan 12\, 111 52 Stockholm
-DESCRIPTION:Jockum Nordström\nOn view until 2027-01-23.
-URL:https://www.gallerimagnuskarlsson.com/exhibitions/409-jockum-nordstrom-
- halet-i-vaggen/
+DTSTART;TZID=Europe/Stockholm:20261010T120000
+DTEND;TZID=Europe/Stockholm:20261010T160000
+SUMMARY:Vernissage: den här dagen. Och den här dagen. [this day and this 
+ day] at Björkholmen Gallery
+LOCATION:Rödbodtorget 2\, 111 52 Stockholm
+DESCRIPTION:Anders Widoff\nOn view until 2026-11-08.
+URL:https://bjorkholmengallery.com/exhibition/den-har-dagen-och-den-har-dag
+ en/
 END:VEVENT
 END:VCALENDAR

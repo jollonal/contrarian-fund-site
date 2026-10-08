@@ -22,10 +22,10 @@ END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
 UID:de781fd4d68d@contrarian.fund
-DTSTAMP:20261008T215613Z
+DTSTAMP:20261008T222253Z
 DTSTART;TZID=Europe/Stockholm:20261106T160000
 DTEND;TZID=Europe/Stockholm:20261106T190000
-SUMMARY:Vernissage: Våra ... at Galleri Helle Knudsen
+SUMMARY:Vernissage: Våra ... [Our ...”\,] at Galleri Helle Knudsen
 LOCATION:Hantverkargatan 18-20\, 112 21 Stockholm
 DESCRIPTION:Britta Marakatt-Labba\, Tomas Colbengtson\nOn view until 2026-1
  2-05.

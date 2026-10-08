@@ -12,7 +12,7 @@
    }
   },
   "https://gallerihelle.com/blogs/utstallningar/vara-historier": {
-   "hash": "787ba3f91624f3b6",
+   "hash": "a87d2560791bf6c4",
    "result": {
     "access": "unknown",
     "opening": {
@@ -23,11 +23,11 @@
    }
   },
   "https://nordenhake.com/exhibitions/2026/ayan-farah": {
-   "hash": "d7045d2018073d6b",
+   "hash": "bde60860ee163d47",
    "result": null
   },
   "https://nordenhake.com/exhibitions/2026/paul-faegerskioeld": {
-   "hash": "57a62018bf85de41",
+   "hash": "817789251c85b37a",
    "result": {
     "access": "unknown",
     "opening": {
@@ -38,15 +38,15 @@
    }
   },
   "https://steinslandberliner.com/shows/hanna-hansdotter-kalypso-2026": {
-   "hash": "37fd9cc3d05c39ac",
+   "hash": "d6755a6521a85247",
    "result": null
   },
   "https://www.galleriglas.se/exhibitions/82-tusen-sjoars-glod-karsikas-koskinen-schirm-suppanen/overview/": {
-   "hash": "b34168f87d7f0757",
+   "hash": "1b799556cf325a36",
    "result": null
   },
   "https://www.gallerimagnuskarlsson.com/exhibitions/409-jockum-nordstrom-halet-i-vaggen/": {
-   "hash": "95cb24666e795cae",
+   "hash": "91ccfb65d2603745",
    "result": null
   },
   "https://www.saskianeumangallery.com/fairs/artissima": {
@@ -54,10 +54,17 @@
    "result": null
   }
  },
+ "mail": {
+  "b3214588986a9b82": {
+   "date": "2026-10-08",
+   "result": [],
+   "venue": null
+  }
+ },
  "pages": {
   "https://belenius.com/": {
-   "hash": "c51cff8b9f8ba948",
-   "ok_at": "2026-10-08T09:05:33+00:00",
+   "hash": "2b83ba01ef3ea89c",
+   "ok_at": "2026-10-08T22:09:21+00:00",
    "result": [
     {
      "artists": [
@@ -75,13 +82,15 @@
       "text": "Opening Thursday 01.10 at 6 – 8 PM"
      },
      "start_date": "2026-10-02",
-     "title": "Parallella världar"
+     "title": "Parallella världar",
+     "title_en": null,
+     "title_gloss": "Parallel worlds"
     }
    ]
   },
   "https://belenius.com/exhibitions/": {
-   "hash": "03b7eddcaf72707e",
-   "ok_at": "2026-10-08T09:05:39+00:00",
+   "hash": "7f80a68ec05087c5",
+   "ok_at": "2026-10-08T22:09:27+00:00",
    "result": [
     {
      "artists": [
@@ -99,15 +108,18 @@
       "text": null
      },
      "start_date": "2026-10-02",
-     "title": "Parallella världar Jan Manker"
+     "title": "Parallella världar",
+     "title_en": null,
+     "title_gloss": "Parallel worlds"
     }
    ]
   },
   "https://bjorkholmengallery.com/exhibitions/": {
-   "hash": "6920e7f0d0247712",
-   "ok_at": "2026-10-08T09:07:04+00:00",
+   "hash": "b96718db3d59be41",
+   "ok_at": "2026-10-08T22:12:33+00:00",
    "result": [
     {
+     "access": "public",
      "artists": [
       "Anders Widoff"
      ],
@@ -123,15 +135,18 @@
       "text": "Opening Saturday 10 October 12-16"
      },
      "start_date": "2026-10-10",
-     "title": "Anders Widoff"
+     "title": "den här dagen. Och den här dagen.",
+     "title_en": null,
+     "title_gloss": "this day and this day"
     }
    ]
   },
   "https://chgallery.se/exhibitions/": {
-   "hash": "6a0922ee5fbb23b4",
-   "ok_at": "2026-10-08T09:06:24+00:00",
+   "hash": "3f6690f4d872cd68",
+   "ok_at": "2026-10-08T22:10:13+00:00",
    "result": [
     {
+     "access": "public",
      "artists": [
       "Linnea Rygaard"
      ],
@@ -147,9 +162,12 @@
       "text": null
      },
      "start_date": "2026-10-01",
-     "title": "Linnea Rygaard – Area 51"
+     "title": "Area 51",
+     "title_en": null,
+     "title_gloss": null
     },
     {
+     "access": "public",
      "artists": [
       "David Molander"
      ],
@@ -165,38 +183,22 @@
       "text": null
      },
      "start_date": "2026-10-01",
-     "title": "David Molander – Hjärtat med vänner"
+     "title": "Hjärtat med vänner",
+     "title_en": null,
+     "title_gloss": "Heart with Friends"
     }
    ]
   },
   "https://gallerihelle.com/blogs/aktuell": {
-   "hash": "8d5a0b305b9e9c06",
-   "ok_at": "2026-10-08T09:07:49+00:00",
+   "hash": "2ac4ccacde31a5c5",
+   "ok_at": "2026-10-08T22:13:52+00:00",
    "result": [
-    {
-     "access": "unknown",
-     "artists": [
-      "Tomas Gustavsson"
-     ],
-     "city": null,
-     "confidence": 1,
-     "detail_url": "https://gallerihelle.com/blogs/aktuell/tomas-gustavsson-en-plats-i-solen",
-     "end_date": "2026-10-30",
-     "kind": "exhibition",
-     "opening": {
-      "date": "2026-10-08",
-      "start_time": "17:00",
-      "text": "Vernissage i konstnärens närvaro, torsdagen den 8 oktober kl. 17-19”, "
-     },
-     "start_date": "2026-10-08",
-     "title": "Tomas Gustavsson: En plats i solen"
-    },
     {
      "artists": [
       "Ida Westberg"
      ],
      "city": null,
-     "confidence": 0,
+     "confidence": 1,
      "detail_url": "https://gallerihelle.com/blogs/aktuell/ida-westberg-nar-dagarna-ar-langa",
      "end_date": "2026-10-10",
      "kind": "exhibition",
@@ -207,13 +209,35 @@
       "text": null
      },
      "start_date": "2026-09-10",
-     "title": "Ida Westberg: När dagarna är långa"
+     "title": "Ida Westberg: När dagarna är långa",
+     "title_en": null,
+     "title_gloss": "Ida Westberg: When the days are long”, "
+    },
+    {
+     "artists": [
+      "Tomas Gustavsson"
+     ],
+     "city": null,
+     "confidence": 1,
+     "detail_url": "https://gallerihelle.com/blogs/aktuell/tomas-gustavsson-en-plats-i-solen",
+     "end_date": "2026-10-30",
+     "kind": "exhibition",
+     "opening": {
+      "date": null,
+      "end_time": null,
+      "start_time": null,
+      "text": null
+     },
+     "start_date": "2026-10-08",
+     "title": "Tomas Gustavsson: En plats i solen",
+     "title_en": null,
+     "title_gloss": "Tomas Gustavsson: A place in the sun"
     }
    ]
   },
   "https://gallerihelle.com/blogs/utstallningar": {
-   "hash": "b0a74cd9fdec7db7",
-   "ok_at": "2026-10-08T09:07:53+00:00",
+   "hash": "d16dfa0e1b881301",
+   "ok_at": "2026-10-08T22:13:59+00:00",
    "result": [
     {
      "access": "unknown",
@@ -232,18 +256,20 @@
       "text": "Vernissage: 16–19 (konstnärerna närvarar)', "
      },
      "start_date": "2026-11-06",
-     "title": "Våra ..."
+     "title": "Våra ...",
+     "title_en": null,
+     "title_gloss": "Our ...”, "
     }
    ]
   },
   "https://gerdmangallery.com/exhibitions/": {
-   "hash": "1b16a14eacd498d0",
-   "ok_at": "2026-10-08T09:06:07+00:00",
+   "hash": "fc2e07adb82d7da1",
+   "ok_at": "2026-10-08T22:09:54+00:00",
    "result": []
   },
   "https://kostyal.com/": {
-   "hash": "270c4e14b98bb38d",
-   "ok_at": "2026-10-08T09:09:56+00:00",
+   "hash": "091f91d3e51ed94a",
+   "ok_at": "2026-10-08T22:16:17+00:00",
    "result": [
     {
      "artists": [
@@ -261,7 +287,9 @@
       "text": null
      },
      "start_date": "2026-04-25",
-     "title": "Dire Straits"
+     "title": "Dire Straits",
+     "title_en": null,
+     "title_gloss": null
     },
     {
      "artists": [
@@ -279,14 +307,33 @@
       "text": null
      },
      "start_date": "2026-04-25",
-     "title": "Between Hand & Mouth"
+     "title": "Between Hand & Mouth",
+     "title_en": null,
+     "title_gloss": null
     }
    ]
   },
   "https://nordenhake.com/exhibitions": {
-   "hash": "31dcd6d7960c7a00",
-   "ok_at": "2026-10-08T09:09:14+00:00",
+   "hash": "59d6716c0829798f",
+   "ok_at": "2026-10-08T22:15:30+00:00",
    "result": [
+    {
+     "city": "Berlin",
+     "confidence": 1,
+     "detail_url": "https://nordenhake.com/exhibitions/2026/inaugural-group-exhibition-opening-our-new-location-at-goethestrasse-2-3",
+     "end_date": "2026-10-24",
+     "kind": "exhibition",
+     "opening": {
+      "date": null,
+      "end_time": null,
+      "start_time": null,
+      "text": null
+     },
+     "start_date": "2026-09-10",
+     "title": "Symptoms: Inaugural group exhibition at our new space at Goethestraße 2–3",
+     "title_en": null,
+     "title_gloss": null
+    },
     {
      "artists": [
       "Mirosław Bałka",
@@ -318,7 +365,9 @@
       "text": null
      },
      "start_date": "2026-09-10",
-     "title": "Symptoms: Inaugural group exhibition at our new space at Goethestraße 2–3"
+     "title": "Symptoms: Inaugural group exhibition at our new space at Goethestraße 2–3",
+     "title_en": null,
+     "title_gloss": null
     },
     {
      "artists": [
@@ -336,7 +385,9 @@
       "text": null
      },
      "start_date": "2026-10-01",
-     "title": "BEING"
+     "title": "BEING",
+     "title_en": null,
+     "title_gloss": null
     },
     {
      "artists": [
@@ -354,7 +405,9 @@
       "text": null
      },
      "start_date": "2026-09-03",
-     "title": "No es un poema, aunque soñemos muchas cosas"
+     "title": "No es un poema, aunque soñemos muchas cosas",
+     "title_en": null,
+     "title_gloss": "It's not a poem, although we dream many things"
     },
     {
      "access": "unknown",
@@ -372,7 +425,9 @@
       "text": "Opening: November 20, 6–8 pm”, "
      },
      "start_date": "2026-11-21",
-     "title": "Paul Fägerskiöld"
+     "title": "Paul Fägerskiöld",
+     "title_en": null,
+     "title_gloss": null
     },
     {
      "artists": [
@@ -390,18 +445,20 @@
       "text": null
      },
      "start_date": "2026-11-06",
-     "title": "Ayan Farah"
+     "title": "Ayan Farah",
+     "title_en": null,
+     "title_gloss": null
     }
    ]
   },
   "https://stancegallery.com/exhibitions/": {
-   "hash": "e797ccfc538762a0",
-   "ok_at": "2026-10-08T09:06:12+00:00",
+   "hash": "5c7c6579662a6a62",
+   "ok_at": "2026-10-08T22:10:00+00:00",
    "result": []
   },
   "https://steinslandberliner.com/shows": {
-   "hash": "2f8e7ae18565cae5",
-   "ok_at": "2026-10-08T09:08:16+00:00",
+   "hash": "f9d5e3ebc01af1a4",
+   "ok_at": "2026-10-08T22:14:23+00:00",
    "result": [
     {
      "artists": [
@@ -419,7 +476,29 @@
       "text": null
      },
      "start_date": "2026-10-09",
-     "title": "Hanna Hansdotter Kalypso"
+     "title": "Kalypso",
+     "title_en": null,
+     "title_gloss": null
+    },
+    {
+     "artists": [
+      "Ylva Carlgren"
+     ],
+     "city": null,
+     "confidence": 1,
+     "detail_url": "https://steinslandberliner.com/shows/ylva-carlgren-chart-art-fair-2026",
+     "end_date": "2026-08-30",
+     "kind": "fair",
+     "opening": {
+      "date": null,
+      "end_time": null,
+      "start_time": null,
+      "text": null
+     },
+     "start_date": "2026-08-27",
+     "title": "CHART Art Fair 2026",
+     "title_en": null,
+     "title_gloss": null
     },
     {
      "artists": [
@@ -437,13 +516,15 @@
       "text": null
      },
      "start_date": "2026-08-21",
-     "title": "Ragnar Persson Jag och mina demoner"
+     "title": "Jag och mina demoner",
+     "title_en": null,
+     "title_gloss": "Me and my demons"
     }
    ]
   },
   "https://www.andrehn-schiptjenko.com/exhibitions/current/": {
-   "hash": "abd7bceacd558aa7",
-   "ok_at": "2026-10-08T09:05:17+00:00",
+   "hash": "f91dc5c19001bfac",
+   "ok_at": "2026-10-08T22:09:02+00:00",
    "result": [
     {
      "artists": [
@@ -461,9 +542,12 @@
       "text": null
      },
      "start_date": "2026-09-05",
-     "title": "NATURAL HISTORY"
+     "title": "NATURAL HISTORY",
+     "title_en": null,
+     "title_gloss": null
     },
     {
+     "access": "public",
      "artists": [
       "Omid Delafrouz"
      ],
@@ -479,22 +563,21 @@
       "text": "The exhibition opens on Thursday 1 October between 17:00 and 20:00."
      },
      "start_date": "2026-10-01",
-     "title": "Terra Nullius"
+     "title": "Terra Nullius",
+     "title_en": null,
+     "title_gloss": null
     }
    ]
   },
   "https://www.andrehn-schiptjenko.com/exhibitions/forthcoming/": {
-   "hash": "5fd50ad3ebdb5077",
-   "ok_at": "2026-10-08T09:05:23+00:00",
+   "hash": "3d38339de6fb7c4e",
+   "ok_at": "2026-10-08T22:09:11+00:00",
    "result": [
     {
-     "artists": [
-      "Annika Elisabeth von Hausswolff"
-     ],
      "city": "Paris",
      "confidence": 1,
      "detail_url": "https://www.andrehn-schiptjenko.com/exhibitions/142-annika-elisabeth-von-hausswolff-a-song-for-paris/",
-     "end_date": "2027-11-21",
+     "end_date": "2026-11-20",
      "kind": "exhibition",
      "opening": {
       "date": "2026-10-17",
@@ -503,13 +586,40 @@
       "text": "The opening will take place in the presence of the artist on Saturday 17 October, from 5pm to 8pm."
      },
      "start_date": "2026-10-17",
-     "title": "A Song for Europe"
+     "title": "A Song for Europe",
+     "title_en": null,
+     "title_gloss": null
+    },
+    {
+     "artists": [
+      "Annika Elisabeth von Hausswolff"
+     ],
+     "city": null,
+     "confidence": 0,
+     "detail_url": null,
+     "end_date": null,
+     "kind": "exhibition",
+     "opening": {
+      "date": null,
+      "end_time": null,
+      "start_time": null,
+      "text": null
+     },
+     "start_date": null,
+     "title": "Annika Elisabeth von Hausswolff - A Song for Europe Paris 17 Oct - 20 Nov 2026",
+     "title_en": null,
+     "title_gloss": null
     }
    ]
   },
+  "https://www.annabohmangallery.com/": {
+   "hash": "f4b2b7f8fc23f5c2",
+   "ok_at": "2026-10-08T22:16:21+00:00",
+   "result": []
+  },
   "https://www.berggallery.se/exhibitions/": {
-   "hash": "1595bf602f429a5c",
-   "ok_at": "2026-10-08T09:06:39+00:00",
+   "hash": "20230f6f984c1288",
+   "ok_at": "2026-10-08T22:10:32+00:00",
    "result": [
     {
      "artists": [
@@ -524,10 +634,12 @@
       "date": null,
       "end_time": null,
       "start_time": null,
-      "text": null
+      "text": "We are pleased to present Alice Máselníková’s second solo exhibition at Berg Gallery, titled And the Wild Birds Will Carry Us ."
      },
      "start_date": "2026-10-01",
-     "title": "Alice Máselníková | And the Wild Birds Will Carry Us"
+     "title": "And the Wild Birds Will Carry Us",
+     "title_en": null,
+     "title_gloss": null
     },
     {
      "artists": [
@@ -542,16 +654,18 @@
       "date": null,
       "end_time": null,
       "start_time": null,
-      "text": null
+      "text": "Kristina Riska is one of the most significant contemporary ceramic artists in the Nordic countries, and a long-standing member of the Arabia Art Department Society."
      },
      "start_date": "2026-10-01",
-     "title": "Kristina Riska | Parallel"
+     "title": "Parallel",
+     "title_en": null,
+     "title_gloss": null
     }
    ]
   },
   "https://www.carlingdalenson.com/exhibitions": {
-   "hash": "fa7e58b75dc918ce",
-   "ok_at": "2026-10-08T09:08:28+00:00",
+   "hash": "71dc283a4d8d4448",
+   "ok_at": "2026-10-08T22:14:38+00:00",
    "result": [
     {
      "artists": [
@@ -569,18 +683,40 @@
       "text": null
      },
      "start_date": "2026-09-22",
-     "title": "Erwin Wurm Mind Bubbles & More"
+     "title": "Mind Bubbles & More",
+     "title_en": null,
+     "title_gloss": null
+    },
+    {
+     "artists": [
+      "Philip Smith"
+     ],
+     "city": null,
+     "confidence": 0,
+     "detail_url": "https://www.carlingdalenson.com/exhibitions/philip-smith-dream-maps",
+     "end_date": null,
+     "kind": "exhibition",
+     "opening": {
+      "date": null,
+      "end_time": null,
+      "start_time": null,
+      "text": null
+     },
+     "start_date": null,
+     "title": "Dream Maps",
+     "title_en": null,
+     "title_gloss": null
     }
    ]
   },
   "https://www.cfhill.com/exhibitions": {
-   "hash": "6c86347d6b87860f",
-   "ok_at": "2026-10-08T09:09:29+00:00",
+   "hash": "a96877c7e71999a9",
+   "ok_at": "2026-10-08T22:15:44+00:00",
    "result": []
   },
   "https://www.galleriduerr.com/exhibitions/current/": {
-   "hash": "89b3c2432870d9e5",
-   "ok_at": "2026-10-08T09:06:02+00:00",
+   "hash": "f639b0ab938e03e4",
+   "ok_at": "2026-10-08T22:09:49+00:00",
    "result": [
     {
      "artists": [
@@ -598,13 +734,15 @@
       "text": null
      },
      "start_date": "2026-10-01",
-     "title": "Terra / Terratorium. Öar av makt – Landskap av tid"
+     "title": "Terra / Terratorium. Öar av makt – Landskap av tid",
+     "title_en": "Islands of Power, Landscapes of Time",
+     "title_gloss": null
     }
    ]
   },
   "https://www.galleriflach.com/category/exhibitions/": {
-   "hash": "92cc0c2975548d87",
-   "ok_at": "2026-10-08T09:07:27+00:00",
+   "hash": "8b614bcc73da6879",
+   "ok_at": "2026-10-08T22:13:03+00:00",
    "result": [
     {
      "artists": [
@@ -624,7 +762,9 @@
       "text": null
      },
      "start_date": "2026-08-27",
-     "title": "Enter Art Fair"
+     "title": "Enter Art Fair",
+     "title_en": null,
+     "title_gloss": null
     },
     {
      "artists": [
@@ -639,10 +779,12 @@
       "date": null,
       "end_time": null,
       "start_time": null,
-      "text": "Det är med stor glädje vi visar utställning ”De levande och döda”,"
+      "text": null
      },
      "start_date": "2026-04-25",
-     "title": "Moa Israelsson, ”De levande och döda” / The living and the dead"
+     "title": "De levande och döda / The living and the dead",
+     "title_en": "The living and the dead",
+     "title_gloss": null
     },
     {
      "artists": [
@@ -661,14 +803,36 @@
       "text": null
      },
      "start_date": "2026-04-24",
-     "title": "Market Art Fair"
+     "title": "Market Art Fair",
+     "title_en": null,
+     "title_gloss": null
+    },
+    {
+     "artists": [
+      "Fredrik Sweger"
+     ],
+     "city": null,
+     "confidence": 1,
+     "detail_url": "https://www.galleriflach.com/fredrik-sweger-nothing-to-see-26-3-18-4-2026/",
+     "end_date": "2026-04-18",
+     "kind": "exhibition",
+     "opening": {
+      "date": null,
+      "end_time": null,
+      "start_time": null,
+      "text": null
+     },
+     "start_date": "2026-03-26",
+     "title": "Nothing to See",
+     "title_en": null,
+     "title_gloss": null
     },
     {
      "artists": [
       "Inka & Niclas"
      ],
      "city": null,
-     "confidence": 1,
+     "confidence": 0,
      "detail_url": "https://www.galleriflach.com/inka-niclas-g-type-main-sequence-2026/",
      "end_date": null,
      "kind": "exhibition",
@@ -676,16 +840,18 @@
       "date": null,
       "end_time": null,
       "start_time": null,
-      "text": "Konstnärerna Inka & Niclas har under många år arbetat med ett gemensamt projekt i vilket de"
+      "text": null
      },
      "start_date": null,
-     "title": "Inka & Niclas, ”G – type Main Sequence”"
+     "title": "G – type Main Sequence",
+     "title_en": null,
+     "title_gloss": null
     }
    ]
   },
   "https://www.galleriglas.se/exhibitions/current/": {
-   "hash": "c4fa20fc0599eb2a",
-   "ok_at": "2026-10-08T09:06:46+00:00",
+   "hash": "a647f272475acb65",
+   "ok_at": "2026-10-08T22:10:42+00:00",
    "result": [
     {
      "artists": [
@@ -703,20 +869,22 @@
       "text": null
      },
      "start_date": "2026-09-23",
-     "title": "Skepnader"
+     "title": "Skepnader",
+     "title_en": null,
+     "title_gloss": "Figures or Shapes (rough translation, but 'skepnad' can also mean 'creature' or 'being')”, "
     }
    ]
   },
   "https://www.galleriglas.se/exhibitions/forthcoming/": {
-   "hash": "332d81093335433c",
-   "ok_at": "2026-10-08T09:06:52+00:00",
+   "hash": "da233dfd0ae94421",
+   "ok_at": "2026-10-08T22:10:54+00:00",
    "result": [
     {
      "artists": [
-      "Karsikas",
-      "Koskinen",
-      "Schirm",
-      "Suppanen"
+      "KARSIKAS",
+      "KOSKINEN",
+      "SCHIRM",
+      "SUPPANEN"
      ],
      "city": "Stockholm",
      "confidence": 1,
@@ -730,7 +898,26 @@
       "text": null
      },
      "start_date": "2026-10-21",
-     "title": "Tusen sjöars glöd"
+     "title": "Tusen sjöars glöd",
+     "title_en": null,
+     "title_gloss": "The glow of a thousand lakes”, "
+    },
+    {
+     "access": "public",
+     "confidence": 1,
+     "detail_url": null,
+     "end_date": null,
+     "kind": "exhibition",
+     "opening": {
+      "date": null,
+      "end_time": null,
+      "start_time": null,
+      "text": null
+     },
+     "start_date": null,
+     "title": "",
+     "title_en": null,
+     "title_gloss": null
     }
    ]
   },
@@ -763,9 +950,101 @@
    "ok_at": "2026-10-08T09:07:37+00:00",
    "result": []
   },
+  "https://www.gallerihedenius.com/utstllningar/currentexhibition": {
+   "hash": "744d1a80480e6b2c",
+   "ok_at": "2026-10-08T22:13:14+00:00",
+   "result": [
+    {
+     "artists": [
+      "JURI MARKKULA"
+     ],
+     "city": null,
+     "confidence": 1,
+     "detail_url": null,
+     "end_date": null,
+     "kind": "exhibition",
+     "opening": {
+      "date": "2026-10-22",
+      "end_time": "19:00",
+      "start_time": "17:00",
+      "text": "VERNISSAGE 22 OKTOBER KL. 17 - 19"
+     },
+     "start_date": null,
+     "title": "VALV",
+     "title_en": null,
+     "title_gloss": "The Gate/Valve (VALV is Swedish for gate/valve, but in this context it is likely the title of the exhibition and not a description, so it is left as is, however a gloss could be 'Gate')”, "
+    }
+   ]
+  },
+  "https://www.gallerihedenius.com/utstllningar/new-portfolio-item": {
+   "hash": "1b2354854b728f31",
+   "ok_at": "2026-10-08T22:13:38+00:00",
+   "result": [
+    {
+     "artists": [
+      "Juri Markkula"
+     ],
+     "city": null,
+     "confidence": 1,
+     "detail_url": null,
+     "end_date": "2026-11-21",
+     "kind": "exhibition",
+     "opening": {
+      "date": "2026-10-22",
+      "end_time": "19:00",
+      "start_time": "17:00",
+      "text": "Vernissage torsdagen 22 oktober kl. 17-19"
+     },
+     "start_date": "2026-10-22",
+     "title": "VALV",
+     "title_en": null,
+     "title_gloss": null
+    },
+    {
+     "artists": [
+      "Madeleine Pyk"
+     ],
+     "city": null,
+     "confidence": 1,
+     "detail_url": null,
+     "end_date": "2026-12-06",
+     "kind": "exhibition",
+     "opening": {
+      "date": "2026-11-25",
+      "end_time": "19:00",
+      "start_time": "17:00",
+      "text": "Vernissage onsdag 25 november kl. 17-19"
+     },
+     "start_date": "2026-11-25",
+     "title": "90 × 90",
+     "title_en": null,
+     "title_gloss": null
+    },
+    {
+     "artists": [
+      "Dan Wolgers"
+     ],
+     "city": null,
+     "confidence": 1,
+     "detail_url": null,
+     "end_date": "2027-01-16",
+     "kind": "exhibition",
+     "opening": {
+      "date": "2026-12-10",
+      "end_time": "19:00",
+      "start_time": "17:00",
+      "text": "Vernissage torsdagen 10 december kl. 17-19"
+     },
+     "start_date": "2026-12-10",
+     "title": "WOLGERS + DUCHAMP = SANT",
+     "title_en": null,
+     "title_gloss": null
+    }
+   ]
+  },
   "https://www.gallerimagnuskarlsson.com/exhibitions/current/": {
-   "hash": "857fde993baacc62",
-   "ok_at": "2026-10-08T09:04:49+00:00",
+   "hash": "0bf5ec3db981561d",
+   "ok_at": "2026-10-08T22:08:24+00:00",
    "result": [
     {
      "city": "Venedig",
@@ -780,33 +1059,16 @@
       "text": null
      },
      "start_date": "2026-05-09",
-     "title": "Klara Kristalova | Lust for Life | Nordic Countries Pavilion | La Biennale di Venezia 9 May - 22 Nov 2026 Vi har glädjen att informera om Klara Kristalovas medverkan i den Nordiska paviljongen på den 61:a Venedigbiennalen i Italien. På utställningen visar Klara Kristalova installationen Lust for Life. – PRESS RELEASE – The Nordic Countries Pavilion will present How Many Angels Can Dance on the Head of a Pin? at... Read more"
-    },
-    {
-     "access": "public",
-     "artists": [
-      "Klara Kristalova"
-     ],
-     "city": "Venedig",
-     "confidence": 1,
-     "detail_url": "https://www.gallerimagnuskarlsson.com/exhibitions/405-klara-kristalova-lust-for-life-nordic/",
-     "end_date": "2026-11-22",
-     "kind": "exhibition",
-     "opening": {
-      "date": null,
-      "end_time": null,
-      "start_time": null,
-      "text": null
-     },
-     "start_date": "2026-05-09",
-     "title": "Klara Kristalova | Lust for Life | Nordic Countries Pavilion | La Biennale di Venezia 9 May - 22 Nov 2026 Vi har glädjen att informera om Klara Kristalovas medverkan i den Nordiska paviljongen på den 61:a Venedigbiennalen i Italien. På utställningen visar Klara Kristalova installationen Lust for Life. – PRESS RELEASE – The Nordic Countries Pavilion will present How Many Angels Can Dance on the Head of a Pin? at... Read more"
+     "title": "Lust for Life",
+     "title_en": null,
+     "title_gloss": null
     },
     {
      "access": "public",
      "artists": [
       "Thomas Broomé"
      ],
-     "city": null,
+     "city": "Stockholm",
      "confidence": 1,
      "detail_url": "https://www.gallerimagnuskarlsson.com/exhibitions/407-thomas-broome-false-idols/",
      "end_date": "2026-10-10",
@@ -818,13 +1080,15 @@
       "text": "Vernissage fredag 4 september, 17–19 Reception Friday September 4, 5–7 pm"
      },
      "start_date": "2026-09-04",
-     "title": "Thomas Broomé | False Idols 4 Sep - 10 Oct 2026 Vernissage fredag 4 september, 17–19 Reception Friday September 4, 5–7 pm Vi har glädjen att presentera Thomas Broomés åttonde separatutställning på galleriet. I False Idols visas en serie nya målningar och en rumslig ljusinstallation. Lotten Wiklund, vetenskapsjournalist och doktorand vid Umeå universitet, har skrivit en text om verken som kan... Read more"
+     "title": "False Idols",
+     "title_en": null,
+     "title_gloss": null
     }
    ]
   },
   "https://www.gallerimagnuskarlsson.com/exhibitions/forthcoming/": {
-   "hash": "a89d07b4a6363c83",
-   "ok_at": "2026-10-08T09:05:02+00:00",
+   "hash": "395a059409ea73c0",
+   "ok_at": "2026-10-08T22:08:42+00:00",
    "result": [
     {
      "artists": [
@@ -842,7 +1106,9 @@
       "text": "Vernissage och drink torsdag 15 oktober, 17–19 Reception and drink Thursday October 15, 5–7 pm"
      },
      "start_date": "2026-10-15",
-     "title": "Between Hidden and Almost Revealed"
+     "title": "Between Hidden and Almost Revealed",
+     "title_en": null,
+     "title_gloss": null
     },
     {
      "artists": [
@@ -860,7 +1126,9 @@
       "text": "Vernissage fredag 6 november, 17–19 Reception Friday November 6, 5–7 pm"
      },
      "start_date": "2026-11-06",
-     "title": "Nya målningar / New Paintings"
+     "title": "Nya målningar / New Paintings",
+     "title_en": "New Paintings",
+     "title_gloss": null
     },
     {
      "artists": [
@@ -878,18 +1146,20 @@
       "text": null
      },
      "start_date": "2026-11-28",
-     "title": "Hålet i väggen"
+     "title": "Hålet i väggen",
+     "title_en": null,
+     "title_gloss": "The Hole in the Wall"
     }
    ]
   },
   "https://www.issues.gallery/exhibitions": {
-   "hash": "9dc50d012ae45840",
-   "ok_at": "2026-10-08T09:08:35+00:00",
+   "hash": "0849d8f9417dddd8",
+   "ok_at": "2026-10-08T22:14:44+00:00",
    "result": []
   },
   "https://www.saskianeumangallery.com/": {
-   "hash": "916cc60a504f33e3",
-   "ok_at": "2026-10-08T09:09:42+00:00",
+   "hash": "98eaa16237a53cc8",
+   "ok_at": "2026-10-08T22:16:02+00:00",
    "result": [
     {
      "artists": [
@@ -907,35 +1177,57 @@
       "text": null
      },
      "start_date": "2026-09-30",
-     "title": "Seducing Birds and Humans"
+     "title": "Seducing Birds and Humans",
+     "title_en": null,
+     "title_gloss": null
     },
     {
-     "artists": [],
+     "artists": [
+      "Kayo Mpoyi",
+      "Mark Dion",
+      "Nadine Byrne",
+      "Tobias Bradford",
+      "Gina Hejdebäck",
+      "Erik Jeor",
+      "Edit Sihlberg",
+      "Jakob Solgren Nordenskiöld",
+      "Harry Anderson",
+      "Dimen Hama Abdulla",
+      "Geraldine Swayne",
+      "Jonas Lipps",
+      "Justin Swinburne",
+      "Pia Ferm",
+      "Susanna Marcus Jablonski",
+      "Niklas Delin",
+      "Emma Jönsson"
+     ],
      "city": null,
-     "confidence": 1,
-     "detail_url": "https://www.saskianeumangallery.com/fairs/artissima",
-     "end_date": "2026-10-31",
-     "kind": "fair",
+     "confidence": 0,
+     "detail_url": null,
+     "end_date": null,
+     "kind": "exhibition",
      "opening": {
       "date": null,
       "end_time": null,
       "start_time": null,
       "text": null
      },
-     "start_date": "2026-10-27",
-     "title": "Artissima"
+     "start_date": null,
+     "title": "Artissima",
+     "title_en": null,
+     "title_gloss": null
     }
    ]
   },
   "https://www.wetterlinggallery.com/exhibitions/current/": {
-   "hash": "37248685480ca02b",
-   "ok_at": "2026-10-08T09:05:50+00:00",
+   "hash": "f405b86acdc0fe65",
+   "ok_at": "2026-10-08T22:09:38+00:00",
    "result": [
     {
      "artists": [
       "Nathalia Edenmont"
      ],
-     "city": "Stockholm",
+     "city": null,
      "confidence": 1,
      "detail_url": "https://www.wetterlinggallery.com/exhibitions/201-nathalia-edenmont-wg.151-here-i-am/",
      "end_date": "2026-11-15",
@@ -947,7 +1239,9 @@
       "text": null
      },
      "start_date": "2026-10-07",
-     "title": "HERE I AM"
+     "title": "HERE I AM",
+     "title_en": null,
+     "title_gloss": null
     }
    ]
   }

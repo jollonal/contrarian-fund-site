@@ -2,7 +2,7 @@ BEGIN:VCALENDAR
 VERSION:2.0
 PRODID:-//contrarian.fund//vernissage//EN
 CALSCALE:GREGORIAN
-X-WR-CALNAME:Anders Widoff
+X-WR-CALNAME:90 × 90
 BEGIN:VTIMEZONE
 TZID:Europe/Stockholm
 BEGIN:DAYLIGHT
@@ -21,14 +21,13 @@ RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU
 END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
-UID:834adcc6811a@contrarian.fund
-DTSTAMP:20261008T215613Z
-DTSTART;TZID=Europe/Stockholm:20261010T120000
-DTEND;TZID=Europe/Stockholm:20261010T160000
-SUMMARY:Vernissage: Anders Widoff at Björkholmen Gallery
-LOCATION:Rödbodtorget 2\, 111 52 Stockholm
-DESCRIPTION:Anders Widoff\nOn view until 2026-11-08.
-URL:https://bjorkholmengallery.com/exhibition/den-har-dagen-och-den-har-dag
- en/
+UID:97955ba84cae@contrarian.fund
+DTSTAMP:20261008T222253Z
+DTSTART;TZID=Europe/Stockholm:20261125T170000
+DTEND;TZID=Europe/Stockholm:20261125T190000
+SUMMARY:Vernissage: 90 × 90 at Galleri Hedenius
+LOCATION:Sturegatan 36\, 114 36 Stockholm
+DESCRIPTION:Madeleine Pyk\nOn view until 2026-12-06.
+URL:https://www.gallerihedenius.com/
 END:VEVENT
 END:VCALENDAR

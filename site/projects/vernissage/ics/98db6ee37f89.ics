@@ -1,0 +1,36 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//contrarian.fund//vernissage//EN
+CALSCALE:GREGORIAN
+X-WR-CALNAME:VALV
+BEGIN:VTIMEZONE
+TZID:Europe/Stockholm
+BEGIN:DAYLIGHT
+TZOFFSETFROM:+0100
+TZOFFSETTO:+0200
+TZNAME:CEST
+DTSTART:19700329T020000
+RRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=-1SU
+END:DAYLIGHT
+BEGIN:STANDARD
+TZOFFSETFROM:+0200
+TZOFFSETTO:+0100
+TZNAME:CET
+DTSTART:19701025T030000
+RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU
+END:STANDARD
+END:VTIMEZONE
+BEGIN:VEVENT
+UID:98db6ee37f89@contrarian.fund
+DTSTAMP:20261008T222253Z
+DTSTART;TZID=Europe/Stockholm:20261022T170000
+DTEND;TZID=Europe/Stockholm:20261022T190000
+SUMMARY:Vernissage: VALV [The Gate/Valve (VALV is Swedish for gate/valve\, 
+ but in this context it is likely the title of the exhibition and not a des
+ cription\, so it is left as is\, however a gloss could be 'Gate')”\,] at
+  Galleri Hedenius
+LOCATION:Sturegatan 36\, 114 36 Stockholm
+DESCRIPTION:JURI MARKKULA\, Juri Markkula\nOn view until 2026-11-21.
+URL:https://www.gallerihedenius.com/
+END:VEVENT
+END:VCALENDAR
