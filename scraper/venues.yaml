@@ -1,4 +1,4 @@
-# Stockholm venue registry. Hand-curated. Verified 2026-10-07.
+# Stockholm venue registry. Hand-curated. Verified 2026-10-07; artist-run spaces added 2026-10-08.
 #
 # adapter:
 #   artlogic   Artlogic CMS. Fetch /exhibitions/current/ and /exhibitions/forthcoming/.
@@ -398,6 +398,176 @@ venues:
     type: commercial
     notes: Editions shop and showroom; no exhibition programme.
     status: excluded
+
+  # ---------- Artist-run (added 2026-10-08) ----------
+  - id: candyland
+    name: Candyland
+    homepage: https://candyland.se/
+    exhibitions_urls:
+      - https://candyland.se/?cat=6
+      - https://candyland.se/?cat=10
+    address: Gotlandsgatan 76, 116 38 Stockholm
+    district: Södermalm
+    type: artist-run
+    adapter: wordpress
+    opening_text: yes
+    status: active
+
+  - id: detroit-stockholm
+    name: Detroit Stockholm
+    homepage: https://detroitstockholm.info/
+    exhibitions_urls:
+      - https://www.detroitstockholm.info/current-exhibition
+    address: Roslagsgatan 21, 113 55 Stockholm
+    district: Vasastan
+    type: artist-run
+    adapter: static
+    opening_text: yes
+    notes: Archive page stops in 2021; current-exhibition page is maintained.
+    status: active
+
+  - id: studio-44
+    name: Studio 44
+    homepage: https://studio44-stockholm.com/en/
+    exhibitions_urls:
+      - https://studio44-stockholm.com/en/
+      - https://studio44-stockholm.com/en/39499-2/
+    address: Tjärhovsgatan 44 B, 116 28 Stockholm
+    district: Södermalm
+    type: artist-run
+    adapter: wordpress
+    opening_text: yes
+    mail_domains: [studio44.se]
+    notes: Exhibitions 2026 page is at a numeric slug; recheck the URL in January.
+    status: active
+
+  - id: idi-galleri
+    name: ID:I galleri
+    homepage: https://idigalleri.org/
+    exhibitions_urls:
+      - https://idigalleri.org/
+    address: Tjärhovsgatan 19, 116 28 Stockholm
+    district: Södermalm
+    type: artist-run
+    adapter: wordpress
+    opening_text: yes
+    status: active
+
+  - id: slipvillan
+    name: Slipvillan
+    homepage: https://slipvillan.org/
+    exhibitions_urls:
+      - https://slipvillan.org/hem/program.html
+    address: Mälarvarvsbacken 32, 117 33 Stockholm
+    district: Långholmen
+    type: artist-run
+    adapter: static
+    opening_text: yes
+    notes: Program page has date conflicts; expect some items in review.json.
+    status: active
+
+  - id: konsthallen-abc
+    name: Konsthallen ABC
+    homepage: https://studioabc.se/
+    exhibitions_urls:
+      - https://studioabc.se/utstallningar/
+    address: Jämtlandsgatan 161, 162 60 Vällingby
+    district: Vällingby
+    type: artist-run
+    adapter: wordpress
+    opening_text: yes
+    status: active
+
+  - id: grafiska-sallskapet
+    name: Grafiska Sällskapet
+    homepage: https://grafiskasallskapet.se/
+    exhibitions_urls:
+      - https://grafiskasallskapet.se/kommande/
+      - https://grafiskasallskapet.se/
+    address: Hornsgatan 6, 118 20 Stockholm
+    district: Södermalm
+    type: artist-run
+    adapter: wordpress
+    opening_text: no
+    status: active
+
+  - id: konstnarshuset
+    name: Konstnärshuset
+    homepage: https://konstnarshuset.org/
+    exhibitions_urls:
+      - https://konstnarshuset.org/utstallningsprogram-2026/
+      - https://konstnarshuset.org/
+    address: Smålandsgatan 7, 111 46 Stockholm
+    district: Norrmalm
+    type: artist-run
+    adapter: wordpress
+    opening_text: yes
+    notes: Svenska Konstnärernas Förening (SKF). Programme URL is per year; update in January.
+    status: active
+
+  - id: platform-stockholm
+    name: Platform Stockholm
+    homepage: https://platformstockholm.com/
+    exhibitions_urls:
+      - https://platformstockholm.com/gallery
+    address: Färgkontoret, Lövholmsgränd 12, 117 43 Stockholm
+    district: Liljeholmen
+    type: artist-run
+    adapter: static
+    opening_text: yes
+    notes: Artist-run status unconfirmed; included for its programme.
+    status: active
+
+  - id: blas-och-knada
+    name: blås & knåda
+    homepage: https://www.blasknada.com/
+    exhibitions_urls:
+      - https://www.blasknada.com/category/utstallningar/
+    address: Hornsgatan 26, 118 20 Stockholm
+    district: Södermalm
+    type: craft cooperative
+    adapter: wordpress
+    opening_text: yes
+    status: active
+
+  - id: kaolin
+    name: Kaolin
+    homepage: https://kaolin.se/
+    exhibitions_urls:
+      - https://kaolin.se/sidor/45772-10597-79130-kommande-utstallningar
+      - https://kaolin.se/sidor/pagaende-utstallning
+    address: Hornsgatan 50, 118 21 Stockholm
+    district: Södermalm
+    type: craft cooperative
+    adapter: static
+    opening_text: no
+    status: active
+
+  - id: tegen2
+    name: TEGEN2
+    homepage: http://www.tegen2.se/
+    exhibitions_urls:
+      - http://www.tegen2.se/
+    address: Bjurholmsgatan 9b, 116 38 Stockholm
+    district: Södermalm
+    type: artist-run
+    adapter: static
+    opening_text: no
+    notes: Site lists nothing after Nov-Dec 2024; space status unverified. Mail comes from a gmail address, so newsletters match by name.
+    status: active
+
+  - id: parallel-collective
+    name: Parallel Collective
+    homepage: https://parallelcollective.se/en
+    exhibitions_urls:
+      - https://parallelcollective.se/en
+    address: Svartensgatan 10, 116 20 Stockholm
+    district: Södermalm
+    type: artist-run
+    adapter: static
+    opening_text: no
+    notes: No exhibition scheduled as of 2026-10-08.
+    status: active
 
   # ---------- Not scraped ----------
   - id: larsen-warner
