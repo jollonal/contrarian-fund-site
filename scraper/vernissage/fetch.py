@@ -25,6 +25,7 @@ class Fetcher:
         self.timeout = timeout
         self._last: dict[str, float] = {}
         self._robots: dict[str, urllib.robotparser.RobotFileParser] = {}
+        self._why: dict[str, str] = {}  # base URL -> reason robots.txt could not be read
         self._pw = None
         self._browser = None
 
@@ -36,6 +37,11 @@ class Fetcher:
         self._last[host] = time.monotonic()
 
     def allowed(self, url: str) -> bool:
+        """robots.txt check following RFC 9309.
+
+        200: obey the rules. Other 4xx (incl. 401/403): no usable robots.txt, so allowed.
+        429, 5xx or no connection: unreachable, so stay out this run.
+        """
         p = urllib.parse.urlsplit(url)
         base = f"{p.scheme}://{p.netloc}"
         rp = self._robots.get(base)
@@ -44,21 +50,28 @@ class Fetcher:
             try:
                 self._throttle(p.netloc)
                 r = self.s.get(base + "/robots.txt", timeout=self.timeout)
-                if r.status_code in (401, 403) or r.status_code == 429 or r.status_code >= 500:
-                    rp.disallow_all = True  # unknown or hostile: stay out this run
+                if r.status_code == 429 or r.status_code >= 500:
+                    rp.disallow_all = True
+                    self._why[base] = f"robots.txt unreachable (HTTP {r.status_code})"
                 elif r.status_code >= 400:
-                    rp.parse([])  # no robots.txt: allowed
+                    rp.parse([])
                 else:
                     rp.parse(r.text.splitlines())
-            except requests.RequestException:
+            except requests.RequestException as e:
                 rp.disallow_all = True
+                self._why[base] = f"robots.txt unreachable ({type(e).__name__})"
             self._robots[base] = rp
         return rp.can_fetch(UA, url)
+
+    def _refusal(self, url: str) -> str:
+        p = urllib.parse.urlsplit(url)
+        why = self._why.get(f"{p.scheme}://{p.netloc}", "robots.txt disallows")
+        return f"{why}: {url}"
 
     # ---------- fetching ----------
     def get(self, url: str) -> str:
         if not self.allowed(url):
-            raise FetchError(f"robots.txt disallows {url}")
+            raise FetchError(self._refusal(url))
         host = urllib.parse.urlsplit(url).netloc
         for attempt in range(2):
             self._throttle(host)
@@ -79,7 +92,7 @@ class Fetcher:
     def render(self, url: str) -> str:
         """Render with headless Chromium for client-side sites."""
         if not self.allowed(url):
-            raise FetchError(f"robots.txt disallows {url}")
+            raise FetchError(self._refusal(url))
         if self._browser is None:
             from playwright.sync_api import sync_playwright
 
