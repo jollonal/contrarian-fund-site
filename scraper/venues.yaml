@@ -584,6 +584,46 @@ venues:
     notes: No exhibition scheduled as of 2026-10-08.
     status: active
 
+  # ---------- Södermalm additions (added 2026-10-09) ----------
+  - id: galleri-katarina-ap
+    name: Galleri Katarina AP
+    homepage: https://www.falkenbergskonstskola.se/
+    exhibitions_urls:
+      - https://www.falkenbergskonstskola.se/vara-gallerier
+    address: Katarina Bangata 49, 116 39 Stockholm
+    district: Södermalm
+    type: school gallery
+    adapter: static
+    opening_text: yes
+    notes: Gallery of Falkenbergs konstskola (distance-learning art school). No newsletter.
+    status: active
+
+  - id: beau-travail
+    name: Beau Travail
+    homepage: https://beautravail.se/
+    exhibitions_urls:
+      - https://beautravail.se/category/exhibitions/
+    address: Skånegatan 108, 116 35 Stockholm
+    district: Södermalm
+    type: project space
+    adapter: wordpress
+    opening_text: yes
+    notes: Mail comes from a gmail address, so newsletters match by name.
+    status: active
+
+  - id: southnord
+    name: Southnord
+    homepage: https://www.southnord.com/
+    exhibitions_urls:
+      - https://www.southnord.com/calendar
+    address: Katarina Bangata 40, 116 39 Stockholm
+    district: Södermalm
+    type: artist-run
+    adapter: squarespace
+    opening_text: no
+    city_filter: Stockholm   # Artfest programme is in Helsinki
+    status: active
+
   # ---------- Not scraped ----------
   - id: larsen-warner
     name: Larsen / Warner
