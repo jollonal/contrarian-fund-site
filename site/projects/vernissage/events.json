@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-10-08T09:09:57+00:00",
+ "generated_at": "2026-10-08T11:08:09+00:00",
  "window_days": 60,
  "venues_tracked": 21,
  "events": [
@@ -10,6 +10,9 @@
    "address": "Hantverkargatan 18-20, 112 21 Stockholm",
    "district": "Kungsholmen",
    "title": "Tomas Gustavsson: En plats i solen",
+   "title_en": null,
+   "gloss": null,
+   "gloss_source": null,
    "artists": [
     "Tomas Gustavsson"
    ],
@@ -19,7 +22,7 @@
    "opening": {
     "confirmed": true,
     "start_time": "17:00",
-    "end_time": null,
+    "end_time": "19:00",
     "text": "Vernissage i konstnärens närvaro, torsdagen den 8 oktober kl. 17-19”, "
    },
    "access": "unknown",
@@ -32,6 +35,9 @@
    "address": "Bondegatan 70, 116 33 Stockholm",
    "district": "Södermalm",
    "title": "Hanna Hansdotter Kalypso",
+   "title_en": null,
+   "gloss": null,
+   "gloss_source": null,
    "artists": [
     "Hanna Hansdotter"
    ],
@@ -54,6 +60,9 @@
    "address": "Rödbodtorget 2, 111 52 Stockholm",
    "district": "Norrmalm",
    "title": "Anders Widoff",
+   "title_en": null,
+   "gloss": null,
+   "gloss_source": null,
    "artists": [
     "Anders Widoff"
    ],
@@ -76,6 +85,9 @@
    "address": "Fredsgatan 12, 111 52 Stockholm",
    "district": "Norrmalm",
    "title": "Between Hidden and Almost Revealed",
+   "title_en": null,
+   "gloss": null,
+   "gloss_source": null,
    "artists": [
     "Alejandro Sintura"
    ],
@@ -98,6 +110,9 @@
    "address": "Nybrogatan 34, 114 39 Stockholm",
    "district": "Östermalm",
    "title": "Tusen sjöars glöd",
+   "title_en": null,
+   "gloss": null,
+   "gloss_source": null,
    "artists": [
     "Karsikas",
     "Koskinen",
@@ -123,6 +138,9 @@
    "address": "Sturegatan 36, 114 36 Stockholm",
    "district": "Östermalm",
    "title": "Juri Markkula: Valv”,",
+   "title_en": null,
+   "gloss": null,
+   "gloss_source": null,
    "artists": [
     "Juri Markkula"
    ],
@@ -145,6 +163,9 @@
    "address": "Hantverkargatan 18-20, 112 21 Stockholm",
    "district": "Kungsholmen",
    "title": "Våra ...",
+   "title_en": null,
+   "gloss": null,
+   "gloss_source": null,
    "artists": [
     "Britta Marakatt-Labba",
     "Tomas Colbengtson"
@@ -155,7 +176,7 @@
    "opening": {
     "confirmed": true,
     "start_time": "16:00",
-    "end_time": null,
+    "end_time": "19:00",
     "text": "Vernissage: 16–19 (konstnärerna närvarar)', "
    },
    "access": "unknown",
@@ -168,6 +189,9 @@
    "address": "Fredsgatan 12, 111 52 Stockholm",
    "district": "Norrmalm",
    "title": "Nya målningar / New Paintings",
+   "title_en": null,
+   "gloss": null,
+   "gloss_source": null,
    "artists": [
     "Anna Bjerger"
    ],
@@ -190,6 +214,9 @@
    "address": "Lützengatan 1, 115 20 Stockholm",
    "district": "Östermalm",
    "title": "Ayan Farah",
+   "title_en": null,
+   "gloss": null,
+   "gloss_source": null,
    "artists": [
     "Ayan Farah"
    ],
@@ -212,6 +239,9 @@
    "address": "Fredsgatan 12, 111 52 Stockholm",
    "district": "Norrmalm",
    "title": "Hålet i väggen",
+   "title_en": null,
+   "gloss": null,
+   "gloss_source": null,
    "artists": [
     "Jockum Nordström"
    ],
