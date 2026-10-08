@@ -82,7 +82,9 @@
   .foot .copyright{color:var(--fg)}
   .foot .email{color:var(--fg);text-decoration:none;border-bottom:1px solid var(--hot)}
   .foot .email:hover{color:var(--hot)}
-  .foot .side{margin-left:1.2rem;color:var(--dim);text-decoration:none}
+  .foot{display:grid;grid-template-columns:1fr auto 1fr}
+  .foot .email{justify-self:end}
+  .foot .side{justify-self:center;padding:0 2rem;color:var(--dim);font-weight:600;text-decoration:none}
   .foot .side:hover{color:var(--hot)}
   .foot .li{border:1px solid var(--line);padding:.35rem .5rem;display:inline-flex;align-items:center;color:#0a66c2}
   .foot .li:hover{border-color:#378fe9;color:#378fe9}
@@ -92,7 +94,8 @@
     .ident{gap:.9rem;font-size:13px}
     .ident .flag{font-size:16px}
     .ident span{white-space:nowrap}
-    .foot{flex-direction:column;align-items:flex-start;gap:.8rem}
+    .foot{display:flex;flex-direction:column;align-items:flex-start;gap:.8rem}
+    .foot .side{padding:0}
     .bar{font-size:14px}
     .bar .fglogo img{height:42px}
     .pedline{line-height:2.2}
@@ -211,7 +214,8 @@
 
   <!-- FOOTER -->
   <div class="foot">
-    <span class="copyright">&copy; 2026 Fair Globe GP, LLC<a class="side" href="/projects/">Side projects</a></span>
+    <span class="copyright">&copy; 2026 Fair Globe GP, LLC</span>
+    <a class="side" href="/projects/">Side projects</a>
     <a class="email" href="mailto:office@contrarian.fund">office@contrarian.fund</a>
   </div>
 
