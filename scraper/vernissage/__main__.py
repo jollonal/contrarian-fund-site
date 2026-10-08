@@ -16,7 +16,7 @@ from zoneinfo import ZoneInfo
 
 import yaml
 
-from .build import normalize, write_outputs
+from .build import gloss_report, normalize, write_outputs
 from .fetch import Fetcher
 from .llm import LLM
 
@@ -60,7 +60,10 @@ def main() -> int:
             return 0
         cache_path.write_text(json.dumps(cache, ensure_ascii=False, indent=1, sort_keys=True), encoding="utf-8")
 
-    events, review = normalize(found, venues, today, a.window)
+    ov_path = ROOT / "overrides.yaml"
+    overrides = (yaml.safe_load(ov_path.read_text(encoding="utf-8")) or {}).get("glosses") if ov_path.exists() else None
+    events, review = normalize(found, venues, today, a.window, overrides or {})
+    (ROOT / "state" / "glosses.md").write_text(gloss_report(events), encoding="utf-8")
     (ROOT / "state" / "review.json").write_text(json.dumps(review, ensure_ascii=False, indent=1), encoding="utf-8")
     write_outputs(events, venues, SITE, today, a.window, os.environ.get("REPO_URL"))
     log.info("%d events (%d confirmed openings), %d for review, %s LLM calls",

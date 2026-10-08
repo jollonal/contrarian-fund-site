@@ -1,0 +1,15 @@
+# Spot corrections for the bracketed English glosses on the vernissage page.
+#
+# Key:   the original title exactly as it appears on the page (copy it from
+#        scraper/state/glosses.md).
+# Value: the English text to show in brackets instead.
+#        Use "" to show no gloss at all for that title.
+#
+# Saving this file on GitHub rebuilds and redeploys the page in about two
+# minutes, without calling the AI.
+#
+# Example:
+#   "den här dagen. Och den här dagen.": "this day. And this day."
+
+glosses:
+  {}

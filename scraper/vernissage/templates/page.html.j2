@@ -31,6 +31,7 @@
   .ev:last-child { padding-bottom: 0; }
   .ev .venue { font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; margin: 0 0 4px; }
   .ev h3 { font-size: 22px; font-weight: 400; line-height: 1.25; margin: 0; }
+  .ev h3 .gloss { color: var(--muted); }
   .ev .artists { margin: 2px 0 0; }
   .ev .when { margin: 8px 0 0; font-size: 15px; }
   .ev .when.unconfirmed { color: var(--muted); }
@@ -72,7 +73,7 @@
       {% for e in events %}
         <article class="ev" data-district="{{ e.district or '' }}" data-confirmed="{{ 1 if e.opening.confirmed else 0 }}">
           <p class="venue">{{ e.venue }}</p>
-          <h3>{{ e.title }}</h3>
+          <h3>{{ e.title }}{% if e.title_en %} / {{ e.title_en }}{% endif %}{% if e.gloss %} <span class="gloss" title="English translation">[{{ e.gloss }}]</span>{% endif %}</h3>
           {% set artists = e.artists | join(", ") %}
           {% if artists and artists != e.title %}<p class="artists">{{ artists }}</p>{% endif %}
           {% if e.opening.confirmed %}

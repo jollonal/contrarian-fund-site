@@ -4,6 +4,7 @@ from __future__ import annotations
 import datetime as dt
 import hashlib
 import logging
+import re
 import urllib.parse
 
 from . import llm as L
@@ -12,6 +13,18 @@ from .fetch import FetchError, Fetcher
 
 log = logging.getLogger("vernissage")
 STALE_DAYS = 14  # reuse a cached extraction this long if a page stops responding
+
+
+def restore_spacing(title, text: str):
+    """Undo model spacing slips ('Hålet iväggen') by matching the title against the page text
+    with whitespace made optional, and returning the page's own spelling."""
+    if not isinstance(title, str) or not title.strip():
+        return title
+    chars = [re.escape(c) for c in title if not c.isspace()]
+    if not chars:
+        return title
+    m = re.search(r"\s*".join(chars), text, re.I)
+    return re.sub(r"\s+", " ", m.group(0)).strip() if m else title.strip()
 
 
 def _hash(text: str) -> str:
@@ -58,6 +71,9 @@ def scrape(venues: list[dict], cache: dict, today: dt.date, window: int,
                 out = llm.json(L.LISTING_SYSTEM, L.LISTING_USER.format(
                     today=today.isoformat(), venue=v["name"], url=url, text=text))
                 result = [x for x in out.get("exhibitions", []) if isinstance(x, dict)]
+                for x in result:
+                    x["title"] = restore_spacing(x.get("title"), text)
+                    x["title_en"] = restore_spacing(x.get("title_en"), text)
             except L.LLMUnavailable as e:
                 log.warning("llm unavailable for %s: %s", url, e)
                 if _fresh(entry, today):

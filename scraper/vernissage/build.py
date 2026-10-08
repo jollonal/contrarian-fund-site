@@ -31,7 +31,50 @@ def _slug(s: str) -> str:
     return re.sub(r"[^a-z0-9]+", "-", s).strip("-")
 
 
-def normalize(found: dict[str, list[dict]], venues: list[dict], today: dt.date, window: int):
+RANGE_RE = re.compile(r"(?<![\d.])(\d{1,2})(?:[:.](\d{2}))?\s*(?:-|\u2013|\u2014|to|till)\s*(\d{1,2})(?:[:.](\d{2}))?(?![\d.])")
+
+
+def end_time_from_text(text: str | None, start: str) -> str | None:
+    """Recover a missing end time from the quoted opening sentence, e.g. 'kl. 17-19' or '5-7 pm'.
+
+    Only a range whose first hour matches the known start hour is trusted, so date
+    ranges such as '10-16 oktober' are ignored."""
+    sh, sm = int(start[:2]), int(start[3:])
+    for m in RANGE_RE.finditer(text or ""):
+        h1, m1, h2, m2 = int(m[1]), int(m[2] or 0), int(m[3]), int(m[4] or 0)
+        shift = 0 if (h1, m1) == (sh, sm) else 12 if (h1 + 12, m1) == (sh, sm) else None
+        if shift is None:
+            continue
+        h2 += shift if h2 + shift <= 23 else 0
+        if h2 > 23 or m2 > 59 or (h2, m2) <= (sh, sm):
+            continue
+        return f"{h2:02d}:{m2:02d}"
+    return None
+
+
+def english_title(title: str, title_en, gloss, overrides: dict | None = None):
+    """Return (title_en, gloss, gloss_source) for display.
+
+    A gallery's own English title wins and is shown without brackets. Otherwise the
+    machine gloss is shown in brackets, unless overrides.yaml corrects or blanks it."""
+    norm = lambda t: re.sub(r"\s+", " ", t or "").strip().lower()
+    en = title_en.strip() if isinstance(title_en, str) and title_en.strip() else None
+    if en and norm(en) in norm(title):
+        en = None  # already part of the title, e.g. "Nya målningar / New Paintings"
+    if en:
+        return en, None, None
+    overrides = overrides or {}
+    if title in overrides:
+        fixed = (overrides[title] or "").strip()
+        return None, (fixed or None), ("override" if fixed else None)
+    g = gloss.strip() if isinstance(gloss, str) and gloss.strip() else None
+    if not g or norm(g) == norm(title):
+        return None, None, None
+    return None, g, "machine"
+
+
+def normalize(found: dict[str, list[dict]], venues: list[dict], today: dt.date, window: int,
+              overrides: dict | None = None):
     """Return (events, review). Events are deduped, in-window, sorted."""
     by_id = {v["id"]: v for v in venues}
     horizon = today + dt.timedelta(days=window)
@@ -50,6 +93,10 @@ def normalize(found: dict[str, list[dict]], venues: list[dict], today: dt.date, 
             start, end = _date(x.get("start_date")), _date(x.get("end_date"))
             op = x.get("opening") or {}
             op_date = _date(op.get("date"))
+            day = op_date or start
+            if not day or not (today <= day <= horizon):
+                continue  # outside the window: never shown, so never worth reviewing
+
             problems = []
             if start and end and start > end:
                 problems.append("start after end")
@@ -61,10 +108,13 @@ def normalize(found: dict[str, list[dict]], venues: list[dict], today: dt.date, 
                 review.append({"venue": vid, "problems": problems, "item": x})
                 continue
 
-            day = op_date or start
-            if not day or not (today <= day <= horizon):
-                continue
+            st = _time(op.get("start_time")) if op_date else None
+            et = _time(op.get("end_time")) if op_date else None
+            if st and not et:
+                et = end_time_from_text(op.get("text"), st)
 
+            title = x["title"].strip()
+            title_en, gloss, gloss_source = english_title(title, x.get("title_en"), x.get("title_gloss"), overrides)
             key = f"{vid}|{_slug(x['title'])}|{start or day}"
             ev = {
                 "id": hashlib.sha1(key.encode()).hexdigest()[:12],
@@ -72,15 +122,18 @@ def normalize(found: dict[str, list[dict]], venues: list[dict], today: dt.date, 
                 "venue": v["name"],
                 "address": v.get("address"),
                 "district": v.get("district"),
-                "title": x["title"].strip(),
+                "title": title,
+                "title_en": title_en,
+                "gloss": gloss,
+                "gloss_source": gloss_source,
                 "artists": [a.strip() for a in x.get("artists") or [] if isinstance(a, str) and a.strip()],
                 "start_date": start.isoformat() if start else None,
                 "end_date": end.isoformat() if end else None,
                 "date": day.isoformat(),
                 "opening": {
                     "confirmed": bool(op_date),
-                    "start_time": _time(op.get("start_time")) if op_date else None,
-                    "end_time": _time(op.get("end_time")) if op_date else None,
+                    "start_time": st,
+                    "end_time": et,
                     "text": op.get("text") if op_date else None,
                 },
                 "access": x.get("access") if x.get("access") in ("public", "invite") else "unknown",
@@ -132,6 +185,32 @@ def _fold(line: str) -> str:
     return "\r\n".join(out)
 
 
+def display_title(e: dict) -> str:
+    t = e["title"]
+    if e.get("title_en"):
+        t += " / " + e["title_en"]
+    if e.get("gloss"):
+        t += " [" + e["gloss"] + "]"
+    return t
+
+
+def gloss_report(events: list[dict]) -> str:
+    """Markdown table of every English title on the page, for review on GitHub."""
+    rows = ["# English titles on the live page", "",
+            "Correct a machine gloss in `scraper/overrides.yaml`.", "",
+            "| Date | Gallery | Title | English | Source |", "|---|---|---|---|---|"]
+    for e in events:
+        en = e.get("title_en") or e.get("gloss")
+        if not en:
+            continue
+        src = "gallery" if e.get("title_en") else e.get("gloss_source")
+        cell = lambda v: str(v).replace("|", "\\|")
+        rows.append(f"| {e['date']} | {cell(e['venue'])} | {cell(e['title'])} | {cell(en)} | {src} |")
+    if len(rows) == 6:
+        rows.append("| | | | | |")
+    return "\n".join(rows) + "\n"
+
+
 def _vevent(e: dict, stamp: str) -> list[str]:
     d = e["date"].replace("-", "")
     op = e["opening"]
@@ -151,7 +230,7 @@ def _vevent(e: dict, stamp: str) -> list[str]:
         f"UID:{e['id']}@contrarian.fund",
         f"DTSTAMP:{stamp}",
         *when,
-        "SUMMARY:" + _esc(label + ": " + e["title"] + " at " + e["venue"]),
+        "SUMMARY:" + _esc(label + ": " + display_title(e) + " at " + e["venue"]),
         f"LOCATION:{_esc(e['address'] or e['venue'])}",
         f"DESCRIPTION:{_esc(desc.strip())}",
         f"URL:{e['url']}",

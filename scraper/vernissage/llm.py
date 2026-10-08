@@ -17,7 +17,7 @@ ENDPOINT = f"https://api.cloudflare.com/client/v4/accounts/{ACCOUNT_ID}/ai/run/{
 MAX_CALLS = int(os.environ.get("LLM_MAX_CALLS", "35"))
 SPACING = 1.0
 
-PROMPT_VERSION = "2026-10-08.1"  # bump to invalidate cached extractions
+PROMPT_VERSION = "2026-10-09.2"  # bump to invalidate cached extractions
 
 _S = {"type": ["string", "null"]}
 OPENING_SCHEMA = {"type": "object", "properties": {
@@ -25,7 +25,8 @@ OPENING_SCHEMA = {"type": "object", "properties": {
 LISTING_SCHEMA = {"type": "object", "properties": {"exhibitions": {"type": "array", "items": {
     "type": "object",
     "properties": {
-        "title": {"type": "string"}, "artists": {"type": "array", "items": {"type": "string"}},
+        "title": {"type": "string"}, "title_en": _S, "title_gloss": _S,
+        "artists": {"type": "array", "items": {"type": "string"}},
         "start_date": _S, "end_date": _S, "city": _S,
         "kind": {"type": "string", "enum": ["exhibition", "fair", "event", "other"]},
         "detail_url": _S, "opening": OPENING_SCHEMA,
@@ -48,7 +49,9 @@ Page URL: {url}
 
 Return JSON of the form:
 {{"exhibitions": [{{
-  "title": string,                     // exhibition title; if none, the artist name(s)
+  "title": string,                     // the exhibition title, copied exactly
+  "title_en": string | null,           // the gallery's OWN English title, only if printed on the page
+  "title_gloss": string | null,        // your plain English translation of a non-English title
   "artists": [string],
   "start_date": "YYYY-MM-DD" | null,
   "end_date": "YYYY-MM-DD" | null,
@@ -62,6 +65,9 @@ Return JSON of the form:
 }}]}}
 
 Rules:
+- "title" is the exhibition's own title, copied character for character with the page's spelling, spacing and capitalisation. Many pages print the artist name on one line and the title on the next: the title is the second line, not the artist. Use the artist name as the title only when the page gives no title at all.
+- "title_en": fill only when the page itself prints an English version of the title (for example "Nya målningar / New Paintings" gives title_en "New Paintings"). Never invent it.
+- "title_gloss": when the title is not in English and title_en is null, give a short, plain English translation that tells a reader what the show is about. Keep names untranslated. Null if the title is already English or is only a name.
 - Include only exhibitions that end on or after {today}, or start after it, or whose dates are unknown.
 - "opening" is the vernissage / opening reception / "Öppning" / "Reception". Leave all its fields null unless the text states it. Do not assume the opening is on the start date.
 - Text may be Swedish or English. Swedish months: januari februari mars april maj juni juli augusti september oktober november december. Weekdays: måndag tisdag onsdag torsdag fredag lördag söndag. "kl. 17-19" means 17:00 to 19:00. "t o m" means until.

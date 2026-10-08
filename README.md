@@ -45,6 +45,12 @@ CF_ACCOUNT_ID=<id> CF_API_TOKEN=<token> python -m vernissage
 python -m vernissage --no-fetch           # rebuild page from cache
 ```
 
+## English titles
+
+Titles stay in the original language. If the gallery publishes its own English title, it is shown after a slash. Otherwise the model's English translation is shown in [brackets], marking it as a machine gloss.
+
+`scraper/state/glosses.md` lists every English title currently on the page. To correct one, add the original title and the replacement to `scraper/overrides.yaml` (or `""` to hide the gloss). Saving that file on GitHub rebuilds and redeploys the page from cache in about two minutes, with no AI calls.
+
 ## Adding a venue
 
 Add an entry to `scraper/venues.yaml`, then run `python -m vernissage --dry-run --only <id>` to check the page fetches and its text size.

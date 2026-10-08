@@ -2,11 +2,13 @@ name: nightly
 
 on:
   schedule:
-    - cron: "17 2 * * *"        # 02:17 UTC daily (04:17 CEST / 03:17 CET)
+    - cron: "17 2 * * *"        # 02:17 UTC daily (04:17 CEST / 03:17 CET); GitHub may start it late
   workflow_dispatch:             # manual "Run workflow" button
   push:
     branches: [main]
-    paths: ["site/**"]           # edits to the main site deploy immediately
+    paths:
+      - "site/**"                # edits to the main site deploy immediately
+      - "scraper/overrides.yaml" # gloss corrections rebuild the page from cache, no AI calls
 
 permissions:
   contents: write                # commit refreshed data back to the repo
@@ -23,7 +25,6 @@ jobs:
       - uses: actions/checkout@v5
 
       - name: Set up Python
-        if: github.event_name != 'push'
         uses: actions/setup-python@v6
         with:
           python-version: "3.12"
@@ -31,34 +32,35 @@ jobs:
           cache-dependency-path: scraper/requirements.txt
 
       - name: Install
-        if: github.event_name != 'push'
         run: |
           pip install -r scraper/requirements.txt
-          python -m playwright install --with-deps chromium
+          if [ "${{ github.event_name }}" != "push" ]; then python -m playwright install --with-deps chromium; fi
 
       - name: Test
-        if: github.event_name != 'push'
         working-directory: scraper
         run: python -m pytest -q
 
       - name: Scrape and build
-        if: github.event_name != 'push'
         working-directory: scraper
         env:
           CF_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
           CF_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           REPO_URL: ${{ github.server_url }}/${{ github.repository }}
-        run: python -m vernissage
+        run: |
+          if [ "${{ github.event_name }}" = "push" ]; then
+            python -m vernissage --no-fetch   # rebuild from cache only
+          else
+            python -m vernissage
+          fi
 
       - name: Commit data
-        if: github.event_name != 'push'
         continue-on-error: true      # a failed push must not block the deploy
         run: |
           git config user.name "vernissage-bot"
           git config user.email "actions@users.noreply.github.com"
           git add scraper/state site/projects/vernissage
           git diff --cached --quiet && exit 0
-          git commit -m "data: nightly refresh $(date -u +%F)"
+          git commit -m "data: refresh $(date -u +%F) (${{ github.event_name }})"
           for i in 1 2 3 4; do
             git push && exit 0
             echo "push failed (attempt $i), retrying"

@@ -61,3 +61,57 @@ def test_clean_keeps_links_and_drops_chrome():
     assert "Menu" not in t and "cookies" not in t and "Address" not in t
     assert "Vernissage torsdag" in opening_snippets(t)
     assert opening_snippets("nothing here") == ""
+
+
+def test_end_time_recovered_from_opening_text():
+    from vernissage.build import end_time_from_text as f
+    assert f("Vernissage i konstnärens närvaro, torsdagen den 8 oktober kl. 17-19", "17:00") == "19:00"
+    assert f("Vernissage: 16–19 (konstnärerna närvarar)", "16:00") == "19:00"
+    assert f("Reception Thursday October 15, 5–7 pm", "17:00") == "19:00"
+    assert f("VERNISSAGE 22 OKTOBER KL. 17 - 19", "17:00") == "19:00"
+    assert f("Vernissage 17.30-20.00", "17:30") == "20:00"
+    assert f("2026.10.10-2026.11.08 Opening Saturday 10 October 12-16", "12:00") == "16:00"
+    assert f("Utställning 10-16 oktober", "17:00") is None
+    assert f(None, "17:00") is None
+
+
+def test_end_time_filled_in_events_and_past_items_not_reviewed():
+    item = ex(opening={"date": "2026-10-15", "start_time": "17:00", "end_time": None, "text": "kl. 17-19"})
+    past_unsure = ex(title="Old", start_date="2026-09-10", end_date="2026-10-10", confidence=0)
+    events, review = normalize({"a": [item, past_unsure]}, VENUES, TODAY, 60)
+    assert events[0]["opening"]["end_time"] == "19:00"
+    assert review == []
+
+
+def test_restore_spacing_uses_page_spelling():
+    from vernissage.pipeline import restore_spacing
+    page = "Upcoming\nJockum Nordström | Hålet i väggen\n28 November 2026 - 23 January 2027"
+    assert restore_spacing("Hålet iväggen", page) == "Hålet i väggen"
+    assert restore_spacing("Not on page", page) == "Not on page"
+    assert restore_spacing(None, page) is None
+
+
+def test_english_title_rules():
+    from vernissage.build import english_title as f
+    # gallery's own English title wins, no brackets
+    assert f("Nya målningar", "New Paintings", "New paintings", {}) == ("New Paintings", None, None)
+    # already inside the title: show nothing extra
+    assert f("Nya målningar / New Paintings", "New Paintings", None, {}) == (None, None, None)
+    # machine gloss
+    assert f("Hålet i väggen", None, "The Hole in the Wall", {}) == (None, "The Hole in the Wall", "machine")
+    # gloss identical to title (English title or a name): nothing
+    assert f("Ayan Farah", None, "Ayan Farah", {}) == (None, None, None)
+    # override corrects, empty override suppresses
+    ov = {"Hålet i väggen": "A Hole in the Wall", "Valv": ""}
+    assert f("Hålet i väggen", None, "The Hole", ov) == (None, "A Hole in the Wall", "override")
+    assert f("Valv", None, "Vault", ov) == (None, None, None)
+
+
+def test_gloss_flows_to_events_report_and_calendar():
+    from vernissage.build import display_title, gloss_report
+    x = ex(title="Hålet i väggen", title_gloss="The Hole in the Wall")
+    events, _ = normalize({"a": [x]}, VENUES, TODAY, 60, {})
+    e = events[0]
+    assert display_title(e) == "Hålet i väggen [The Hole in the Wall]"
+    assert "| Hålet i väggen | The Hole in the Wall | machine |" in gloss_report(events)
+    assert "Hålet i väggen [The Hole in the Wall]" in ics(events, "t").replace("\r\n ", "")
