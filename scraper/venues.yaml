@@ -168,14 +168,14 @@ venues:
     name: Galleri Hedenius
     homepage: https://www.gallerihedenius.com/
     exhibitions_urls:
-      - https://www.gallerihedenius.com/
-      - https://www.gallerihedenius.com/utstllningar
+      - https://www.gallerihedenius.com/utstllningar/currentexhibition
+      - https://www.gallerihedenius.com/utstllningar/new-portfolio-item   # upcoming shows
     address: Sturegatan 36, 114 36 Stockholm
     district: Östermalm
     type: commercial
     adapter: squarespace
     opening_text: yes
-    notes: Returned HTTP 429 on repeat fetch. Crawl slowly.
+    notes: Returned HTTP 429 on repeat fetch. Crawl slowly. /utstllningar is an index page; shows live on the two subpages.
     status: active
 
   - id: helle-knudsen
