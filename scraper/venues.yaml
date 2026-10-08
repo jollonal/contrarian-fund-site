@@ -399,6 +399,21 @@ venues:
     notes: Editions shop and showroom; no exhibition programme.
     status: excluded
 
+  - id: mankovsky
+    name: Mankovsky Gallery
+    homepage: https://mankovskygallery.com/
+    exhibitions_urls:
+      - https://mankovskygallery.com/pages/exhibitions-originals
+      - https://mankovskygallery.com/blogs/exhibitions
+    address: Linnégatan 13, 114 47 Stockholm
+    district: Östermalm
+    type: commercial
+    adapter: shopify
+    opening_text: no
+    city_filter: Stockholm   # also has a Gothenburg showroom
+    notes: Opened April 2026. Listing pages carry no dates; newsletter is the main source.
+    status: active
+
   # ---------- Artist-run (added 2026-10-08) ----------
   - id: candyland
     name: Candyland
