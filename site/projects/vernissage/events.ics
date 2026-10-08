@@ -22,7 +22,7 @@ END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
 UID:c11bd021df7c@contrarian.fund
-DTSTAMP:20261008T215122Z
+DTSTAMP:20261008T215613Z
 DTSTART;TZID=Europe/Stockholm:20261008T170000
 DTEND;TZID=Europe/Stockholm:20261008T190000
 SUMMARY:Vernissage: Tomas Gustavsson: En plats i solen at Galleri Helle Knu
@@ -34,7 +34,7 @@ URL:https://gallerihelle.com/blogs/aktuell/tomas-gustavsson-en-plats-i-sole
 END:VEVENT
 BEGIN:VEVENT
 UID:f2690f6559c9@contrarian.fund
-DTSTAMP:20261008T215122Z
+DTSTAMP:20261008T215613Z
 DTSTART;VALUE=DATE:20261009
 DTEND;VALUE=DATE:20261010
 SUMMARY:Opens: Hanna Hansdotter Kalypso at Gallery Steinsland Berliner
@@ -44,7 +44,7 @@ URL:https://steinslandberliner.com/shows/hanna-hansdotter-kalypso-2026
 END:VEVENT
 BEGIN:VEVENT
 UID:834adcc6811a@contrarian.fund
-DTSTAMP:20261008T215122Z
+DTSTAMP:20261008T215613Z
 DTSTART;TZID=Europe/Stockholm:20261010T120000
 DTEND;TZID=Europe/Stockholm:20261010T160000
 SUMMARY:Vernissage: Anders Widoff at Björkholmen Gallery
@@ -55,7 +55,7 @@ URL:https://bjorkholmengallery.com/exhibition/den-har-dagen-och-den-har-dag
 END:VEVENT
 BEGIN:VEVENT
 UID:cd19592ae54f@contrarian.fund
-DTSTAMP:20261008T215122Z
+DTSTAMP:20261008T215613Z
 DTSTART;TZID=Europe/Stockholm:20261015T170000
 DTEND;TZID=Europe/Stockholm:20261015T190000
 SUMMARY:Vernissage: Between Hidden and Almost Revealed at Galleri Magnus Ka
@@ -67,7 +67,7 @@ URL:https://www.gallerimagnuskarlsson.com/exhibitions/408-alejandro-sintura
 END:VEVENT
 BEGIN:VEVENT
 UID:eba1d820963f@contrarian.fund
-DTSTAMP:20261008T215122Z
+DTSTAMP:20261008T215613Z
 DTSTART;VALUE=DATE:20261021
 DTEND;VALUE=DATE:20261022
 SUMMARY:Opens: Tusen sjöars glöd at Galleri Glas
@@ -79,7 +79,7 @@ URL:https://www.galleriglas.se/exhibitions/82-tusen-sjoars-glod-karsikas-ko
 END:VEVENT
 BEGIN:VEVENT
 UID:de781fd4d68d@contrarian.fund
-DTSTAMP:20261008T215122Z
+DTSTAMP:20261008T215613Z
 DTSTART;TZID=Europe/Stockholm:20261106T160000
 DTEND;TZID=Europe/Stockholm:20261106T190000
 SUMMARY:Vernissage: Våra ... at Galleri Helle Knudsen
@@ -90,7 +90,7 @@ URL:https://gallerihelle.com/blogs/utstallningar/vara-historier
 END:VEVENT
 BEGIN:VEVENT
 UID:8289226dd3ee@contrarian.fund
-DTSTAMP:20261008T215122Z
+DTSTAMP:20261008T215613Z
 DTSTART;TZID=Europe/Stockholm:20261106T170000
 DTEND;TZID=Europe/Stockholm:20261106T190000
 SUMMARY:Vernissage: Nya målningar / New Paintings at Galleri Magnus Karlss
@@ -102,7 +102,7 @@ URL:https://www.gallerimagnuskarlsson.com/exhibitions/410-anna-bjerger-nya-
 END:VEVENT
 BEGIN:VEVENT
 UID:a3e63ac6887a@contrarian.fund
-DTSTAMP:20261008T215122Z
+DTSTAMP:20261008T215613Z
 DTSTART;VALUE=DATE:20261106
 DTEND;VALUE=DATE:20261107
 SUMMARY:Opens: Ayan Farah at Galerie Nordenhake
@@ -112,7 +112,7 @@ URL:https://nordenhake.com/exhibitions/2026/ayan-farah
 END:VEVENT
 BEGIN:VEVENT
 UID:1f6ed3574640@contrarian.fund
-DTSTAMP:20261008T215122Z
+DTSTAMP:20261008T215613Z
 DTSTART;VALUE=DATE:20261128
 DTEND;VALUE=DATE:20261129
 SUMMARY:Opens: Hålet i väggen at Galleri Magnus Karlsson
