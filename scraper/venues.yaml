@@ -518,6 +518,7 @@ venues:
     type: artist-run
     adapter: wordpress
     opening_text: yes
+    mail_domains: [6447337.brevosend.com]   # SKF's own Brevo sender subdomain, not brevosend.com
     notes: Svenska Konstnärernas Förening (SKF). Programme URL is per year; update in January.
     status: active
 
