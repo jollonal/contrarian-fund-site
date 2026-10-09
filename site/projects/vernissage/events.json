@@ -1,8 +1,34 @@
 {
- "generated_at": "2026-10-08T22:22:53+00:00",
+ "generated_at": "2026-10-09T00:11:28+00:00",
  "window_days": 60,
- "venues_tracked": 41,
+ "venues_tracked": 44,
  "events": [
+  {
+   "id": "76c585ee52bc",
+   "venue_id": "hera",
+   "venue": "Galleri Hera",
+   "address": "Hornsgatan 36, 118 20 Stockholm",
+   "district": "Södermalm",
+   "title": "Dagar och nätter vid havet",
+   "title_en": null,
+   "gloss": "Days and nights by the sea”,",
+   "gloss_source": "machine",
+   "artists": [
+    "Thomas Ekvall"
+   ],
+   "start_date": "2026-09-26",
+   "end_date": "2026-10-14",
+   "date": "2026-10-09",
+   "opening": {
+    "confirmed": true,
+    "start_time": "11:00",
+    "end_time": "16:00",
+    "text": "Välkommen på Vernissage Lördag kl. 11.00 -16.00"
+   },
+   "access": "unknown",
+   "url": "https://gallerihera.se/",
+   "source": "web"
+  },
   {
    "id": "fd8ea4b5a75c",
    "venue_id": "steinsland-berliner",
@@ -82,6 +108,135 @@
    "source": "web"
   },
   {
+   "id": "e483921a99c2",
+   "venue_id": "studio-44",
+   "venue": "Studio 44",
+   "address": "Tjärhovsgatan 44 B, 116 28 Stockholm",
+   "district": "Södermalm",
+   "title": "Thomas Brennan & Maria Lundmark",
+   "title_en": null,
+   "gloss": null,
+   "gloss_source": null,
+   "artists": [
+    "Maria Lundmark",
+    "Thomas Brennan"
+   ],
+   "start_date": "2026-10-16",
+   "end_date": "2026-11-01",
+   "date": "2026-10-16",
+   "opening": {
+    "confirmed": true,
+    "start_time": "17:00",
+    "end_time": "21:00",
+    "text": "Opening"
+   },
+   "access": "unknown",
+   "url": "https://studio44-stockholm.com/39499-2/thomas-brennan-maria-lundmark/",
+   "source": "web"
+  },
+  {
+   "id": "60cd4b1061a0",
+   "venue_id": "idi-galleri",
+   "venue": "ID:I galleri",
+   "address": "Tjärhovsgatan 19, 116 28 Stockholm",
+   "district": "Södermalm",
+   "title": "Christine Dahl Helweg-Larsen. Queenning Zhao",
+   "title_en": null,
+   "gloss": null,
+   "gloss_source": null,
+   "artists": [],
+   "start_date": "2026-10-16",
+   "end_date": "2026-11-01",
+   "date": "2026-10-16",
+   "opening": {
+    "confirmed": true,
+    "start_time": null,
+    "end_time": null,
+    "text": null
+   },
+   "access": "unknown",
+   "url": "https://idigalleri.org/",
+   "source": "web"
+  },
+  {
+   "id": "bd9d5a2df007",
+   "venue_id": "hera",
+   "venue": "Galleri Hera",
+   "address": "Hornsgatan 36, 118 20 Stockholm",
+   "district": "Södermalm",
+   "title": "Morten Lassen",
+   "title_en": null,
+   "gloss": null,
+   "gloss_source": null,
+   "artists": [
+    "Morten Lassen"
+   ],
+   "start_date": "2026-10-17",
+   "end_date": "2026-11-04",
+   "date": "2026-10-17",
+   "opening": {
+    "confirmed": false,
+    "start_time": null,
+    "end_time": null,
+    "text": null
+   },
+   "access": "unknown",
+   "url": "https://gallerihera.se/",
+   "source": "web"
+  },
+  {
+   "id": "3ab421afc491",
+   "venue_id": "grafiska-sallskapet",
+   "venue": "Grafiska Sällskapet",
+   "address": "Hornsgatan 6, 118 20 Stockholm",
+   "district": "Södermalm",
+   "title": "Tillstånd",
+   "title_en": null,
+   "gloss": "Condition",
+   "gloss_source": "machine",
+   "artists": [
+    "Pernilla Jansson"
+   ],
+   "start_date": "2026-10-17",
+   "end_date": "2026-11-04",
+   "date": "2026-10-17",
+   "opening": {
+    "confirmed": false,
+    "start_time": null,
+    "end_time": null,
+    "text": null
+   },
+   "access": "unknown",
+   "url": "https://grafiskasallskapet.se/",
+   "source": "web"
+  },
+  {
+   "id": "d24b61ddf06d",
+   "venue_id": "grafiska-sallskapet",
+   "venue": "Grafiska Sällskapet",
+   "address": "Hornsgatan 6, 118 20 Stockholm",
+   "district": "Södermalm",
+   "title": "Mellanrum",
+   "title_en": null,
+   "gloss": "In-between spaces",
+   "gloss_source": "machine",
+   "artists": [
+    "Anne De Geer"
+   ],
+   "start_date": "2026-10-17",
+   "end_date": "2026-11-04",
+   "date": "2026-10-17",
+   "opening": {
+    "confirmed": false,
+    "start_time": null,
+    "end_time": null,
+    "text": null
+   },
+   "access": "unknown",
+   "url": "https://grafiskasallskapet.se/",
+   "source": "web"
+  },
+  {
    "id": "eba1d820963f",
    "venue_id": "galleri-glas",
    "venue": "Galleri Glas",
@@ -135,6 +290,142 @@
    },
    "access": "unknown",
    "url": "https://www.gallerihedenius.com/",
+   "source": "web"
+  },
+  {
+   "id": "925412b80497",
+   "venue_id": "kaolin",
+   "venue": "Kaolin",
+   "address": "Hornsgatan 50, 118 21 Stockholm",
+   "district": "Södermalm",
+   "title": "Jae Chang",
+   "title_en": null,
+   "gloss": null,
+   "gloss_source": null,
+   "artists": [
+    "Jae Chang"
+   ],
+   "start_date": "2026-10-24",
+   "end_date": "2026-11-14",
+   "date": "2026-10-24",
+   "opening": {
+    "confirmed": false,
+    "start_time": null,
+    "end_time": null,
+    "text": null
+   },
+   "access": "unknown",
+   "url": "https://kaolin.se/",
+   "source": "web"
+  },
+  {
+   "id": "f24c1fdfc487",
+   "venue_id": "kaolin",
+   "venue": "Kaolin",
+   "address": "Hornsgatan 50, 118 21 Stockholm",
+   "district": "Södermalm",
+   "title": "Elin Sundström",
+   "title_en": null,
+   "gloss": null,
+   "gloss_source": null,
+   "artists": [
+    "Elin Sundström"
+   ],
+   "start_date": "2026-10-24",
+   "end_date": null,
+   "date": "2026-10-24",
+   "opening": {
+    "confirmed": false,
+    "start_time": null,
+    "end_time": null,
+    "text": null
+   },
+   "access": "unknown",
+   "url": "https://kaolin.se/",
+   "source": "web"
+  },
+  {
+   "id": "3efe4f736501",
+   "venue_id": "grafiska-sallskapet",
+   "venue": "Grafiska Sällskapet",
+   "address": "Hornsgatan 6, 118 20 Stockholm",
+   "district": "Södermalm",
+   "title": "Extern utställning: Norske Grafikere i Oslo, ett urval av 9 grafiker",
+   "title_en": null,
+   "gloss": "External exhibition: Norwegian Printmakers in Oslo, a selection of 9 printmakers",
+   "gloss_source": "machine",
+   "artists": [
+    "Alexandra Skarp",
+    "Amalia Årfelt",
+    "Annalena Törnström",
+    "Christer Themptander",
+    "Christina Västerbo",
+    "Helena Laukkanen",
+    "Kristina Stark",
+    "Laurens Rohlfs",
+    "Nina Kerola"
+   ],
+   "start_date": "2026-10-29",
+   "end_date": "2026-11-28",
+   "date": "2026-10-29",
+   "opening": {
+    "confirmed": false,
+    "start_time": null,
+    "end_time": null,
+    "text": null
+   },
+   "access": "unknown",
+   "url": "https://grafiskasallskapet.se/GSimg/pdf/2026.10.29-GS-%20Norske_Grafikere.pdf",
+   "source": "web"
+  },
+  {
+   "id": "2f0f2a2d6d0c",
+   "venue_id": "slipvillan",
+   "venue": "Slipvillan",
+   "address": "Mälarvarvsbacken 32, 117 33 Stockholm",
+   "district": "Långholmen",
+   "title": "Tillit",
+   "title_en": null,
+   "gloss": "Trust”,",
+   "gloss_source": "machine",
+   "artists": [],
+   "start_date": "2026-10-31",
+   "end_date": "2026-11-22",
+   "date": "2026-10-31",
+   "opening": {
+    "confirmed": true,
+    "start_time": null,
+    "end_time": null,
+    "text": null
+   },
+   "access": "unknown",
+   "url": "https://slipvillan.org/",
+   "source": "web"
+  },
+  {
+   "id": "24426fa60f8e",
+   "venue_id": "platform-stockholm",
+   "venue": "Platform Stockholm",
+   "address": "Färgkontoret, Lövholmsgränd 12, 117 43 Stockholm",
+   "district": "Liljeholmen",
+   "title": "The Ecology of Forking Paths",
+   "title_en": null,
+   "gloss": null,
+   "gloss_source": null,
+   "artists": [
+    "Jonatan T. Wejnold"
+   ],
+   "start_date": "2026-11-05",
+   "end_date": "2027-01-17",
+   "date": "2026-11-05",
+   "opening": {
+    "confirmed": true,
+    "start_time": null,
+    "end_time": null,
+    "text": "Öppnar torsdag 5 november"
+   },
+   "access": "unknown",
+   "url": "https://platformstockholm.com/gallery/e335f103-5c3f-4f80-be31-2196b12a58da",
    "source": "web"
   },
   {
@@ -217,6 +508,187 @@
    "source": "web"
   },
   {
+   "id": "35911122f480",
+   "venue_id": "hera",
+   "venue": "Galleri Hera",
+   "address": "Hornsgatan 36, 118 20 Stockholm",
+   "district": "Södermalm",
+   "title": "Kai Savelsberg",
+   "title_en": null,
+   "gloss": null,
+   "gloss_source": null,
+   "artists": [
+    "Kai Savelsberg"
+   ],
+   "start_date": "2026-11-06",
+   "end_date": "2026-11-25",
+   "date": "2026-11-06",
+   "opening": {
+    "confirmed": false,
+    "start_time": null,
+    "end_time": null,
+    "text": null
+   },
+   "access": "unknown",
+   "url": "https://gallerihera.se/",
+   "source": "web"
+  },
+  {
+   "id": "6c9e56818fbb",
+   "venue_id": "idi-galleri",
+   "venue": "ID:I galleri",
+   "address": "Tjärhovsgatan 19, 116 28 Stockholm",
+   "district": "Södermalm",
+   "title": "Simon Blanck",
+   "title_en": null,
+   "gloss": null,
+   "gloss_source": null,
+   "artists": [],
+   "start_date": "2026-11-06",
+   "end_date": "2026-11-22",
+   "date": "2026-11-06",
+   "opening": {
+    "confirmed": false,
+    "start_time": null,
+    "end_time": null,
+    "text": null
+   },
+   "access": "unknown",
+   "url": "https://idigalleri.org/",
+   "source": "web"
+  },
+  {
+   "id": "22701df4753f",
+   "venue_id": "grafiska-sallskapet",
+   "venue": "Grafiska Sällskapet",
+   "address": "Hornsgatan 6, 118 20 Stockholm",
+   "district": "Södermalm",
+   "title": "Träsnitt",
+   "title_en": null,
+   "gloss": "Woodcuts",
+   "gloss_source": "machine",
+   "artists": [
+    "Lars Arvidsson"
+   ],
+   "start_date": "2026-11-07",
+   "end_date": "2026-11-25",
+   "date": "2026-11-07",
+   "opening": {
+    "confirmed": false,
+    "start_time": null,
+    "end_time": null,
+    "text": null
+   },
+   "access": "unknown",
+   "url": "https://grafiskasallskapet.se/",
+   "source": "web"
+  },
+  {
+   "id": "5e10c1566299",
+   "venue_id": "grafiska-sallskapet",
+   "venue": "Grafiska Sällskapet",
+   "address": "Hornsgatan 6, 118 20 Stockholm",
+   "district": "Södermalm",
+   "title": "Herbarium",
+   "title_en": null,
+   "gloss": null,
+   "gloss_source": null,
+   "artists": [
+    "Peter Wiklund"
+   ],
+   "start_date": "2026-11-07",
+   "end_date": "2026-11-25",
+   "date": "2026-11-07",
+   "opening": {
+    "confirmed": false,
+    "start_time": null,
+    "end_time": null,
+    "text": null
+   },
+   "access": "unknown",
+   "url": "https://grafiskasallskapet.se/",
+   "source": "web"
+  },
+  {
+   "id": "f90622c8f253",
+   "venue_id": "grafiska-sallskapet",
+   "venue": "Grafiska Sällskapet",
+   "address": "Hornsgatan 6, 118 20 Stockholm",
+   "district": "Södermalm",
+   "title": "P O Söderlund minnesutställning",
+   "title_en": null,
+   "gloss": "P O Söderlund Memorial Exhibition",
+   "gloss_source": "machine",
+   "artists": [
+    "P O Söderlund"
+   ],
+   "start_date": "2026-11-07",
+   "end_date": "2026-11-25",
+   "date": "2026-11-07",
+   "opening": {
+    "confirmed": false,
+    "start_time": null,
+    "end_time": null,
+    "text": null
+   },
+   "access": "unknown",
+   "url": "https://grafiskasallskapet.se/",
+   "source": "web"
+  },
+  {
+   "id": "2f95f0e85db6",
+   "venue_id": "kaolin",
+   "venue": "Kaolin",
+   "address": "Hornsgatan 50, 118 21 Stockholm",
+   "district": "Södermalm",
+   "title": "JUL PÅ KAOLIN / Medlemsutställning",
+   "title_en": null,
+   "gloss": "CHRISTMAS AT KAOLIN / Members' exhibition",
+   "gloss_source": "machine",
+   "artists": [],
+   "start_date": "2026-11-21",
+   "end_date": "2026-12-31",
+   "date": "2026-11-21",
+   "opening": {
+    "confirmed": false,
+    "start_time": null,
+    "end_time": null,
+    "text": null
+   },
+   "access": "unknown",
+   "url": "https://kaolin.se/",
+   "source": "web"
+  },
+  {
+   "id": "b2043c7b0f56",
+   "venue_id": "konstnarshuset",
+   "venue": "Konstnärshuset",
+   "address": "Smålandsgatan 7, 111 46 Stockholm",
+   "district": "Norrmalm",
+   "title": "Avund & svartsjuka",
+   "title_en": null,
+   "gloss": "envy and jealousy",
+   "gloss_source": "machine",
+   "artists": [
+    "Pontus Djanaieff",
+    "Tang Wen",
+    "Selma Morshedi",
+    "Filippa Nilsson Kallhed"
+   ],
+   "start_date": "2026-11-21",
+   "end_date": "2026-12-12",
+   "date": "2026-11-21",
+   "opening": {
+    "confirmed": false,
+    "start_time": null,
+    "end_time": null,
+    "text": null
+   },
+   "access": "unknown",
+   "url": "https://konstnarshuset.org/",
+   "source": "web"
+  },
+  {
    "id": "97955ba84cae",
    "venue_id": "hedenius",
    "venue": "Galleri Hedenius",
@@ -243,6 +715,56 @@
    "source": "web"
   },
   {
+   "id": "834aa7e9c814",
+   "venue_id": "idi-galleri",
+   "venue": "ID:I galleri",
+   "address": "Tjärhovsgatan 19, 116 28 Stockholm",
+   "district": "Södermalm",
+   "title": "Molekyl",
+   "title_en": null,
+   "gloss": null,
+   "gloss_source": null,
+   "artists": [],
+   "start_date": "2026-11-27",
+   "end_date": "2026-12-13",
+   "date": "2026-11-27",
+   "opening": {
+    "confirmed": false,
+    "start_time": null,
+    "end_time": null,
+    "text": null
+   },
+   "access": "unknown",
+   "url": "https://idigalleri.org/",
+   "source": "web"
+  },
+  {
+   "id": "00f8791b3be2",
+   "venue_id": "hera",
+   "venue": "Galleri Hera",
+   "address": "Hornsgatan 36, 118 20 Stockholm",
+   "district": "Södermalm",
+   "title": "Gunilla Hammar",
+   "title_en": null,
+   "gloss": null,
+   "gloss_source": null,
+   "artists": [
+    "Gunilla Hammar"
+   ],
+   "start_date": "2026-11-28",
+   "end_date": "2026-12-16",
+   "date": "2026-11-28",
+   "opening": {
+    "confirmed": false,
+    "start_time": null,
+    "end_time": null,
+    "text": null
+   },
+   "access": "unknown",
+   "url": "https://gallerihera.se/",
+   "source": "web"
+  },
+  {
    "id": "1f6ed3574640",
    "venue_id": "magnus-karlsson",
    "venue": "Galleri Magnus Karlsson",
@@ -266,6 +788,82 @@
    },
    "access": "unknown",
    "url": "https://www.gallerimagnuskarlsson.com/exhibitions/409-jockum-nordstrom-halet-i-vaggen/",
+   "source": "web"
+  },
+  {
+   "id": "5d70fafc2ec5",
+   "venue_id": "grafiska-sallskapet",
+   "venue": "Grafiska Sällskapet",
+   "address": "Hornsgatan 6, 118 20 Stockholm",
+   "district": "Södermalm",
+   "title": "Från golv till tak",
+   "title_en": null,
+   "gloss": "From floor to ceiling",
+   "gloss_source": "machine",
+   "artists": [
+    "Chennet Juhlin"
+   ],
+   "start_date": "2026-11-28",
+   "end_date": "2026-12-16",
+   "date": "2026-11-28",
+   "opening": {
+    "confirmed": false,
+    "start_time": null,
+    "end_time": null,
+    "text": null
+   },
+   "access": "unknown",
+   "url": "https://grafiskasallskapet.se/",
+   "source": "web"
+  },
+  {
+   "id": "b8ead8f67710",
+   "venue_id": "grafiska-sallskapet",
+   "venue": "Grafiska Sällskapet",
+   "address": "Hornsgatan 6, 118 20 Stockholm",
+   "district": "Södermalm",
+   "title": "Black Box Manual Instruction",
+   "title_en": null,
+   "gloss": null,
+   "gloss_source": null,
+   "artists": [
+    "Mats Gustavsson"
+   ],
+   "start_date": "2026-11-28",
+   "end_date": "2026-12-16",
+   "date": "2026-11-28",
+   "opening": {
+    "confirmed": false,
+    "start_time": null,
+    "end_time": null,
+    "text": null
+   },
+   "access": "unknown",
+   "url": "https://grafiskasallskapet.se/",
+   "source": "web"
+  },
+  {
+   "id": "371027f5d509",
+   "venue_id": "slipvillan",
+   "venue": "Slipvillan",
+   "address": "Mälarvarvsbacken 32, 117 33 Stockholm",
+   "district": "Långholmen",
+   "title": "Hjälp",
+   "title_en": null,
+   "gloss": "Help”,",
+   "gloss_source": "machine",
+   "artists": [],
+   "start_date": "2026-11-28",
+   "end_date": "2026-12-20",
+   "date": "2026-11-28",
+   "opening": {
+    "confirmed": true,
+    "start_time": null,
+    "end_time": null,
+    "text": null
+   },
+   "access": "unknown",
+   "url": "https://slipvillan.org/",
    "source": "web"
   }
  ]

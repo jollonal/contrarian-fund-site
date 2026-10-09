@@ -2,7 +2,7 @@ BEGIN:VCALENDAR
 VERSION:2.0
 PRODID:-//contrarian.fund//vernissage//EN
 CALSCALE:GREGORIAN
-X-WR-CALNAME:Ayan Farah
+X-WR-CALNAME:Tillit
 BEGIN:VTIMEZONE
 TZID:Europe/Stockholm
 BEGIN:DAYLIGHT
@@ -21,13 +21,13 @@ RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU
 END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
-UID:a3e63ac6887a@contrarian.fund
+UID:2f0f2a2d6d0c@contrarian.fund
 DTSTAMP:20261009T001128Z
-DTSTART;VALUE=DATE:20261106
-DTEND;VALUE=DATE:20261107
-SUMMARY:Opens: Ayan Farah at Galerie Nordenhake
-LOCATION:Lützengatan 1\, 115 20 Stockholm
-DESCRIPTION:Ayan Farah\nOn view until 2026-11-28.
-URL:https://nordenhake.com/exhibitions/2026/ayan-farah
+DTSTART;VALUE=DATE:20261031
+DTEND;VALUE=DATE:20261101
+SUMMARY:Vernissage: Tillit [Trust”\,] at Slipvillan
+LOCATION:Mälarvarvsbacken 32\, 117 33 Stockholm
+DESCRIPTION:On view until 2026-11-22.
+URL:https://slipvillan.org/
 END:VEVENT
 END:VCALENDAR

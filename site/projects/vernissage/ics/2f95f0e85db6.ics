@@ -2,7 +2,7 @@ BEGIN:VCALENDAR
 VERSION:2.0
 PRODID:-//contrarian.fund//vernissage//EN
 CALSCALE:GREGORIAN
-X-WR-CALNAME:Ayan Farah
+X-WR-CALNAME:JUL PÅ KAOLIN / Medlemsutställning
 BEGIN:VTIMEZONE
 TZID:Europe/Stockholm
 BEGIN:DAYLIGHT
@@ -21,13 +21,14 @@ RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU
 END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
-UID:a3e63ac6887a@contrarian.fund
+UID:2f95f0e85db6@contrarian.fund
 DTSTAMP:20261009T001128Z
-DTSTART;VALUE=DATE:20261106
-DTEND;VALUE=DATE:20261107
-SUMMARY:Opens: Ayan Farah at Galerie Nordenhake
-LOCATION:Lützengatan 1\, 115 20 Stockholm
-DESCRIPTION:Ayan Farah\nOn view until 2026-11-28.
-URL:https://nordenhake.com/exhibitions/2026/ayan-farah
+DTSTART;VALUE=DATE:20261121
+DTEND;VALUE=DATE:20261122
+SUMMARY:Opens: JUL PÅ KAOLIN / Medlemsutställning [CHRISTMAS AT KAOLIN / 
+ Members' exhibition] at Kaolin
+LOCATION:Hornsgatan 50\, 118 21 Stockholm
+DESCRIPTION:On view until 2026-12-31.
+URL:https://kaolin.se/
 END:VEVENT
 END:VCALENDAR

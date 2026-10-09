@@ -2,7 +2,7 @@ BEGIN:VCALENDAR
 VERSION:2.0
 PRODID:-//contrarian.fund//vernissage//EN
 CALSCALE:GREGORIAN
-X-WR-CALNAME:Ayan Farah
+X-WR-CALNAME:Herbarium
 BEGIN:VTIMEZONE
 TZID:Europe/Stockholm
 BEGIN:DAYLIGHT
@@ -21,13 +21,13 @@ RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU
 END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
-UID:a3e63ac6887a@contrarian.fund
+UID:5e10c1566299@contrarian.fund
 DTSTAMP:20261009T001128Z
-DTSTART;VALUE=DATE:20261106
-DTEND;VALUE=DATE:20261107
-SUMMARY:Opens: Ayan Farah at Galerie Nordenhake
-LOCATION:Lützengatan 1\, 115 20 Stockholm
-DESCRIPTION:Ayan Farah\nOn view until 2026-11-28.
-URL:https://nordenhake.com/exhibitions/2026/ayan-farah
+DTSTART;VALUE=DATE:20261107
+DTEND;VALUE=DATE:20261108
+SUMMARY:Opens: Herbarium at Grafiska Sällskapet
+LOCATION:Hornsgatan 6\, 118 20 Stockholm
+DESCRIPTION:Peter Wiklund\nOn view until 2026-11-25.
+URL:https://grafiskasallskapet.se/
 END:VEVENT
 END:VCALENDAR

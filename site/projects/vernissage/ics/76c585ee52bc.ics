@@ -2,7 +2,7 @@ BEGIN:VCALENDAR
 VERSION:2.0
 PRODID:-//contrarian.fund//vernissage//EN
 CALSCALE:GREGORIAN
-X-WR-CALNAME:Ayan Farah
+X-WR-CALNAME:Dagar och nätter vid havet
 BEGIN:VTIMEZONE
 TZID:Europe/Stockholm
 BEGIN:DAYLIGHT
@@ -21,13 +21,14 @@ RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU
 END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
-UID:a3e63ac6887a@contrarian.fund
+UID:76c585ee52bc@contrarian.fund
 DTSTAMP:20261009T001128Z
-DTSTART;VALUE=DATE:20261106
-DTEND;VALUE=DATE:20261107
-SUMMARY:Opens: Ayan Farah at Galerie Nordenhake
-LOCATION:Lützengatan 1\, 115 20 Stockholm
-DESCRIPTION:Ayan Farah\nOn view until 2026-11-28.
-URL:https://nordenhake.com/exhibitions/2026/ayan-farah
+DTSTART;TZID=Europe/Stockholm:20261009T110000
+DTEND;TZID=Europe/Stockholm:20261009T160000
+SUMMARY:Vernissage: Dagar och nätter vid havet [Days and nights by the sea
+ ”\,] at Galleri Hera
+LOCATION:Hornsgatan 36\, 118 20 Stockholm
+DESCRIPTION:Thomas Ekvall\nOn view until 2026-10-14.
+URL:https://gallerihera.se/
 END:VEVENT
 END:VCALENDAR
