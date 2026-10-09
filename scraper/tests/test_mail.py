@@ -106,3 +106,41 @@ def test_excluded_venues_ignored_unless_newsletter_flag(monkeypatch):
     monkeypatch.setenv("GMAIL_APP_PASSWORD", "x")
     M.read_newsletters(venues, {}, dt.date(2026, 10, 8), None)
     assert "loyal" not in seen["ids"] and "larsen-warner" in seen["ids"]
+
+
+def test_unmatched_email_is_retried_after_domain_added(monkeypatch):
+    from vernissage import mail as M
+
+    m = EmailMessage()
+    m["From"] = "News <hello@mail.sendservice.example>"
+    m["Message-ID"] = "<u1@x>"
+    m["Date"] = "Thu, 08 Oct 2026 10:00:00 +0200"
+    m.set_content("Welcome to our autumn programme. Vernissage 22 oktober kl. 17-19.")
+    raw = m.as_bytes()
+
+    class FakeIMAP:
+        def __init__(self, host): pass
+        def login(self, u, p): pass
+        def select(self, box, readonly=False): return "OK", [b"1"]
+        def search(self, *a): return "OK", [b"1"]
+        def fetch(self, num, what): return "OK", [(b"1", raw)]
+        def logout(self): pass
+
+    class LLM:
+        available = True
+        calls = 0
+        def json(self, system, user, max_tokens=2500):
+            LLM.calls += 1
+            return {"exhibitions": [{"title": "Valv", "start_date": "2026-10-22", "kind": "exhibition",
+                                     "opening": {"date": "2026-10-22", "start_time": "17:00"}, "confidence": 0.9}]}
+
+    monkeypatch.setattr(M.imaplib, "IMAP4_SSL", FakeIMAP)
+    monkeypatch.setenv("GMAIL_ADDRESS", "a@gmail.com")
+    monkeypatch.setenv("GMAIL_APP_PASSWORD", "x")
+    cache = {}
+    assert M.read_newsletters(VENUES, cache, dt.date(2026, 10, 8), LLM()) == {}
+    assert LLM.calls == 0 and list(cache["mail"].values())[0]["venue"] is None
+    venues = [dict(v, mail_domains=["sendservice.example"]) if v["id"] == "hedenius" else v for v in VENUES]
+    found = M.read_newsletters(venues, cache, dt.date(2026, 10, 8), LLM())
+    assert LLM.calls == 1 and found["hedenius"][0]["title"] == "Valv"
+    assert len(cache["mail"]) == 1

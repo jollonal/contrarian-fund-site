@@ -49,7 +49,7 @@ python -m vernissage --no-fetch           # rebuild page from cache
 
 ## Gallery newsletters
 
-Many galleries announce vernissage times only by email. The nightly run reads the Gmail label `vernissage` over IMAP (read-only, with an app password stored as `GMAIL_ADDRESS` and `GMAIL_APP_PASSWORD` secrets), matches each email to a gallery by sender domain (`mail_domains` in `venues.yaml`) or gallery name, and extracts exhibitions with the same model call as the web pages. A newsletter's opening time is merged into the website's listing of the same show.
+Many galleries announce vernissage times only by email. The nightly run reads the Gmail label `vernissage` over IMAP (read-only, with an app password stored as `GMAIL_ADDRESS` and `GMAIL_APP_PASSWORD` secrets), matches each email to a gallery by sender domain (`mail_domains` in `venues.yaml`) or gallery name, and extracts exhibitions with the same model call as the web pages. A newsletter's opening time is merged into the website's listing of the same show. Emails from senders that match no gallery are re-checked on every run (matching costs no AI), so adding a `mail_domains` entry later picks them up.
 
 Because the repo and its logs are public, nothing from an email is logged or committed except the extracted exhibition facts: message ids are hashed, and senders, subjects and links are dropped. Events found only by email link to the gallery's homepage.
 

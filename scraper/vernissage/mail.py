@@ -117,6 +117,7 @@ def _fetch_new(address: str, password: str, venues: list[dict], store: dict, tod
     by_id = {v["id"]: v for v in venues}
     since = (today - dt.timedelta(days=LOOKBACK_DAYS)).strftime("%d-%b-%Y")
     seen = new = unmatched = 0
+    stopped = ""
 
     imap = imaplib.IMAP4_SSL(IMAP_HOST)
     try:
@@ -134,8 +135,10 @@ def _fetch_new(address: str, password: str, venues: list[dict], store: dict, tod
             msg = email.message_from_bytes(parts[0][1], policy=email.policy.default)
             seen += 1
             key = _key(str(msg.get("Message-ID") or msg.get("Date", "")) + str(num))
-            if key in store:
-                continue
+            if key in store and store[key].get("venue"):
+                continue  # already read and matched to a gallery
+            # new, or previously unmatched: match again (no AI cost), since
+            # venues.yaml may have gained the sender's domain or the gallery
             text = message_text(msg)
             venue_id = match_venue(str(msg.get("From", "")), text, venues, domains)
             sent = email.utils.parsedate_to_datetime(msg["Date"]).date().isoformat() if msg.get("Date") else today.isoformat()
@@ -144,7 +147,8 @@ def _fetch_new(address: str, password: str, venues: list[dict], store: dict, tod
                 store[key] = {"date": sent, "venue": None, "result": []}
                 continue
             if not llm.available:
-                break  # retry tomorrow; nothing recorded for this message
+                stopped = ", stopped early: AI allowance used"
+                break  # retry next run; nothing recorded for this message
             v = by_id[venue_id]
             try:
                 out = llm.json(L.LISTING_SYSTEM, L.LISTING_USER.format(
@@ -152,6 +156,7 @@ def _fetch_new(address: str, password: str, venues: list[dict], store: dict, tod
                     url=f"newsletter email sent {sent}", text=text))
             except L.LLMUnavailable as e:
                 log.warning("newsletters: model unavailable (%s)", type(e).__name__)
+                stopped = ", stopped early: model unavailable"
                 break
             result = []
             for x in out.get("exhibitions", []):
@@ -166,4 +171,5 @@ def _fetch_new(address: str, password: str, venues: list[dict], store: dict, tod
             imap.logout()
         except Exception:
             pass
-    log.info("newsletters: %d in label, %d newly read, %d from unknown senders", seen, new, unmatched)
+    log.info("newsletters: %d checked, %d newly read, %d from unknown senders%s",
+             seen, new, unmatched, stopped)
