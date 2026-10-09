@@ -485,6 +485,7 @@ venues:
     name: Konsthallen ABC
     homepage: https://studioabc.se/
     exhibitions_urls:
+      - https://studioabc.se/
       - https://studioabc.se/utstallningar/
     address: Jämtlandsgatan 161, 162 60 Vällingby
     district: Vällingby
