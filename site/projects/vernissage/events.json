@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-10-10T23:14:58+00:00",
+ "generated_at": "2026-10-10T23:19:59+00:00",
  "window_days": 60,
  "venues_tracked": 65,
  "events": [
@@ -611,6 +611,60 @@
    },
    "access": "unknown",
    "url": "https://antics.se/david-permen",
+   "source": "web"
+  },
+  {
+   "id": "b993644a00b4",
+   "venue_id": "coulisse",
+   "venue": "Coulisse Gallery",
+   "address": "Gävlegatan 10 B, 113 30 Stockholm",
+   "map_url": "https://www.google.com/maps/search/?api=1&query=Coulisse%20Gallery%2C%20G%C3%A4vlegatan%2010%20B%2C%20113%2030%20Stockholm",
+   "district": "Vasastan",
+   "title": "Thom Trojanowski",
+   "title_en": null,
+   "gloss": null,
+   "gloss_source": null,
+   "artists": [
+    "Thom Trojanowski"
+   ],
+   "start_date": "2026-11-05",
+   "end_date": null,
+   "date": "2026-11-05",
+   "opening": {
+    "confirmed": false,
+    "start_time": null,
+    "end_time": null,
+    "text": null
+   },
+   "access": "unknown",
+   "url": "https://www.coulisse-gallery.com/",
+   "source": "web"
+  },
+  {
+   "id": "c93611b9653e",
+   "venue_id": "coulisse",
+   "venue": "Coulisse Gallery",
+   "address": "Gävlegatan 10 B, 113 30 Stockholm",
+   "map_url": "https://www.google.com/maps/search/?api=1&query=Coulisse%20Gallery%2C%20G%C3%A4vlegatan%2010%20B%2C%20113%2030%20Stockholm",
+   "district": "Vasastan",
+   "title": "Evelina Jonsson",
+   "title_en": null,
+   "gloss": null,
+   "gloss_source": null,
+   "artists": [
+    "Evelina Jonsson"
+   ],
+   "start_date": "2026-11-05",
+   "end_date": null,
+   "date": "2026-11-05",
+   "opening": {
+    "confirmed": false,
+    "start_time": null,
+    "end_time": null,
+    "text": null
+   },
+   "access": "unknown",
+   "url": "https://www.coulisse-gallery.com/",
    "source": "web"
   },
   {
