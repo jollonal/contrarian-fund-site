@@ -331,12 +331,13 @@ def ics(events: list[dict], name: str) -> str:
 # ---------- map ----------
 CENTRE = (59.3326, 18.0649)  # Sergels torg
 
-# Map numbering and filter order (user, 2026-10-11): the three densest districts first,
-# then neighbours kept together: Danvikstull after Södermalm, Gamla stan between Södermalm
-# and Norrmalm, Gärdet with Frihamnen, the west side, then outliers. Unlisted districts go last.
-DISTRICT_ORDER = ["Östermalm", "Vasastan", "Södermalm", "Danvikstull", "Gamla stan", "Norrmalm",
-                  "Gärdet", "Frihamnen", "Kungsholmen", "Långholmen", "Liljeholmen", "Vällingby",
-                  "Åkersberga"]
+# Map numbering, gallery list and filter order (user, 2026-10-11). The gallery list shows
+# KEY_LEFT in the left column and everything else, in order, in the right column.
+# Unlisted districts go last (right column). District line Östermalm/Vasastan: Birger Jarlsgatan.
+DISTRICT_ORDER = ["Östermalm", "Gärdet", "Frihamnen", "Vasastan", "Norrmalm", "Gamla stan",
+                  "Kungsholmen", "Södermalm", "Långholmen", "Liljeholmen", "Danvikstull",
+                  "Vällingby", "Åkersberga"]
+KEY_LEFT = DISTRICT_ORDER[:6]
 
 
 def district_rank(d: str | None) -> tuple:
@@ -404,12 +405,14 @@ def write_outputs(events: list[dict], venues: list[dict], out_dir: Path, today: 
     key: dict[str, list[dict]] = {}
     for p in points:
         key.setdefault(p["district"], []).append(p)
+    key_columns = [[(d, ps) for d, ps in key.items() if d in KEY_LEFT],
+                   [(d, ps) for d, ps in key.items() if d not in KEY_LEFT]]
     html = env.get_template("page.html.j2").render(
         days=[(dt.date.fromisoformat(d), es) for d, es in days.items()],
         today=today, window=window, districts=districts,
         n_events=len(events), n_confirmed=sum(e["opening"]["confirmed"] for e in events),
         n_venues=len(points) or len(active), updated=stockholm_now.strftime("%-d %B %Y, %H:%M"),
-        repo_url=repo_url, key=list(key.items()), n_points=len(points),
+        repo_url=repo_url, key=key_columns, n_points=len(points),
         map_json=json.dumps(points, ensure_ascii=False).replace("</", "<\\/"),
     )
     (out_dir / "index.html").write_text(html, encoding="utf-8")

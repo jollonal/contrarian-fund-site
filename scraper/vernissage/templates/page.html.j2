@@ -64,7 +64,7 @@
   .key-group { margin: 14px 0 0; break-inside: avoid; }
   .key h4 { font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; font-weight: 400; margin: 0 0 4px; }
   .key ol { margin: 0; padding-left: 28px; }
-  .key-groups { columns: 2 280px; column-gap: 32px; }
+  .key-groups { display: grid; grid-template-columns: 1fr 1fr; column-gap: 32px; align-items: start; }
   .key li button { font: inherit; color: inherit; background: none; border: 0; padding: 0; cursor: pointer; text-align: left;
                    text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 3px; }
   .key .count { color: var(--muted); }
@@ -79,6 +79,7 @@
     .day { grid-template-columns: 1fr; gap: 12px; }
     .filters label { margin-left: 0; width: 100%; }
     #map { height: 300px; }
+    .key-groups { grid-template-columns: 1fr; }
   }
 </style>
 </head>
@@ -101,10 +102,12 @@
     </div>
     <div class="key" id="map-key" hidden>
       <div class="key-groups">
-      {% for district, pts in key %}<div class="key-group" data-district="{{ district }}"><h4>{{ district }}</h4><ol>
+      {% for col in key %}<div class="key-col">
+      {% for district, pts in col %}<div class="key-group" data-district="{{ district }}"><h4>{{ district }}</h4><ol>
         {% for p in pts %}<li value="{{ p.n }}"><button type="button" data-pin="{{ p.id }}">{{ p.name }}</button>{% if p.openings %} <span class="count">{{ p.openings | length }} opening{{ "" if p.openings | length == 1 else "s" }}</span>{% endif %}</li>
         {% endfor %}</ol></div>
       {% endfor %}
+      </div>{% endfor %}
       </div>
     </div>
   </section>
