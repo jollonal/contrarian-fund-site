@@ -74,7 +74,7 @@ Return JSON of the form:
 Rules:
 - "title" is the exhibition's own title, copied character for character with the page's spelling, spacing and capitalisation. Many pages print the artist name on one line and the title on the next: the title is the second line, not the artist. Use the artist name as the title only when the page gives no title at all.
 - "title_en": fill only when the page itself prints an English version of the title (for example "Nya målningar / New Paintings" gives title_en "New Paintings"). Never invent it.
-- "title_gloss": when the title is not in English and title_en is null, give a short, plain English translation that tells a reader what the show is about. Keep names untranslated. Null if the title is already English or is only a name.
+- "title_gloss": when the title is not in English and title_en is null, give a short, plain English translation that tells a reader what the show is about. Keep names untranslated. Give the translation only: no quotation marks, notes, explanations or alternatives. Null if the title is already English or is only a name.
 - Include only exhibitions that end on or after {today}, or start after it, or whose dates are unknown.
 - "opening" is the vernissage / opening reception / "Öppning" / "Reception". Leave all its fields null unless the text states it. Do not assume the opening is on the start date.
 - Text may be Swedish or English. Swedish months: januari februari mars april maj juni juli augusti september oktober november december. Weekdays: måndag tisdag onsdag torsdag fredag lördag söndag. "kl. 17-19" means 17:00 to 19:00. "t o m" means until.

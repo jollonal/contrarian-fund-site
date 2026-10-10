@@ -81,7 +81,7 @@
           {% else %}
             <p class="when unconfirmed">Exhibition opens. Reception details not published.</p>
           {% endif %}
-          <p class="meta">{% if e.end_date %}Until {{ e.end_date | longdate }}. {% endif %}{{ e.address or "" }}</p>
+          <p class="meta">{% if e.end_date %}Until {{ e.end_date | longdate }}. {% endif %}{% if e.address %}<a href="{{ e.map_url }}" rel="noopener">{{ e.address }}</a>{% endif %}</p>
           <p class="links"><a href="{{ e.url }}" rel="noopener">Gallery page</a><a href="ics/{{ e.id }}.ics">Add to calendar</a></p>
         </article>
       {% endfor %}

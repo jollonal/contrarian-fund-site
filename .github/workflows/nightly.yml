@@ -9,6 +9,7 @@ on:
     paths:
       - "site/**"                # edits to the main site deploy immediately
       - "scraper/overrides.yaml" # gloss corrections rebuild the page from cache, no AI calls
+      - "scraper/vernissage/**"  # code and template changes rebuild from cache, no AI calls
 
 permissions:
   contents: write                # commit refreshed data back to the repo
@@ -19,7 +20,7 @@ concurrency:
 
 jobs:
   run:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04            # pinned: ubuntu-latest moves to Ubuntu 26 from 2026-10-19
     timeout-minutes: 30
     steps:
       - uses: actions/checkout@v5

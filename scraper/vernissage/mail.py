@@ -83,6 +83,12 @@ def message_text(msg: email.message.EmailMessage) -> str:
     return text[:MAX_CHARS]
 
 
+def _own(sender: str, address: str) -> bool:
+    """True when a message was sent from the inbox's own address (any +tag)."""
+    norm = lambda a: re.sub(r"\+[^@]*@", "@", (a or "").strip().lower())
+    return bool(address) and norm(email.utils.parseaddr(sender or "")[1]) == norm(address)
+
+
 def _key(msg_id: str) -> str:
     return hashlib.sha256(msg_id.encode()).hexdigest()[:16]
 
@@ -116,7 +122,7 @@ def _fetch_new(address: str, password: str, venues: list[dict], store: dict, tod
     domains = venue_domains(venues)
     by_id = {v["id"]: v for v in venues}
     since = (today - dt.timedelta(days=LOOKBACK_DAYS)).strftime("%d-%b-%Y")
-    seen = new = unmatched = 0
+    seen = new = unmatched = own = 0
     stopped = ""
 
     imap = imaplib.IMAP4_SSL(IMAP_HOST)
@@ -135,6 +141,10 @@ def _fetch_new(address: str, password: str, venues: list[dict], store: dict, tod
             msg = email.message_from_bytes(parts[0][1], policy=email.policy.default)
             seen += 1
             key = _key(str(msg.get("Message-ID") or msg.get("Date", "")) + str(num))
+            if _own(str(msg.get("From", "")), address):
+                own += 1
+                store.pop(key, None)  # your own requests in reply threads are never newsletters
+                continue
             if key in store and store[key].get("venue"):
                 continue  # already read and matched to a gallery
             # new, or previously unmatched: match again (no AI cost), since
@@ -171,5 +181,5 @@ def _fetch_new(address: str, password: str, venues: list[dict], store: dict, tod
             imap.logout()
         except Exception:
             pass
-    log.info("newsletters: %d checked, %d newly read, %d from unknown senders%s",
-             seen, new, unmatched, stopped)
+    log.info("newsletters: %d checked, %d newly read, %d from unknown senders, %d own skipped%s",
+             seen, new, unmatched, own, stopped)

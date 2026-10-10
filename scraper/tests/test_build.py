@@ -115,3 +115,29 @@ def test_gloss_flows_to_events_report_and_calendar():
     assert display_title(e) == "Hålet i väggen [The Hole in the Wall]"
     assert "| Hålet i väggen | The Hole in the Wall | machine |" in gloss_report(events)
     assert "Hålet i väggen [The Hole in the Wall]" in ics(events, "t").replace("\r\n ", "")
+
+
+def test_gloss_cleanup_and_title_case():
+    from vernissage.build import clean_gloss
+    assert clean_gloss("The glow of a thousand lakes”,", "Tusen sjöars glöd") == "The Glow of a Thousand Lakes"
+    assert clean_gloss("envy and jealousy", "Avund & svartsjuka") == "Envy and Jealousy"
+    assert clean_gloss("Help”,", "Hjälp") == "Help"
+    assert clean_gloss("The Gate/Valve (VALV is Swedish for gate, likely a title)”,", "VALV") == "The Gate"
+    assert clean_gloss("Our ...”,", "Våra ...") == "Our ..."
+    assert clean_gloss("This is probably the artist's name and not a title at all", "Valv") is None
+
+
+def test_explicit_vernissage_beats_low_confidence_and_map_link():
+    from vernissage.build import normalize
+    venues = [{"id": "glas", "name": "Galleri Glas", "homepage": "https://g.se/",
+               "address": "Rödbodtorget 2, 111 52 Stockholm", "district": "Norrmalm", "status": "active"}]
+    item = {"title": "Tusen sjöars glöd", "artists": ["Karsikas"], "start_date": None, "end_date": None,
+            "kind": "exhibition", "confidence": 0.5,
+            "opening": {"date": "2026-10-21", "start_time": "17:00", "end_time": "19:00",
+                        "text": "VERNISSAGE 21 OKTOBER KL. 17.00–19.00"}}
+    events, review = normalize({"glas": [item]}, venues, dt.date(2026, 10, 10), 60)
+    assert not review and events[0]["opening"]["confirmed"]
+    assert events[0]["map_url"].startswith("https://www.google.com/maps/search/?api=1&query=Galleri%20Glas")
+    vague = dict(item, opening={"date": "2026-10-21", "start_time": None, "end_time": None, "text": None})
+    events, review = normalize({"glas": [vague]}, venues, dt.date(2026, 10, 10), 60)
+    assert review and not events

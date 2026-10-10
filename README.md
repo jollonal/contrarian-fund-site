@@ -49,13 +49,13 @@ python -m vernissage --no-fetch           # rebuild page from cache
 
 ## Gallery newsletters
 
-Many galleries announce vernissage times only by email. The nightly run reads the Gmail label `vernissage` over IMAP (read-only, with an app password stored as `GMAIL_ADDRESS` and `GMAIL_APP_PASSWORD` secrets), matches each email to a gallery by sender domain (`mail_domains` in `venues.yaml`) or gallery name, and extracts exhibitions with the same model call as the web pages. A newsletter's opening time is merged into the website's listing of the same show. Emails from senders that match no gallery are re-checked on every run (matching costs no AI), so adding a `mail_domains` entry later picks them up.
+Many galleries announce vernissage times only by email. The nightly run reads the Gmail label `vernissage` over IMAP (read-only, with an app password stored as `GMAIL_ADDRESS` and `GMAIL_APP_PASSWORD` secrets), matches each email to a gallery by sender domain (`mail_domains` in `venues.yaml`) or gallery name, and extracts exhibitions with the same model call as the web pages. A newsletter's opening time is merged into the website's listing of the same show. Messages sent from the inbox's own address (your requests in reply threads) are skipped. Emails from senders that match no gallery are re-checked on every run (matching costs no AI), so adding a `mail_domains` entry later picks them up.
 
 Because the repo and its logs are public, nothing from an email is logged or committed except the extracted exhibition facts: message ids are hashed, and senders, subjects and links are dropped. Events found only by email link to the gallery's homepage.
 
 ## English titles
 
-Titles stay in the original language. If the gallery publishes its own English title, it is shown after a slash. Otherwise the model's English translation is shown in [brackets], marking it as a machine gloss.
+Titles stay in the original language. If the gallery publishes its own English title, it is shown after a slash. Otherwise the model's English translation is shown in [brackets], marking it as a machine gloss. Glosses are cleaned before display (stray quotes and punctuation, notes in parentheses, alternatives after a slash) and set in title case, Chicago style.
 
 `scraper/state/glosses.md` lists every English title currently on the page. To correct one, add the original title and the replacement to `scraper/overrides.yaml` (or `""` to hide the gloss). Saving that file on GitHub rebuilds and redeploys the page from cache in about two minutes, with no AI calls.
 

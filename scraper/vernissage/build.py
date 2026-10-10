@@ -6,12 +6,14 @@ import hashlib
 import json
 import re
 import unicodedata
+import urllib.parse
 from pathlib import Path
 from zoneinfo import ZoneInfo
 
 from jinja2 import Environment, FileSystemLoader, select_autoescape
 
 MIN_CONFIDENCE = 0.6
+OPENING_TEXT = re.compile(r"(vernissage|opening|öppning|invigning|reception).*\d", re.I | re.S)
 TIME_RE = re.compile(r"^([01]\d|2[0-3]):[0-5]\d$")
 
 
@@ -52,6 +54,50 @@ def end_time_from_text(text: str | None, start: str) -> str | None:
     return None
 
 
+# Chicago Manual of Style title case: lowercase articles, coordinating conjunctions
+# and prepositions unless first or last; capitalize everything else.
+MINOR_WORDS = set("""a an the and but for nor or so yet as at by down for from in into like near of off on
+onto out over past per since than till to toward towards under until up upon via with within without
+about above across after against along among around before behind below beneath beside between beyond
+despite during except inside outside through throughout underneath""".split())
+
+
+def title_case(text: str) -> str:
+    words = text.split()
+    out = []
+    for i, w in enumerate(words):
+        core = re.sub(r"^[^\w]+|[^\w]+$", "", w)
+        first = i == 0 or re.search(r"[:\u2013\u2014-]$", words[i - 1] or "")
+        last = i == len(words) - 1
+        if not core or core != core.lower():
+            out.append(w)  # keep names, acronyms and existing capitals as given
+        elif core in MINOR_WORDS and not first and not last:
+            out.append(w)
+        else:
+            out.append(w.replace(core, core[:1].upper() + core[1:], 1))
+    return " ".join(out)
+
+
+def clean_gloss(gloss: str, title: str) -> str | None:
+    """Strip model noise from a machine gloss: stray quotes and commas, notes in
+    parentheses, alternatives after a slash. Drop it if it reads like commentary."""
+    g = re.sub(r"\s*\(.*$", "", gloss, flags=re.S)        # "(VALV is Swedish for ...)" and after
+    if "/" in g and "/" not in title:
+        g = g.split("/")[0]                                 # "The Gate/Valve" -> "The Gate"
+    g = g.strip().strip("\"'\u201c\u201d\u201e\u2018\u2019,;: ").strip()
+    if g.endswith(".") and not g.endswith("..."):
+        g = g[:-1].rstrip()
+    if not g or len(g.split()) > max(8, 2 * len(title.split()) + 3):
+        return None
+    return title_case(g)
+
+
+def map_url(venue: str, address: str | None) -> str | None:
+    if not address:
+        return None
+    return "https://www.google.com/maps/search/?api=1&query=" + urllib.parse.quote(f"{venue}, {address}")
+
+
 def english_title(title: str, title_en, gloss, overrides: dict | None = None):
     """Return (title_en, gloss, gloss_source) for display.
 
@@ -67,7 +113,7 @@ def english_title(title: str, title_en, gloss, overrides: dict | None = None):
     if title in overrides:
         fixed = (overrides[title] or "").strip()
         return None, (fixed or None), ("override" if fixed else None)
-    g = gloss.strip() if isinstance(gloss, str) and gloss.strip() else None
+    g = clean_gloss(gloss, title) if isinstance(gloss, str) and gloss.strip() else None
     if not g or norm(g) == norm(title):
         return None, None, None
     return None, g, "machine"
@@ -132,8 +178,9 @@ def normalize(found: dict[str, list[dict]], venues: list[dict], today: dt.date, 
                 problems.append("start after end")
             if op_date and start and abs((op_date - start).days) > 14:
                 problems.append("opening far from start")
-            if float(x.get("confidence") or 0) < MIN_CONFIDENCE:
-                problems.append("low confidence")
+            explicit = bool(op_date and _time(op.get("start_time")) and OPENING_TEXT.search(op.get("text") or ""))
+            if float(x.get("confidence") or 0) < MIN_CONFIDENCE and not explicit:
+                problems.append("low confidence")  # a stated vernissage date and time is enough
             if problems:
                 review.append({"venue": vid, "problems": problems, "item": x})
                 continue
@@ -151,6 +198,7 @@ def normalize(found: dict[str, list[dict]], venues: list[dict], today: dt.date, 
                 "venue_id": vid,
                 "venue": v["name"],
                 "address": v.get("address"),
+                "map_url": map_url(v["name"], v.get("address")),
                 "district": v.get("district"),
                 "title": title,
                 "title_en": title_en,

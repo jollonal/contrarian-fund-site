@@ -144,3 +144,34 @@ def test_unmatched_email_is_retried_after_domain_added(monkeypatch):
     found = M.read_newsletters(venues, cache, dt.date(2026, 10, 8), LLM())
     assert LLM.calls == 1 and found["hedenius"][0]["title"] == "Valv"
     assert len(cache["mail"]) == 1
+
+
+def test_own_messages_skipped_and_removed(monkeypatch):
+    from vernissage import mail as M
+
+    m = EmailMessage()
+    m["From"] = "Alfred <a+vernissage@gmail.com>"
+    m["Message-ID"] = "<own@x>"
+    m["Date"] = "Thu, 08 Oct 2026 10:00:00 +0200"
+    m.set_content("Hej Galleri Hedenius, please add me to your newsletter.")
+    raw = m.as_bytes()
+
+    class FakeIMAP:
+        def __init__(self, host): pass
+        def login(self, u, p): pass
+        def select(self, box, readonly=False): return "OK", [b"1"]
+        def search(self, *a): return "OK", [b"1"]
+        def fetch(self, num, what): return "OK", [(b"1", raw)]
+        def logout(self): pass
+
+    class NoLLM:
+        available = True
+        def json(self, *a, **k): raise AssertionError("own messages must not reach the model")
+
+    monkeypatch.setattr(M.imaplib, "IMAP4_SSL", FakeIMAP)
+    monkeypatch.setenv("GMAIL_ADDRESS", "a@gmail.com")
+    monkeypatch.setenv("GMAIL_APP_PASSWORD", "x")
+    key = M._key("<own@x>" + str(b"1"))  # same key the reader builds
+    cache = {"mail": {key: {"date": "2026-10-08", "venue": None, "result": []}}}
+    assert M.read_newsletters(VENUES, cache, dt.date(2026, 10, 8), NoLLM()) == {}
+    assert cache["mail"] == {}
