@@ -175,3 +175,10 @@ def test_own_messages_skipped_and_removed(monkeypatch):
     cache = {"mail": {key: {"date": "2026-10-08", "venue": None, "result": []}}}
     assert M.read_newsletters(VENUES, cache, dt.date(2026, 10, 8), NoLLM()) == {}
     assert cache["mail"] == {}
+
+
+def test_social_homepages_do_not_claim_sender_domains():
+    from vernissage.mail import venue_domains
+    d = venue_domains([{"id": "ps", "homepage": "https://www.instagram.com/public_service_gallery/",
+                        "mail_domains": ["public-service.com"], "status": "listed"}])
+    assert "instagram.com" not in d and d["public-service.com"] == "ps"

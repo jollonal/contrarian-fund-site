@@ -37,12 +37,15 @@ def _host(url_or_domain: str) -> str:
     return h.lower().removeprefix("www.")
 
 
+SHARED_HOSTS = {"instagram.com", "facebook.com", "linktr.ee", "gmail.com"}  # never identify a gallery
+
+
 def venue_domains(venues: list[dict]) -> dict[str, str]:
     """Map sender domain -> venue id: the website's domain plus any listed mail_domains."""
     out: dict[str, str] = {}
     for v in venues:
         for d in [_host(v.get("homepage", ""))] + [_host(x) for x in v.get("mail_domains", [])]:
-            if d:
+            if d and d not in SHARED_HOSTS:
                 out[d] = v["id"]
     return out
 

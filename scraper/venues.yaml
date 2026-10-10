@@ -5,7 +5,7 @@
 #   wordpress  WordPress. Try /feed/ first, fall back to HTML.
 #   squarespace, shopify, static  Fetch HTML, LLM extraction.
 #   headless   Needs Playwright to render before extraction.
-# status: active | paused | excluded
+# status: active | paused | excluded | listed (on the map and in newsletter matching, not scraped)
 # opening_text: does the site publish vernissage times in HTML (yes/no)
 # mail_domains: sender domains for newsletters when they differ from the website's.
 #   Newsletters are matched to every venue except excluded ones; newsletter: true
@@ -732,6 +732,173 @@ venues:
     opening_text: no
     notes: Members' craft shop with gallery. Dates given without year.
     status: active
+
+  # ---------- Added 2026-10-10 (user approved; includes rental galleries and listed-only venues) ----------
+  - id: konstochfolk
+    name: Konstochfolk
+    homepage: https://www.konstochfolk.se/
+    exhibitions_urls:
+      - https://www.konstochfolk.se/
+    address: Hornsgatan 38, 118 20 Stockholm
+    district: Södermalm
+    type: commercial
+    adapter: static
+    opening_text: yes
+    notes: Gallery, webshop and framing workshop. Vernissage dates often given without year.
+    status: active
+
+  - id: galleri-hantverket
+    name: Galleri Hantverket
+    homepage: https://gallerihantverket.se/
+    exhibitions_urls:
+      - https://gallerihantverket.se/events/
+    address: Götgatan 63, 116 21 Stockholm
+    district: Södermalm
+    type: craft cooperative
+    adapter: wordpress
+    opening_text: no
+    status: active
+
+  - id: willas
+    name: WILLAS contemporary
+    homepage: https://willas.com/
+    exhibitions_urls:
+      - https://willas.com/exhibitions
+    type: commercial
+    adapter: headless
+    opening_text: no
+    notes: Photography dealer, by appointment; shows often at partner venues (e.g. Villa Dagmar). Exhibition list loads by script, hence headless. No fixed address, so no map pin.
+    status: active
+
+  - id: konst-se
+    name: Konst.se Gallery
+    homepage: https://www.konst.se/gallery
+    exhibitions_urls:
+      - https://www.konst.se/gallery
+    address: Rörstrandsgatan 28, Stockholm
+    district: Vasastan
+    type: commercial
+    adapter: static
+    opening_text: no
+    mail_domains: [konst.se]
+    notes: Gallery of the konst.se marketplace; announces vernissages mainly on Instagram.
+    status: active
+
+  - id: galleri86
+    name: Galleri86
+    homepage: https://galleri-86-stockholm.webnode.se/
+    exhibitions_urls:
+      - https://galleri-86-stockholm.webnode.se/
+    address: Skånegatan 86, Stockholm
+    district: Södermalm
+    type: rental gallery
+    adapter: static
+    opening_text: no
+    notes: Artists book the space. The site lists no exhibitions yet.
+    status: active
+
+  - id: seart
+    name: SEART
+    homepage: https://seart.se/
+    exhibitions_urls:
+      - https://seart.se/SEART/Exhibition.html
+    address: Drottninggatan 116 B, 113 60 Stockholm
+    district: Vasastan
+    type: project space
+    adapter: static
+    opening_text: yes
+    notes: Lusthuset in Spökparken. Short shows with published opening times.
+    status: active
+
+  - id: firestorm
+    name: Firestorm Foundation
+    homepage: https://www.firestormfoundation.art/
+    exhibitions_urls:
+      - https://www.firestormfoundation.art/
+    address: Hudiksvallsgatan 6, 113 30 Stockholm
+    district: Vasastan
+    type: foundation
+    adapter: static
+    opening_text: no
+    notes: Collection foundation showing at Hudiksvallsgatan 6 (Stockholm Gallery District).
+    status: active
+
+  - id: futura-gallery
+    name: Futura Gallery (Eva Livijn)
+    homepage: https://rockmysoulstockholm.se/
+    exhibitions_urls:
+      - https://rockmysoulstockholm.se/
+    address: Karlaplan 14, 115 20 Stockholm
+    district: Östermalm
+    type: private gallery
+    adapter: static
+    opening_text: yes
+    mail_domains: [futuragallery.se]
+    notes: Curated shows in Eva Livijn's apartment. futuragallery.se refuses robots; rockmysoulstockholm.se last listed 2022.
+    status: active
+
+  - id: villa-dagmar
+    name: Villa Dagmar
+    homepage: https://hotelvilladagmar.com/en/art/
+    exhibitions_urls:
+      - https://hotelvilladagmar.com/en/art/
+    address: Nybrogatan 25, 114 39 Stockholm
+    district: Östermalm
+    type: hotel programme
+    adapter: static
+    opening_text: no
+    mail_domains: [hotelvilladagmar.com]
+    notes: Seasonal exhibitions in the lobby with partner galleries (Wetterling, WILLAS, Andréhn-Schiptjenko). Dates by season only.
+    status: active
+
+  - id: galleri-grip
+    name: Galleri Grip
+    homepage: https://gallerigrip.se/
+    exhibitions_urls:
+      - https://gallerigrip.se/utst-llningar-2026/
+      - https://gallerigrip.se/
+    address: Celsiusgatan 2, 112 30 Stockholm
+    district: Kungsholmen
+    type: rental gallery
+    adapter: wordpress
+    opening_text: yes
+    notes: Vernissages usually Saturdays 13-16.
+    status: active
+
+  - id: gallery-lienhart
+    name: Gallery Lienhart
+    homepage: https://www.gallerylienhart.se/
+    exhibitions_urls:
+      - https://gallerylienhart.se/pages/art-exhibitions
+    address: Norra Benickebrinken 2, 111 31 Stockholm
+    district: Gamla stan
+    type: rental gallery
+    adapter: shopify
+    opening_text: no
+    notes: Week-long shows.
+    status: active
+
+  # Listed: on the map and matched in newsletters, not scraped (Instagram only, no readable website).
+  - id: public-service
+    name: Public Service Gallery
+    homepage: https://www.instagram.com/public_service_gallery/
+    address: Storgatan 1, 114 44 Stockholm
+    district: Östermalm
+    type: commercial
+    mail_domains: [public-service.com]
+    notes: Website says "Coming soon"; programme on Instagram only. Open Wed-Fri 12-17.30, Sat 12-16.
+    newsletter: true
+    status: listed
+
+  - id: spazio-libero
+    name: Spazio Libero
+    homepage: https://www.instagram.com/spazio______libero/
+    address: Tulegatan 37, 113 53 Stockholm
+    district: Vasastan
+    type: project space
+    notes: c/o Godland. Programme on Instagram only.
+    newsletter: true
+    status: listed
 
   # ---------- Not scraped ----------
   - id: larsen-warner
