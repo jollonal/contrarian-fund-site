@@ -99,27 +99,27 @@
     <details class="key">
       <summary>All 44 galleries on the map</summary>
       <div class="key-groups">
-      <div class="key-group"><h4>Danvikstull</h4><ol>
+      <div class="key-group" data-district="Danvikstull"><h4>Danvikstull</h4><ol>
         <li value="1"><button type="button" data-pin="kostyal">Carl Kostyál</button></li>
         </ol></div>
-      <div class="key-group"><h4>Frihamnen</h4><ol>
+      <div class="key-group" data-district="Frihamnen"><h4>Frihamnen</h4><ol>
         <li value="2"><button type="button" data-pin="jan-wallmark">Galleri Jan Wallmark</button></li>
         </ol></div>
-      <div class="key-group"><h4>Kungsholmen</h4><ol>
+      <div class="key-group" data-district="Kungsholmen"><h4>Kungsholmen</h4><ol>
         <li value="3"><button type="button" data-pin="helle-knudsen">Galleri Helle Knudsen</button> <span class="count">1 opening</span></li>
         </ol></div>
-      <div class="key-group"><h4>Liljeholmen</h4><ol>
+      <div class="key-group" data-district="Liljeholmen"><h4>Liljeholmen</h4><ol>
         <li value="4"><button type="button" data-pin="platform-stockholm">Platform Stockholm</button> <span class="count">1 opening</span></li>
         </ol></div>
-      <div class="key-group"><h4>Långholmen</h4><ol>
+      <div class="key-group" data-district="Långholmen"><h4>Långholmen</h4><ol>
         <li value="5"><button type="button" data-pin="slipvillan">Slipvillan</button> <span class="count">2 openings</span></li>
         </ol></div>
-      <div class="key-group"><h4>Norrmalm</h4><ol>
+      <div class="key-group" data-district="Norrmalm"><h4>Norrmalm</h4><ol>
         <li value="6"><button type="button" data-pin="magnus-karlsson">Galleri Magnus Karlsson</button> <span class="count">3 openings</span></li>
         <li value="7"><button type="button" data-pin="issues">ISSUES</button></li>
         <li value="8"><button type="button" data-pin="konstnarshuset">Konstnärshuset</button> <span class="count">1 opening</span></li>
         </ol></div>
-      <div class="key-group"><h4>Södermalm</h4><ol>
+      <div class="key-group" data-district="Södermalm"><h4>Södermalm</h4><ol>
         <li value="9"><button type="button" data-pin="abante">ABANTE Gallery</button></li>
         <li value="10"><button type="button" data-pin="beau-travail">Beau Travail</button></li>
         <li value="11"><button type="button" data-pin="blas-och-knada">blås &amp; knåda</button></li>
@@ -135,7 +135,7 @@
         <li value="21"><button type="button" data-pin="studio-44">Studio 44</button> <span class="count">1 opening</span></li>
         <li value="22"><button type="button" data-pin="tegen2">TEGEN2</button></li>
         </ol></div>
-      <div class="key-group"><h4>Vasastan</h4><ol>
+      <div class="key-group" data-district="Vasastan"><h4>Vasastan</h4><ol>
         <li value="23"><button type="button" data-pin="berg">Berg Gallery</button></li>
         <li value="24"><button type="button" data-pin="cecilia-hillstrom">Cecilia Hillström Gallery</button></li>
         <li value="25"><button type="button" data-pin="detroit-stockholm">Detroit Stockholm</button></li>
@@ -143,13 +143,13 @@
         <li value="27"><button type="button" data-pin="larsen-warner">Larsen / Warner</button></li>
         <li value="28"><button type="button" data-pin="susanne-pettersson">Susanne Pettersson Gallery</button></li>
         </ol></div>
-      <div class="key-group"><h4>Vällingby</h4><ol>
+      <div class="key-group" data-district="Vällingby"><h4>Vällingby</h4><ol>
         <li value="29"><button type="button" data-pin="konsthallen-abc">Konsthallen ABC</button> <span class="count">1 opening</span></li>
         </ol></div>
-      <div class="key-group"><h4>Åkersberga</h4><ol>
+      <div class="key-group" data-district="Åkersberga"><h4>Åkersberga</h4><ol>
         <li value="30"><button type="button" data-pin="ekvall-tornblom">Galleri Ekvall + Törnblom</button></li>
         </ol></div>
-      <div class="key-group"><h4>Östermalm</h4><ol>
+      <div class="key-group" data-district="Östermalm"><h4>Östermalm</h4><ol>
         <li value="31"><button type="button" data-pin="andrehn-schiptjenko">Andréhn-Schiptjenko</button></li>
         <li value="32"><button type="button" data-pin="anna-bohman">Anna Bohman Gallery</button></li>
         <li value="33"><button type="button" data-pin="belenius">Belenius</button></li>
@@ -739,7 +739,7 @@
   </main>
 
   <footer>
-    <p>35 openings, 13 with confirmed reception times. Last updated 10 October 2026, 13:50.</p>
+    <p>35 openings, 13 with confirmed reception times. Last updated 10 October 2026, 20:36.</p>
     <p><a href="events.ics">Subscribe to the calendar</a> · <a href="https://github.com/jollonal/contrarian-fund-site">Source code</a> · Built by <a href="/">Alfred J. Jollon</a></p>
   </footer>
 </div>
@@ -766,6 +766,7 @@
       district = b.dataset.district;
       btns.forEach(function (x) { x.setAttribute("aria-pressed", x === b ? "true" : "false"); });
       apply();
+      if (window.vernissageMap) window.vernissageMap.showDistrict(district);  // map follows the district filter
     });
   });
   if (box) box.addEventListener("change", function () { confirmedOnly = box.checked; apply(); });
@@ -805,7 +806,22 @@ document.addEventListener("DOMContentLoaded", function () {
                                                zIndexOffset: p.openings.length ? 1000 : 0 }).addTo(map).bindPopup(box);
     all.push([p.lat, p.lon]); if (p.central) central.push([p.lat, p.lon]);
   });
-  map.fitBounds(central.length ? central : all, { padding: [24, 24] });
+  function fitAll() { map.fitBounds(central.length ? central : all, { padding: [24, 24] }); }
+  fitAll();
+
+  // District filter: show only that district's pins and zoom to them; "All" restores everything.
+  window.vernissageMap = { showDistrict: function (d) {
+    var shown = [];
+    pts.forEach(function (p) {
+      var m = markers[p.id], on = !d || p.district === d;
+      if (on) { if (!map.hasLayer(m)) m.addTo(map); shown.push([p.lat, p.lon]); }
+      else { m.closePopup(); map.removeLayer(m); }
+    });
+    document.querySelectorAll(".key-group").forEach(function (g) { g.hidden = !!d && g.dataset.district !== d; });
+    if (!d) fitAll();
+    else if (shown.length === 1) map.setView(shown[0], 15);
+    else if (shown.length) map.fitBounds(shown, { padding: [24, 24], maxZoom: 16 });
+  } };
 
   var btn = document.getElementById("map-expand");
   function expand(on) {
