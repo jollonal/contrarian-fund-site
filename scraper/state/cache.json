@@ -1,5 +1,9 @@
 {
  "details": {
+  "https://125kvadrat.com/galleri/utstallning/": {
+   "hash": "b24eec2acf08611b",
+   "result": null
+  },
   "https://bjorkholmengallery.com/exhibition/den-har-dagen-och-den-har-dagen/": {
    "hash": "955863f64fb3f9db",
    "result": {
@@ -10,6 +14,14 @@
      "text": "Opening Saturday 10 October 12-16”, "
     }
    }
+  },
+  "https://gallerihantverket.se/event/peter-schalin-3-dimensionellt-akvarellmaleri/": {
+   "hash": "6c5741413c2cc075",
+   "result": null
+  },
+  "https://gallerihantverket.se/event/susanne-nilsson-vingar-av-tystnad/": {
+   "hash": "6c5741413c2cc075",
+   "result": null
   },
   "https://gallerihelle.com/blogs/aktuell/tomas-gustavsson-en-plats-i-solen": {
    "hash": "8ef465defc1bcc10",
@@ -66,6 +78,10 @@
   },
   "https://www.gallerimagnuskarlsson.com/exhibitions/409-jockum-nordstrom-halet-i-vaggen/": {
    "hash": "91ccfb65d2603745",
+   "result": null
+  },
+  "https://www.rf.se/riksidrottsmuseum/konsthall-16/utstallningar/kommande-utstallning/upcoming-exhibitions": {
+   "hash": "5996561ef21e78e9",
    "result": null
   },
   "https://www.saskianeumangallery.com/fairs/artissima": {
@@ -700,14 +716,134 @@
     }
    ]
   },
+  "https://125kvadrat.com/galleri/utstallning/": {
+   "hash": "0e8035b34f291300",
+   "ok_at": "2026-10-10T22:38:00+00:00",
+   "result": [
+    {
+     "artists": [
+      "Ann-Christin von Reybekiel"
+     ],
+     "city": null,
+     "confidence": 1,
+     "detail_url": "https://125kvadrat.com/galleri/utstallning/",
+     "end_date": "2026-11-22",
+     "kind": "exhibition",
+     "opening": {
+      "date": null,
+      "end_time": null,
+      "start_time": null,
+      "text": null
+     },
+     "start_date": "2026-10-24",
+     "title": "Fartyg, fåglar och fyrar",
+     "title_en": null,
+     "title_gloss": "Ships, birds and lighthouses"
+    },
+    {
+     "artists": [
+      "Beate Trygger"
+     ],
+     "city": null,
+     "confidence": 0,
+     "detail_url": "https://125kvadrat.com/galleri/beate-trygger/",
+     "end_date": null,
+     "kind": "exhibition",
+     "opening": {
+      "date": null,
+      "end_time": null,
+      "start_time": null,
+      "text": null
+     },
+     "start_date": null,
+     "title": "Who are you",
+     "title_en": null,
+     "title_gloss": null
+    }
+   ]
+  },
   "https://abantegallery.se/": {
    "hash": "9328f5c08edd0b35",
    "ok_at": "2026-10-10T08:37:57+00:00",
    "result": []
   },
+  "https://antics.se/": {
+   "hash": "e44096c978cf7616",
+   "ok_at": "2026-10-10T22:37:06+00:00",
+   "result": [
+    {
+     "city": null,
+     "confidence": 1,
+     "detail_url": "https://antics.se/ideas-from-ikea-art-club2000",
+     "end_date": null,
+     "kind": "exhibition",
+     "opening": {
+      "date": "2026-09-10",
+      "end_time": null,
+      "start_time": null,
+      "text": "Opening: September 10"
+     },
+     "start_date": null,
+     "title": "IDEAS FROM IKEA - Art Club 2000",
+     "title_en": null,
+     "title_gloss": null
+    },
+    {
+     "city": null,
+     "confidence": 1,
+     "detail_url": "https://antics.se/david-permen",
+     "end_date": null,
+     "kind": "exhibition",
+     "opening": {
+      "date": "2026-11-05",
+      "end_time": null,
+      "start_time": null,
+      "text": "Opening: November 5"
+     },
+     "start_date": null,
+     "title": "David Permén",
+     "title_en": null,
+     "title_gloss": null
+    },
+    {
+     "city": null,
+     "confidence": 0,
+     "detail_url": null,
+     "end_date": null,
+     "kind": "exhibition",
+     "opening": {
+      "date": null,
+      "end_time": null,
+      "start_time": null,
+      "text": null
+     },
+     "start_date": null,
+     "title": "TBA: Atlas TV",
+     "title_en": null,
+     "title_gloss": null
+    },
+    {
+     "city": null,
+     "confidence": 0,
+     "detail_url": null,
+     "end_date": null,
+     "kind": "exhibition",
+     "opening": {
+      "date": null,
+      "end_time": null,
+      "start_time": null,
+      "text": null
+     },
+     "start_date": null,
+     "title": "TBA: Mona Varichon",
+     "title_en": null,
+     "title_gloss": null
+    }
+   ]
+  },
   "https://beautravail.se/category/exhibitions/": {
    "hash": "e00aff06d81b31cc",
-   "ok_at": "2026-10-10T08:40:55+00:00",
+   "ok_at": "2026-10-10T22:35:21+00:00",
    "result": [
     {
      "access": "unknown",
@@ -837,7 +973,7 @@
   },
   "https://belenius.com/": {
    "hash": "2b83ba01ef3ea89c",
-   "ok_at": "2026-10-10T08:35:02+00:00",
+   "ok_at": "2026-10-10T22:26:18+00:00",
    "result": [
     {
      "artists": [
@@ -863,7 +999,7 @@
   },
   "https://belenius.com/exhibitions/": {
    "hash": "7f80a68ec05087c5",
-   "ok_at": "2026-10-10T08:35:07+00:00",
+   "ok_at": "2026-10-10T22:26:23+00:00",
    "result": [
     {
      "artists": [
@@ -889,7 +1025,7 @@
   },
   "https://bjorkholmengallery.com/exhibitions/": {
    "hash": "0193ea38f40d4715",
-   "ok_at": "2026-10-10T08:36:03+00:00",
+   "ok_at": "2026-10-10T22:27:08+00:00",
    "result": [
     {
      "access": "unknown",
@@ -1012,7 +1148,7 @@
   },
   "https://chgallery.se/exhibitions/": {
    "hash": "3f6690f4d872cd68",
-   "ok_at": "2026-10-10T08:35:29+00:00",
+   "ok_at": "2026-10-10T22:26:45+00:00",
    "result": [
     {
      "access": "public",
@@ -1058,9 +1194,166 @@
     }
    ]
   },
+  "https://dittelauridsen.com/exhibitions/": {
+   "hash": "5b9ea85e0c61eac0",
+   "ok_at": "2026-10-10T22:37:37+00:00",
+   "result": [
+    {
+     "artists": [
+      "Fabian Bergmark Näsman"
+     ],
+     "city": null,
+     "confidence": 1,
+     "detail_url": null,
+     "end_date": "2026-10-22",
+     "kind": "exhibition",
+     "opening": {
+      "date": null,
+      "end_time": null,
+      "start_time": null,
+      "text": null
+     },
+     "start_date": "2026-10-01",
+     "title": "Fig. 78",
+     "title_en": null,
+     "title_gloss": null
+    },
+    {
+     "artists": [
+      "Axel Versteegh"
+     ],
+     "city": null,
+     "confidence": 1,
+     "detail_url": null,
+     "end_date": "2026-09-22",
+     "kind": "exhibition",
+     "opening": {
+      "date": null,
+      "end_time": null,
+      "start_time": null,
+      "text": null
+     },
+     "start_date": "2026-09-02",
+     "title": "Labyrinten",
+     "title_en": null,
+     "title_gloss": "The Labyrinth"
+    }
+   ]
+  },
+  "https://galleri-86-stockholm.webnode.se/": {
+   "hash": "eec9f916d4912af1",
+   "ok_at": "2026-10-10T22:38:58+00:00",
+   "result": []
+  },
+  "https://gallerihantverket.se/events/": {
+   "hash": "48d0463116cbc71c",
+   "ok_at": "2026-10-10T22:38:37+00:00",
+   "result": [
+    {
+     "artists": [
+      "Gunilla Luiga"
+     ],
+     "city": null,
+     "confidence": 1,
+     "detail_url": "https://gallerihantverket.se/event/gunilla-luiga-konsten-som-rorelse-och-upptackt/",
+     "end_date": "2026-10-22",
+     "kind": "exhibition",
+     "opening": {
+      "date": null,
+      "end_time": null,
+      "start_time": null,
+      "text": null
+     },
+     "start_date": "2026-10-03",
+     "title": "Gunilla Luiga – Konsten som rörelse och upptäckt",
+     "title_en": null,
+     "title_gloss": "Art as movement and discovery"
+    },
+    {
+     "artists": [
+      "Susanne Nilsson"
+     ],
+     "city": null,
+     "confidence": 1,
+     "detail_url": "https://gallerihantverket.se/event/susanne-nilsson-vingar-av-tystnad/",
+     "end_date": "2026-11-12",
+     "kind": "exhibition",
+     "opening": {
+      "date": null,
+      "end_time": null,
+      "start_time": null,
+      "text": null
+     },
+     "start_date": "2026-10-24",
+     "title": "Susanne Nilsson – Vingar av Tystnad – Keramikkonst",
+     "title_en": null,
+     "title_gloss": "Wings of silence - ceramic art"
+    },
+    {
+     "artists": [
+      "Peter Schalin"
+     ],
+     "city": null,
+     "confidence": 1,
+     "detail_url": "https://gallerihantverket.se/event/peter-schalin-3-dimensionellt-akvarellmaleri/",
+     "end_date": "2026-11-26",
+     "kind": "exhibition",
+     "opening": {
+      "date": null,
+      "end_time": null,
+      "start_time": null,
+      "text": null
+     },
+     "start_date": "2026-11-14",
+     "title": "Peter Schalin – 3-dimensionellt akvarellmåleri",
+     "title_en": null,
+     "title_gloss": "3-dimensional watercolor painting"
+    },
+    {
+     "artists": [
+      "Villiina Jaakonaho"
+     ],
+     "city": null,
+     "confidence": 1,
+     "detail_url": null,
+     "end_date": "2026-10-01",
+     "kind": "exhibition",
+     "opening": {
+      "date": null,
+      "end_time": null,
+      "start_time": null,
+      "text": null
+     },
+     "start_date": "2026-09-12",
+     "title": "Glaskonst - Villiina Jaakonaho",
+     "title_en": null,
+     "title_gloss": "Glass art"
+    },
+    {
+     "artists": [
+      "Medlemmarna"
+     ],
+     "city": null,
+     "confidence": 1,
+     "detail_url": null,
+     "end_date": null,
+     "kind": "exhibition",
+     "opening": {
+      "date": null,
+      "end_time": null,
+      "start_time": null,
+      "text": null
+     },
+     "start_date": "2026-11-28",
+     "title": "Medlemmarnas Julutställning",
+     "title_en": null,
+     "title_gloss": "Members' Christmas exhibition"
+    }
+   ]
+  },
   "https://gallerihelle.com/blogs/aktuell": {
    "hash": "2ac4ccacde31a5c5",
-   "ok_at": "2026-10-10T08:36:23+00:00",
+   "ok_at": "2026-10-10T22:27:27+00:00",
    "result": [
     {
      "artists": [
@@ -1106,7 +1399,7 @@
   },
   "https://gallerihelle.com/blogs/utstallningar": {
    "hash": "d16dfa0e1b881301",
-   "ok_at": "2026-10-10T08:36:27+00:00",
+   "ok_at": "2026-10-10T22:27:31+00:00",
    "result": [
     {
      "access": "unknown",
@@ -1220,9 +1513,14 @@
     }
    ]
   },
+  "https://gallerylienhart.se/pages/art-exhibitions": {
+   "hash": "2e43ed5ac5e35b5f",
+   "ok_at": "2026-10-10T22:40:49+00:00",
+   "result": []
+  },
   "https://gerdmangallery.com/exhibitions/": {
    "hash": "fc2e07adb82d7da1",
-   "ok_at": "2026-10-10T08:35:20+00:00",
+   "ok_at": "2026-10-10T22:26:36+00:00",
    "result": []
   },
   "https://grafiskasallskapet.se/": {
@@ -1477,6 +1775,32 @@
     }
    ]
   },
+  "https://hotelvilladagmar.com/en/art/": {
+   "hash": "6a1aa3e3fa444a5d",
+   "ok_at": "2026-10-10T22:40:13+00:00",
+   "result": [
+    {
+     "artists": [
+      "Roland-Philippe Kretzschmar"
+     ],
+     "city": null,
+     "confidence": 0.5,
+     "detail_url": "https://hotelvilladagmar.com/en/art/scales-of-intimacy/",
+     "end_date": null,
+     "kind": "exhibition",
+     "opening": {
+      "date": null,
+      "end_time": null,
+      "start_time": null,
+      "text": null
+     },
+     "start_date": "2026-10-01",
+     "title": "Scales of Intimacy",
+     "title_en": null,
+     "title_gloss": null
+    }
+   ]
+  },
   "https://idigalleri.org/": {
    "hash": "ec9750947cc8a8e7",
    "ok_at": "2026-10-10T08:38:41+00:00",
@@ -1536,7 +1860,7 @@
   },
   "https://kaolin.se/sidor/45772-10597-79130-kommande-utstallningar": {
    "hash": "01333ed669939afb",
-   "ok_at": "2026-10-10T08:40:10+00:00",
+   "ok_at": "2026-10-10T22:34:24+00:00",
    "result": [
     {
      "city": "Stockholm",
@@ -1616,7 +1940,7 @@
   },
   "https://kaolin.se/sidor/pagaende-utstallning": {
    "hash": "fa3c3e65a1a7060f",
-   "ok_at": "2026-10-10T08:40:14+00:00",
+   "ok_at": "2026-10-10T22:34:28+00:00",
    "result": [
     {
      "artists": [
@@ -1642,7 +1966,7 @@
   },
   "https://konstnarshuset.org/": {
    "hash": "bc118827a025949e",
-   "ok_at": "2026-10-10T08:39:55+00:00",
+   "ok_at": "2026-10-10T22:34:09+00:00",
    "result": [
     {
      "access": "unknown",
@@ -1686,7 +2010,7 @@
   },
   "https://konstnarshuset.org/utstallningsprogram-2026/": {
    "hash": "1380cd7d3a845683",
-   "ok_at": "2026-10-10T08:39:52+00:00",
+   "ok_at": "2026-10-10T22:34:05+00:00",
    "result": [
     {
      "artists": [
@@ -1958,12 +2282,12 @@
   },
   "https://kostyal.com/": {
    "hash": "2c69edfd2b38e1ea",
-   "ok_at": "2026-10-10T08:37:22+00:00",
+   "ok_at": "2026-10-10T22:28:18+00:00",
    "result": []
   },
   "https://mankovskygallery.com/blogs/exhibitions": {
    "hash": "0c2d0ba54b94609a",
-   "ok_at": "2026-10-10T08:38:11+00:00",
+   "ok_at": "2026-10-10T22:30:46+00:00",
    "result": [
     {
      "city": "Gothenburg",
@@ -2040,12 +2364,12 @@
   },
   "https://mankovskygallery.com/pages/exhibitions-originals": {
    "hash": "131374bed81c2de3",
-   "ok_at": "2026-10-10T08:38:07+00:00",
+   "ok_at": "2026-10-10T22:30:42+00:00",
    "result": []
   },
   "https://nordenhake.com/exhibitions": {
    "hash": "59d6716c0829798f",
-   "ok_at": "2026-10-10T08:36:57+00:00",
+   "ok_at": "2026-10-10T22:28:00+00:00",
    "result": [
     {
      "city": "Berlin",
@@ -2183,12 +2507,12 @@
   },
   "https://parallelcollective.se/en": {
    "hash": "ff56cb5ca013e7b3",
-   "ok_at": "2026-10-10T08:40:24+00:00",
+   "ok_at": "2026-10-10T22:35:02+00:00",
    "result": []
   },
   "https://platformstockholm.com/gallery": {
    "hash": "89f56af96da1aadd",
-   "ok_at": "2026-10-10T08:40:01+00:00",
+   "ok_at": "2026-10-10T22:34:14+00:00",
    "result": [
     {
      "artists": [
@@ -2345,12 +2669,12 @@
   },
   "https://stancegallery.com/exhibitions/": {
    "hash": "5c7c6579662a6a62",
-   "ok_at": "2026-10-10T08:35:25+00:00",
+   "ok_at": "2026-10-10T22:26:41+00:00",
    "result": []
   },
   "https://steinslandberliner.com/shows": {
    "hash": "f9d5e3ebc01af1a4",
-   "ok_at": "2026-10-10T08:36:32+00:00",
+   "ok_at": "2026-10-10T22:27:36+00:00",
    "result": [
     {
      "artists": [
@@ -2416,7 +2740,7 @@
   },
   "https://studio44-stockholm.com/en/": {
    "hash": "32e5d1720a8fdc59",
-   "ok_at": "2026-10-10T08:38:28+00:00",
+   "ok_at": "2026-10-10T22:31:52+00:00",
    "result": [
     {
      "artists": [
@@ -2443,7 +2767,7 @@
   },
   "https://studio44-stockholm.com/en/39499-2/": {
    "hash": "3c7a642c52ff4c40",
-   "ok_at": "2026-10-10T08:38:33+00:00",
+   "ok_at": "2026-10-10T22:31:56+00:00",
    "result": [
     {
      "artists": [
@@ -2547,9 +2871,94 @@
    "ok_at": "2026-10-10T08:38:55+00:00",
    "result": []
   },
+  "https://willas.com/exhibitions": {
+   "hash": "00276ba513f658bc",
+   "ok_at": "2026-10-10T22:38:48+00:00",
+   "result": []
+  },
+  "https://www.amells.com/utstallningar/aktuellt/": {
+   "hash": "54bff3922944d4e4",
+   "ok_at": "2026-10-10T22:37:18+00:00",
+   "result": [
+    {
+     "artists": [
+      "Alexander Roslin",
+      "Louis Jean Desprez",
+      "Pehr Hilleström",
+      "Johan Fredrik Martin",
+      "Johan Tobias Sergel",
+      "Gottlieb Iwerson",
+      "Elias Martin",
+      "David Klöcker Ehrenstrahl"
+     ],
+     "city": "Stockholm",
+     "confidence": 1,
+     "detail_url": "https://www.amells.com/data/publications/2026Ljuva1700-tal/html/index.html",
+     "end_date": "2026-10-24",
+     "kind": "exhibition",
+     "opening": {
+      "date": null,
+      "end_time": null,
+      "start_time": null,
+      "text": null
+     },
+     "start_date": "2026-10-03",
+     "title": "Ljuva 1700-tal: Roslin, Hilleström, Sergel m fl",
+     "title_en": null,
+     "title_gloss": "Sweet 1700s: Roslin, Hilleström, Sergel et al"
+    }
+   ]
+  },
+  "https://www.amells.com/utstallningar/kommande/": {
+   "hash": "335124249786a5f1",
+   "ok_at": "2026-10-10T22:37:26+00:00",
+   "result": [
+    {
+     "access": "public",
+     "artists": [],
+     "city": "Stockholm",
+     "confidence": 1,
+     "detail_url": null,
+     "end_date": "2026-11-28",
+     "kind": "exhibition",
+     "opening": {
+      "date": null,
+      "end_time": null,
+      "start_time": null,
+      "text": null
+     },
+     "start_date": "2026-11-07",
+     "title": "Höstutställning 2026",
+     "title_en": null,
+     "title_gloss": "Autumn Exhibition 2026"
+    },
+    {
+     "access": "public",
+     "artists": [
+      "Anna Boberg",
+      "Bruno Liljefors"
+     ],
+     "city": "Stockholm",
+     "confidence": 1,
+     "detail_url": null,
+     "end_date": "2027-01-16",
+     "kind": "exhibition",
+     "opening": {
+      "date": null,
+      "end_time": null,
+      "start_time": null,
+      "text": null
+     },
+     "start_date": "2026-12-12",
+     "title": "Magiska vinter! Anna Boberg, Bruno Liljefors, m fl",
+     "title_en": null,
+     "title_gloss": "Magical Winter! Anna Boberg, Bruno Liljefors, etc"
+    }
+   ]
+  },
   "https://www.andrehn-schiptjenko.com/exhibitions/current/": {
    "hash": "f91dc5c19001bfac",
-   "ok_at": "2026-10-10T08:34:54+00:00",
+   "ok_at": "2026-10-10T22:26:10+00:00",
    "result": [
     {
      "artists": [
@@ -2596,7 +3005,7 @@
   },
   "https://www.andrehn-schiptjenko.com/exhibitions/forthcoming/": {
    "hash": "3d38339de6fb7c4e",
-   "ok_at": "2026-10-10T08:34:58+00:00",
+   "ok_at": "2026-10-10T22:26:14+00:00",
    "result": [
     {
      "city": "Paris",
@@ -2639,17 +3048,17 @@
   },
   "https://www.annabohmangallery.com/": {
    "hash": "f4b2b7f8fc23f5c2",
-   "ok_at": "2026-10-10T08:37:26+00:00",
+   "ok_at": "2026-10-10T22:28:28+00:00",
    "result": []
   },
   "https://www.annabohmangallery.com/exhibitions": {
    "hash": "b1d7dc4b6d7d3d6e",
-   "ok_at": "2026-10-10T08:37:30+00:00",
+   "ok_at": "2026-10-10T22:28:32+00:00",
    "result": []
   },
   "https://www.berggallery.se/exhibitions/": {
    "hash": "20230f6f984c1288",
-   "ok_at": "2026-10-10T08:35:34+00:00",
+   "ok_at": "2026-10-10T22:26:50+00:00",
    "result": [
     {
      "artists": [
@@ -2695,7 +3104,7 @@
   },
   "https://www.blasknada.com/category/utstallningar/": {
    "hash": "4a7bc1155c4fe26b",
-   "ok_at": "2026-10-10T08:40:06+00:00",
+   "ok_at": "2026-10-10T22:34:19+00:00",
    "result": [
     {
      "artists": [
@@ -2778,7 +3187,7 @@
   },
   "https://www.carlingdalenson.com/exhibitions": {
    "hash": "71dc283a4d8d4448",
-   "ok_at": "2026-10-10T08:36:36+00:00",
+   "ok_at": "2026-10-10T22:27:40+00:00",
    "result": [
     {
      "artists": [
@@ -2824,7 +3233,7 @@
   },
   "https://www.cfhill.com/exhibitions": {
    "hash": "f560091fc27c0d4a",
-   "ok_at": "2026-10-10T08:37:10+00:00",
+   "ok_at": "2026-10-10T22:28:07+00:00",
    "result": [
     {
      "artists": [
@@ -2847,6 +3256,11 @@
      "title_gloss": "The Fruits of Evil”, "
     }
    ]
+  },
+  "https://www.coulisse-gallery.com/": {
+   "hash": "09ac8bf7180e2c46",
+   "ok_at": "2026-10-10T22:28:24+00:00",
+   "result": []
   },
   "https://www.detroitstockholm.info/current-exhibition": {
    "hash": "a77bd898b1d5f825",
@@ -2894,17 +3308,70 @@
   },
   "https://www.ekvalltornblom.se/": {
    "hash": "67cc35f565e9b333",
-   "ok_at": "2026-10-10T08:38:02+00:00",
+   "ok_at": "2026-10-10T22:30:37+00:00",
    "result": []
+  },
+  "https://www.falkenbergskonstskola.se/": {
+   "hash": "803e2a6867ef34a0",
+   "ok_at": "2026-10-10T22:35:16+00:00",
+   "result": [
+    {
+     "artists": [
+      "Marta Bencivenni"
+     ],
+     "city": "Stockholm",
+     "confidence": 1,
+     "detail_url": "https://www.falkenbergskonstskola.se/nyheter/the-beginning-marta-bencivenni",
+     "end_date": "2026-10-09",
+     "kind": "exhibition",
+     "opening": {
+      "date": "2026-10-09",
+      "end_time": "20:00",
+      "start_time": "17:00",
+      "text": "The exhibition opens October 9, 17.00–20.00."
+     },
+     "start_date": "2026-10-09",
+     "title": "The Beginning",
+     "title_en": "The Beginning",
+     "title_gloss": null
+    },
+    {
+     "artists": [
+      "Viktor Fordell",
+      "Johan Hedbäck",
+      "Jaime Reyes"
+     ],
+     "city": "Stockholm",
+     "confidence": 1,
+     "detail_url": "https://www.falkenbergskonstskola.se/nyheter/butterfly-effects",
+     "end_date": null,
+     "kind": "exhibition",
+     "opening": {
+      "date": "2026-09-04",
+      "end_time": "20:00",
+      "start_time": "17:00",
+      "text": "Vernissage 4 september, 17.00–20.00"
+     },
+     "start_date": "2026-09-04",
+     "title": "Butterfly Effects",
+     "title_en": "Butterfly Effects",
+     "title_gloss": null
+    }
+   ]
   },
   "https://www.falkenbergskonstskola.se/vara-gallerier": {
    "hash": "29df7c31fd62eaf9",
    "ok_at": "2026-10-10T08:40:29+00:00",
    "result": []
   },
+  "https://www.firestormfoundation.art/": {
+   "hash": "d680c623ee309b9c",
+   "ok_at": "2026-10-10T22:39:34+00:00",
+   "result": []
+  },
   "https://www.galleriduerr.com/exhibitions/current/": {
    "hash": "f639b0ab938e03e4",
-   "ok_at": "2026-10-10T08:35:16+00:00",
+   "ok_at": "2026-10-10T22:26:32+00:00",
    "result": [
     {
      "artists": [
@@ -2930,7 +3397,7 @@
   },
   "https://www.galleriflach.com/category/exhibitions/": {
    "hash": "8b614bcc73da6879",
-   "ok_at": "2026-10-10T08:36:10+00:00",
+   "ok_at": "2026-10-10T22:27:14+00:00",
    "result": [
     {
      "artists": [
@@ -3039,7 +3506,7 @@
   },
   "https://www.galleriglas.se/exhibitions/current/": {
    "hash": "030252a0cf069a4d",
-   "ok_at": "2026-10-10T08:35:44+00:00",
+   "ok_at": "2026-10-10T22:26:54+00:00",
    "result": [
     {
      "city": "Stockholm",
@@ -3062,7 +3529,7 @@
   },
   "https://www.galleriglas.se/exhibitions/forthcoming/": {
    "hash": "da233dfd0ae94421",
-   "ok_at": "2026-10-10T08:35:45+00:00",
+   "ok_at": "2026-10-10T22:26:58+00:00",
    "result": [
     {
      "artists": [
@@ -3137,7 +3604,7 @@
   },
   "https://www.gallerihedenius.com/utstllningar/currentexhibition": {
    "hash": "744d1a80480e6b2c",
-   "ok_at": "2026-10-10T08:36:14+00:00",
+   "ok_at": "2026-10-10T22:27:18+00:00",
    "result": [
     {
      "artists": [
@@ -3163,7 +3630,7 @@
   },
   "https://www.gallerihedenius.com/utstllningar/new-portfolio-item": {
    "hash": "1b2354854b728f31",
-   "ok_at": "2026-10-10T08:36:18+00:00",
+   "ok_at": "2026-10-10T22:27:22+00:00",
    "result": [
     {
      "artists": [
@@ -3229,7 +3696,7 @@
   },
   "https://www.gallerimagnuskarlsson.com/exhibitions/current/": {
    "hash": "0bf5ec3db981561d",
-   "ok_at": "2026-10-10T08:34:41+00:00",
+   "ok_at": "2026-10-10T22:25:58+00:00",
    "result": [
     {
      "city": "Venedig",
@@ -3273,7 +3740,7 @@
   },
   "https://www.gallerimagnuskarlsson.com/exhibitions/forthcoming/": {
    "hash": "395a059409ea73c0",
-   "ok_at": "2026-10-10T08:34:45+00:00",
+   "ok_at": "2026-10-10T22:26:02+00:00",
    "result": [
     {
      "artists": [
@@ -3337,9 +3804,14 @@
     }
    ]
   },
+  "https://www.houseofphotography.se/blogs/exhibitions": {
+   "hash": "618089a271f07460",
+   "ok_at": "2026-10-10T22:40:55+00:00",
+   "result": []
+  },
   "https://www.issues.gallery/exhibitions": {
    "hash": "0849d8f9417dddd8",
-   "ok_at": "2026-10-10T08:36:41+00:00",
+   "ok_at": "2026-10-10T22:27:45+00:00",
    "result": []
   },
   "https://www.janwallmark.se/vernissage/": {
@@ -3347,9 +3819,166 @@
    "ok_at": "2026-10-10T08:37:44+00:00",
    "result": []
   },
+  "https://www.konst.se/gallery": {
+   "hash": "02f3c32a7f55b337",
+   "ok_at": "2026-10-10T22:38:53+00:00",
+   "result": []
+  },
+  "https://www.konstochfolk.se/": {
+   "hash": "0f45c7a2bb25e87b",
+   "ok_at": "2026-10-10T22:38:14+00:00",
+   "result": [
+    {
+     "artists": [
+      "Lisa Rinnevuo"
+     ],
+     "city": "Stockholm",
+     "confidence": 1,
+     "detail_url": null,
+     "end_date": null,
+     "kind": "exhibition",
+     "opening": {
+      "date": "2026-05-21",
+      "end_time": "20:00",
+      "start_time": "16:00",
+      "text": "Lisa Rinnevuo Flygirls and Fairies, målningar I små format. Vernissage på KONSTOCHFOLK 21 maj kl 16-20. Kom och träffa Lisa och ta ett glas bubbel!"
+     },
+     "start_date": null,
+     "title": "Flygirls and Fairies",
+     "title_en": null,
+     "title_gloss": "Paintings of flygirls and fairies"
+    }
+   ]
+  },
+  "https://www.lundberg-sandhagen.com/": {
+   "hash": "ecbffaa682e705ef",
+   "ok_at": "2026-10-10T22:36:26+00:00",
+   "result": [
+    {
+     "artists": [
+      "Lars-Göran Nilsson"
+     ],
+     "city": null,
+     "confidence": 1,
+     "detail_url": null,
+     "end_date": "2026-10-31",
+     "kind": "exhibition",
+     "opening": {
+      "date": null,
+      "end_time": null,
+      "start_time": null,
+      "text": null
+     },
+     "start_date": "2026-10-17",
+     "title": "Okända moln",
+     "title_en": null,
+     "title_gloss": "Unknown clouds”, "
+    },
+    {
+     "access": "public",
+     "artists": [
+      "Lars-Göran Nilsson"
+     ],
+     "city": null,
+     "confidence": 1,
+     "detail_url": null,
+     "end_date": "2026-10-31",
+     "kind": "exhibition",
+     "opening": {
+      "date": null,
+      "end_time": null,
+      "start_time": null,
+      "text": null
+     },
+     "start_date": "2026-10-17",
+     "title": "Okända moln",
+     "title_en": null,
+     "title_gloss": "Unknown clouds"
+    }
+   ]
+  },
+  "https://www.rf.se/riksidrottsmuseum/konsthall-16": {
+   "hash": "9f3cb5b317714697",
+   "ok_at": "2026-10-10T22:36:46+00:00",
+   "result": []
+  },
+  "https://www.rf.se/riksidrottsmuseum/konsthall-16/utstallningar/kommande-utstallning": {
+   "hash": "a0d80e0ea9040277",
+   "ok_at": "2026-10-10T22:36:45+00:00",
+   "result": [
+    {
+     "artists": [
+      "Nadja Hallström"
+     ],
+     "city": "Stockholm",
+     "confidence": 1,
+     "detail_url": "https://www.rf.se/riksidrottsmuseum/konsthall-16/utstallningar/kommande-utstallning/upcoming-exhibitions",
+     "end_date": "2027-01-24",
+     "kind": "exhibition",
+     "opening": {
+      "date": null,
+      "end_time": null,
+      "start_time": null,
+      "text": null
+     },
+     "start_date": "2026-10-16",
+     "title": "Nadja Hallström – Mustang/Queens",
+     "title_en": "Nadja Hallström – Mustang/Queens",
+     "title_gloss": null
+    },
+    {
+     "artists": [
+      "Sofia Runarsdotter"
+     ],
+     "city": null,
+     "confidence": 1,
+     "detail_url": null,
+     "end_date": "2027-05-16",
+     "kind": "exhibition",
+     "opening": {
+      "date": null,
+      "end_time": null,
+      "start_time": null,
+      "text": null
+     },
+     "start_date": "2027-02-05",
+     "title": "Sofia Runarsdotter – Fogbloss",
+     "title_en": null,
+     "title_gloss": "Sofia Runarsdotter - Fogbloss"
+    },
+    {
+     "artists": [],
+     "city": null,
+     "confidence": 1,
+     "detail_url": null,
+     "end_date": "2027-10-03",
+     "kind": "exhibition",
+     "opening": {
+      "date": null,
+      "end_time": null,
+      "start_time": null,
+      "text": null
+     },
+     "start_date": "2027-05-28",
+     "title": "Nyförvärv till Tore A Jonassons samling",
+     "title_en": null,
+     "title_gloss": "New acquisitions to the Tore A Jonasson collection"
+    }
+   ]
+  },
+  "https://www.richterholtermann.com/": {
+   "hash": "1609baf0c6695128",
+   "ok_at": "2026-10-10T22:37:42+00:00",
+   "result": []
+  },
+  "https://www.richterholtermann.com/gallery": {
+   "hash": "8fc6b9511ccf80c1",
+   "ok_at": "2026-10-10T22:37:48+00:00",
+   "result": []
+  },
   "https://www.saskianeumangallery.com/": {
    "hash": "98eaa16237a53cc8",
-   "ok_at": "2026-10-10T08:37:16+00:00",
+   "ok_at": "2026-10-10T22:28:13+00:00",
    "result": [
     {
      "artists": [
@@ -3411,7 +4040,7 @@
   },
   "https://www.southnord.com/calendar": {
    "hash": "8fc1be7104c45d66",
-   "ok_at": "2026-10-10T08:42:12+00:00",
+   "ok_at": "2026-10-10T22:35:25+00:00",
    "result": [
     {
      "artists": [
@@ -3831,9 +4460,235 @@
     }
    ]
   },
+  "https://www.waygallerysthlm.com/exhibitions": {
+   "hash": "9b8a038a0460a047",
+   "ok_at": "2026-10-10T22:36:16+00:00",
+   "result": [
+    {
+     "artists": [
+      "Manon Steyaert"
+     ],
+     "city": "Stockholm",
+     "confidence": 1,
+     "detail_url": "https://www.waygallerysthlm.com/manon-steyaert-long-distance-romance-with-memories",
+     "end_date": "2026-11-08",
+     "kind": "exhibition",
+     "opening": {
+      "date": "2026-10-01",
+      "end_time": null,
+      "start_time": null,
+      "text": null
+     },
+     "start_date": "2026-10-01",
+     "title": "Long Distance Romance with Memories",
+     "title_en": null,
+     "title_gloss": null
+    },
+    {
+     "artists": [
+      "Estelle Graf",
+      "Wilda Wennelin",
+      "Amanda Malm"
+     ],
+     "city": "Skanör",
+     "confidence": 1,
+     "detail_url": "https://www.waygallerysthlm.com/skanor-galleri-valvet",
+     "end_date": "2026-08-09",
+     "kind": "exhibition",
+     "opening": {
+      "date": null,
+      "end_time": null,
+      "start_time": null,
+      "text": null
+     },
+     "start_date": "2026-07-25",
+     "title": "Valvet",
+     "title_en": null,
+     "title_gloss": "The Vault"
+    },
+    {
+     "artists": [
+      "Ellen Hedin",
+      "Emma Stocklassa",
+      "Erika Kristofersson Bredberg",
+      "Myrsini Alexandridi"
+     ],
+     "city": "Stockholm",
+     "confidence": 1,
+     "detail_url": "https://www.waygallerysthlm.com/liljeholmen-marievik-kakelhuset",
+     "end_date": "2026-09-09",
+     "kind": "exhibition",
+     "opening": {
+      "date": null,
+      "end_time": null,
+      "start_time": null,
+      "text": null
+     },
+     "start_date": "2026-06-09",
+     "title": "KAKELHUSET",
+     "title_en": null,
+     "title_gloss": "The Tile House"
+    },
+    {
+     "artists": [
+      "Manon Steyaert"
+     ],
+     "city": "Stockholm",
+     "confidence": 1,
+     "detail_url": "https://www.waygallerysthlm.com/manon-steyaert-long-distance-romance-with-memories",
+     "end_date": "2026-11-08",
+     "kind": "exhibition",
+     "opening": {
+      "date": "2026-10-01",
+      "end_time": null,
+      "start_time": null,
+      "text": "WAY gallery presents Long Distance Romance with Memories, a new body of work by Manon Steyaert, marking her second solo exhibition at the gallery."
+     },
+     "start_date": "2026-09-30",
+     "title": "Long Distance Romance with Memories",
+     "title_en": null,
+     "title_gloss": null
+    },
+    {
+     "artists": [
+      "Rebecca von Matérn"
+     ],
+     "city": null,
+     "confidence": 1,
+     "detail_url": "https://www.waygallerysthlm.com/rebecca-von-matern-in-and-between-exhibition",
+     "end_date": "2026-09-19",
+     "kind": "exhibition",
+     "opening": {
+      "date": null,
+      "end_time": null,
+      "start_time": null,
+      "text": null
+     },
+     "start_date": "2026-09-09",
+     "title": "IN-AND-BETWEEN",
+     "title_en": null,
+     "title_gloss": "In and Between"
+    },
+    {
+     "artists": [
+      "Rebecca von Matérn"
+     ],
+     "city": null,
+     "confidence": 1,
+     "detail_url": "https://www.waygallerysthlm.com/rebecca-von-matern-in-and-between-exhibition",
+     "end_date": null,
+     "kind": "exhibition",
+     "opening": {
+      "date": null,
+      "end_time": null,
+      "start_time": null,
+      "text": null
+     },
+     "start_date": null,
+     "title": "In In-and-Between, the artist explores a liminal state—the threshold between movement and stillness, between control and surrender, between what has been and what has yet to take shape.",
+     "title_en": null,
+     "title_gloss": null
+    },
+    {
+     "artists": [
+      "Ellen Hedin",
+      "Emma Stocklassa",
+      "Erika Kristofersson Bredberg",
+      "Myrsini Alexandridi"
+     ],
+     "city": "Stockholm",
+     "confidence": 1,
+     "detail_url": null,
+     "end_date": null,
+     "kind": "exhibition",
+     "opening": {
+      "date": null,
+      "end_time": null,
+      "start_time": null,
+      "text": null
+     },
+     "start_date": null,
+     "title": "Ongoing exhibition - Guest space Marievik Stockholm",
+     "title_en": null,
+     "title_gloss": null
+    },
+    {
+     "artists": [
+      "Tove Eklund",
+      "Johan Bjurmar",
+      "Anna Mörner",
+      "Thyra Weiss",
+      "Elsa Ekman",
+      "Rebecca von Matérn"
+     ],
+     "city": "Trosa",
+     "confidence": 1,
+     "detail_url": "https://www.waygallerysthlm.com/landet-stay",
+     "end_date": "2026-09-15",
+     "kind": "exhibition",
+     "opening": {
+      "date": null,
+      "end_time": null,
+      "start_time": null,
+      "text": null
+     },
+     "start_date": "2026-03-09",
+     "title": "Landet Stay",
+     "title_en": null,
+     "title_gloss": null
+    },
+    {
+     "artists": [
+      "Tove Eklund",
+      "Johan Bjurmar",
+      "Anna Mörner",
+      "Thyra Weiss",
+      "Elsa Ekman",
+      "Rebecca von Matérn"
+     ],
+     "city": "Trosa",
+     "confidence": 1,
+     "detail_url": "https://www.waygallerysthlm.com/landet-stay",
+     "end_date": null,
+     "kind": "exhibition",
+     "opening": {
+      "date": null,
+      "end_time": null,
+      "start_time": null,
+      "text": null
+     },
+     "start_date": null,
+     "title": "Ongoing exhibition & art residence Landet Stay",
+     "title_en": null,
+     "title_gloss": null
+    },
+    {
+     "artists": [
+      "Storm Philippa Clarén",
+      "Melina Badejo",
+      "Madelen Möllard"
+     ],
+     "city": "Copenhagen",
+     "confidence": 1,
+     "detail_url": "https://www.waygallerysthlm.com/enter-art-fair",
+     "end_date": "2026-08-30",
+     "kind": "fair",
+     "opening": {
+      "date": null,
+      "end_time": null,
+      "start_time": null,
+      "text": null
+     },
+     "start_date": "2026-08-27",
+     "title": "Enter Art Fair",
+     "title_en": null,
+     "title_gloss": null
+    }
+   ]
+  },
   "https://www.wetterlinggallery.com/exhibitions/current/": {
    "hash": "f405b86acdc0fe65",
-   "ok_at": "2026-10-10T08:35:12+00:00",
+   "ok_at": "2026-10-10T22:26:28+00:00",
    "result": [
     {
      "artists": [

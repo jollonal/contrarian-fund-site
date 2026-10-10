@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-10-10T22:23:34+00:00",
+ "generated_at": "2026-10-10T22:40:55+00:00",
  "window_days": 60,
  "venues_tracked": 65,
  "events": [
@@ -140,6 +140,33 @@
    "source": "web"
   },
   {
+   "id": "72e26fc8ed7d",
+   "venue_id": "konsthall-16",
+   "venue": "Konsthall 16",
+   "address": "Djurgårdsbrunnsvägen 26, 115 27 Stockholm",
+   "map_url": "https://www.google.com/maps/search/?api=1&query=Konsthall%2016%2C%20Djurg%C3%A5rdsbrunnsv%C3%A4gen%2026%2C%20115%2027%20Stockholm",
+   "district": "Gärdet",
+   "title": "Nadja Hallström – Mustang/Queens",
+   "title_en": null,
+   "gloss": null,
+   "gloss_source": null,
+   "artists": [
+    "Nadja Hallström"
+   ],
+   "start_date": "2026-10-16",
+   "end_date": "2027-01-24",
+   "date": "2026-10-16",
+   "opening": {
+    "confirmed": false,
+    "start_time": null,
+    "end_time": null,
+    "text": null
+   },
+   "access": "unknown",
+   "url": "https://www.rf.se/riksidrottsmuseum/konsthall-16/utstallningar/kommande-utstallning/upcoming-exhibitions",
+   "source": "web"
+  },
+  {
    "id": "bd9d5a2df007",
    "venue_id": "hera",
    "venue": "Galleri Hera",
@@ -164,6 +191,33 @@
    },
    "access": "unknown",
    "url": "https://gallerihera.se/",
+   "source": "web"
+  },
+  {
+   "id": "c5de6b968b2d",
+   "venue_id": "lundberg-sandhagen",
+   "venue": "Galleri Lundberg-Sandhagen",
+   "address": null,
+   "map_url": null,
+   "district": "Vasastan",
+   "title": "Okända moln",
+   "title_en": null,
+   "gloss": "Unknown Clouds",
+   "gloss_source": "machine",
+   "artists": [
+    "Lars-Göran Nilsson"
+   ],
+   "start_date": "2026-10-17",
+   "end_date": "2026-10-31",
+   "date": "2026-10-17",
+   "opening": {
+    "confirmed": false,
+    "start_time": null,
+    "end_time": null,
+    "text": null
+   },
+   "access": "public",
+   "url": "https://www.lundberg-sandhagen.com/",
    "source": "web"
   },
   {
@@ -283,6 +337,60 @@
    "source": "web"
   },
   {
+   "id": "f872dd063463",
+   "venue_id": "125kvadrat",
+   "venue": "125kvadrat",
+   "address": "Kocksgatan 17, 116 24 Stockholm",
+   "map_url": "https://www.google.com/maps/search/?api=1&query=125kvadrat%2C%20Kocksgatan%2017%2C%20116%2024%20Stockholm",
+   "district": "Södermalm",
+   "title": "Fartyg, fåglar och fyrar",
+   "title_en": null,
+   "gloss": "Ships, Birds and Lighthouses",
+   "gloss_source": "machine",
+   "artists": [
+    "Ann-Christin von Reybekiel"
+   ],
+   "start_date": "2026-10-24",
+   "end_date": "2026-11-22",
+   "date": "2026-10-24",
+   "opening": {
+    "confirmed": false,
+    "start_time": null,
+    "end_time": null,
+    "text": null
+   },
+   "access": "unknown",
+   "url": "https://125kvadrat.com/galleri/utstallning/",
+   "source": "web"
+  },
+  {
+   "id": "44d85c5f68ea",
+   "venue_id": "galleri-hantverket",
+   "venue": "Galleri Hantverket",
+   "address": "Götgatan 63, 116 21 Stockholm",
+   "map_url": "https://www.google.com/maps/search/?api=1&query=Galleri%20Hantverket%2C%20G%C3%B6tgatan%2063%2C%20116%2021%20Stockholm",
+   "district": "Södermalm",
+   "title": "Susanne Nilsson – Vingar av Tystnad – Keramikkonst",
+   "title_en": null,
+   "gloss": "Wings of Silence - Ceramic Art",
+   "gloss_source": "machine",
+   "artists": [
+    "Susanne Nilsson"
+   ],
+   "start_date": "2026-10-24",
+   "end_date": "2026-11-12",
+   "date": "2026-10-24",
+   "opening": {
+    "confirmed": false,
+    "start_time": null,
+    "end_time": null,
+    "text": null
+   },
+   "access": "unknown",
+   "url": "https://gallerihantverket.se/event/susanne-nilsson-vingar-av-tystnad/",
+   "source": "web"
+  },
+  {
    "id": "925412b80497",
    "venue_id": "kaolin",
    "venue": "Kaolin",
@@ -394,6 +502,31 @@
    },
    "access": "unknown",
    "url": "https://slipvillan.org/",
+   "source": "web"
+  },
+  {
+   "id": "17216f453138",
+   "venue_id": "antics",
+   "venue": "Antics",
+   "address": "Hudiksvallsgatan 8, 113 30 Stockholm",
+   "map_url": "https://www.google.com/maps/search/?api=1&query=Antics%2C%20Hudiksvallsgatan%208%2C%20113%2030%20Stockholm",
+   "district": "Vasastan",
+   "title": "David Permén",
+   "title_en": null,
+   "gloss": null,
+   "gloss_source": null,
+   "artists": [],
+   "start_date": null,
+   "end_date": null,
+   "date": "2026-11-05",
+   "opening": {
+    "confirmed": true,
+    "start_time": null,
+    "end_time": null,
+    "text": "Opening: November 5"
+   },
+   "access": "unknown",
+   "url": "https://antics.se/david-permen",
    "source": "web"
   },
   {
@@ -639,6 +772,58 @@
    "source": "web"
   },
   {
+   "id": "1c9f70338226",
+   "venue_id": "amells",
+   "venue": "Åmells Konsthandel",
+   "address": "Birger Jarlsgatan 14, 114 34 Stockholm",
+   "map_url": "https://www.google.com/maps/search/?api=1&query=%C3%85mells%20Konsthandel%2C%20Birger%20Jarlsgatan%2014%2C%20114%2034%20Stockholm",
+   "district": "Östermalm",
+   "title": "Höstutställning 2026",
+   "title_en": null,
+   "gloss": "Autumn Exhibition 2026",
+   "gloss_source": "machine",
+   "artists": [],
+   "start_date": "2026-11-07",
+   "end_date": "2026-11-28",
+   "date": "2026-11-07",
+   "opening": {
+    "confirmed": false,
+    "start_time": null,
+    "end_time": null,
+    "text": null
+   },
+   "access": "public",
+   "url": "https://www.amells.com/",
+   "source": "web"
+  },
+  {
+   "id": "20baa9a04a94",
+   "venue_id": "galleri-hantverket",
+   "venue": "Galleri Hantverket",
+   "address": "Götgatan 63, 116 21 Stockholm",
+   "map_url": "https://www.google.com/maps/search/?api=1&query=Galleri%20Hantverket%2C%20G%C3%B6tgatan%2063%2C%20116%2021%20Stockholm",
+   "district": "Södermalm",
+   "title": "Peter Schalin – 3-dimensionellt akvarellmåleri",
+   "title_en": null,
+   "gloss": "3-dimensional Watercolor Painting",
+   "gloss_source": "machine",
+   "artists": [
+    "Peter Schalin"
+   ],
+   "start_date": "2026-11-14",
+   "end_date": "2026-11-26",
+   "date": "2026-11-14",
+   "opening": {
+    "confirmed": false,
+    "start_time": null,
+    "end_time": null,
+    "text": null
+   },
+   "access": "unknown",
+   "url": "https://gallerihantverket.se/event/peter-schalin-3-dimensionellt-akvarellmaleri/",
+   "source": "web"
+  },
+  {
    "id": "62dc4a7ea218",
    "venue_id": "galleri-glas",
    "venue": "Galleri Glas",
@@ -798,6 +983,33 @@
    },
    "access": "unknown",
    "url": "https://idigalleri.org/",
+   "source": "web"
+  },
+  {
+   "id": "6f8bf7f1caa8",
+   "venue_id": "galleri-hantverket",
+   "venue": "Galleri Hantverket",
+   "address": "Götgatan 63, 116 21 Stockholm",
+   "map_url": "https://www.google.com/maps/search/?api=1&query=Galleri%20Hantverket%2C%20G%C3%B6tgatan%2063%2C%20116%2021%20Stockholm",
+   "district": "Södermalm",
+   "title": "Medlemmarnas Julutställning",
+   "title_en": null,
+   "gloss": "Members' Christmas Exhibition",
+   "gloss_source": "machine",
+   "artists": [
+    "Medlemmarna"
+   ],
+   "start_date": "2026-11-28",
+   "end_date": null,
+   "date": "2026-11-28",
+   "opening": {
+    "confirmed": false,
+    "start_time": null,
+    "end_time": null,
+    "text": null
+   },
+   "access": "unknown",
+   "url": "https://gallerihantverket.se/",
    "source": "web"
   },
   {
