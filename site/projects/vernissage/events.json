@@ -1,35 +1,8 @@
 {
- "generated_at": "2026-10-10T21:26:07+00:00",
+ "generated_at": "2026-10-10T22:09:51+00:00",
  "window_days": 60,
  "venues_tracked": 65,
  "events": [
-  {
-   "id": "11ac02581fe4",
-   "venue_id": "bjorkholmen",
-   "venue": "Björkholmen Gallery",
-   "address": "Rödbodtorget 2, 111 52 Stockholm",
-   "map_url": "https://www.google.com/maps/search/?api=1&query=Bj%C3%B6rkholmen%20Gallery%2C%20R%C3%B6dbodtorget%202%2C%20111%2052%20Stockholm",
-   "district": "Norrmalm",
-   "title": "den här dagen. Och den här dagen.",
-   "title_en": null,
-   "gloss": "This Day. and This Day",
-   "gloss_source": "machine",
-   "artists": [
-    "Anders Widoff"
-   ],
-   "start_date": "2026-10-10",
-   "end_date": "2026-11-08",
-   "date": "2026-10-10",
-   "opening": {
-    "confirmed": true,
-    "start_time": "12:00",
-    "end_time": "16:00",
-    "text": "Opening Saturday 10 October 12-16”, "
-   },
-   "access": "unknown",
-   "url": "https://bjorkholmengallery.com/exhibition/den-har-dagen-och-den-har-dagen/",
-   "source": "web+newsletter"
-  },
   {
    "id": "cd19592ae54f",
    "venue_id": "magnus-karlsson",
@@ -958,6 +931,33 @@
    },
    "access": "unknown",
    "url": "https://slipvillan.org/",
+   "source": "web"
+  },
+  {
+   "id": "8ee1947b35f4",
+   "venue_id": "hedenius",
+   "venue": "Galleri Hedenius",
+   "address": "Sturegatan 36, 114 36 Stockholm",
+   "map_url": "https://www.google.com/maps/search/?api=1&query=Galleri%20Hedenius%2C%20Sturegatan%2036%2C%20114%2036%20Stockholm",
+   "district": "Östermalm",
+   "title": "WOLGERS + DUCHAMP = SANT",
+   "title_en": null,
+   "gloss": null,
+   "gloss_source": null,
+   "artists": [
+    "Dan Wolgers"
+   ],
+   "start_date": "2026-12-10",
+   "end_date": "2027-01-16",
+   "date": "2026-12-10",
+   "opening": {
+    "confirmed": true,
+    "start_time": "17:00",
+    "end_time": "19:00",
+    "text": "Vernissage torsdagen 10 december kl. 17-19"
+   },
+   "access": "unknown",
+   "url": "https://www.gallerihedenius.com/",
    "source": "web"
   }
  ]

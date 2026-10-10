@@ -4,7 +4,6 @@ Correct a machine gloss in `scraper/overrides.yaml`.
 
 | Date | Gallery | Title | English | Source |
 |---|---|---|---|---|
-| 2026-10-10 | Björkholmen Gallery | den här dagen. Och den här dagen. | This Day. and This Day | machine |
 | 2026-10-16 | CFHILL | Les Fruits du mal | The Fruits of Evil | machine |
 | 2026-10-17 | Grafiska Sällskapet | Tillstånd | Condition | machine |
 | 2026-10-17 | Grafiska Sällskapet | Mellanrum | In-between Spaces | machine |
