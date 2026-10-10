@@ -1,15 +1,34 @@
-# Spot corrections for the bracketed English glosses on the vernissage page.
+# Hand corrections for the vernissage page. Saving this file on GitHub rebuilds and
+# redeploys the page in about two minutes, without calling the AI.
+#
+# glosses: spot corrections for the bracketed English titles.
 #
 # Key:   the original title exactly as it appears on the page (copy it from
 #        scraper/state/glosses.md).
 # Value: the English text to show in brackets instead.
 #        Use "" to show no gloss at all for that title.
 #
-# Saving this file on GitHub rebuilds and redeploys the page in about two
-# minutes, without calling the AI.
-#
 # Example:
 #   "den här dagen. Och den här dagen.": "this day. And this day."
+#
+# events: shows added by hand when a gallery announces one the scraper cannot read.
+#   venue (id from venues.yaml), title, start_date are required; artists, end_date, url,
+#   opening_date, opening_start, opening_end (quoted, e.g. "17:00"), opening_text are optional.
+#   An opening counts as confirmed only when opening_date is given. If the scraper later
+#   finds the same show (same start date, shared artist), the two are merged.
+#   Remove an entry once the show has opened.
 
 glosses:
   "VALV": "Vault"
+
+events:
+  # Coulisse homepage ticker, read 2026-10-11: "05.11.2026 solo exhibition by
+  # Thom Trojanowski; solo by Evelina Jonsson". No titles or opening times published.
+  - venue: coulisse
+    title: Thom Trojanowski
+    artists: [Thom Trojanowski]
+    start_date: 2026-11-05
+  - venue: coulisse
+    title: Evelina Jonsson
+    artists: [Evelina Jonsson]
+    start_date: 2026-11-05

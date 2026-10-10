@@ -57,7 +57,7 @@ Because the repo and its logs are public, nothing from an email is logged or com
 
 Titles stay in the original language. If the gallery publishes its own English title, it is shown after a slash. Otherwise the model's English translation is shown in [brackets], marking it as a machine gloss. Glosses are cleaned before display (stray quotes and punctuation, notes in parentheses, alternatives after a slash) and set in title case, Chicago style.
 
-`scraper/state/glosses.md` lists every English title currently on the page. To correct one, add the original title and the replacement to `scraper/overrides.yaml` (or `""` to hide the gloss). Saving that file on GitHub rebuilds and redeploys the page from cache in about two minutes, with no AI calls.
+`scraper/state/glosses.md` lists every English title currently on the page. To correct one, add the original title and the replacement to `scraper/overrides.yaml` (or `""` to hide the gloss). Saving that file on GitHub rebuilds and redeploys the page from cache in about two minutes, with no AI calls. The same file's `events:` list adds shows by hand when a gallery announces one the scraper cannot read; the format is described at the top of the file.
 
 ## Map
 

@@ -24,6 +24,32 @@ ROOT = Path(__file__).resolve().parents[1]          # scraper/
 SITE = ROOT.parent / "site" / "projects" / "vernissage"
 
 
+def manual_events(entries, venues: list[dict], log) -> list[tuple[str, dict]]:
+    """Shows added by hand in overrides.yaml `events:`, shaped like scraped items. A scraped
+    copy of the same show (same venue and start date, shared artist or title) merges with it."""
+    ids = {v["id"] for v in venues}
+    out = []
+    for e in entries or []:
+        vid = (e or {}).get("venue")
+        if vid not in ids or not e.get("title") or not e.get("start_date"):
+            log.warning("overrides.yaml: skipped event %r (needs a known venue, title and start_date)", e)
+            continue
+        out.append((vid, {
+            "title": str(e["title"]),
+            "artists": [str(x) for x in e.get("artists") or []],
+            "start_date": str(e["start_date"]),
+            "end_date": str(e["end_date"]) if e.get("end_date") else None,
+            "kind": "exhibition",
+            "detail_url": e.get("url"),
+            "opening": {"date": str(e["opening_date"]) if e.get("opening_date") else None,
+                        "start_time": e.get("opening_start"), "end_time": e.get("opening_end"),
+                        "text": e.get("opening_text")},
+            "access": "unknown",
+            "confidence": 1,
+        }))
+    return out
+
+
 def main() -> int:
     ap = argparse.ArgumentParser(prog="vernissage")
     ap.add_argument("--dry-run", action="store_true")
@@ -68,8 +94,10 @@ def main() -> int:
         cache_path.write_text(json.dumps(cache, ensure_ascii=False, indent=1, sort_keys=True), encoding="utf-8")
 
     ov_path = ROOT / "overrides.yaml"
-    overrides = (yaml.safe_load(ov_path.read_text(encoding="utf-8")) or {}).get("glosses") if ov_path.exists() else None
-    events, review = normalize(found, venues, today, a.window, overrides or {})
+    ov = (yaml.safe_load(ov_path.read_text(encoding="utf-8")) or {}) if ov_path.exists() else {}
+    for vid, item in manual_events(ov.get("events"), venues, log):
+        found.setdefault(vid, []).append(item)
+    events, review = normalize(found, venues, today, a.window, ov.get("glosses") or {})
     (ROOT / "state" / "glosses.md").write_text(gloss_report(events), encoding="utf-8")
     (ROOT / "state" / "review.json").write_text(json.dumps(review, ensure_ascii=False, indent=1), encoding="utf-8")
     from .geocode import locate
