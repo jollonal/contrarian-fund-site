@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-10-10T10:56:33+00:00",
+ "generated_at": "2026-10-10T11:50:27+00:00",
  "window_days": 60,
  "venues_tracked": 44,
  "events": [
@@ -290,8 +290,8 @@
    "district": "Östermalm",
    "title": "VALV",
    "title_en": null,
-   "gloss": "The Gate",
-   "gloss_source": "machine",
+   "gloss": "Vault",
+   "gloss_source": "override",
    "artists": [
     "JURI MARKKULA",
     "Juri Markkula"

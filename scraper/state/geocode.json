@@ -1,0 +1,173 @@
+{
+ "Bjurholmsgatan 9b, 116 38 Stockholm": {
+  "lat": 59.308747,
+  "lon": 18.081162
+ },
+ "Bondegatan 70, 116 33 Stockholm": {
+  "lat": 59.313903,
+  "lon": 18.087654
+ },
+ "Fredsgatan 12, 111 52 Stockholm": {
+  "lat": 59.328683,
+  "lon": 18.064425
+ },
+ "Frihamnsgatan 60, Magasin 6, 115 56 Stockholm": {
+  "lat": 59.340493,
+  "lon": 18.114726
+ },
+ "Färgkontoret, Lövholmsgränd 12, 117 43 Stockholm": {
+  "lat": 59.314144,
+  "lon": 18.019559
+ },
+ "Gotlandsgatan 76, 116 38 Stockholm": {
+  "lat": 59.31049,
+  "lon": 18.083397
+ },
+ "Gävlegatan 10 B, 113 30 Stockholm": {
+  "lat": 59.345736,
+  "lon": 18.036493
+ },
+ "Hantverkargatan 18-20, 112 21 Stockholm": {
+  "lat": 59.328938,
+  "lon": 18.044221
+ },
+ "Hornsgatan 26, 118 20 Stockholm": {
+  "lat": 59.319606,
+  "lon": 18.067438
+ },
+ "Hornsgatan 36, 118 20 Stockholm": {
+  "lat": 59.319402,
+  "lon": 18.06581
+ },
+ "Hornsgatan 44, 118 21 Stockholm": {
+  "lat": 59.319244,
+  "lon": 18.064567
+ },
+ "Hornsgatan 50, 118 21 Stockholm": {
+  "lat": 59.319094,
+  "lon": 18.063368
+ },
+ "Hornsgatan 6, 118 20 Stockholm": {
+  "lat": 59.319891,
+  "lon": 18.069701
+ },
+ "Hudiksvallsgatan 6, 113 30 Stockholm": {
+  "lat": 59.345892,
+  "lon": 18.037917
+ },
+ "Hudiksvallsgatan 8, 113 30 Stockholm": {
+  "lat": 59.345837,
+  "lon": 18.037842
+ },
+ "Jämtlandsgatan 161, 162 60 Vällingby": {
+  "lat": 59.357598,
+  "lon": 17.877681
+ },
+ "Karlavägen 15 B, 114 31 Stockholm": {
+  "lat": 59.342882,
+  "lon": 18.06872
+ },
+ "Karlavägen 9, 114 24 Stockholm": {
+  "lat": 59.34436,
+  "lon": 18.065395
+ },
+ "Katarina Bangata 40, 116 39 Stockholm": {
+  "lat": 59.31118,
+  "lon": 18.080573
+ },
+ "Katarina Bangata 49, 116 39 Stockholm": {
+  "lat": 59.310207,
+  "lon": 18.085198
+ },
+ "Linnégatan 13, 114 47 Stockholm": {
+  "lat": 59.337823,
+  "lon": 18.077793
+ },
+ "Linnégatan 19, 114 47 Stockholm": {
+  "lat": 59.337645,
+  "lon": 18.07866
+ },
+ "Linnégatan 31, 114 47 Stockholm": {
+  "lat": 59.33703,
+  "lon": 18.081651
+ },
+ "Lützengatan 1, 115 20 Stockholm": {
+  "lat": 59.338135,
+  "lon": 18.0919
+ },
+ "Mälarvarvsbacken 32, 117 33 Stockholm": {
+  "lat": 59.321342,
+  "lon": 18.036388
+ },
+ "Nybrogatan 20, 114 39 Stockholm": {
+  "lat": 59.335164,
+  "lon": 18.077869
+ },
+ "Nybrogatan 34, 114 39 Stockholm": {
+  "lat": 59.337128,
+  "lon": 18.079424
+ },
+ "Riddargatan 13, 114 51 Stockholm": {
+  "lat": 59.334712,
+  "lon": 18.08023
+ },
+ "Roslagsgatan 21, 113 55 Stockholm": {
+  "lat": 59.347132,
+  "lon": 18.059045
+ },
+ "Rödbodtorget 2, 111 52 Stockholm": {
+  "miss": "2026-10-10"
+ },
+ "Sibyllegatan 49, 114 42 Stockholm": {
+  "lat": 59.338108,
+  "lon": 18.081438
+ },
+ "Sjökvarnsbacken 15, 131 71 Nacka": {
+  "lat": 59.314346,
+  "lon": 18.107186
+ },
+ "Skånegatan 108, 116 35 Stockholm": {
+  "lat": 59.312927,
+  "lon": 18.089104
+ },
+ "Smålandsgatan 7, 111 46 Stockholm": {
+  "lat": 59.333666,
+  "lon": 18.074404
+ },
+ "Storgatan 25, 114 55 Stockholm": {
+  "lat": 59.334808,
+  "lon": 18.084935
+ },
+ "Sturegatan 32, 114 36 Stockholm": {
+  "lat": 59.33965,
+  "lon": 18.075875
+ },
+ "Sturegatan 36, 114 36 Stockholm": {
+  "lat": 59.340072,
+  "lon": 18.076214
+ },
+ "Svartensgatan 10, 116 20 Stockholm": {
+  "lat": 59.317418,
+  "lon": 18.073571
+ },
+ "Tjärhovsgatan 19, 116 28 Stockholm": {
+  "lat": 59.315907,
+  "lon": 18.081607
+ },
+ "Tjärhovsgatan 44 B, 116 28 Stockholm": {
+  "lat": 59.315867,
+  "lon": 18.081619
+ },
+ "Ulrikagatan 13, 115 23 Stockholm": {
+  "lat": 59.333207,
+  "lon": 18.096574
+ },
+ "Vattugatan 13, 111 52 Stockholm": {
+  "lat": 59.330378,
+  "lon": 18.063477
+ },
+ "Åkersberga 2 b, 184 50 Åkersberga": {
+  "lat": 59.483099,
+  "lon": 18.313537
+ }
+}

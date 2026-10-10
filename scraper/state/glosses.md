@@ -9,7 +9,7 @@ Correct a machine gloss in `scraper/overrides.yaml`.
 | 2026-10-17 | Grafiska Sällskapet | Tillstånd | Condition | machine |
 | 2026-10-17 | Grafiska Sällskapet | Mellanrum | In-between Spaces | machine |
 | 2026-10-21 | Galleri Glas | Tusen sjöars glöd | The Glow of a Thousand Lakes | machine |
-| 2026-10-22 | Galleri Hedenius | VALV | The Gate | machine |
+| 2026-10-22 | Galleri Hedenius | VALV | Vault | override |
 | 2026-10-29 | Grafiska Sällskapet | Extern utställning: Norske Grafikere i Oslo, ett urval av 9 grafiker | External Exhibition: Norwegian Printmakers in Oslo, a Selection of 9 Printmakers | machine |
 | 2026-10-31 | Slipvillan | Tillit | Trust | machine |
 | 2026-11-06 | Galleri Helle Knudsen | Våra ... | Our ... | machine |

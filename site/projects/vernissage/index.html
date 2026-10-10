@@ -7,6 +7,8 @@
 <meta name="description" content="Exhibition openings at Stockholm galleries over the next 60 days. Updated nightly.">
 <link rel="icon" href="/favicon.png">
 <link rel="alternate" type="text/calendar" title="Stockholm Vernissages" href="events.ics">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin="">
+<script defer src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script>
 <style>
   :root {
     --bg: #FAFAF7; --ink: #111111; --muted: #6B6B66; --rule: #DADAD4;
@@ -41,11 +43,42 @@
   footer { margin-top: 48px; font-size: 13px; color: var(--muted); }
   footer p { margin: 0 0 4px; }
   [hidden] { display: none !important; }
+  /* Map: OpenStreetMap tiles via Leaflet. Numbered pins; filled = opening in the window. */
+  .map-wrap { margin: 40px 0 0; }
+  #map { height: 380px; border: 1px solid var(--ink); background: #EEEEEA; }
+  .map-wrap.full { position: fixed; inset: 0; z-index: 1000; margin: 0; padding: 12px; background: var(--bg);
+                   display: flex; flex-direction: column; }
+  .map-wrap.full #map { flex: 1; height: auto; }
+  .map-wrap.full .key { display: none; }
+  .map-bar { display: flex; justify-content: space-between; align-items: center; gap: 8px 16px; flex-wrap: wrap;
+             padding: 8px 0 0; font-size: 13px; color: var(--muted); }
+  .map-bar button { font: inherit; color: var(--ink); background: none; border: 1px solid var(--ink); padding: 4px 10px; cursor: pointer; }
+  .dot { display: inline-block; width: 10px; height: 10px; border-radius: 50%; border: 1.5px solid var(--ink);
+         background: var(--bg); vertical-align: -1px; margin: 0 4px 0 12px; }
+  .dot.on { background: var(--ink); margin-left: 0; }
+  .pin span { display: flex; align-items: center; justify-content: center; box-sizing: border-box; width: 22px; height: 22px;
+              border-radius: 50%; border: 1.5px solid var(--ink); background: var(--bg); color: var(--ink); font: 600 11px/1 var(--font); }
+  .pin.on span { background: var(--ink); color: var(--bg); }
+  .key { margin: 12px 0 0; font-size: 14px; }
+  .key summary { cursor: pointer; color: var(--muted); }
+  .key-group { margin: 14px 0 0; break-inside: avoid; }
+  .key h4 { font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; font-weight: 400; margin: 0 0 4px; }
+  .key ol { margin: 0; padding-left: 28px; }
+  .key-groups { columns: 2 280px; column-gap: 32px; }
+  .key li button { font: inherit; color: inherit; background: none; border: 0; padding: 0; cursor: pointer; text-align: left;
+                   text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 3px; }
+  .key .count { color: var(--muted); }
+  .leaflet-popup-content { font: 14px/1.4 var(--font); margin: 12px 14px; }
+  .pop p { margin: 2px 0; }
+  .pop .pop-name { font-weight: 600; }
+  .pop ul { margin: 6px 0; padding-left: 16px; }
+  .pop .pop-none { color: var(--muted); }
   @media (max-width: 640px) {
     .wrap { padding: 32px 16px 56px; }
     header h1 { font-size: 26px; }
     .day { grid-template-columns: 1fr; gap: 12px; }
     .filters label { margin-left: 0; width: 100%; }
+    #map { height: 300px; }
   }
 </style>
 </head>
@@ -55,6 +88,89 @@
     <h1>Stockholm Vernissages</h1>
     <p>Exhibition openings at 44 Stockholm galleries over the next 60 days. Updated nightly.</p>
   </header>
+
+  
+  <section class="map-wrap" id="map-wrap" aria-label="Map of galleries">
+    <div id="map" data-window="60" role="region" aria-label="Map of 44 galleries. Filled pins have an opening in the next 60 days."></div>
+    <div class="map-bar">
+      <span><span class="dot on"></span>Opening in the next 60 days<span class="dot"></span>Other galleries</span>
+      <button type="button" id="map-expand" aria-expanded="false">Expand map</button>
+    </div>
+    <details class="key">
+      <summary>All 44 galleries on the map</summary>
+      <div class="key-groups">
+      <div class="key-group"><h4>Danvikstull</h4><ol>
+        <li value="1"><button type="button" data-pin="kostyal">Carl Kostyál</button></li>
+        </ol></div>
+      <div class="key-group"><h4>Frihamnen</h4><ol>
+        <li value="2"><button type="button" data-pin="jan-wallmark">Galleri Jan Wallmark</button></li>
+        </ol></div>
+      <div class="key-group"><h4>Kungsholmen</h4><ol>
+        <li value="3"><button type="button" data-pin="helle-knudsen">Galleri Helle Knudsen</button> <span class="count">1 opening</span></li>
+        </ol></div>
+      <div class="key-group"><h4>Liljeholmen</h4><ol>
+        <li value="4"><button type="button" data-pin="platform-stockholm">Platform Stockholm</button> <span class="count">1 opening</span></li>
+        </ol></div>
+      <div class="key-group"><h4>Långholmen</h4><ol>
+        <li value="5"><button type="button" data-pin="slipvillan">Slipvillan</button> <span class="count">2 openings</span></li>
+        </ol></div>
+      <div class="key-group"><h4>Norrmalm</h4><ol>
+        <li value="6"><button type="button" data-pin="magnus-karlsson">Galleri Magnus Karlsson</button> <span class="count">3 openings</span></li>
+        <li value="7"><button type="button" data-pin="issues">ISSUES</button></li>
+        <li value="8"><button type="button" data-pin="konstnarshuset">Konstnärshuset</button> <span class="count">1 opening</span></li>
+        </ol></div>
+      <div class="key-group"><h4>Södermalm</h4><ol>
+        <li value="9"><button type="button" data-pin="abante">ABANTE Gallery</button></li>
+        <li value="10"><button type="button" data-pin="beau-travail">Beau Travail</button></li>
+        <li value="11"><button type="button" data-pin="blas-och-knada">blås &amp; knåda</button></li>
+        <li value="12"><button type="button" data-pin="candyland">Candyland</button></li>
+        <li value="13"><button type="button" data-pin="hera">Galleri Hera</button> <span class="count">3 openings</span></li>
+        <li value="14"><button type="button" data-pin="galleri-katarina-ap">Galleri Katarina AP</button></li>
+        <li value="15"><button type="button" data-pin="steinsland-berliner">Gallery Steinsland Berliner</button></li>
+        <li value="16"><button type="button" data-pin="grafiska-sallskapet">Grafiska Sällskapet</button> <span class="count">8 openings</span></li>
+        <li value="17"><button type="button" data-pin="idi-galleri">ID:I galleri</button> <span class="count">3 openings</span></li>
+        <li value="18"><button type="button" data-pin="kaolin">Kaolin</button> <span class="count">3 openings</span></li>
+        <li value="19"><button type="button" data-pin="parallel-collective">Parallel Collective</button></li>
+        <li value="20"><button type="button" data-pin="southnord">Southnord</button></li>
+        <li value="21"><button type="button" data-pin="studio-44">Studio 44</button> <span class="count">1 opening</span></li>
+        <li value="22"><button type="button" data-pin="tegen2">TEGEN2</button></li>
+        </ol></div>
+      <div class="key-group"><h4>Vasastan</h4><ol>
+        <li value="23"><button type="button" data-pin="berg">Berg Gallery</button></li>
+        <li value="24"><button type="button" data-pin="cecilia-hillstrom">Cecilia Hillström Gallery</button></li>
+        <li value="25"><button type="button" data-pin="detroit-stockholm">Detroit Stockholm</button></li>
+        <li value="26"><button type="button" data-pin="duerr">Galleri Duerr</button></li>
+        <li value="27"><button type="button" data-pin="larsen-warner">Larsen / Warner</button></li>
+        <li value="28"><button type="button" data-pin="susanne-pettersson">Susanne Pettersson Gallery</button></li>
+        </ol></div>
+      <div class="key-group"><h4>Vällingby</h4><ol>
+        <li value="29"><button type="button" data-pin="konsthallen-abc">Konsthallen ABC</button> <span class="count">1 opening</span></li>
+        </ol></div>
+      <div class="key-group"><h4>Åkersberga</h4><ol>
+        <li value="30"><button type="button" data-pin="ekvall-tornblom">Galleri Ekvall + Törnblom</button></li>
+        </ol></div>
+      <div class="key-group"><h4>Östermalm</h4><ol>
+        <li value="31"><button type="button" data-pin="andrehn-schiptjenko">Andréhn-Schiptjenko</button></li>
+        <li value="32"><button type="button" data-pin="anna-bohman">Anna Bohman Gallery</button></li>
+        <li value="33"><button type="button" data-pin="belenius">Belenius</button></li>
+        <li value="34"><button type="button" data-pin="carling-dalenson">Carling Dalenson</button></li>
+        <li value="35"><button type="button" data-pin="cfhill">CFHILL</button> <span class="count">1 opening</span></li>
+        <li value="36"><button type="button" data-pin="nordenhake">Galerie Nordenhake</button> <span class="count">1 opening</span></li>
+        <li value="37"><button type="button" data-pin="flach">Galleri Flach</button></li>
+        <li value="38"><button type="button" data-pin="galleri-glas">Galleri Glas</button> <span class="count">3 openings</span></li>
+        <li value="39"><button type="button" data-pin="hedenius">Galleri Hedenius</button> <span class="count">2 openings</span></li>
+        <li value="40"><button type="button" data-pin="gerdman">Gerdman Gallery</button></li>
+        <li value="41"><button type="button" data-pin="mankovsky">Mankovsky Gallery</button></li>
+        <li value="42"><button type="button" data-pin="saskia-neuman">Saskia Neuman Gallery</button></li>
+        <li value="43"><button type="button" data-pin="stance">STANCE Gallery</button></li>
+        <li value="44"><button type="button" data-pin="wetterling">Wetterling Gallery</button></li>
+        </ol></div>
+      
+      </div>
+    </details>
+  </section>
+  <script type="application/json" id="map-data">[{"n": 1, "id": "kostyal", "name": "Carl Kostyál", "district": "Danvikstull", "address": "Sjökvarnsbacken 15, 131 71 Nacka", "map_url": "https://www.google.com/maps/search/?api=1&query=Carl%20Kosty%C3%A1l%2C%20Sj%C3%B6kvarnsbacken%2015%2C%20131%2071%20Nacka", "url": "https://kostyal.com/", "lat": 59.314346, "lon": 18.107186, "openings": [], "central": true}, {"n": 2, "id": "jan-wallmark", "name": "Galleri Jan Wallmark", "district": "Frihamnen", "address": "Frihamnsgatan 60, Magasin 6, 115 56 Stockholm", "map_url": "https://www.google.com/maps/search/?api=1&query=Galleri%20Jan%20Wallmark%2C%20Frihamnsgatan%2060%2C%20Magasin%206%2C%20115%2056%20Stockholm", "url": "https://www.janwallmark.se/", "lat": 59.340493, "lon": 18.114726, "openings": [], "central": true}, {"n": 3, "id": "helle-knudsen", "name": "Galleri Helle Knudsen", "district": "Kungsholmen", "address": "Hantverkargatan 18-20, 112 21 Stockholm", "map_url": "https://www.google.com/maps/search/?api=1&query=Galleri%20Helle%20Knudsen%2C%20Hantverkargatan%2018-20%2C%20112%2021%20Stockholm", "url": "https://gallerihelle.com/", "lat": 59.328938, "lon": 18.044221, "openings": [{"date": "Fri 6 Nov", "title": "Våra ... [Our ...]", "time": "16:00 to 19:00"}], "central": true}, {"n": 4, "id": "platform-stockholm", "name": "Platform Stockholm", "district": "Liljeholmen", "address": "Färgkontoret, Lövholmsgränd 12, 117 43 Stockholm", "map_url": "https://www.google.com/maps/search/?api=1&query=Platform%20Stockholm%2C%20F%C3%A4rgkontoret%2C%20L%C3%B6vholmsgr%C3%A4nd%2012%2C%20117%2043%20Stockholm", "url": "https://platformstockholm.com/", "lat": 59.314144, "lon": 18.019559, "openings": [{"date": "Thu 5 Nov", "title": "The Ecology of Forking Paths", "time": null}], "central": true}, {"n": 5, "id": "slipvillan", "name": "Slipvillan", "district": "Långholmen", "address": "Mälarvarvsbacken 32, 117 33 Stockholm", "map_url": "https://www.google.com/maps/search/?api=1&query=Slipvillan%2C%20M%C3%A4larvarvsbacken%2032%2C%20117%2033%20Stockholm", "url": "https://slipvillan.org/", "lat": 59.321342, "lon": 18.036388, "openings": [{"date": "Sat 31 Oct", "title": "Tillit [Trust]", "time": null}, {"date": "Sat 28 Nov", "title": "Hjälp [Help]", "time": null}], "central": true}, {"n": 6, "id": "magnus-karlsson", "name": "Galleri Magnus Karlsson", "district": "Norrmalm", "address": "Fredsgatan 12, 111 52 Stockholm", "map_url": "https://www.google.com/maps/search/?api=1&query=Galleri%20Magnus%20Karlsson%2C%20Fredsgatan%2012%2C%20111%2052%20Stockholm", "url": "https://www.gallerimagnuskarlsson.com/", "lat": 59.328683, "lon": 18.064425, "openings": [{"date": "Thu 15 Oct", "title": "Between Hidden and Almost Revealed", "time": "17:00 to 19:00"}, {"date": "Fri 6 Nov", "title": "Nya målningar / New Paintings", "time": "17:00 to 19:00"}, {"date": "Sat 28 Nov", "title": "Hålet i väggen [The Hole in the Wall]", "time": null}], "central": true}, {"n": 7, "id": "issues", "name": "ISSUES", "district": "Norrmalm", "address": "Vattugatan 13, 111 52 Stockholm", "map_url": "https://www.google.com/maps/search/?api=1&query=ISSUES%2C%20Vattugatan%2013%2C%20111%2052%20Stockholm", "url": "https://www.issues.gallery/", "lat": 59.330378, "lon": 18.063477, "openings": [], "central": true}, {"n": 8, "id": "konstnarshuset", "name": "Konstnärshuset", "district": "Norrmalm", "address": "Smålandsgatan 7, 111 46 Stockholm", "map_url": "https://www.google.com/maps/search/?api=1&query=Konstn%C3%A4rshuset%2C%20Sm%C3%A5landsgatan%207%2C%20111%2046%20Stockholm", "url": "https://konstnarshuset.org/", "lat": 59.333666, "lon": 18.074404, "openings": [{"date": "Sat 21 Nov", "title": "Avund & svartsjuka [Envy and Jealousy]", "time": null}], "central": true}, {"n": 9, "id": "abante", "name": "ABANTE Gallery", "district": "Södermalm", "address": "Hornsgatan 44, 118 21 Stockholm", "map_url": "https://www.google.com/maps/search/?api=1&query=ABANTE%20Gallery%2C%20Hornsgatan%2044%2C%20118%2021%20Stockholm", "url": "https://abantegallery.se/", "lat": 59.319244, "lon": 18.064567, "openings": [], "central": true}, {"n": 10, "id": "beau-travail", "name": "Beau Travail", "district": "Södermalm", "address": "Skånegatan 108, 116 35 Stockholm", "map_url": "https://www.google.com/maps/search/?api=1&query=Beau%20Travail%2C%20Sk%C3%A5negatan%20108%2C%20116%2035%20Stockholm", "url": "https://beautravail.se/", "lat": 59.312927, "lon": 18.089104, "openings": [], "central": true}, {"n": 11, "id": "blas-och-knada", "name": "blås & knåda", "district": "Södermalm", "address": "Hornsgatan 26, 118 20 Stockholm", "map_url": "https://www.google.com/maps/search/?api=1&query=bl%C3%A5s%20%26%20kn%C3%A5da%2C%20Hornsgatan%2026%2C%20118%2020%20Stockholm", "url": "https://www.blasknada.com/", "lat": 59.319606, "lon": 18.067438, "openings": [], "central": true}, {"n": 12, "id": "candyland", "name": "Candyland", "district": "Södermalm", "address": "Gotlandsgatan 76, 116 38 Stockholm", "map_url": "https://www.google.com/maps/search/?api=1&query=Candyland%2C%20Gotlandsgatan%2076%2C%20116%2038%20Stockholm", "url": "https://candyland.se/", "lat": 59.31049, "lon": 18.083397, "openings": [], "central": true}, {"n": 13, "id": "hera", "name": "Galleri Hera", "district": "Södermalm", "address": "Hornsgatan 36, 118 20 Stockholm", "map_url": "https://www.google.com/maps/search/?api=1&query=Galleri%20Hera%2C%20Hornsgatan%2036%2C%20118%2020%20Stockholm", "url": "https://gallerihera.se/", "lat": 59.319402, "lon": 18.06581, "openings": [{"date": "Sat 17 Oct", "title": "Morten Lassen", "time": null}, {"date": "Fri 6 Nov", "title": "Kai Savelsberg", "time": null}, {"date": "Sat 28 Nov", "title": "Gunilla Hammar", "time": null}], "central": true}, {"n": 14, "id": "galleri-katarina-ap", "name": "Galleri Katarina AP", "district": "Södermalm", "address": "Katarina Bangata 49, 116 39 Stockholm", "map_url": "https://www.google.com/maps/search/?api=1&query=Galleri%20Katarina%20AP%2C%20Katarina%20Bangata%2049%2C%20116%2039%20Stockholm", "url": "https://www.falkenbergskonstskola.se/", "lat": 59.310207, "lon": 18.085198, "openings": [], "central": true}, {"n": 15, "id": "steinsland-berliner", "name": "Gallery Steinsland Berliner", "district": "Södermalm", "address": "Bondegatan 70, 116 33 Stockholm", "map_url": "https://www.google.com/maps/search/?api=1&query=Gallery%20Steinsland%20Berliner%2C%20Bondegatan%2070%2C%20116%2033%20Stockholm", "url": "https://www.steinslandberliner.com/", "lat": 59.313903, "lon": 18.087654, "openings": [], "central": true}, {"n": 16, "id": "grafiska-sallskapet", "name": "Grafiska Sällskapet", "district": "Södermalm", "address": "Hornsgatan 6, 118 20 Stockholm", "map_url": "https://www.google.com/maps/search/?api=1&query=Grafiska%20S%C3%A4llskapet%2C%20Hornsgatan%206%2C%20118%2020%20Stockholm", "url": "https://grafiskasallskapet.se/", "lat": 59.319891, "lon": 18.069701, "openings": [{"date": "Sat 17 Oct", "title": "Tillstånd [Condition]", "time": null}, {"date": "Sat 17 Oct", "title": "Mellanrum [In-between Spaces]", "time": null}, {"date": "Thu 29 Oct", "title": "Extern utställning: Norske Grafikere i Oslo, ett urval av 9 grafiker [External Exhibition: Norwegian Printmakers in Oslo, a Selection of 9 Printmakers]", "time": null}, {"date": "Sat 7 Nov", "title": "Träsnitt [Woodcuts]", "time": null}, {"date": "Sat 7 Nov", "title": "Herbarium", "time": null}, {"date": "Sat 7 Nov", "title": "P O Söderlund minnesutställning [P O Söderlund Memorial Exhibition]", "time": null}, {"date": "Sat 28 Nov", "title": "Från golv till tak [From Floor to Ceiling]", "time": null}, {"date": "Sat 28 Nov", "title": "Black Box Manual Instruction", "time": null}], "central": true}, {"n": 17, "id": "idi-galleri", "name": "ID:I galleri", "district": "Södermalm", "address": "Tjärhovsgatan 19, 116 28 Stockholm", "map_url": "https://www.google.com/maps/search/?api=1&query=ID%3AI%20galleri%2C%20Tj%C3%A4rhovsgatan%2019%2C%20116%2028%20Stockholm", "url": "https://idigalleri.org/", "lat": 59.315907, "lon": 18.081607, "openings": [{"date": "Fri 16 Oct", "title": "Christine Dahl Helweg-Larsen. Queenning Zhao", "time": null}, {"date": "Fri 6 Nov", "title": "Simon Blanck", "time": null}, {"date": "Fri 27 Nov", "title": "Molekyl", "time": null}], "central": true}, {"n": 18, "id": "kaolin", "name": "Kaolin", "district": "Södermalm", "address": "Hornsgatan 50, 118 21 Stockholm", "map_url": "https://www.google.com/maps/search/?api=1&query=Kaolin%2C%20Hornsgatan%2050%2C%20118%2021%20Stockholm", "url": "https://kaolin.se/", "lat": 59.319094, "lon": 18.063368, "openings": [{"date": "Sat 24 Oct", "title": "Jae Chang", "time": null}, {"date": "Sat 24 Oct", "title": "Elin Sundström", "time": null}, {"date": "Sat 21 Nov", "title": "JUL PÅ KAOLIN / Medlemsutställning [CHRISTMAS AT KAOLIN / Members' Exhibition]", "time": null}], "central": true}, {"n": 19, "id": "parallel-collective", "name": "Parallel Collective", "district": "Södermalm", "address": "Svartensgatan 10, 116 20 Stockholm", "map_url": "https://www.google.com/maps/search/?api=1&query=Parallel%20Collective%2C%20Svartensgatan%2010%2C%20116%2020%20Stockholm", "url": "https://parallelcollective.se/en", "lat": 59.317418, "lon": 18.073571, "openings": [], "central": true}, {"n": 20, "id": "southnord", "name": "Southnord", "district": "Södermalm", "address": "Katarina Bangata 40, 116 39 Stockholm", "map_url": "https://www.google.com/maps/search/?api=1&query=Southnord%2C%20Katarina%20Bangata%2040%2C%20116%2039%20Stockholm", "url": "https://www.southnord.com/", "lat": 59.31118, "lon": 18.080573, "openings": [], "central": true}, {"n": 21, "id": "studio-44", "name": "Studio 44", "district": "Södermalm", "address": "Tjärhovsgatan 44 B, 116 28 Stockholm", "map_url": "https://www.google.com/maps/search/?api=1&query=Studio%2044%2C%20Tj%C3%A4rhovsgatan%2044%20B%2C%20116%2028%20Stockholm", "url": "https://studio44-stockholm.com/en/", "lat": 59.315867, "lon": 18.081619, "openings": [{"date": "Fri 16 Oct", "title": "Thomas Brennan & Maria Lundmark", "time": "17:00 to 21:00"}], "central": true}, {"n": 22, "id": "tegen2", "name": "TEGEN2", "district": "Södermalm", "address": "Bjurholmsgatan 9b, 116 38 Stockholm", "map_url": "https://www.google.com/maps/search/?api=1&query=TEGEN2%2C%20Bjurholmsgatan%209b%2C%20116%2038%20Stockholm", "url": "http://www.tegen2.se/", "lat": 59.308747, "lon": 18.081162, "openings": [], "central": true}, {"n": 23, "id": "berg", "name": "Berg Gallery", "district": "Vasastan", "address": "Hudiksvallsgatan 8, 113 30 Stockholm", "map_url": "https://www.google.com/maps/search/?api=1&query=Berg%20Gallery%2C%20Hudiksvallsgatan%208%2C%20113%2030%20Stockholm", "url": "https://www.berggallery.se/", "lat": 59.345837, "lon": 18.038082, "openings": [], "central": true}, {"n": 24, "id": "cecilia-hillstrom", "name": "Cecilia Hillström Gallery", "district": "Vasastan", "address": "Hudiksvallsgatan 8, 113 30 Stockholm", "map_url": "https://www.google.com/maps/search/?api=1&query=Cecilia%20Hillstr%C3%B6m%20Gallery%2C%20Hudiksvallsgatan%208%2C%20113%2030%20Stockholm", "url": "https://chgallery.se/", "lat": 59.345941, "lon": 18.037722, "openings": [], "central": true}, {"n": 25, "id": "detroit-stockholm", "name": "Detroit Stockholm", "district": "Vasastan", "address": "Roslagsgatan 21, 113 55 Stockholm", "map_url": "https://www.google.com/maps/search/?api=1&query=Detroit%20Stockholm%2C%20Roslagsgatan%2021%2C%20113%2055%20Stockholm", "url": "https://detroitstockholm.info/", "lat": 59.347132, "lon": 18.059045, "openings": [], "central": true}, {"n": 26, "id": "duerr", "name": "Galleri Duerr", "district": "Vasastan", "address": "Hudiksvallsgatan 6, 113 30 Stockholm", "map_url": "https://www.google.com/maps/search/?api=1&query=Galleri%20Duerr%2C%20Hudiksvallsgatan%206%2C%20113%2030%20Stockholm", "url": "https://www.galleriduerr.com/", "lat": 59.345892, "lon": 18.037917, "openings": [], "central": true}, {"n": 27, "id": "larsen-warner", "name": "Larsen / Warner", "district": "Vasastan", "address": "Hudiksvallsgatan 8, 113 30 Stockholm", "map_url": "https://www.google.com/maps/search/?api=1&query=Larsen%20/%20Warner%2C%20Hudiksvallsgatan%208%2C%20113%2030%20Stockholm", "url": "https://larsenwarner.com/", "lat": 59.345733, "lon": 18.037722, "openings": [], "central": true}, {"n": 28, "id": "susanne-pettersson", "name": "Susanne Pettersson Gallery", "district": "Vasastan", "address": "Gävlegatan 10 B, 113 30 Stockholm", "map_url": "https://www.google.com/maps/search/?api=1&query=Susanne%20Pettersson%20Gallery%2C%20G%C3%A4vlegatan%2010%20B%2C%20113%2030%20Stockholm", "url": "https://spgallery.se/", "lat": 59.345736, "lon": 18.036493, "openings": [], "central": true}, {"n": 29, "id": "konsthallen-abc", "name": "Konsthallen ABC", "district": "Vällingby", "address": "Jämtlandsgatan 161, 162 60 Vällingby", "map_url": "https://www.google.com/maps/search/?api=1&query=Konsthallen%20ABC%2C%20J%C3%A4mtlandsgatan%20161%2C%20162%2060%20V%C3%A4llingby", "url": "https://studioabc.se/", "lat": 59.357598, "lon": 17.877681, "openings": [{"date": "Fri 16 Oct", "title": "Pull Up the Roots", "time": "18:00 to 22:00"}], "central": false}, {"n": 30, "id": "ekvall-tornblom", "name": "Galleri Ekvall + Törnblom", "district": "Åkersberga", "address": "Åkersberga 2 b, 184 50 Åkersberga", "map_url": "https://www.google.com/maps/search/?api=1&query=Galleri%20Ekvall%20%2B%20T%C3%B6rnblom%2C%20%C3%85kersberga%202%20b%2C%20184%2050%20%C3%85kersberga", "url": "https://www.ekvalltornblom.se/", "lat": 59.483099, "lon": 18.313537, "openings": [], "central": false}, {"n": 31, "id": "andrehn-schiptjenko", "name": "Andréhn-Schiptjenko", "district": "Östermalm", "address": "Linnégatan 31, 114 47 Stockholm", "map_url": "https://www.google.com/maps/search/?api=1&query=Andr%C3%A9hn-Schiptjenko%2C%20Linn%C3%A9gatan%2031%2C%20114%2047%20Stockholm", "url": "https://www.andrehn-schiptjenko.com/", "lat": 59.33703, "lon": 18.081651, "openings": [], "central": true}, {"n": 32, "id": "anna-bohman", "name": "Anna Bohman Gallery", "district": "Östermalm", "address": "Karlavägen 15 B, 114 31 Stockholm", "map_url": "https://www.google.com/maps/search/?api=1&query=Anna%20Bohman%20Gallery%2C%20Karlav%C3%A4gen%2015%20B%2C%20114%2031%20Stockholm", "url": "https://www.annabohmangallery.com/", "lat": 59.342882, "lon": 18.06872, "openings": [], "central": true}, {"n": 33, "id": "belenius", "name": "Belenius", "district": "Östermalm", "address": "Ulrikagatan 13, 115 23 Stockholm", "map_url": "https://www.google.com/maps/search/?api=1&query=Belenius%2C%20Ulrikagatan%2013%2C%20115%2023%20Stockholm", "url": "https://belenius.com/", "lat": 59.333207, "lon": 18.096574, "openings": [], "central": true}, {"n": 34, "id": "carling-dalenson", "name": "Carling Dalenson", "district": "Östermalm", "address": "Sibyllegatan 49, 114 42 Stockholm", "map_url": "https://www.google.com/maps/search/?api=1&query=Carling%20Dalenson%2C%20Sibyllegatan%2049%2C%20114%2042%20Stockholm", "url": "https://www.carlingdalenson.com/", "lat": 59.338108, "lon": 18.081438, "openings": [], "central": true}, {"n": 35, "id": "cfhill", "name": "CFHILL", "district": "Östermalm", "address": "Riddargatan 13, 114 51 Stockholm", "map_url": "https://www.google.com/maps/search/?api=1&query=CFHILL%2C%20Riddargatan%2013%2C%20114%2051%20Stockholm", "url": "https://www.cfhill.com/", "lat": 59.334712, "lon": 18.08023, "openings": [{"date": "Fri 16 Oct", "title": "Les Fruits du mal [The Fruits of Evil]", "time": null}], "central": true}, {"n": 36, "id": "nordenhake", "name": "Galerie Nordenhake", "district": "Östermalm", "address": "Lützengatan 1, 115 20 Stockholm", "map_url": "https://www.google.com/maps/search/?api=1&query=Galerie%20Nordenhake%2C%20L%C3%BCtzengatan%201%2C%20115%2020%20Stockholm", "url": "https://nordenhake.com/", "lat": 59.338135, "lon": 18.0919, "openings": [{"date": "Fri 6 Nov", "title": "Ayan Farah", "time": null}], "central": true}, {"n": 37, "id": "flach", "name": "Galleri Flach", "district": "Östermalm", "address": "Karlavägen 9, 114 24 Stockholm", "map_url": "https://www.google.com/maps/search/?api=1&query=Galleri%20Flach%2C%20Karlav%C3%A4gen%209%2C%20114%2024%20Stockholm", "url": "https://www.galleriflach.com/", "lat": 59.34436, "lon": 18.065395, "openings": [], "central": true}, {"n": 38, "id": "galleri-glas", "name": "Galleri Glas", "district": "Östermalm", "address": "Nybrogatan 34, 114 39 Stockholm", "map_url": "https://www.google.com/maps/search/?api=1&query=Galleri%20Glas%2C%20Nybrogatan%2034%2C%20114%2039%20Stockholm", "url": "https://www.galleriglas.se/", "lat": 59.337128, "lon": 18.079424, "openings": [{"date": "Wed 21 Oct", "title": "Tusen sjöars glöd [The Glow of a Thousand Lakes]", "time": "17:00 to 19:00"}, {"date": "Sun 15 Nov", "title": "Precession through glass", "time": null}, {"date": "Wed 18 Nov", "title": "Uppåt väggarna [Up the Walls]", "time": null}], "central": true}, {"n": 39, "id": "hedenius", "name": "Galleri Hedenius", "district": "Östermalm", "address": "Sturegatan 36, 114 36 Stockholm", "map_url": "https://www.google.com/maps/search/?api=1&query=Galleri%20Hedenius%2C%20Sturegatan%2036%2C%20114%2036%20Stockholm", "url": "https://www.gallerihedenius.com/", "lat": 59.340072, "lon": 18.076214, "openings": [{"date": "Thu 22 Oct", "title": "VALV [Vault]", "time": "17:00 to 19:00"}, {"date": "Wed 25 Nov", "title": "90 × 90", "time": "17:00 to 19:00"}], "central": true}, {"n": 40, "id": "gerdman", "name": "Gerdman Gallery", "district": "Östermalm", "address": "Sturegatan 32, 114 36 Stockholm", "map_url": "https://www.google.com/maps/search/?api=1&query=Gerdman%20Gallery%2C%20Sturegatan%2032%2C%20114%2036%20Stockholm", "url": "https://gerdmangallery.com/", "lat": 59.33965, "lon": 18.075875, "openings": [], "central": true}, {"n": 41, "id": "mankovsky", "name": "Mankovsky Gallery", "district": "Östermalm", "address": "Linnégatan 13, 114 47 Stockholm", "map_url": "https://www.google.com/maps/search/?api=1&query=Mankovsky%20Gallery%2C%20Linn%C3%A9gatan%2013%2C%20114%2047%20Stockholm", "url": "https://mankovskygallery.com/", "lat": 59.337823, "lon": 18.077793, "openings": [], "central": true}, {"n": 42, "id": "saskia-neuman", "name": "Saskia Neuman Gallery", "district": "Östermalm", "address": "Linnégatan 19, 114 47 Stockholm", "map_url": "https://www.google.com/maps/search/?api=1&query=Saskia%20Neuman%20Gallery%2C%20Linn%C3%A9gatan%2019%2C%20114%2047%20Stockholm", "url": "https://www.saskianeumangallery.com/", "lat": 59.337645, "lon": 18.07866, "openings": [], "central": true}, {"n": 43, "id": "stance", "name": "STANCE Gallery", "district": "Östermalm", "address": "Storgatan 25, 114 55 Stockholm", "map_url": "https://www.google.com/maps/search/?api=1&query=STANCE%20Gallery%2C%20Storgatan%2025%2C%20114%2055%20Stockholm", "url": "https://stancegallery.com/", "lat": 59.334808, "lon": 18.084935, "openings": [], "central": true}, {"n": 44, "id": "wetterling", "name": "Wetterling Gallery", "district": "Östermalm", "address": "Nybrogatan 20, 114 39 Stockholm", "map_url": "https://www.google.com/maps/search/?api=1&query=Wetterling%20Gallery%2C%20Nybrogatan%2020%2C%20114%2039%20Stockholm", "url": "https://www.wetterlinggallery.com/", "lat": 59.335164, "lon": 18.077869, "openings": [], "central": true}]</script>
+  
 
   
   <nav class="filters" aria-label="Filter">
@@ -234,7 +350,7 @@
       
         <article class="ev" data-district="Östermalm" data-confirmed="1">
           <p class="venue">Galleri Hedenius</p>
-          <h3>VALV <span class="gloss" title="English translation">[The Gate]</span></h3>
+          <h3>VALV <span class="gloss" title="English translation">[Vault]</span></h3>
           
           <p class="artists">JURI MARKKULA, Juri Markkula</p>
           
@@ -623,7 +739,7 @@
   </main>
 
   <footer>
-    <p>35 openings, 13 with confirmed reception times. Last updated 10 October 2026, 12:56.</p>
+    <p>35 openings, 13 with confirmed reception times. Last updated 10 October 2026, 13:50.</p>
     <p><a href="events.ics">Subscribe to the calendar</a> · <a href="https://github.com/jollonal/contrarian-fund-site">Source code</a> · Built by <a href="/">Alfred J. Jollon</a></p>
   </footer>
 </div>
@@ -654,6 +770,62 @@
   });
   if (box) box.addEventListener("change", function () { confirmedOnly = box.checked; apply(); });
 })();
+
+document.addEventListener("DOMContentLoaded", function () {
+  var wrap = document.getElementById("map-wrap"), el = document.getElementById("map"),
+      data = document.getElementById("map-data");
+  if (!wrap || !el || !data) return;
+  if (!window.L) { wrap.hidden = true; return; }  // map library unavailable: the list still works
+  var days = el.dataset.window, pts = JSON.parse(data.textContent);
+  var map = L.map(el, { scrollWheelZoom: false });
+  L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", { maxZoom: 19,
+    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors' }).addTo(map);
+  function node(tag, cls, text) {
+    var n = document.createElement(tag); if (cls) n.className = cls; if (text != null) n.textContent = text; return n;
+  }
+  function link(href, text) { var a = node("a", null, text); a.href = href; a.rel = "noopener"; a.target = "_blank"; return a; }
+  var markers = {}, all = [], central = [];
+  pts.forEach(function (p) {
+    var box = node("div", "pop");
+    box.appendChild(node("p", "pop-name", p.n + ". " + p.name));
+    if (p.address) { var ap = node("p"); ap.appendChild(link(p.map_url, p.address)); box.appendChild(ap); }
+    if (p.openings.length) {
+      var ul = node("ul");
+      p.openings.forEach(function (o) {
+        ul.appendChild(node("li", null, o.date + ": " + o.title + (o.time ? ". Vernissage " + o.time : "")));
+      });
+      box.appendChild(ul);
+    } else {
+      box.appendChild(node("p", "pop-none", "No openings in the next " + days + " days."));
+    }
+    if (p.url) { var wp = node("p"); wp.appendChild(link(p.url, "Gallery website")); box.appendChild(wp); }
+    var icon = L.divIcon({ className: "pin" + (p.openings.length ? " on" : ""), html: "<span>" + p.n + "</span>",
+                           iconSize: [22, 22], iconAnchor: [11, 11], popupAnchor: [0, -12] });
+    markers[p.id] = L.marker([p.lat, p.lon], { icon: icon, title: p.n + ". " + p.name, alt: p.n + ". " + p.name,
+                                               zIndexOffset: p.openings.length ? 1000 : 0 }).addTo(map).bindPopup(box);
+    all.push([p.lat, p.lon]); if (p.central) central.push([p.lat, p.lon]);
+  });
+  map.fitBounds(central.length ? central : all, { padding: [24, 24] });
+
+  var btn = document.getElementById("map-expand");
+  function expand(on) {
+    wrap.classList.toggle("full", on);
+    btn.textContent = on ? "Close map" : "Expand map";
+    btn.setAttribute("aria-expanded", on ? "true" : "false");
+    document.body.style.overflow = on ? "hidden" : "";
+    on ? map.scrollWheelZoom.enable() : map.scrollWheelZoom.disable();
+    setTimeout(function () { map.invalidateSize(); }, 50);
+  }
+  btn.addEventListener("click", function () { expand(!wrap.classList.contains("full")); });
+  document.addEventListener("keydown", function (e) { if (e.key === "Escape" && wrap.classList.contains("full")) expand(false); });
+  document.querySelectorAll(".key button[data-pin]").forEach(function (b) {
+    b.addEventListener("click", function () {
+      var m = markers[b.dataset.pin]; if (!m) return;
+      el.scrollIntoView({ behavior: "smooth", block: "center" });
+      map.setView(m.getLatLng(), 16); m.openPopup();
+    });
+  });
+});
 </script>
 </body>
 </html>

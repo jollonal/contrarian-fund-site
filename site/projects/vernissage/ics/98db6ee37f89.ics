@@ -22,10 +22,10 @@ END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
 UID:98db6ee37f89@contrarian.fund
-DTSTAMP:20261010T105633Z
+DTSTAMP:20261010T115027Z
 DTSTART;TZID=Europe/Stockholm:20261022T170000
 DTEND;TZID=Europe/Stockholm:20261022T190000
-SUMMARY:Vernissage: VALV [The Gate] at Galleri Hedenius
+SUMMARY:Vernissage: VALV [Vault] at Galleri Hedenius
 LOCATION:Sturegatan 36\, 114 36 Stockholm
 DESCRIPTION:JURI MARKKULA\, Juri Markkula\nOn view until 2026-11-21.
 URL:https://www.gallerihedenius.com/
