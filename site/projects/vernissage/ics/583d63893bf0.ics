@@ -2,7 +2,7 @@ BEGIN:VCALENDAR
 VERSION:2.0
 PRODID:-//contrarian.fund//vernissage//EN
 CALSCALE:GREGORIAN
-X-WR-CALNAME:Kalypso
+X-WR-CALNAME:Les Fruits du mal
 BEGIN:VTIMEZONE
 TZID:Europe/Stockholm
 BEGIN:DAYLIGHT
@@ -21,13 +21,13 @@ RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU
 END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
-UID:fd8ea4b5a75c@contrarian.fund
-DTSTAMP:20261009T091627Z
-DTSTART;VALUE=DATE:20261009
-DTEND;VALUE=DATE:20261010
-SUMMARY:Opens: Kalypso at Gallery Steinsland Berliner
-LOCATION:Bondegatan 70\, 116 33 Stockholm
-DESCRIPTION:Hanna Hansdotter\nOn view until 2026-10-31.
-URL:https://steinslandberliner.com/shows/hanna-hansdotter-kalypso-2026
+UID:583d63893bf0@contrarian.fund
+DTSTAMP:20261010T084343Z
+DTSTART;VALUE=DATE:20261016
+DTEND;VALUE=DATE:20261017
+SUMMARY:Opens: Les Fruits du mal [The Fruits of Evil”\,] at CFHILL
+LOCATION:Riddargatan 13\, 114 51 Stockholm
+DESCRIPTION:Simone Haack\nOn view until 2026-11-13.
+URL:https://www.cfhill.com/
 END:VEVENT
 END:VCALENDAR

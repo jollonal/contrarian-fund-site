@@ -2,7 +2,7 @@ BEGIN:VCALENDAR
 VERSION:2.0
 PRODID:-//contrarian.fund//vernissage//EN
 CALSCALE:GREGORIAN
-X-WR-CALNAME:Thomas Brennan & Maria Lundmark
+X-WR-CALNAME:Pull Up the Roots
 BEGIN:VTIMEZONE
 TZID:Europe/Stockholm
 BEGIN:DAYLIGHT
@@ -21,13 +21,14 @@ RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU
 END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
-UID:e483921a99c2@contrarian.fund
+UID:b1ce880fddbf@contrarian.fund
 DTSTAMP:20261010T084343Z
-DTSTART;TZID=Europe/Stockholm:20261016T170000
-DTEND;TZID=Europe/Stockholm:20261016T210000
-SUMMARY:Vernissage: Thomas Brennan & Maria Lundmark at Studio 44
-LOCATION:Tjärhovsgatan 44 B\, 116 28 Stockholm
-DESCRIPTION:Maria Lundmark\, Thomas Brennan\nOn view until 2026-11-01.
-URL:https://studio44-stockholm.com/39499-2/thomas-brennan-maria-lundmark/
+DTSTART;TZID=Europe/Stockholm:20261016T180000
+DTEND;TZID=Europe/Stockholm:20261016T220000
+SUMMARY:Vernissage: Pull Up the Roots at Konsthallen ABC
+LOCATION:Jämtlandsgatan 161\, 162 60 Vällingby
+DESCRIPTION:Oleksandra Voronina\, Vitalii Kravets\, Serhii Pohrebitskyi\nOn
+  view until 2026-11-01.
+URL:https://studioabc.se/
 END:VEVENT
 END:VCALENDAR

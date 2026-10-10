@@ -2,7 +2,7 @@ BEGIN:VCALENDAR
 VERSION:2.0
 PRODID:-//contrarian.fund//vernissage//EN
 CALSCALE:GREGORIAN
-X-WR-CALNAME:Dagar och nätter vid havet
+X-WR-CALNAME:Precession through glass
 BEGIN:VTIMEZONE
 TZID:Europe/Stockholm
 BEGIN:DAYLIGHT
@@ -21,14 +21,13 @@ RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU
 END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
-UID:76c585ee52bc@contrarian.fund
-DTSTAMP:20261009T091627Z
-DTSTART;TZID=Europe/Stockholm:20261009T110000
-DTEND;TZID=Europe/Stockholm:20261009T160000
-SUMMARY:Vernissage: Dagar och nätter vid havet [Days and nights by the sea
- ”\,] at Galleri Hera
-LOCATION:Hornsgatan 36\, 118 20 Stockholm
-DESCRIPTION:Thomas Ekvall\nOn view until 2026-10-14.
-URL:https://gallerihera.se/
+UID:62dc4a7ea218@contrarian.fund
+DTSTAMP:20261010T084343Z
+DTSTART;VALUE=DATE:20261115
+DTEND;VALUE=DATE:20261116
+SUMMARY:Opens: Precession through glass at Galleri Glas
+LOCATION:Nybrogatan 34\, 114 39 Stockholm
+DESCRIPTION:Monica Guggisberg\, Philip Baldwin\nOn view until 2027-04-25.
+URL:https://www.galleriglas.se/
 END:VEVENT
 END:VCALENDAR

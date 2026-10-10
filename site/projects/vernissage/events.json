@@ -1,60 +1,8 @@
 {
- "generated_at": "2026-10-09T09:16:27+00:00",
+ "generated_at": "2026-10-10T08:43:43+00:00",
  "window_days": 60,
  "venues_tracked": 44,
  "events": [
-  {
-   "id": "76c585ee52bc",
-   "venue_id": "hera",
-   "venue": "Galleri Hera",
-   "address": "Hornsgatan 36, 118 20 Stockholm",
-   "district": "Södermalm",
-   "title": "Dagar och nätter vid havet",
-   "title_en": null,
-   "gloss": "Days and nights by the sea”,",
-   "gloss_source": "machine",
-   "artists": [
-    "Thomas Ekvall"
-   ],
-   "start_date": "2026-09-26",
-   "end_date": "2026-10-14",
-   "date": "2026-10-09",
-   "opening": {
-    "confirmed": true,
-    "start_time": "11:00",
-    "end_time": "16:00",
-    "text": "Välkommen på Vernissage Lördag kl. 11.00 -16.00"
-   },
-   "access": "unknown",
-   "url": "https://gallerihera.se/",
-   "source": "web"
-  },
-  {
-   "id": "fd8ea4b5a75c",
-   "venue_id": "steinsland-berliner",
-   "venue": "Gallery Steinsland Berliner",
-   "address": "Bondegatan 70, 116 33 Stockholm",
-   "district": "Södermalm",
-   "title": "Kalypso",
-   "title_en": null,
-   "gloss": null,
-   "gloss_source": null,
-   "artists": [
-    "Hanna Hansdotter"
-   ],
-   "start_date": "2026-10-09",
-   "end_date": "2026-10-31",
-   "date": "2026-10-09",
-   "opening": {
-    "confirmed": false,
-    "start_time": null,
-    "end_time": null,
-    "text": null
-   },
-   "access": "unknown",
-   "url": "https://steinslandberliner.com/shows/hanna-hansdotter-kalypso-2026",
-   "source": "web"
-  },
   {
    "id": "11ac02581fe4",
    "venue_id": "bjorkholmen",
@@ -63,7 +11,7 @@
    "district": "Norrmalm",
    "title": "den här dagen. Och den här dagen.",
    "title_en": null,
-   "gloss": "this day and this day",
+   "gloss": "this day. and this day.",
    "gloss_source": "machine",
    "artists": [
     "Anders Widoff"
@@ -75,11 +23,11 @@
     "confirmed": true,
     "start_time": "12:00",
     "end_time": "16:00",
-    "text": "Opening Saturday 10 October 12-16"
+    "text": "Opening Saturday 10 October 12-16”, "
    },
-   "access": "public",
+   "access": "unknown",
    "url": "https://bjorkholmengallery.com/exhibition/den-har-dagen-och-den-har-dagen/",
-   "source": "web"
+   "source": "web+newsletter"
   },
   {
    "id": "cd19592ae54f",
@@ -132,6 +80,60 @@
    },
    "access": "unknown",
    "url": "https://studio44-stockholm.com/39499-2/thomas-brennan-maria-lundmark/",
+   "source": "web"
+  },
+  {
+   "id": "b1ce880fddbf",
+   "venue_id": "konsthallen-abc",
+   "venue": "Konsthallen ABC",
+   "address": "Jämtlandsgatan 161, 162 60 Vällingby",
+   "district": "Vällingby",
+   "title": "Pull Up the Roots",
+   "title_en": null,
+   "gloss": null,
+   "gloss_source": null,
+   "artists": [
+    "Oleksandra Voronina",
+    "Vitalii Kravets",
+    "Serhii Pohrebitskyi"
+   ],
+   "start_date": "2026-10-16",
+   "end_date": "2026-11-01",
+   "date": "2026-10-16",
+   "opening": {
+    "confirmed": true,
+    "start_time": "18:00",
+    "end_time": "22:00",
+    "text": "18:00 — Opening / Reception"
+   },
+   "access": "unknown",
+   "url": "https://studioabc.se/",
+   "source": "web"
+  },
+  {
+   "id": "583d63893bf0",
+   "venue_id": "cfhill",
+   "venue": "CFHILL",
+   "address": "Riddargatan 13, 114 51 Stockholm",
+   "district": "Östermalm",
+   "title": "Les Fruits du mal",
+   "title_en": null,
+   "gloss": "The Fruits of Evil”,",
+   "gloss_source": "machine",
+   "artists": [
+    "Simone Haack"
+   ],
+   "start_date": "2026-10-16",
+   "end_date": "2026-11-13",
+   "date": "2026-10-16",
+   "opening": {
+    "confirmed": false,
+    "start_time": null,
+    "end_time": null,
+    "text": null
+   },
+   "access": "unknown",
+   "url": "https://www.cfhill.com/",
    "source": "web"
   },
   {
@@ -249,21 +251,25 @@
    "artists": [
     "KARSIKAS",
     "KOSKINEN",
+    "Karsikas",
+    "Koskinen",
     "SCHIRM",
-    "SUPPANEN"
+    "SUPPANEN",
+    "Schirm",
+    "Suppanen"
    ],
    "start_date": "2026-10-21",
    "end_date": "2026-11-13",
    "date": "2026-10-21",
    "opening": {
-    "confirmed": false,
-    "start_time": null,
-    "end_time": null,
-    "text": null
+    "confirmed": true,
+    "start_time": "17:00",
+    "end_time": "19:00",
+    "text": "Inbjudan vernissage KARSIKAS, KOSKINEN, SCHIRM & SUPPANEN"
    },
    "access": "unknown",
    "url": "https://www.galleriglas.se/exhibitions/82-tusen-sjoars-glod-karsikas-koskinen-schirm-suppanen/overview/",
-   "source": "web"
+   "source": "web+newsletter"
   },
   {
    "id": "98db6ee37f89",
@@ -617,7 +623,7 @@
    "district": "Södermalm",
    "title": "P O Söderlund minnesutställning",
    "title_en": null,
-   "gloss": "P O Söderlund Memorial Exhibition",
+   "gloss": "P O Söderlund memorial exhibition",
    "gloss_source": "machine",
    "artists": [
     "P O Söderlund"
@@ -634,6 +640,59 @@
    "access": "unknown",
    "url": "https://grafiskasallskapet.se/",
    "source": "web"
+  },
+  {
+   "id": "62dc4a7ea218",
+   "venue_id": "galleri-glas",
+   "venue": "Galleri Glas",
+   "address": "Nybrogatan 34, 114 39 Stockholm",
+   "district": "Östermalm",
+   "title": "Precession through glass",
+   "title_en": null,
+   "gloss": null,
+   "gloss_source": null,
+   "artists": [
+    "Monica Guggisberg",
+    "Philip Baldwin"
+   ],
+   "start_date": "2026-11-15",
+   "end_date": "2027-04-25",
+   "date": "2026-11-15",
+   "opening": {
+    "confirmed": false,
+    "start_time": null,
+    "end_time": null,
+    "text": null
+   },
+   "access": "public",
+   "url": "https://www.galleriglas.se/",
+   "source": "newsletter"
+  },
+  {
+   "id": "19cc3648bde5",
+   "venue_id": "galleri-glas",
+   "venue": "Galleri Glas",
+   "address": "Nybrogatan 34, 114 39 Stockholm",
+   "district": "Östermalm",
+   "title": "Uppåt väggarna",
+   "title_en": null,
+   "gloss": "Up the Walls",
+   "gloss_source": "machine",
+   "artists": [
+    "Ulla Forsell"
+   ],
+   "start_date": "2026-11-18",
+   "end_date": "2026-12-16",
+   "date": "2026-11-18",
+   "opening": {
+    "confirmed": false,
+    "start_time": null,
+    "end_time": null,
+    "text": null
+   },
+   "access": "public",
+   "url": "https://www.galleriglas.se/",
+   "source": "newsletter"
   },
   {
    "id": "2f95f0e85db6",

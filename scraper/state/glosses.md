@@ -4,8 +4,8 @@ Correct a machine gloss in `scraper/overrides.yaml`.
 
 | Date | Gallery | Title | English | Source |
 |---|---|---|---|---|
-| 2026-10-09 | Galleri Hera | Dagar och nätter vid havet | Days and nights by the sea”, | machine |
-| 2026-10-10 | Björkholmen Gallery | den här dagen. Och den här dagen. | this day and this day | machine |
+| 2026-10-10 | Björkholmen Gallery | den här dagen. Och den här dagen. | this day. and this day. | machine |
+| 2026-10-16 | CFHILL | Les Fruits du mal | The Fruits of Evil”, | machine |
 | 2026-10-17 | Grafiska Sällskapet | Tillstånd | Condition | machine |
 | 2026-10-17 | Grafiska Sällskapet | Mellanrum | In-between spaces | machine |
 | 2026-10-21 | Galleri Glas | Tusen sjöars glöd | The glow of a thousand lakes”, | machine |
@@ -14,7 +14,8 @@ Correct a machine gloss in `scraper/overrides.yaml`.
 | 2026-10-31 | Slipvillan | Tillit | Trust”, | machine |
 | 2026-11-06 | Galleri Helle Knudsen | Våra ... | Our ...”, | machine |
 | 2026-11-07 | Grafiska Sällskapet | Träsnitt | Woodcuts | machine |
-| 2026-11-07 | Grafiska Sällskapet | P O Söderlund minnesutställning | P O Söderlund Memorial Exhibition | machine |
+| 2026-11-07 | Grafiska Sällskapet | P O Söderlund minnesutställning | P O Söderlund memorial exhibition | machine |
+| 2026-11-18 | Galleri Glas | Uppåt väggarna | Up the Walls | machine |
 | 2026-11-21 | Kaolin | JUL PÅ KAOLIN / Medlemsutställning | CHRISTMAS AT KAOLIN / Members' exhibition | machine |
 | 2026-11-21 | Konstnärshuset | Avund & svartsjuka | envy and jealousy | machine |
 | 2026-11-28 | Galleri Magnus Karlsson | Hålet i väggen | The Hole in the Wall | machine |
