@@ -1,6 +1,7 @@
 """Reduce gallery HTML to compact text with absolute links, sized for a small LLM context."""
 from __future__ import annotations
 
+import json
 import re
 import urllib.parse
 
@@ -50,6 +51,58 @@ def html_to_text(html: str, base_url: str) -> str:
         seen.add(ln)
         out.append(ln)
     return "\n".join(out)[:MAX_CHARS]
+
+
+SKIP_KEYS = {"component", "id", "uuid", "filename", "focus", "copyright", "fieldtype", "linktype", "cached_url",
+             # media and biographies: captions and CVs name other shows that are not on here
+             "images", "images_exhibition", "video", "video_teaser", "portrait", "press", "products",
+             "meta_data", "info"}
+UUID = re.compile(r"^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$", re.I)
+
+
+def next_data_text(html: str, keys: list[str] | None = None) -> str:
+    """Text from a Next.js page's embedded __NEXT_DATA__ JSON, for sites whose listings exist
+    only as data until the browser draws them. `keys` picks pageProps entries, in order."""
+    tag = BeautifulSoup(html, "html.parser").find("script", id="__NEXT_DATA__")
+    if not tag or not tag.string:
+        return ""
+    try:
+        props = json.loads(tag.string)["props"]["pageProps"]
+    except (ValueError, KeyError, TypeError):
+        return ""
+    out: list[str] = []
+    for k in keys or list(props):
+        if k in props:
+            _walk(props[k], k, out)
+    return "\n".join(out)[:MAX_CHARS]
+
+
+def _walk(node, key: str, out: list[str]) -> None:
+    if isinstance(node, dict):
+        if node.get("type") == "doc":  # rich text: one line per paragraph
+            for block in node.get("content") or []:
+                line = "".join(t.get("text", "") for t in _leaves(block)).strip()
+                if line:
+                    out.append(line)
+            return
+        for k, v in node.items():
+            if not k.startswith("_") and k not in SKIP_KEYS:
+                _walk(v, k, out)
+    elif isinstance(node, list):
+        for x in node:
+            _walk(x, key, out)
+    elif isinstance(node, str):
+        s = node.strip()
+        if s and not s.startswith(("http://", "https://", "//")) and not UUID.match(s):
+            out.append(f"{key}: {s}")
+
+
+def _leaves(node) -> list[dict]:
+    if isinstance(node, dict):
+        if "text" in node and isinstance(node["text"], str):
+            return [node]
+        return [x for c in node.get("content") or [] for x in _leaves(c)]
+    return []
 
 
 def opening_snippets(text: str, radius: int = 250, limit: int = 3000) -> str:

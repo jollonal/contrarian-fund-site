@@ -15,7 +15,7 @@ venues.yaml ──► fetch (robots.txt, 4 s/host) ──► HTML to text ──
                             validate, dedupe, 60-day window ──► events.json, .ics, index.html
 ```
 
-- **Registry:** `scraper/venues.yaml` is hand-curated. Each venue has its exhibitions URLs, address, district, and an `adapter` (`headless` means it is rendered with Playwright first).
+- **Registry:** `scraper/venues.yaml` is hand-curated. Each venue has its exhibitions URLs, address, district, and an `adapter` (`headless` means it is rendered with Playwright first; `next_data` reads a Next.js page's embedded data, choosing entries with `next_data_keys`).
 - **Extraction:** page text goes to a small model with a strict JSON schema. Results are cached by content hash in `scraper/state/cache.json`, so an unchanged page costs nothing. A typical night makes a handful of model calls.
 - **Openings:** most galleries publish only date ranges. The page shows every exhibition opening in the window and marks those with a published vernissage time as confirmed.
 - **Safety:** low-confidence or inconsistent items go to `scraper/state/review.json` instead of the page. If a site or the model is down, the last good extraction is reused for up to 14 days.

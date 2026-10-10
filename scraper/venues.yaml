@@ -5,6 +5,8 @@
 #   wordpress  WordPress. Try /feed/ first, fall back to HTML.
 #   squarespace, shopify, static  Fetch HTML, LLM extraction.
 #   headless   Needs Playwright to render before extraction.
+#   next_data  Next.js site: plain fetch, text taken from the embedded __NEXT_DATA__ JSON.
+#              next_data_keys picks which page data to read, in order (default: all).
 # status: active | paused | excluded | listed (on the map and in newsletter matching, not scraped)
 # opening_text: does the site publish vernissage times in HTML (yes/no)
 # floor: shown with the address on the map (not used for geocoding).
@@ -299,9 +301,10 @@ venues:
     floor: ground floor
     district: Vasastan
     type: commercial
-    adapter: headless
+    adapter: next_data
+    next_data_keys: [news, current]
     opening_text: no
-    notes: Fully client-rendered; homepage rendered with Playwright. Part of Stockholm Gallery District. Reactivated 2026-10-10 on the user's report of regular vernissages.
+    notes: Next.js on Vercel. The homepage draws its shows in the browser from embedded data, read directly here. "news" is the ticker naming upcoming shows; "current" the show on now. Part of Stockholm Gallery District. Reactivated 2026-10-10 on the user's report of regular vernissages.
     status: active
 
   # ---------- Added from Svenska Galleriförbundet (verified 2026-10-08) ----------
