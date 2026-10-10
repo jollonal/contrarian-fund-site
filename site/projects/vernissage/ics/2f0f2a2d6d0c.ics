@@ -22,10 +22,10 @@ END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
 UID:2f0f2a2d6d0c@contrarian.fund
-DTSTAMP:20261010T084343Z
+DTSTAMP:20261010T105633Z
 DTSTART;VALUE=DATE:20261031
 DTEND;VALUE=DATE:20261101
-SUMMARY:Vernissage: Tillit [Trust”\,] at Slipvillan
+SUMMARY:Vernissage: Tillit [Trust] at Slipvillan
 LOCATION:Mälarvarvsbacken 32\, 117 33 Stockholm
 DESCRIPTION:On view until 2026-11-22.
 URL:https://slipvillan.org/

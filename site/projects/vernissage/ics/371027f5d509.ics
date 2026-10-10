@@ -22,10 +22,10 @@ END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
 UID:371027f5d509@contrarian.fund
-DTSTAMP:20261010T084343Z
+DTSTAMP:20261010T105633Z
 DTSTART;VALUE=DATE:20261128
 DTEND;VALUE=DATE:20261129
-SUMMARY:Vernissage: Hjälp [Help”\,] at Slipvillan
+SUMMARY:Vernissage: Hjälp [Help] at Slipvillan
 LOCATION:Mälarvarvsbacken 32\, 117 33 Stockholm
 DESCRIPTION:On view until 2026-12-20.
 URL:https://slipvillan.org/

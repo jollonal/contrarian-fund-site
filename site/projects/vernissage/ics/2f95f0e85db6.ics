@@ -22,11 +22,11 @@ END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
 UID:2f95f0e85db6@contrarian.fund
-DTSTAMP:20261010T084343Z
+DTSTAMP:20261010T105633Z
 DTSTART;VALUE=DATE:20261121
 DTEND;VALUE=DATE:20261122
 SUMMARY:Opens: JUL PÅ KAOLIN / Medlemsutställning [CHRISTMAS AT KAOLIN / 
- Members' exhibition] at Kaolin
+ Members' Exhibition] at Kaolin
 LOCATION:Hornsgatan 50\, 118 21 Stockholm
 DESCRIPTION:On view until 2026-12-31.
 URL:https://kaolin.se/

@@ -23,12 +23,12 @@ END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
 UID:3efe4f736501@contrarian.fund
-DTSTAMP:20261010T084343Z
+DTSTAMP:20261010T105633Z
 DTSTART;VALUE=DATE:20261029
 DTEND;VALUE=DATE:20261030
 SUMMARY:Opens: Extern utställning: Norske Grafikere i Oslo\, ett urval av 
- 9 grafiker [External exhibition: Norwegian Printmakers in Oslo\, a selecti
- on of 9 printmakers] at Grafiska Sällskapet
+ 9 grafiker [External Exhibition: Norwegian Printmakers in Oslo\, a Selecti
+ on of 9 Printmakers] at Grafiska Sällskapet
 LOCATION:Hornsgatan 6\, 118 20 Stockholm
 DESCRIPTION:Alexandra Skarp\, Amalia Årfelt\, Annalena Törnström\, Chris
  ter Themptander\, Christina Västerbo\, Helena Laukkanen\, Kristina Stark\

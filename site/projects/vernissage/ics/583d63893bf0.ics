@@ -22,10 +22,10 @@ END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
 UID:583d63893bf0@contrarian.fund
-DTSTAMP:20261010T084343Z
+DTSTAMP:20261010T105633Z
 DTSTART;VALUE=DATE:20261016
 DTEND;VALUE=DATE:20261017
-SUMMARY:Opens: Les Fruits du mal [The Fruits of Evil”\,] at CFHILL
+SUMMARY:Opens: Les Fruits du mal [The Fruits of Evil] at CFHILL
 LOCATION:Riddargatan 13\, 114 51 Stockholm
 DESCRIPTION:Simone Haack\nOn view until 2026-11-13.
 URL:https://www.cfhill.com/

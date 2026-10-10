@@ -22,11 +22,11 @@ END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
 UID:11ac02581fe4@contrarian.fund
-DTSTAMP:20261010T084343Z
+DTSTAMP:20261010T105633Z
 DTSTART;TZID=Europe/Stockholm:20261010T120000
 DTEND;TZID=Europe/Stockholm:20261010T160000
-SUMMARY:Vernissage: den här dagen. Och den här dagen. [this day. and this
-  day.] at Björkholmen Gallery
+SUMMARY:Vernissage: den här dagen. Och den här dagen. [This Day. and This
+  Day] at Björkholmen Gallery
 LOCATION:Rödbodtorget 2\, 111 52 Stockholm
 DESCRIPTION:Anders Widoff\nOn view until 2026-11-08.
 URL:https://bjorkholmengallery.com/exhibition/den-har-dagen-och-den-har-dag

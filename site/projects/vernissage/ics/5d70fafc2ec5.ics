@@ -22,10 +22,10 @@ END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
 UID:5d70fafc2ec5@contrarian.fund
-DTSTAMP:20261010T084343Z
+DTSTAMP:20261010T105633Z
 DTSTART;VALUE=DATE:20261128
 DTEND;VALUE=DATE:20261129
-SUMMARY:Opens: Från golv till tak [From floor to ceiling] at Grafiska Säl
+SUMMARY:Opens: Från golv till tak [From Floor to Ceiling] at Grafiska Säl
  lskapet
 LOCATION:Hornsgatan 6\, 118 20 Stockholm
 DESCRIPTION:Chennet Juhlin\nOn view until 2026-12-16.

@@ -22,10 +22,10 @@ END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
 UID:d24b61ddf06d@contrarian.fund
-DTSTAMP:20261010T084343Z
+DTSTAMP:20261010T105633Z
 DTSTART;VALUE=DATE:20261017
 DTEND;VALUE=DATE:20261018
-SUMMARY:Opens: Mellanrum [In-between spaces] at Grafiska Sällskapet
+SUMMARY:Opens: Mellanrum [In-between Spaces] at Grafiska Sällskapet
 LOCATION:Hornsgatan 6\, 118 20 Stockholm
 DESCRIPTION:Anne De Geer\nOn view until 2026-11-04.
 URL:https://grafiskasallskapet.se/

@@ -22,10 +22,10 @@ END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
 UID:b2043c7b0f56@contrarian.fund
-DTSTAMP:20261010T084343Z
+DTSTAMP:20261010T105633Z
 DTSTART;VALUE=DATE:20261121
 DTEND;VALUE=DATE:20261122
-SUMMARY:Opens: Avund & svartsjuka [envy and jealousy] at Konstnärshuset
+SUMMARY:Opens: Avund & svartsjuka [Envy and Jealousy] at Konstnärshuset
 LOCATION:Smålandsgatan 7\, 111 46 Stockholm
 DESCRIPTION:Pontus Djanaieff\, Tang Wen\, Selma Morshedi\, Filippa Nilsson 
  Kallhed\nOn view until 2026-12-12.
