@@ -353,7 +353,7 @@ def map_points(events: list[dict], venues: list[dict]) -> list[dict]:
         dlat, dlon = v["lat"] - CENTRE[0], (v["lon"] - CENTRE[1]) * 0.5
         points.append({
             "n": n, "id": v["id"], "name": v["name"], "district": v.get("district") or "Other",
-            "address": v.get("address"), "map_url": map_url(v["name"], v.get("address")),
+            "address": v.get("address"), "floor": v.get("floor"), "map_url": map_url(v["name"], v.get("address")),
             "url": v.get("homepage"), "lat": v["lat"], "lon": v["lon"], "openings": opens,
             "central": (dlat * dlat + dlon * dlon) ** 0.5 < 0.06,  # roughly within 7 km of the centre
         })

@@ -197,7 +197,11 @@ document.addEventListener("DOMContentLoaded", function () {
   pts.forEach(function (p) {
     var box = node("div", "pop");
     box.appendChild(node("p", "pop-name", p.n + ". " + p.name));
-    if (p.address) { var ap = node("p"); ap.appendChild(link(p.map_url, p.address)); box.appendChild(ap); }
+    if (p.address) {
+      var ap = node("p"); ap.appendChild(link(p.map_url, p.address));
+      if (p.floor) ap.appendChild(document.createTextNode(", " + p.floor));
+      box.appendChild(ap);
+    }
     if (p.openings.length) {
       var ul = node("ul");
       p.openings.forEach(function (o) {

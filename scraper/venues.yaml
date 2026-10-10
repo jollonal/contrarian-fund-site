@@ -7,6 +7,7 @@
 #   headless   Needs Playwright to render before extraction.
 # status: active | paused | excluded | listed (on the map and in newsletter matching, not scraped)
 # opening_text: does the site publish vernissage times in HTML (yes/no)
+# floor: shown with the address on the map (not used for geocoding).
 # mail_domains: sender domains for newsletters when they differ from the website's.
 #   Newsletters are matched to every venue except excluded ones; newsletter: true
 #   keeps an excluded venue (e.g. one that blocks scrapers) in the newsletter reader.
@@ -72,6 +73,7 @@ venues:
     exhibitions_urls:
       - https://www.galleriduerr.com/exhibitions/current/
     address: Hudiksvallsgatan 6, 113 30 Stockholm
+    floor: 2nd floor
     district: Vasastan
     type: commercial
     adapter: artlogic
@@ -108,6 +110,7 @@ venues:
     exhibitions_urls:
       - https://chgallery.se/exhibitions/
     address: Hudiksvallsgatan 8, 113 30 Stockholm
+    floor: 2nd floor
     district: Vasastan
     type: commercial
     adapter: artlogic
@@ -121,6 +124,7 @@ venues:
     exhibitions_urls:
       - https://www.berggallery.se/exhibitions/
     address: Hudiksvallsgatan 8, 113 30 Stockholm
+    floor: ground floor
     district: Vasastan
     type: commercial
     adapter: artlogic
@@ -292,12 +296,13 @@ venues:
     exhibitions_urls:
       - https://www.coulisse-gallery.com/
     address: Gävlegatan 10 B, 113 30 Stockholm
+    floor: ground floor
     district: Vasastan
     type: commercial
     adapter: headless
     opening_text: no
-    notes: Fully client-rendered. No exhibitions URL found.
-    status: paused
+    notes: Fully client-rendered; homepage rendered with Playwright. Part of Stockholm Gallery District. Reactivated 2026-10-10 on the user's report of regular vernissages.
+    status: active
 
   # ---------- Added from Svenska Galleriförbundet (verified 2026-10-08) ----------
   - id: anna-bohman
@@ -673,10 +678,13 @@ venues:
     homepage: https://antics.se/
     exhibitions_urls:
       - https://antics.se/
+    address: Hudiksvallsgatan 8, 113 30 Stockholm
+    floor: 1st floor
+    district: Vasastan
     type: artist-run
     adapter: static
     opening_text: yes
-    notes: Address not published (Instagram @anticsgallery), so no map pin yet. Opening dates given without year.
+    notes: Part of Stockholm Gallery District (address from its listing). Opening dates given without year.
     status: active
 
   - id: amells
@@ -878,6 +886,19 @@ venues:
     notes: Week-long shows.
     status: active
 
+  - id: house-of-photography
+    name: House of Photography
+    homepage: https://www.houseofphotography.se/
+    exhibitions_urls:
+      - https://www.houseofphotography.se/blogs/exhibitions
+    address: Sankt Paulsgatan 29, 118 48 Stockholm
+    district: Södermalm
+    type: photography gallery
+    adapter: shopify
+    opening_text: no
+    notes: Admission charged; sells work. Exhibition pages carry no dates.
+    status: active
+
   # Listed: on the map and matched in newsletters, not scraped (Instagram only, no readable website).
   - id: public-service
     name: Public Service Gallery
@@ -905,6 +926,7 @@ venues:
     name: Larsen / Warner
     homepage: https://larsenwarner.com/
     address: Hudiksvallsgatan 8, 113 30 Stockholm
+    floor: ground floor
     district: Vasastan
     type: commercial
     notes: robots.txt disallows all paths. Newsletter only.

@@ -58,7 +58,7 @@ def test_shared_address_is_fanned_out():
 
 def test_map_points_numbered_by_district_with_openings():
     venues = [{"id": "z", "name": "Zeta", "district": "Södermalm", "status": "active", "lat": 59.31, "lon": 18.07,
-               "address": "Gatan 1", "homepage": "https://z.se/"},
+               "address": "Gatan 1", "floor": "1st floor", "homepage": "https://z.se/"},
               {"id": "a", "name": "Alfa", "district": "Östermalm", "status": "active", "lat": 59.34, "lon": 18.08},
               {"id": "n", "name": "Nope", "district": "Vasastan", "status": "excluded", "lat": 59.34, "lon": 18.05}]
     ev = {"venue_id": "z", "date": "2026-10-21", "title": "Show", "title_en": None, "gloss": None,
@@ -67,3 +67,4 @@ def test_map_points_numbered_by_district_with_openings():
     assert [p["id"] for p in pts] == ["z", "a"] and [p["n"] for p in pts] == [1, 2]
     assert pts[0]["openings"][0] == {"date": "Wed 21 Oct", "title": "Show", "time": "17:00 to 19:00"}
     assert pts[0]["map_url"].startswith("https://www.google.com/maps/search/") and pts[0]["central"]
+    assert pts[0]["floor"] == "1st floor" and pts[1]["floor"] is None
