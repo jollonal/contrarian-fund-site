@@ -13,6 +13,7 @@ Correct a machine gloss in `scraper/overrides.yaml`.
 | 2026-10-24 | 125kvadrat | Fartyg, fåglar och fyrar | Ships, Birds and Lighthouses | machine |
 | 2026-10-24 | Galleri Hantverket | Susanne Nilsson – Vingar av Tystnad – Keramikkonst | Wings of Silence - Ceramic Art | machine |
 | 2026-10-29 | Grafiska Sällskapet | Extern utställning: Norske Grafikere i Oslo, ett urval av 9 grafiker | External Exhibition: Norwegian Printmakers in Oslo, a Selection of 9 Printmakers | machine |
+| 2026-10-31 | Galleri Grip | Pia Wijnbladh och Gunilla Zaar Akne | Pia Wijnbladh and Gunilla Zaar Akne | machine |
 | 2026-10-31 | Slipvillan | Tillit | Trust | machine |
 | 2026-11-06 | Galleri Helle Knudsen | Våra ... | Our ... | machine |
 | 2026-11-07 | Grafiska Sällskapet | Träsnitt | Woodcuts | machine |
@@ -22,6 +23,7 @@ Correct a machine gloss in `scraper/overrides.yaml`.
 | 2026-11-18 | Galleri Glas | Uppåt väggarna | Up the Walls | machine |
 | 2026-11-21 | Kaolin | JUL PÅ KAOLIN / Medlemsutställning | CHRISTMAS AT KAOLIN / Members' Exhibition | machine |
 | 2026-11-21 | Konstnärshuset | Avund & svartsjuka | Envy and Jealousy | machine |
+| 2026-11-28 | Galleri Grip | GrupputstÃ¤llning 2 PLATSER KVAR | Group Exhibition 2 Places Left | machine |
 | 2026-11-28 | Galleri Hantverket | Medlemmarnas Julutställning | Members' Christmas Exhibition | machine |
 | 2026-11-28 | Galleri Magnus Karlsson | Hålet i väggen | The Hole in the Wall | machine |
 | 2026-11-28 | Grafiska Sällskapet | Från golv till tak | From Floor to Ceiling | machine |

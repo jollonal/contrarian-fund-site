@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-10-10T23:04:43+00:00",
+ "generated_at": "2026-10-10T23:14:58+00:00",
  "window_days": 60,
  "venues_tracked": 65,
  "events": [
@@ -164,6 +164,33 @@
    },
    "access": "unknown",
    "url": "https://www.rf.se/riksidrottsmuseum/konsthall-16/utstallningar/kommande-utstallning/upcoming-exhibitions",
+   "source": "web"
+  },
+  {
+   "id": "131d3340489f",
+   "venue_id": "galleri-grip",
+   "venue": "Galleri Grip",
+   "address": "Celsiusgatan 2, 112 30 Stockholm",
+   "map_url": "https://www.google.com/maps/search/?api=1&query=Galleri%20Grip%2C%20Celsiusgatan%202%2C%20112%2030%20Stockholm",
+   "district": "Kungsholmen",
+   "title": "Sandra Dahlberg",
+   "title_en": null,
+   "gloss": null,
+   "gloss_source": null,
+   "artists": [
+    "Sandra Dahlberg"
+   ],
+   "start_date": "2026-10-17",
+   "end_date": null,
+   "date": "2026-10-17",
+   "opening": {
+    "confirmed": false,
+    "start_time": null,
+    "end_time": null,
+    "text": null
+   },
+   "access": "public",
+   "url": "https://gallerigrip.se/",
    "source": "web"
   },
   {
@@ -364,6 +391,35 @@
    "source": "web"
   },
   {
+   "id": "059320005c71",
+   "venue_id": "galleri-grip",
+   "venue": "Galleri Grip",
+   "address": "Celsiusgatan 2, 112 30 Stockholm",
+   "map_url": "https://www.google.com/maps/search/?api=1&query=Galleri%20Grip%2C%20Celsiusgatan%202%2C%20112%2030%20Stockholm",
+   "district": "Kungsholmen",
+   "title": "Kirsti Larsson, Per Sundberg & Cecelia Britten-Austin",
+   "title_en": null,
+   "gloss": null,
+   "gloss_source": null,
+   "artists": [
+    "Kirsti Larsson",
+    "Per Sundberg",
+    "Cecelia Britten-Austin"
+   ],
+   "start_date": "2026-10-24",
+   "end_date": null,
+   "date": "2026-10-24",
+   "opening": {
+    "confirmed": false,
+    "start_time": null,
+    "end_time": null,
+    "text": null
+   },
+   "access": "public",
+   "url": "https://gallerigrip.se/",
+   "source": "web"
+  },
+  {
    "id": "44d85c5f68ea",
    "venue_id": "galleri-hantverket",
    "venue": "Galleri Hantverket",
@@ -477,6 +533,34 @@
    },
    "access": "unknown",
    "url": "https://grafiskasallskapet.se/GSimg/pdf/2026.10.29-GS-%20Norske_Grafikere.pdf",
+   "source": "web"
+  },
+  {
+   "id": "561dbf7d86c2",
+   "venue_id": "galleri-grip",
+   "venue": "Galleri Grip",
+   "address": "Celsiusgatan 2, 112 30 Stockholm",
+   "map_url": "https://www.google.com/maps/search/?api=1&query=Galleri%20Grip%2C%20Celsiusgatan%202%2C%20112%2030%20Stockholm",
+   "district": "Kungsholmen",
+   "title": "Pia Wijnbladh och Gunilla Zaar Akne",
+   "title_en": null,
+   "gloss": "Pia Wijnbladh and Gunilla Zaar Akne",
+   "gloss_source": "machine",
+   "artists": [
+    "Pia Wijnbladh",
+    "Gunilla Zaar Akne"
+   ],
+   "start_date": "2026-10-31",
+   "end_date": null,
+   "date": "2026-10-31",
+   "opening": {
+    "confirmed": false,
+    "start_time": null,
+    "end_time": null,
+    "text": null
+   },
+   "access": "public",
+   "url": "https://gallerigrip.se/",
    "source": "web"
   },
   {
@@ -688,6 +772,33 @@
    },
    "access": "unknown",
    "url": "https://idigalleri.org/",
+   "source": "web"
+  },
+  {
+   "id": "919faa7c6ef4",
+   "venue_id": "galleri-grip",
+   "venue": "Galleri Grip",
+   "address": "Celsiusgatan 2, 112 30 Stockholm",
+   "map_url": "https://www.google.com/maps/search/?api=1&query=Galleri%20Grip%2C%20Celsiusgatan%202%2C%20112%2030%20Stockholm",
+   "district": "Kungsholmen",
+   "title": "Seth Shuwert",
+   "title_en": null,
+   "gloss": null,
+   "gloss_source": null,
+   "artists": [
+    "Seth Shuwert"
+   ],
+   "start_date": "2026-11-07",
+   "end_date": null,
+   "date": "2026-11-07",
+   "opening": {
+    "confirmed": false,
+    "start_time": null,
+    "end_time": null,
+    "text": null
+   },
+   "access": "public",
+   "url": "https://gallerigrip.se/",
    "source": "web"
   },
   {
@@ -983,6 +1094,31 @@
    },
    "access": "unknown",
    "url": "https://idigalleri.org/",
+   "source": "web"
+  },
+  {
+   "id": "24c4b0a90373",
+   "venue_id": "galleri-grip",
+   "venue": "Galleri Grip",
+   "address": "Celsiusgatan 2, 112 30 Stockholm",
+   "map_url": "https://www.google.com/maps/search/?api=1&query=Galleri%20Grip%2C%20Celsiusgatan%202%2C%20112%2030%20Stockholm",
+   "district": "Kungsholmen",
+   "title": "GrupputstÃ¤llning 2 PLATSER KVAR",
+   "title_en": null,
+   "gloss": "Group Exhibition 2 Places Left",
+   "gloss_source": "machine",
+   "artists": [],
+   "start_date": "2026-11-28",
+   "end_date": null,
+   "date": "2026-11-28",
+   "opening": {
+    "confirmed": false,
+    "start_time": null,
+    "end_time": null,
+    "text": null
+   },
+   "access": "public",
+   "url": "https://gallerigrip.se/",
    "source": "web"
   },
   {
