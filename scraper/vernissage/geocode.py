@@ -22,12 +22,14 @@ log = logging.getLogger("vernissage")
 
 ENDPOINT = "https://nominatim.openstreetmap.org/search"
 RETRY_MISS_DAYS = 7
+CANDIDATES_VERSION = 2  # bump when candidates() changes, so earlier misses are retried at once
 SPREAD = 0.00012  # degrees; pins at the same address are fanned out by about 13 m
 
 
 def candidates(address: str) -> list[str]:
     """Queries to try, most specific first: as written, without leading place names
-    ("Färgkontoret, ..."), then street and number with the city only."""
+    ("Färgkontoret, ..."), then street and number with the city only, then the street
+    or square without its number (a square like Rödbodtorget may have no numbered address)."""
     parts = [p.strip() for p in address.split(",") if p.strip()]
     out = [", ".join(parts)]
     while parts and not re.search(r"\d", parts[0]):
@@ -37,6 +39,9 @@ def candidates(address: str) -> list[str]:
         street = parts[0]
         city = re.sub(r"^\d{3}\s?\d{2}\s*", "", parts[-1]) if len(parts) > 1 else "Stockholm"
         out.append(f"{street}, {city or 'Stockholm'}")
+        bare = re.sub(r"\s+\d+\s*[A-Za-z]?(-\d+)?$", "", street).strip()
+        if bare and bare != street:
+            out.append(f"{bare}, {city or 'Stockholm'}")
     seen, uniq = set(), []
     for q in out:
         if q not in seen:
@@ -71,7 +76,9 @@ def locate(venues: list[dict], cache_path: Path, today: dt.date, session=None) -
         if not addr:
             continue
         hit = cache.get(addr)
-        stale_miss = hit and hit.get("miss") and (today - dt.date.fromisoformat(hit["miss"])).days >= RETRY_MISS_DAYS
+        stale_miss = hit and hit.get("miss") and (
+            (today - dt.date.fromisoformat(hit["miss"])).days >= RETRY_MISS_DAYS
+            or hit.get("v", 1) < CANDIDATES_VERSION)
         if (hit is None or stale_miss) and not offline:
             if session is None:
                 session = requests.Session()
@@ -87,7 +94,8 @@ def locate(venues: list[dict], cache_path: Path, today: dt.date, session=None) -
                 offline = True  # use cached locations only for the rest of this run
             else:
                 looked += 1
-                hit = {"lat": found[0], "lon": found[1]} if found else {"miss": today.isoformat()}
+                hit = ({"lat": found[0], "lon": found[1]} if found
+                       else {"miss": today.isoformat(), "v": CANDIDATES_VERSION})
                 cache[addr] = hit
         if hit and hit.get("lat") is not None:
             out[v["id"]] = (hit["lat"], hit["lon"])

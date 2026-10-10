@@ -10,8 +10,11 @@ def test_candidates_strip_place_names_and_fall_back_to_street():
         "Färgkontoret, Lövholmsgränd 12, 117 43 Stockholm",
         "Lövholmsgränd 12, 117 43 Stockholm",
         "Lövholmsgränd 12, Stockholm",
+        "Lövholmsgränd, Stockholm",
     ]
-    assert G.candidates("Sjökvarnsbacken 15, 131 71 Nacka")[-1] == "Sjökvarnsbacken 15, Nacka"
+    assert G.candidates("Rödbodtorget 2, 111 52 Stockholm")[-1] == "Rödbodtorget, Stockholm"
+    assert G.candidates("Hantverkargatan 18-20, 112 21 Stockholm")[-1] == "Hantverkargatan, Stockholm"
+    assert G.candidates("Sjökvarnsbacken 15, 131 71 Nacka")[-2:] == ["Sjökvarnsbacken 15, Nacka", "Sjökvarnsbacken, Nacka"]
 
 
 def test_locate_caches_retries_and_honours_coords(monkeypatch):
@@ -41,6 +44,11 @@ def test_locate_caches_retries_and_honours_coords(monkeypatch):
     G.locate(venues, path, dt.date(2026, 10, 20), Session())        # miss older than 7 days: retried
     assert len(calls) > n
     assert json.loads(path.read_text())["Nowhere 1, 000 00 Void"]["miss"] == "2026-10-20"
+    # a miss recorded by an older candidates() version is retried at once
+    data = json.loads(path.read_text()); data["Nowhere 1, 000 00 Void"] = {"miss": "2026-10-20"}
+    path.write_text(json.dumps(data)); n = len(calls)
+    G.locate(venues, path, dt.date(2026, 10, 21), Session())
+    assert len(calls) > n
 
 
 def test_shared_address_is_fanned_out():
