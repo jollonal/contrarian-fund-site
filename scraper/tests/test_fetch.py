@@ -59,3 +59,28 @@ def test_real_disallow_is_reported_as_such():
         raise AssertionError("should have refused")
     except FetchError as e:
         assert str(e).startswith("robots.txt disallows")
+
+
+def test_reason_is_short_and_specific():
+    from vernissage.fetch import reason
+    e = requests.ConnectionError("HTTPSConnectionPool(host='g.se', port=443): Max retries exceeded with url: /robots.txt "
+                                 "(Caused by NewConnectionError('<x>: Failed to establish a new connection: "
+                                 "[Errno 111] Connection refused'))")
+    assert reason(e) == "connection refused"
+    assert reason(requests.ConnectionError("Read timed out.")) == "timed out"
+    assert reason(requests.ConnectionError()) == "ConnectionError"
+
+
+def test_robots_connection_error_retried_once():
+    class Flaky(Session):
+        n = 0
+        def get(self, url, timeout=None):
+            if url.endswith("/robots.txt"):
+                Flaky.n += 1
+                if Flaky.n == 1:
+                    raise requests.ConnectionError("blip")
+                return Resp(404)
+            return Resp(200, "ok")
+    f = Fetcher(delay=0)
+    f.s = Flaky(None)
+    assert f.allowed("https://g.se/x") and Flaky.n == 2

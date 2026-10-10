@@ -1,6 +1,7 @@
 """Polite HTTP and headless fetching with robots.txt and per-host throttling."""
 from __future__ import annotations
 
+import re
 import time
 import urllib.parse
 import urllib.robotparser
@@ -15,6 +16,19 @@ UA = (
 
 class FetchError(Exception):
     pass
+
+
+def reason(e: Exception) -> str:
+    """Short, log-safe cause of a network error: 'connection refused', 'timed out', etc."""
+    text = str(e)
+    m = re.search(r"\[Errno -?\d+\] ([^'\")]+)", text)
+    if m:
+        return m.group(1).strip().lower()
+    for needle, label in (("timed out", "timed out"), ("SSL", "SSL error"),
+                          ("RemoteDisconnected", "remote disconnected"), ("reset by peer", "connection reset")):
+        if needle in text:
+            return label
+    return type(e).__name__
 
 
 class Fetcher:
@@ -49,7 +63,11 @@ class Fetcher:
             rp = urllib.robotparser.RobotFileParser()
             try:
                 self._throttle(p.netloc)
-                r = self.s.get(base + "/robots.txt", timeout=self.timeout)
+                try:
+                    r = self.s.get(base + "/robots.txt", timeout=self.timeout)
+                except requests.ConnectionError:
+                    time.sleep(10 if self.delay else 0)  # one retry: a passing network blip
+                    r = self.s.get(base + "/robots.txt", timeout=self.timeout)
                 if r.status_code == 429 or r.status_code >= 500:
                     rp.disallow_all = True
                     self._why[base] = f"robots.txt unreachable (HTTP {r.status_code})"
@@ -59,7 +77,7 @@ class Fetcher:
                     rp.parse(r.text.splitlines())
             except requests.RequestException as e:
                 rp.disallow_all = True
-                self._why[base] = f"robots.txt unreachable ({type(e).__name__})"
+                self._why[base] = f"robots.txt unreachable ({type(e).__name__}: {reason(e)})"
             self._robots[base] = rp
         return rp.can_fetch(UA, url)
 
