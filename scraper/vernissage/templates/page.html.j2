@@ -60,7 +60,7 @@
               border-radius: 50%; border: 1.5px solid var(--ink); background: var(--bg); color: var(--ink); font: 600 11px/1 var(--font); }
   .pin.on span { background: var(--ink); color: var(--bg); }
   .key { margin: 12px 0 0; font-size: 14px; }
-  .key summary { cursor: pointer; color: var(--muted); }
+  .map-actions { display: flex; gap: 8px; flex-wrap: wrap; }
   .key-group { margin: 14px 0 0; break-inside: avoid; }
   .key h4 { font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; font-weight: 400; margin: 0 0 4px; }
   .key ol { margin: 0; padding-left: 28px; }
@@ -94,17 +94,19 @@
     <div id="map" data-window="{{ window }}" role="region" aria-label="Map of {{ n_points }} galleries. Filled pins have an opening in the next {{ window }} days."></div>
     <div class="map-bar">
       <span><span class="dot on"></span>Opening in the next {{ window }} days<span class="dot"></span>Other galleries</span>
-      <button type="button" id="map-expand" aria-expanded="false">Expand map</button>
+      <span class="map-actions">
+        <button type="button" id="key-toggle" aria-expanded="false" aria-controls="map-key">Show gallery list ({{ n_points }})</button>
+        <button type="button" id="map-expand" aria-expanded="false">Expand map</button>
+      </span>
     </div>
-    <details class="key">
-      <summary>All {{ n_points }} galleries on the map</summary>
+    <div class="key" id="map-key" hidden>
       <div class="key-groups">
       {% for district, pts in key %}<div class="key-group" data-district="{{ district }}"><h4>{{ district }}</h4><ol>
         {% for p in pts %}<li value="{{ p.n }}"><button type="button" data-pin="{{ p.id }}">{{ p.name }}</button>{% if p.openings %} <span class="count">{{ p.openings | length }} opening{{ "" if p.openings | length == 1 else "s" }}</span>{% endif %}</li>
         {% endfor %}</ol></div>
       {% endfor %}
       </div>
-    </details>
+    </div>
   </section>
   <script type="application/json" id="map-data">{{ map_json | safe }}</script>
   {% endif %}
@@ -234,6 +236,17 @@ document.addEventListener("DOMContentLoaded", function () {
     else if (shown.length === 1) map.setView(shown[0], 15);
     else if (shown.length) map.fitBounds(shown, { padding: [24, 24], maxZoom: 16 });
   } };
+
+  var keyBtn = document.getElementById("key-toggle"), keyBox = document.getElementById("map-key");
+  if (keyBtn && keyBox) {
+    var keyLabel = keyBtn.textContent;
+    keyBtn.addEventListener("click", function () {
+      var show = keyBox.hidden;
+      keyBox.hidden = !show;
+      keyBtn.textContent = show ? "Hide gallery list" : keyLabel;
+      keyBtn.setAttribute("aria-expanded", show ? "true" : "false");
+    });
+  }
 
   var btn = document.getElementById("map-expand");
   function expand(on) {
