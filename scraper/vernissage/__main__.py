@@ -72,6 +72,10 @@ def main() -> int:
     events, review = normalize(found, venues, today, a.window, overrides or {})
     (ROOT / "state" / "glosses.md").write_text(gloss_report(events), encoding="utf-8")
     (ROOT / "state" / "review.json").write_text(json.dumps(review, ensure_ascii=False, indent=1), encoding="utf-8")
+    from .geocode import locate
+    on_map = [v for v in venues if v.get("status") == "active" or v.get("newsletter")]
+    for vid, (lat, lon) in locate(on_map, ROOT / "state" / "geocode.json", today).items():
+        next(v for v in venues if v["id"] == vid).update(lat=lat, lon=lon)
     write_outputs(events, venues, SITE, today, a.window, os.environ.get("REPO_URL"))
     log.info("%d events (%d confirmed openings), %d for review, %s LLM calls, ~%s neurons",
              len(events), sum(e["opening"]["confirmed"] for e in events), len(review),

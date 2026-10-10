@@ -59,6 +59,10 @@ Titles stay in the original language. If the gallery publishes its own English t
 
 `scraper/state/glosses.md` lists every English title currently on the page. To correct one, add the original title and the replacement to `scraper/overrides.yaml` (or `""` to hide the gloss). Saving that file on GitHub rebuilds and redeploys the page from cache in about two minutes, with no AI calls.
 
+## Map
+
+The page embeds an OpenStreetMap map (Leaflet) with one numbered pin per gallery; filled pins have an opening in the window, and each pin's pop-up lists them. Addresses are geocoded once with Nominatim (one request per second, cached in `scraper/state/geocode.json`; misses are retried after 7 days). If a location is wrong, set `coords: [lat, lon]` on the venue in `venues.yaml`. Every address also links to Google Maps.
+
 ## Adding a venue
 
 Add an entry to `scraper/venues.yaml`, then run `python -m vernissage --dry-run --only <id>` to check the page fetches and its text size.

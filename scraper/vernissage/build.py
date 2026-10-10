@@ -328,6 +328,38 @@ def ics(events: list[dict], name: str) -> str:
     return "\r\n".join(_fold(ln) for ln in lines) + "\r\n"
 
 
+# ---------- map ----------
+CENTRE = (59.3326, 18.0649)  # Sergels torg
+
+
+def map_points(events: list[dict], venues: list[dict]) -> list[dict]:
+    """One numbered point per gallery with coordinates, grouped by district for the key.
+    Each carries its openings in the window, for the pop-up."""
+    by_venue: dict[str, list[dict]] = {}
+    for e in events:
+        by_venue.setdefault(e["venue_id"], []).append(e)
+    shown = [v for v in venues if v.get("lat") is not None and (v.get("status") == "active" or v.get("newsletter"))]
+    shown.sort(key=lambda v: ((v.get("district") or "Other").lower(), v["name"].lower()))
+    points = []
+    for n, v in enumerate(shown, 1):
+        opens = []
+        for e in by_venue.get(v["id"], []):
+            d = dt.date.fromisoformat(e["date"])
+            t = e["opening"]["start_time"] if e["opening"]["confirmed"] else None
+            if t and e["opening"]["end_time"]:
+                t += " to " + e["opening"]["end_time"]
+            opens.append({"date": f"{d.strftime('%a')} {d.day} {d.strftime('%b')}", "title": display_title(e),
+                          "time": t})
+        dlat, dlon = v["lat"] - CENTRE[0], (v["lon"] - CENTRE[1]) * 0.5
+        points.append({
+            "n": n, "id": v["id"], "name": v["name"], "district": v.get("district") or "Other",
+            "address": v.get("address"), "map_url": map_url(v["name"], v.get("address")),
+            "url": v.get("homepage"), "lat": v["lat"], "lon": v["lon"], "openings": opens,
+            "central": (dlat * dlat + dlon * dlon) ** 0.5 < 0.06,  # roughly within 7 km of the centre
+        })
+    return points
+
+
 # ---------- outputs ----------
 def write_outputs(events: list[dict], venues: list[dict], out_dir: Path, today: dt.date,
                   window: int, repo_url: str | None) -> None:
@@ -356,12 +388,17 @@ def write_outputs(events: list[dict], venues: list[dict], out_dir: Path, today: 
         days.setdefault(e["date"], []).append(e)
     districts = sorted({e["district"] for e in events if e["district"]})
     stockholm_now = dt.datetime.now(ZoneInfo("Europe/Stockholm"))
+    points = map_points(events, venues)
+    key: dict[str, list[dict]] = {}
+    for p in points:
+        key.setdefault(p["district"], []).append(p)
     html = env.get_template("page.html.j2").render(
         days=[(dt.date.fromisoformat(d), es) for d, es in days.items()],
         today=today, window=window, districts=districts,
         n_events=len(events), n_confirmed=sum(e["opening"]["confirmed"] for e in events),
         n_venues=len(active), updated=stockholm_now.strftime("%-d %B %Y, %H:%M"),
-        repo_url=repo_url,
+        repo_url=repo_url, key=list(key.items()), n_points=len(points),
+        map_json=json.dumps(points, ensure_ascii=False).replace("</", "<\\/"),
     )
     (out_dir / "index.html").write_text(html, encoding="utf-8")
 
