@@ -64,7 +64,8 @@ def test_map_points_numbered_by_district_with_openings():
     ev = {"venue_id": "z", "date": "2026-10-21", "title": "Show", "title_en": None, "gloss": None,
           "opening": {"confirmed": True, "start_time": "17:00", "end_time": "19:00"}}
     pts = map_points([ev], venues)
-    assert [p["id"] for p in pts] == ["z", "a"] and [p["n"] for p in pts] == [1, 2]
-    assert pts[0]["openings"][0] == {"date": "Wed 21 Oct", "title": "Show", "time": "17:00 to 19:00"}
-    assert pts[0]["map_url"].startswith("https://www.google.com/maps/search/") and pts[0]["central"]
-    assert pts[0]["floor"] == "1st floor" and pts[1]["floor"] is None
+    assert [p["id"] for p in pts] == ["a", "z"] and [p["n"] for p in pts] == [1, 2]  # Östermalm before Södermalm
+    z = pts[1]
+    assert z["openings"][0] == {"date": "Wed 21 Oct", "title": "Show", "time": "17:00 to 19:00"}
+    assert z["map_url"].startswith("https://www.google.com/maps/search/") and z["central"]
+    assert z["floor"] == "1st floor" and pts[0]["floor"] is None

@@ -331,6 +331,18 @@ def ics(events: list[dict], name: str) -> str:
 # ---------- map ----------
 CENTRE = (59.3326, 18.0649)  # Sergels torg
 
+# Map numbering and filter order (user, 2026-10-11): the three densest districts first,
+# then neighbours kept together: Danvikstull after Södermalm, Gamla stan between Södermalm
+# and Norrmalm, Gärdet with Frihamnen, the west side, then outliers. Unlisted districts go last.
+DISTRICT_ORDER = ["Östermalm", "Vasastan", "Södermalm", "Danvikstull", "Gamla stan", "Norrmalm",
+                  "Gärdet", "Frihamnen", "Kungsholmen", "Långholmen", "Liljeholmen", "Vällingby",
+                  "Åkersberga"]
+
+
+def district_rank(d: str | None) -> tuple:
+    d = d or "Other"
+    return (DISTRICT_ORDER.index(d), "") if d in DISTRICT_ORDER else (len(DISTRICT_ORDER), d.lower())
+
 
 def map_points(events: list[dict], venues: list[dict]) -> list[dict]:
     """One numbered point per gallery with coordinates, grouped by district for the key.
@@ -339,7 +351,7 @@ def map_points(events: list[dict], venues: list[dict]) -> list[dict]:
     for e in events:
         by_venue.setdefault(e["venue_id"], []).append(e)
     shown = [v for v in venues if v.get("lat") is not None and (v.get("status") == "active" or v.get("newsletter"))]
-    shown.sort(key=lambda v: ((v.get("district") or "Other").lower(), v["name"].lower()))
+    shown.sort(key=lambda v: (district_rank(v.get("district")), v["name"].lower()))
     points = []
     for n, v in enumerate(shown, 1):
         opens = []
@@ -386,7 +398,7 @@ def write_outputs(events: list[dict], venues: list[dict], out_dir: Path, today: 
     days: dict[str, list[dict]] = {}
     for e in events:
         days.setdefault(e["date"], []).append(e)
-    districts = sorted({e["district"] for e in events if e["district"]})
+    districts = sorted({e["district"] for e in events if e["district"]}, key=district_rank)
     stockholm_now = dt.datetime.now(ZoneInfo("Europe/Stockholm"))
     points = map_points(events, venues)
     key: dict[str, list[dict]] = {}
@@ -396,7 +408,7 @@ def write_outputs(events: list[dict], venues: list[dict], out_dir: Path, today: 
         days=[(dt.date.fromisoformat(d), es) for d, es in days.items()],
         today=today, window=window, districts=districts,
         n_events=len(events), n_confirmed=sum(e["opening"]["confirmed"] for e in events),
-        n_venues=len(active), updated=stockholm_now.strftime("%-d %B %Y, %H:%M"),
+        n_venues=len(points) or len(active), updated=stockholm_now.strftime("%-d %B %Y, %H:%M"),
         repo_url=repo_url, key=list(key.items()), n_points=len(points),
         map_json=json.dumps(points, ensure_ascii=False).replace("</", "<\\/"),
     )
