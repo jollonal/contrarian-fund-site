@@ -626,6 +626,113 @@ venues:
     city_filter: Stockholm   # Artfest programme is in Helsinki
     status: active
 
+  # ---------- Added 2026-10-10 (Art Week guide, TripAdvisor, Wikipedia, Artsy leads) ----------
+  - id: way-gallery
+    name: WAY gallery Sthlm
+    homepage: https://www.waygallerysthlm.com/
+    exhibitions_urls:
+      - https://www.waygallerysthlm.com/exhibitions
+    address: Upplandsgatan 57, 113 28 Stockholm
+    district: Vasastan
+    type: commercial
+    adapter: static
+    opening_text: no
+    mail_domains: [waygallery.se]
+    notes: waygallery.se blocks fetching; the .com site is used. Some listings are off-site pop-ups.
+    status: active
+
+  - id: lundberg-sandhagen
+    name: Galleri Lundberg-Sandhagen
+    homepage: https://www.lundberg-sandhagen.com/
+    exhibitions_urls:
+      - https://www.lundberg-sandhagen.com/
+    district: Vasastan
+    type: commercial
+    adapter: static
+    opening_text: no
+    notes: New gallery near Vasaparken; street address not published, so no map pin yet. The /exhibitions list has no dates; the homepage does.
+    status: active
+
+  - id: konsthall-16
+    name: Konsthall 16
+    homepage: https://www.rf.se/riksidrottsmuseum/konsthall-16
+    exhibitions_urls:
+      - https://www.rf.se/riksidrottsmuseum/konsthall-16/utstallningar/kommande-utstallning
+      - https://www.rf.se/riksidrottsmuseum/konsthall-16
+    address: Djurgårdsbrunnsvägen 26, 115 27 Stockholm
+    district: Gärdet
+    type: konsthall
+    adapter: static
+    opening_text: no
+    mail_domains: [rfsisu.se]
+    notes: Inside Riksidrottsmuseet. rf.se may refuse robots; if so, newsletter only.
+    status: active
+
+  - id: antics
+    name: Antics
+    homepage: https://antics.se/
+    exhibitions_urls:
+      - https://antics.se/
+    type: artist-run
+    adapter: static
+    opening_text: yes
+    notes: Address not published (Instagram @anticsgallery), so no map pin yet. Opening dates given without year.
+    status: active
+
+  - id: amells
+    name: Åmells Konsthandel
+    homepage: https://www.amells.com/
+    exhibitions_urls:
+      - https://www.amells.com/utstallningar/aktuellt/
+      - https://www.amells.com/utstallningar/kommande/
+    address: Birger Jarlsgatan 14, 114 34 Stockholm
+    district: Östermalm
+    type: commercial
+    adapter: static
+    opening_text: no
+    notes: Dealer in older Swedish art.
+    status: active
+
+  - id: ditte-lauridsen
+    name: Ditte Lauridsen
+    homepage: https://dittelauridsen.com/
+    exhibitions_urls:
+      - https://dittelauridsen.com/exhibitions/
+    address: Nybrogatan 45, 114 37 Stockholm
+    district: Östermalm
+    type: commercial
+    adapter: wordpress
+    opening_text: no
+    notes: Art consultancy with a gallery; open by appointment during installs.
+    status: active
+
+  - id: richter-holtermann
+    name: Richter Holtermann
+    homepage: https://www.richterholtermann.com/
+    exhibitions_urls:
+      - https://www.richterholtermann.com/
+      - https://www.richterholtermann.com/gallery
+    address: Vattugatan 13, 111 52 Stockholm
+    district: Norrmalm
+    type: commercial
+    adapter: static
+    opening_text: no
+    notes: Same address as ISSUES. Current show often undated on the homepage.
+    status: active
+
+  - id: 125kvadrat
+    name: 125kvadrat
+    homepage: https://125kvadrat.com/
+    exhibitions_urls:
+      - https://125kvadrat.com/galleri/utstallning/
+    address: Kocksgatan 17, 116 24 Stockholm
+    district: Södermalm
+    type: craft cooperative
+    adapter: wordpress
+    opening_text: no
+    notes: Members' craft shop with gallery. Dates given without year.
+    status: active
+
   # ---------- Not scraped ----------
   - id: larsen-warner
     name: Larsen / Warner
