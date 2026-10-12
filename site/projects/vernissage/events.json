@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-10-11T09:06:30+00:00",
+ "generated_at": "2026-10-12T09:26:57+00:00",
  "window_days": 60,
  "venues_tracked": 65,
  "events": [
@@ -31,6 +31,31 @@
    "source": "web"
   },
   {
+   "id": "60cd4b1061a0",
+   "venue_id": "idi-galleri",
+   "venue": "ID:I galleri",
+   "address": "Tjärhovsgatan 19, 116 28 Stockholm",
+   "map_url": "https://www.google.com/maps/search/?api=1&query=ID%3AI%20galleri%2C%20Tj%C3%A4rhovsgatan%2019%2C%20116%2028%20Stockholm",
+   "district": "Södermalm",
+   "title": "Christine Dahl Helweg-Larsen. Queenning Zhao.",
+   "title_en": null,
+   "gloss": null,
+   "gloss_source": null,
+   "artists": [],
+   "start_date": "2026-10-16",
+   "end_date": "2026-11-01",
+   "date": "2026-10-16",
+   "opening": {
+    "confirmed": true,
+    "start_time": "17:00",
+    "end_time": "20:00",
+    "text": "Vernissage 16:e oktober kl 17 – 20"
+   },
+   "access": "unknown",
+   "url": "https://idigalleri.org/",
+   "source": "web"
+  },
+  {
    "id": "e483921a99c2",
    "venue_id": "studio-44",
    "venue": "Studio 44",
@@ -54,7 +79,7 @@
     "end_time": "21:00",
     "text": "Opening"
    },
-   "access": "unknown",
+   "access": "public",
    "url": "https://studio44-stockholm.com/39499-2/thomas-brennan-maria-lundmark/",
    "source": "web"
   },
@@ -112,31 +137,6 @@
    },
    "access": "unknown",
    "url": "https://www.cfhill.com/",
-   "source": "web"
-  },
-  {
-   "id": "60cd4b1061a0",
-   "venue_id": "idi-galleri",
-   "venue": "ID:I galleri",
-   "address": "Tjärhovsgatan 19, 116 28 Stockholm",
-   "map_url": "https://www.google.com/maps/search/?api=1&query=ID%3AI%20galleri%2C%20Tj%C3%A4rhovsgatan%2019%2C%20116%2028%20Stockholm",
-   "district": "Södermalm",
-   "title": "Christine Dahl Helweg-Larsen. Queenning Zhao",
-   "title_en": null,
-   "gloss": null,
-   "gloss_source": null,
-   "artists": [],
-   "start_date": "2026-10-16",
-   "end_date": "2026-11-01",
-   "date": "2026-10-16",
-   "opening": {
-    "confirmed": true,
-    "start_time": null,
-    "end_time": null,
-    "text": null
-   },
-   "access": "unknown",
-   "url": "https://idigalleri.org/",
    "source": "web"
   },
   {
@@ -814,7 +814,9 @@
    "title_en": null,
    "gloss": null,
    "gloss_source": null,
-   "artists": [],
+   "artists": [
+    "Simon Blanck"
+   ],
    "start_date": "2026-11-06",
    "end_date": "2026-11-22",
    "date": "2026-11-06",
@@ -1031,7 +1033,7 @@
     "Ulla Forsell"
    ],
    "start_date": "2026-11-18",
-   "end_date": "2026-12-16",
+   "end_date": "2026-12-17",
    "date": "2026-11-18",
    "opening": {
     "confirmed": false,
@@ -1040,8 +1042,8 @@
     "text": null
    },
    "access": "public",
-   "url": "https://www.galleriglas.se/",
-   "source": "newsletter"
+   "url": "https://www.galleriglas.se/exhibitions/83-ulla-forsell-uppat-vaggarna/overview/",
+   "source": "web+newsletter"
   },
   {
    "id": "2f95f0e85db6",
@@ -1136,7 +1138,9 @@
    "title_en": null,
    "gloss": null,
    "gloss_source": null,
-   "artists": [],
+   "artists": [
+    "Molekyl"
+   ],
    "start_date": "2026-11-27",
    "end_date": "2026-12-13",
    "date": "2026-11-27",
