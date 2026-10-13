@@ -2,7 +2,7 @@ BEGIN:VCALENDAR
 VERSION:2.0
 PRODID:-//contrarian.fund//vernissage//EN
 CALSCALE:GREGORIAN
-X-WR-CALNAME:Christine Dahl Helweg-Larsen. Queenning Zhao.
+X-WR-CALNAME:Christine Dahl Helweg-Larsen. Queenning Zhao
 BEGIN:VTIMEZONE
 TZID:Europe/Stockholm
 BEGIN:DAYLIGHT
@@ -22,11 +22,11 @@ END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
 UID:60cd4b1061a0@contrarian.fund
-DTSTAMP:20261012T092657Z
+DTSTAMP:20261013T050442Z
 DTSTART;TZID=Europe/Stockholm:20261016T170000
 DTEND;TZID=Europe/Stockholm:20261016T200000
-SUMMARY:Vernissage: Christine Dahl Helweg-Larsen. Queenning Zhao. at ID:I g
- alleri
+SUMMARY:Vernissage: Christine Dahl Helweg-Larsen. Queenning Zhao at ID:I ga
+ lleri
 LOCATION:Tjärhovsgatan 19\, 116 28 Stockholm
 DESCRIPTION:On view until 2026-11-01.
 URL:https://idigalleri.org/

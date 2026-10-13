@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-10-12T09:26:57+00:00",
+ "generated_at": "2026-10-13T05:04:42+00:00",
  "window_days": 60,
  "venues_tracked": 65,
  "events": [
@@ -37,7 +37,7 @@
    "address": "Tjärhovsgatan 19, 116 28 Stockholm",
    "map_url": "https://www.google.com/maps/search/?api=1&query=ID%3AI%20galleri%2C%20Tj%C3%A4rhovsgatan%2019%2C%20116%2028%20Stockholm",
    "district": "Södermalm",
-   "title": "Christine Dahl Helweg-Larsen. Queenning Zhao.",
+   "title": "Christine Dahl Helweg-Larsen. Queenning Zhao",
    "title_en": null,
    "gloss": null,
    "gloss_source": null,
@@ -1364,6 +1364,59 @@
    },
    "access": "unknown",
    "url": "https://www.gallerihedenius.com/",
+   "source": "web"
+  },
+  {
+   "id": "7647f5481aff",
+   "venue_id": "galleri-grip",
+   "venue": "Galleri Grip",
+   "address": "Celsiusgatan 2, 112 30 Stockholm",
+   "map_url": "https://www.google.com/maps/search/?api=1&query=Galleri%20Grip%2C%20Celsiusgatan%202%2C%20112%2030%20Stockholm",
+   "district": "Kungsholmen",
+   "title": "GrupputstÃ¤llning 2 PLATSER KVAR",
+   "title_en": null,
+   "gloss": "Group Exhibition 2 Places Left",
+   "gloss_source": "machine",
+   "artists": [],
+   "start_date": "2026-12-12",
+   "end_date": null,
+   "date": "2026-12-12",
+   "opening": {
+    "confirmed": false,
+    "start_time": null,
+    "end_time": null,
+    "text": null
+   },
+   "access": "public",
+   "url": "https://gallerigrip.se/",
+   "source": "web"
+  },
+  {
+   "id": "3ff4435457c2",
+   "venue_id": "amells",
+   "venue": "Åmells Konsthandel",
+   "address": "Birger Jarlsgatan 14, 114 34 Stockholm",
+   "map_url": "https://www.google.com/maps/search/?api=1&query=%C3%85mells%20Konsthandel%2C%20Birger%20Jarlsgatan%2014%2C%20114%2034%20Stockholm",
+   "district": "Östermalm",
+   "title": "Magiska vinter! Anna Boberg, Bruno Liljefors, m fl",
+   "title_en": null,
+   "gloss": "Magical Winter! Anna Boberg, Bruno Liljefors, Etc",
+   "gloss_source": "machine",
+   "artists": [
+    "Anna Boberg",
+    "Bruno Liljefors"
+   ],
+   "start_date": "2026-12-12",
+   "end_date": "2027-01-16",
+   "date": "2026-12-12",
+   "opening": {
+    "confirmed": false,
+    "start_time": null,
+    "end_time": null,
+    "text": null
+   },
+   "access": "public",
+   "url": "https://www.amells.com/",
    "source": "web"
   }
  ]

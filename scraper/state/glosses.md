@@ -28,3 +28,5 @@ Correct a machine gloss in `scraper/overrides.yaml`.
 | 2026-11-28 | Galleri Magnus Karlsson | Hålet i väggen | The Hole in the Wall | machine |
 | 2026-11-28 | Grafiska Sällskapet | Från golv till tak | From Floor to Ceiling | machine |
 | 2026-11-28 | Slipvillan | Hjälp | Help | machine |
+| 2026-12-12 | Galleri Grip | GrupputstÃ¤llning 2 PLATSER KVAR | Group Exhibition 2 Places Left | machine |
+| 2026-12-12 | Åmells Konsthandel | Magiska vinter! Anna Boberg, Bruno Liljefors, m fl | Magical Winter! Anna Boberg, Bruno Liljefors, Etc | machine |
