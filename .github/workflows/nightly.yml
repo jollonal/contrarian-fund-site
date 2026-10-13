@@ -4,6 +4,11 @@ on:
   schedule:
     - cron: "17 2 * * *"        # 02:17 UTC daily (04:17 CEST / 03:17 CET); GitHub may start it late
   workflow_dispatch:             # manual "Run workflow" button
+    inputs:
+      read_mail:
+        description: "Also read the newsletter mailbox (normally only the nightly logs in)"
+        type: boolean
+        default: false
   push:
     branches: [main]
     paths:
@@ -46,8 +51,10 @@ jobs:
         env:
           CF_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
           CF_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
-          GMAIL_ADDRESS: ${{ secrets.GMAIL_ADDRESS }}
-          GMAIL_APP_PASSWORD: ${{ secrets.GMAIL_APP_PASSWORD }}
+          MAIL_ADDRESS: ${{ secrets.MAIL_ADDRESS }}
+          MAIL_PASSWORD: ${{ secrets.MAIL_PASSWORD }}
+          MAIL_HOST: ${{ secrets.MAIL_HOST }}          # optional; default imap.gmx.com
+          READ_MAIL: ${{ github.event_name == 'schedule' || inputs.read_mail == true }}
           REPO_URL: ${{ github.server_url }}/${{ github.repository }}
         run: |
           if [ "${{ github.event_name }}" = "push" ]; then

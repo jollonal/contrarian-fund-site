@@ -1,7 +1,10 @@
-"""Read gallery newsletters from the Gmail "vernissage" label and extract openings.
+"""Read gallery newsletters from a dedicated mailbox over IMAP and extract openings.
+
+The mailbox (GMX by default) holds nothing but gallery newsletters, so it can be replaced
+without losing anything else. Only the scheduled nightly logs in, once, read-only.
 
 Privacy rules (the repo and its Actions logs are public):
-- only the label is opened, read-only, so nothing is marked as read;
+- the folder is opened read-only, so nothing is marked as read, moved or deleted;
 - nothing from an email is logged or stored except extracted exhibition facts;
 - message ids are stored as hashes; addresses, subjects and links are never kept;
 - events from email link to the gallery's homepage, never to links in the email.
@@ -24,8 +27,8 @@ from .clean import html_to_text
 
 log = logging.getLogger("vernissage")
 
-IMAP_HOST = "imap.gmail.com"
-LABEL = os.environ.get("GMAIL_LABEL", "vernissage")
+IMAP_HOST = "imap.gmx.com"   # override with MAIL_HOST (Yahoo: imap.mail.yahoo.com)
+FOLDER = os.environ.get("MAIL_FOLDER", "INBOX")
 LOOKBACK_DAYS = 45      # how far back to look for unread-by-us newsletters
 KEEP_DAYS = 120         # how long to remember an email's extraction
 MAX_CHARS = 12_000
@@ -37,7 +40,8 @@ def _host(url_or_domain: str) -> str:
     return h.lower().removeprefix("www.")
 
 
-SHARED_HOSTS = {"instagram.com", "facebook.com", "linktr.ee", "gmail.com"}  # never identify a gallery
+SHARED_HOSTS = {"instagram.com", "facebook.com", "linktr.ee", "gmail.com", "gmx.com", "gmx.net",
+                "gmx.de", "yahoo.com", "hotmail.com", "outlook.com"}  # never identify a gallery
 
 
 def venue_domains(venues: list[dict]) -> dict[str, str]:
@@ -105,14 +109,19 @@ def read_newsletters(venues: list[dict], cache: dict, today: dt.date, llm: L.LLM
     for k in [k for k, e in store.items() if e.get("date", "") < cutoff]:
         del store[k]
 
-    address, password = os.environ.get("GMAIL_ADDRESS"), os.environ.get("GMAIL_APP_PASSWORD")
-    if address and password:
+    address, password = os.environ.get("MAIL_ADDRESS"), os.environ.get("MAIL_PASSWORD")
+    if os.environ.get("READ_MAIL", "true").lower() != "true":
+        log.info("newsletters: mailbox not read on this run, using remembered results only")
+    elif address and password:
         try:
-            _fetch_new(address, password.replace(" ", ""), venues, store, today, llm)
+            _fetch_new(os.environ.get("MAIL_HOST") or IMAP_HOST, address, password.replace(" ", ""),
+                       venues, cache, today, llm)
         except (imaplib.IMAP4.error, OSError) as e:
-            log.warning("newsletter inbox unavailable: %s", type(e).__name__)
+            hint = (" (login refused: check the password, and that POP3/IMAP access is still"
+                    " switched on in the mailbox settings)") if "auth" in str(e).lower() else ""
+            log.warning("newsletter inbox unavailable: %s%s", type(e).__name__, hint)
     else:
-        log.info("newsletters: GMAIL_ADDRESS / GMAIL_APP_PASSWORD not set, using remembered results only")
+        log.info("newsletters: MAIL_ADDRESS / MAIL_PASSWORD not set, using remembered results only")
 
     found: dict[str, list[dict]] = {}
     for e in store.values():
@@ -121,64 +130,85 @@ def read_newsletters(venues: list[dict], cache: dict, today: dt.date, llm: L.LLM
     return found
 
 
-def _fetch_new(address: str, password: str, venues: list[dict], store: dict, today: dt.date, llm: L.LLM) -> None:
+def _uidvalidity(imap) -> int:
+    _, data = imap.response("UIDVALIDITY")
+    try:
+        return int(data[0]) if data and data[0] else 0
+    except (TypeError, ValueError):
+        return 0
+
+
+def _fetch_new(host: str, address: str, password: str, venues: list[dict], cache: dict,
+               today: dt.date, llm: L.LLM) -> None:
+    """Read messages that arrived since the last run (tracked by IMAP UID), plus earlier
+    messages from unknown senders, which are matched again at no AI cost."""
+    store = cache["mail"]
+    state = cache.setdefault("mail_state", {})
     domains = venue_domains(venues)
     by_id = {v["id"]: v for v in venues}
     since = (today - dt.timedelta(days=LOOKBACK_DAYS)).strftime("%d-%b-%Y")
     seen = new = unmatched = own = 0
     stopped = ""
 
-    imap = imaplib.IMAP4_SSL(IMAP_HOST)
+    imap = imaplib.IMAP4_SSL(host)
     try:
         imap.login(address, password)
-        status, _ = imap.select(f'"{LABEL}"', readonly=True)
+        status, _ = imap.select(f'"{FOLDER}"', readonly=True)
         if status != "OK":
-            log.warning("newsletters: label not found")
+            log.warning("newsletters: folder not found")
             return
-        status, data = imap.search(None, "SINCE", since)
-        ids = data[0].split() if status == "OK" and data and data[0] else []
-        for num in ids:
-            status, parts = imap.fetch(num, "(BODY.PEEK[])")
+        validity = _uidvalidity(imap)
+        if state.get("uidvalidity") != validity:  # new mailbox, or the server renumbered it
+            state.clear()
+            state["uidvalidity"] = validity
+        last = int(state.get("last_uid", 0))
+        status, data = imap.uid("SEARCH", "UID", f"{last + 1}:*", "SINCE", since)
+        fresh = [int(x) for x in (data[0].split() if status == "OK" and data and data[0] else [])]
+        fresh = [u for u in fresh if u > last]  # "N:*" also returns the highest UID when it is below N
+        retry = [e["uid"] for e in store.values()
+                 if e.get("venue") is None and e.get("uid") and e.get("uidvalidity") == validity and e["uid"] <= last]
+        for uid in sorted(set(fresh) | set(retry)):
+            status, parts = imap.uid("FETCH", str(uid), "(BODY.PEEK[])")
             if status != "OK" or not parts or not isinstance(parts[0], tuple):
+                if uid > last:
+                    state["last_uid"] = last = uid
                 continue
             msg = email.message_from_bytes(parts[0][1], policy=email.policy.default)
             seen += 1
-            key = _key(str(msg.get("Message-ID") or msg.get("Date", "")) + str(num))
+            key = _key(str(msg.get("Message-ID") or f"{msg.get('Date', '')}|{uid}"))
+            sent = email.utils.parsedate_to_datetime(msg["Date"]).date().isoformat() if msg.get("Date") else today.isoformat()
             if _own(str(msg.get("From", "")), address):
                 own += 1
                 store.pop(key, None)  # your own requests in reply threads are never newsletters
-                continue
-            if key in store and store[key].get("venue"):
-                continue  # already read and matched to a gallery
-            # new, or previously unmatched: match again (no AI cost), since
-            # venues.yaml may have gained the sender's domain or the gallery
-            text = message_text(msg)
-            venue_id = match_venue(str(msg.get("From", "")), text, venues, domains)
-            sent = email.utils.parsedate_to_datetime(msg["Date"]).date().isoformat() if msg.get("Date") else today.isoformat()
-            if not venue_id:
-                unmatched += 1
-                store[key] = {"date": sent, "venue": None, "result": []}
-                continue
-            if not llm.available:
-                stopped = ", stopped early: AI allowance used"
-                break  # retry next run; nothing recorded for this message
-            v = by_id[venue_id]
-            try:
-                out = llm.json(L.LISTING_SYSTEM, L.LISTING_USER.format(
-                    today=today.isoformat(), venue=v["name"],
-                    url=f"newsletter email sent {sent}", text=text))
-            except L.LLMUnavailable as e:
-                log.warning("newsletters: model unavailable (%s)", type(e).__name__)
-                stopped = ", stopped early: model unavailable"
-                break
-            result = []
-            for x in out.get("exhibitions", []):
-                if isinstance(x, dict):
-                    x["detail_url"] = None           # never publish links from emails
-                    x["source"] = "newsletter"
-                    result.append(x)
-            store[key] = {"date": sent, "venue": venue_id, "result": result}
-            new += 1
+            elif not (key in store and store[key].get("venue")):
+                text = message_text(msg)
+                venue_id = match_venue(str(msg.get("From", "")), text, venues, domains)
+                if not venue_id:
+                    unmatched += 1
+                    store[key] = {"date": sent, "venue": None, "result": [], "uid": uid, "uidvalidity": validity}
+                else:
+                    if not llm.available:
+                        stopped = ", stopped early: AI allowance used"
+                        break  # this message and later ones are read next run
+                    v = by_id[venue_id]
+                    try:
+                        out = llm.json(L.LISTING_SYSTEM, L.LISTING_USER.format(
+                            today=today.isoformat(), venue=v["name"],
+                            url=f"newsletter email sent {sent}", text=text))
+                    except L.LLMUnavailable as e:
+                        log.warning("newsletters: model unavailable (%s)", type(e).__name__)
+                        stopped = ", stopped early: model unavailable"
+                        break
+                    result = []
+                    for x in out.get("exhibitions", []):
+                        if isinstance(x, dict):
+                            x["detail_url"] = None           # never publish links from emails
+                            x["source"] = "newsletter"
+                            result.append(x)
+                    store[key] = {"date": sent, "venue": venue_id, "result": result}
+                    new += 1
+            if uid > last:
+                state["last_uid"] = last = uid
     finally:
         try:
             imap.logout()

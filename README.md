@@ -31,8 +31,9 @@ Repository secrets required:
 |---|---|
 | `CLOUDFLARE_API_TOKEN` | API token with Cloudflare Pages Edit, Workers AI Read, Workers AI Edit |
 | `CLOUDFLARE_ACCOUNT_ID` | Cloudflare account ID |
-| `GMAIL_ADDRESS` | Inbox that receives the gallery newsletters |
-| `GMAIL_APP_PASSWORD` | Gmail app password for that inbox |
+| `MAIL_ADDRESS` | Dedicated mailbox that receives the gallery newsletters (GMX) |
+| `MAIL_PASSWORD` | Password for that mailbox, used nowhere else |
+| `MAIL_HOST` | Optional. IMAP server; default `imap.gmx.com` (Yahoo: `imap.mail.yahoo.com`) |
 
 The same Cloudflare token also calls Workers AI (`@cf/meta/llama-3.3-70b-instruct-fp8-fast`, JSON mode). It needs Workers AI Read and Edit in addition to Pages Edit. The free allocation is 10,000 neurons per UTC day. Each run counts the neurons it spends (from the token counts Workers AI returns) and stops at 9,500 (`LLM_NEURON_BUDGET`). At roughly 110 neurons per call, that is about 85 calls; once pages are cached, a typical night needs only a few.
 
@@ -49,7 +50,7 @@ python -m vernissage --no-fetch           # rebuild page from cache
 
 ## Gallery newsletters
 
-Many galleries announce vernissage times only by email. The nightly run reads the Gmail label `vernissage` over IMAP (read-only, with an app password stored as `GMAIL_ADDRESS` and `GMAIL_APP_PASSWORD` secrets), matches each email to a gallery by sender domain (`mail_domains` in `venues.yaml`) or gallery name, and extracts exhibitions with the same model call as the web pages. A newsletter's opening time is merged into the website's listing of the same show. Messages sent from the inbox's own address (your requests in reply threads) are skipped. Emails from senders that match no gallery are re-checked on every run (matching costs no AI), so adding a `mail_domains` entry later picks them up.
+Many galleries announce vernissage times only by email. They are sent to a dedicated GMX mailbox that holds nothing else, so losing it would cost only newsletters. Only the scheduled nightly logs in (once, read-only, over IMAP with the `MAIL_ADDRESS` and `MAIL_PASSWORD` secrets); a manual run reads the mailbox only when its "read_mail" box is ticked. Each run fetches only messages that arrived since the last one (tracked by IMAP UID in `scraper/state/cache.json`), matches each email to a gallery by sender domain (`mail_domains` in `venues.yaml`) or gallery name, and extracts exhibitions with the same model call as the web pages. A newsletter's opening time is merged into the website's listing of the same show. Messages sent from the mailbox's own address are skipped. Emails from senders that match no gallery are re-checked on every run (matching costs no AI), so adding a `mail_domains` entry later picks them up. If the log says "login refused", check the password and that POP3/IMAP access is still switched on in GMX (GMX switches it off after a long period without use). Never connect a mailbox that holds anything else: if a provider objects to logins from GitHub's servers, only this mailbox is at stake.
 
 Because the repo and its logs are public, nothing from an email is logged or committed except the extracted exhibition facts: message ids are hashed, and senders, subjects and links are dropped. Events found only by email link to the gallery's homepage.
 
