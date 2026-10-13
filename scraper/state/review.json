@@ -1,1 +1,29 @@
-[]
+[
+ {
+  "venue": "125kvadrat",
+  "problems": [
+   "low confidence"
+  ],
+  "item": {
+   "title": "Fartyg, fåglar och fyrar",
+   "title_en": null,
+   "title_gloss": "Ships, birds and lighthouses",
+   "artists": [
+    "Ann-Christin von Reybekiel"
+   ],
+   "start_date": "2026-10-24",
+   "end_date": "2026-11-22",
+   "city": null,
+   "kind": "exhibition",
+   "detail_url": "https://125kvadrat.com/galleri/ann-christin-reybekiel/",
+   "opening": {
+    "date": null,
+    "start_time": null,
+    "end_time": null,
+    "text": null
+   },
+   "access": "unknown",
+   "confidence": 0.5
+  }
+ }
+]
