@@ -28,6 +28,15 @@ def _time(s) -> str | None:
     return s if isinstance(s, str) and TIME_RE.match(s) else None
 
 
+def tidy_title(t: str) -> str:
+    """Drop one trailing full stop ("Christine Dahl Helweg-Larsen. Queenning Zhao." loses its last
+    "."); an ellipsis ("...", "…") is kept."""
+    t = t.strip()
+    if t.endswith(".") and not t.endswith(".."):
+        t = t[:-1].rstrip()
+    return t
+
+
 def _slug(s: str) -> str:
     s = unicodedata.normalize("NFKD", s or "").encode("ascii", "ignore").decode().lower()
     return re.sub(r"[^a-z0-9]+", "-", s).strip("-")
@@ -190,7 +199,7 @@ def normalize(found: dict[str, list[dict]], venues: list[dict], today: dt.date, 
             if st and not et:
                 et = end_time_from_text(op.get("text"), st)
 
-            title = x["title"].strip()
+            title = tidy_title(x["title"])
             title_en, gloss, gloss_source = english_title(title, x.get("title_en"), x.get("title_gloss"), overrides)
             key = f"{vid}|{_slug(x['title'])}|{start or day}"
             ev = {

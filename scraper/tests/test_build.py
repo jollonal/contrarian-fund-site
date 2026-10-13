@@ -141,3 +141,11 @@ def test_explicit_vernissage_beats_low_confidence_and_map_link():
     vague = dict(item, opening={"date": "2026-10-21", "start_time": None, "end_time": None, "text": None})
     events, review = normalize({"glas": [vague]}, venues, dt.date(2026, 10, 10), 60)
     assert review and not events
+
+
+def test_trailing_full_stop_dropped_from_titles():
+    from vernissage.build import tidy_title
+    assert tidy_title("Christine Dahl Helweg-Larsen. Queenning Zhao. ") == "Christine Dahl Helweg-Larsen. Queenning Zhao"
+    assert tidy_title("Wait for it...") == "Wait for it..."
+    assert tidy_title("Wait for it…") == "Wait for it…"
+    assert tidy_title("No stop") == "No stop"
