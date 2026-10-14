@@ -2,8 +2,7 @@ BEGIN:VCALENDAR
 VERSION:2.0
 PRODID:-//contrarian.fund//vernissage//EN
 CALSCALE:GREGORIAN
-X-WR-CALNAME:Extern utställning: Norske Grafikere i Oslo\, ett urval av 9 
- grafiker
+X-WR-CALNAME:Norske Grafikere i Oslo\, ett urval av 9 grafiker
 BEGIN:VTIMEZONE
 TZID:Europe/Stockholm
 BEGIN:DAYLIGHT
@@ -22,13 +21,13 @@ RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU
 END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
-UID:3efe4f736501@contrarian.fund
-DTSTAMP:20261014T060100Z
+UID:f93162676b2b@contrarian.fund
+DTSTAMP:20261014T075222Z
 DTSTART;VALUE=DATE:20261029
 DTEND;VALUE=DATE:20261030
-SUMMARY:Opens: Extern utställning: Norske Grafikere i Oslo\, ett urval av 
- 9 grafiker [External Exhibition: Norwegian Printmakers in Oslo\, a Selecti
- on of 9 Printmakers] at Grafiska Sällskapet
+SUMMARY:Opens: Norske Grafikere i Oslo\, ett urval av 9 grafiker [Norwegian
+  Printmakers in Oslo\, a Selection of 9 Printmakers] at Grafiska Sällskap
+ et
 LOCATION:Hornsgatan 6\, 118 20 Stockholm
 DESCRIPTION:Alexandra Skarp\, Amalia Årfelt\, Annalena Törnström\, Chris
  ter Themptander\, Christina Västerbo\, Helena Laukkanen\, Kristina Stark\

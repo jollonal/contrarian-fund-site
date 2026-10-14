@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-10-14T06:01:00+00:00",
+ "generated_at": "2026-10-14T07:52:22+00:00",
  "window_days": 60,
  "venues_tracked": 65,
  "events": [
@@ -275,6 +275,33 @@
    "source": "web"
   },
   {
+   "id": "3fdf8a8b921b",
+   "venue_id": "grafiska-sallskapet",
+   "venue": "Grafiska Sällskapet",
+   "address": "Hornsgatan 6, 118 20 Stockholm",
+   "map_url": "https://www.google.com/maps/search/?api=1&query=Grafiska%20S%C3%A4llskapet%2C%20Hornsgatan%206%2C%20118%2020%20Stockholm",
+   "district": "Södermalm",
+   "title": "Arv",
+   "title_en": null,
+   "gloss": "Heritage",
+   "gloss_source": "machine",
+   "artists": [
+    "Grafikklassen, Göteborgs konstskola"
+   ],
+   "start_date": "2026-10-17",
+   "end_date": "2026-11-04",
+   "date": "2026-10-17",
+   "opening": {
+    "confirmed": false,
+    "start_time": null,
+    "end_time": null,
+    "text": null
+   },
+   "access": "unknown",
+   "url": "https://grafiskasallskapet.se/",
+   "source": "web"
+  },
+  {
    "id": "d24b61ddf06d",
    "venue_id": "grafiska-sallskapet",
    "venue": "Grafiska Sällskapet",
@@ -501,15 +528,15 @@
    "source": "web"
   },
   {
-   "id": "3efe4f736501",
+   "id": "f93162676b2b",
    "venue_id": "grafiska-sallskapet",
    "venue": "Grafiska Sällskapet",
    "address": "Hornsgatan 6, 118 20 Stockholm",
    "map_url": "https://www.google.com/maps/search/?api=1&query=Grafiska%20S%C3%A4llskapet%2C%20Hornsgatan%206%2C%20118%2020%20Stockholm",
    "district": "Södermalm",
-   "title": "Extern utställning: Norske Grafikere i Oslo, ett urval av 9 grafiker",
+   "title": "Norske Grafikere i Oslo, ett urval av 9 grafiker",
    "title_en": null,
-   "gloss": "External Exhibition: Norwegian Printmakers in Oslo, a Selection of 9 Printmakers",
+   "gloss": "Norwegian Printmakers in Oslo, a Selection of 9 Printmakers",
    "gloss_source": "machine",
    "artists": [
     "Alexandra Skarp",
@@ -923,7 +950,7 @@
    "gloss": "P O Söderlund Memorial Exhibition",
    "gloss_source": "machine",
    "artists": [
-    "P O Söderlund"
+    "P-O Söderlund"
    ],
    "start_date": "2026-11-07",
    "end_date": "2026-11-25",

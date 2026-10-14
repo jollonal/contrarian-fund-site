@@ -7,12 +7,13 @@ Correct a machine gloss in `scraper/overrides.yaml`.
 | 2026-10-16 | CFHILL | Les Fruits du mal | The Fruits of Evil | machine |
 | 2026-10-17 | Galleri Lundberg-Sandhagen | Okända moln | Unknown Clouds | machine |
 | 2026-10-17 | Grafiska Sällskapet | Tillstånd | Condition | machine |
+| 2026-10-17 | Grafiska Sällskapet | Arv | Heritage | machine |
 | 2026-10-17 | Grafiska Sällskapet | Mellanrum | In-between Spaces | machine |
 | 2026-10-21 | Galleri Glas | Tusen sjöars glöd | The Glow of a Thousand Lakes | machine |
 | 2026-10-22 | Galleri Hedenius | VALV | Vault | override |
 | 2026-10-24 | 125kvadrat | Fartyg, fåglar och fyrar | Ships, Birds and Lighthouses | override |
 | 2026-10-24 | Galleri Hantverket | Susanne Nilsson – Vingar av Tystnad – Keramikkonst | Wings of Silence - Ceramic Art | machine |
-| 2026-10-29 | Grafiska Sällskapet | Extern utställning: Norske Grafikere i Oslo, ett urval av 9 grafiker | External Exhibition: Norwegian Printmakers in Oslo, a Selection of 9 Printmakers | machine |
+| 2026-10-29 | Grafiska Sällskapet | Norske Grafikere i Oslo, ett urval av 9 grafiker | Norwegian Printmakers in Oslo, a Selection of 9 Printmakers | machine |
 | 2026-10-31 | Galleri Grip | Pia Wijnbladh och Gunilla Zaar Akne | Pia Wijnbladh and Gunilla Zaar Akne | machine |
 | 2026-10-31 | Slipvillan | Tillit | Trust | machine |
 | 2026-11-06 | Galleri Helle Knudsen | Våra ... | Our ... | machine |
