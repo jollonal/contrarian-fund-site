@@ -20,6 +20,7 @@
 
 glosses:
   "VALV": "Vault"
+  "Fartyg, fåglar och fyrar": "Ships, Birds and Lighthouses"
 
 events:
   # Coulisse homepage ticker, read 2026-10-11: "05.11.2026 solo exhibition by
@@ -32,3 +33,11 @@ events:
     title: Evelina Jonsson
     artists: [Evelina Jonsson]
     start_date: 2026-11-05
+  # 125kvadrat, read 2026-10-10 with full confidence, 2026-10-13 with 0.5 (held for review).
+  # Same title, artist and dates both times. No opening time published.
+  - venue: 125kvadrat
+    title: Fartyg, fåglar och fyrar
+    artists: [Ann-Christin von Reybekiel]
+    start_date: 2026-10-24
+    end_date: 2026-11-22
+    url: https://125kvadrat.com/galleri/ann-christin-reybekiel/

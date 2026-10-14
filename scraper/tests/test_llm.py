@@ -86,3 +86,10 @@ def test_stops_at_neuron_budget(monkeypatch):
     assert not m.available and len(calls) == 2
     with pytest.raises(L.LLMUnavailable, match="run budget reached"):
         m.json("s", "u")
+
+
+def test_missing_year_does_not_lower_confidence_rule_in_prompt():
+    from vernissage import llm as L
+    assert "A missing year alone is not a reason to lower" in L.LISTING_USER
+    # the template must still format cleanly
+    L.LISTING_USER.format(today="2026-10-14", venue="V", url="u", text="t")

@@ -78,7 +78,7 @@ Rules:
 - Include only exhibitions that end on or after {today}, or start after it, or whose dates are unknown.
 - "opening" is the vernissage / opening reception / "Öppning" / "Reception". Leave all its fields null unless the text states it. Do not assume the opening is on the start date.
 - Text may be Swedish or English. Swedish months: januari februari mars april maj juni juli augusti september oktober november december. Weekdays: måndag tisdag onsdag torsdag fredag lördag söndag. "kl. 17-19" means 17:00 to 19:00. "t o m" means until.
-- If a year is missing, choose the year that puts the date closest to today.
+- If a year is missing, choose the year that puts the date closest to today. A missing year alone is not a reason to lower "confidence" when the date falls within the next 12 months.
 - Art fairs, talks, screenings and book launches are kind "fair" or "event", not "exhibition".
 - "text" is the opening sentence copied verbatim from the page.
 - If nothing qualifies, return {{"exhibitions": []}}.
