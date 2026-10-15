@@ -1,8 +1,36 @@
 {
- "generated_at": "2026-10-14T07:52:22+00:00",
+ "generated_at": "2026-10-15T07:39:06+00:00",
  "window_days": 60,
  "venues_tracked": 65,
  "events": [
+  {
+   "id": "e9162f0477f8",
+   "venue_id": "detroit-stockholm",
+   "venue": "Detroit Stockholm",
+   "address": "Roslagsgatan 21, 113 55 Stockholm",
+   "map_url": "https://www.google.com/maps/search/?api=1&query=Detroit%20Stockholm%2C%20Roslagsgatan%2021%2C%20113%2055%20Stockholm",
+   "district": "Vasastan",
+   "title": "SIMULTANEOCITY/GLIMPSE",
+   "title_en": null,
+   "gloss": null,
+   "gloss_source": null,
+   "artists": [
+    "STEPHANIE HARGRAVE",
+    "MARILYN CHARLAT DIX"
+   ],
+   "start_date": "2026-10-15",
+   "end_date": "2026-10-22",
+   "date": "2026-10-15",
+   "opening": {
+    "confirmed": true,
+    "start_time": "17:00",
+    "end_time": "21:00",
+    "text": "Vernissage : 15th Oct 17:00-21:00"
+   },
+   "access": "public",
+   "url": "https://detroitstockholm.info/",
+   "source": "web"
+  },
   {
    "id": "cd19592ae54f",
    "venue_id": "magnus-karlsson",
@@ -24,9 +52,9 @@
     "confirmed": true,
     "start_time": "17:00",
     "end_time": "19:00",
-    "text": "Vernissage och drink torsdag 15 oktober, 17–19 Reception and drink Thursday October 15, 5–7 pm"
+    "text": "Vernissage och drink torsdag 15 oktober, 17–19"
    },
-   "access": "unknown",
+   "access": "public",
    "url": "https://www.gallerimagnuskarlsson.com/exhibitions/408-alejandro-sintura-between-hidden-and-almost-revealed/",
    "source": "web"
   },
@@ -79,7 +107,7 @@
     "end_time": "21:00",
     "text": "Opening"
    },
-   "access": "public",
+   "access": "unknown",
    "url": "https://studio44-stockholm.com/39499-2/thomas-brennan-maria-lundmark/",
    "source": "web"
   },
@@ -377,16 +405,16 @@
     "JURI MARKKULA",
     "Juri Markkula"
    ],
-   "start_date": null,
+   "start_date": "2026-10-22",
    "end_date": "2026-11-21",
    "date": "2026-10-22",
    "opening": {
     "confirmed": true,
     "start_time": "17:00",
     "end_time": "19:00",
-    "text": "VERNISSAGE 22 OKTOBER KL. 17 - 19"
+    "text": "Vernissage torsdagen 22 oktober kl. 17-19"
    },
-   "access": "unknown",
+   "access": "public",
    "url": "https://www.gallerihedenius.com/",
    "source": "web"
   },
@@ -447,13 +475,13 @@
    "source": "web"
   },
   {
-   "id": "44d85c5f68ea",
+   "id": "f6eb12ac7bac",
    "venue_id": "galleri-hantverket",
    "venue": "Galleri Hantverket",
    "address": "Götgatan 63, 116 21 Stockholm",
    "map_url": "https://www.google.com/maps/search/?api=1&query=Galleri%20Hantverket%2C%20G%C3%B6tgatan%2063%2C%20116%2021%20Stockholm",
    "district": "Södermalm",
-   "title": "Susanne Nilsson – Vingar av Tystnad – Keramikkonst",
+   "title": "Vingar av Tystnad - Keramikkonst",
    "title_en": null,
    "gloss": "Wings of Silence - Ceramic Art",
    "gloss_source": "machine",
@@ -770,9 +798,9 @@
     "confirmed": true,
     "start_time": "17:00",
     "end_time": "19:00",
-    "text": "Vernissage fredag 6 november, 17–19 Reception Friday November 6, 5–7 pm"
+    "text": "Vernissage fredag 6 november, 17–19"
    },
-   "access": "unknown",
+   "access": "public",
    "url": "https://www.gallerimagnuskarlsson.com/exhibitions/410-anna-bjerger-nya-malningar-new-paintings-the-inner-room-of-the-gallery-galleriets/",
    "source": "web"
   },
@@ -855,6 +883,33 @@
    },
    "access": "unknown",
    "url": "https://idigalleri.org/",
+   "source": "web"
+  },
+  {
+   "id": "f8d5e6b2efb8",
+   "venue_id": "studio-44",
+   "venue": "Studio 44",
+   "address": "Tjärhovsgatan 44 B, 116 28 Stockholm",
+   "map_url": "https://www.google.com/maps/search/?api=1&query=Studio%2044%2C%20Tj%C3%A4rhovsgatan%2044%20B%2C%20116%2028%20Stockholm",
+   "district": "Södermalm",
+   "title": "Metaphysical Portraits",
+   "title_en": null,
+   "gloss": null,
+   "gloss_source": null,
+   "artists": [
+    "Andro Zverev"
+   ],
+   "start_date": "2026-11-06",
+   "end_date": "2026-11-22",
+   "date": "2026-11-06",
+   "opening": {
+    "confirmed": false,
+    "start_time": null,
+    "end_time": null,
+    "text": null
+   },
+   "access": "unknown",
+   "url": "https://studio44-stockholm.com/en/39499-2/metafysiska-portratt/",
    "source": "web"
   },
   {
@@ -991,13 +1046,13 @@
    "source": "web"
   },
   {
-   "id": "20baa9a04a94",
+   "id": "b72a8fd0e324",
    "venue_id": "galleri-hantverket",
    "venue": "Galleri Hantverket",
    "address": "Götgatan 63, 116 21 Stockholm",
    "map_url": "https://www.google.com/maps/search/?api=1&query=Galleri%20Hantverket%2C%20G%C3%B6tgatan%2063%2C%20116%2021%20Stockholm",
    "district": "Södermalm",
-   "title": "Peter Schalin – 3-dimensionellt akvarellmåleri",
+   "title": "3-dimensionellt akvarellmåleri",
    "title_en": null,
    "gloss": "3-dimensional Watercolor Painting",
    "gloss_source": "machine",
@@ -1283,7 +1338,7 @@
     "end_time": null,
     "text": null
    },
-   "access": "unknown",
+   "access": "public",
    "url": "https://www.gallerimagnuskarlsson.com/exhibitions/409-jockum-nordstrom-halet-i-vaggen/",
    "source": "web"
   },

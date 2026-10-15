@@ -12,7 +12,7 @@ Correct a machine gloss in `scraper/overrides.yaml`.
 | 2026-10-21 | Galleri Glas | Tusen sjöars glöd | The Glow of a Thousand Lakes | machine |
 | 2026-10-22 | Galleri Hedenius | VALV | Vault | override |
 | 2026-10-24 | 125kvadrat | Fartyg, fåglar och fyrar | Ships, Birds and Lighthouses | override |
-| 2026-10-24 | Galleri Hantverket | Susanne Nilsson – Vingar av Tystnad – Keramikkonst | Wings of Silence - Ceramic Art | machine |
+| 2026-10-24 | Galleri Hantverket | Vingar av Tystnad - Keramikkonst | Wings of Silence - Ceramic Art | machine |
 | 2026-10-29 | Grafiska Sällskapet | Norske Grafikere i Oslo, ett urval av 9 grafiker | Norwegian Printmakers in Oslo, a Selection of 9 Printmakers | machine |
 | 2026-10-31 | Galleri Grip | Pia Wijnbladh och Gunilla Zaar Akne | Pia Wijnbladh and Gunilla Zaar Akne | machine |
 | 2026-10-31 | Slipvillan | Tillit | Trust | machine |
@@ -20,7 +20,7 @@ Correct a machine gloss in `scraper/overrides.yaml`.
 | 2026-11-07 | Grafiska Sällskapet | Träsnitt | Woodcuts | machine |
 | 2026-11-07 | Grafiska Sällskapet | P O Söderlund minnesutställning | P O Söderlund Memorial Exhibition | machine |
 | 2026-11-07 | Åmells Konsthandel | Höstutställning 2026 | Autumn Exhibition 2026 | machine |
-| 2026-11-14 | Galleri Hantverket | Peter Schalin – 3-dimensionellt akvarellmåleri | 3-dimensional Watercolor Painting | machine |
+| 2026-11-14 | Galleri Hantverket | 3-dimensionellt akvarellmåleri | 3-dimensional Watercolor Painting | machine |
 | 2026-11-18 | Galleri Glas | Uppåt väggarna | Up the Walls | machine |
 | 2026-11-21 | Kaolin | JUL PÅ KAOLIN / Medlemsutställning | CHRISTMAS AT KAOLIN / Members' Exhibition | machine |
 | 2026-11-21 | Konstnärshuset | Avund & svartsjuka | Envy and Jealousy | machine |

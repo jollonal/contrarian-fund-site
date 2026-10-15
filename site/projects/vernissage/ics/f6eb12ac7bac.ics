@@ -2,7 +2,7 @@ BEGIN:VCALENDAR
 VERSION:2.0
 PRODID:-//contrarian.fund//vernissage//EN
 CALSCALE:GREGORIAN
-X-WR-CALNAME:Peter Schalin – 3-dimensionellt akvarellmåleri
+X-WR-CALNAME:Vingar av Tystnad - Keramikkonst
 BEGIN:VTIMEZONE
 TZID:Europe/Stockholm
 BEGIN:DAYLIGHT
@@ -21,15 +21,14 @@ RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU
 END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
-UID:20baa9a04a94@contrarian.fund
-DTSTAMP:20261014T075222Z
-DTSTART;VALUE=DATE:20261114
-DTEND;VALUE=DATE:20261115
-SUMMARY:Opens: Peter Schalin – 3-dimensionellt akvarellmåleri [3-dimensi
- onal Watercolor Painting] at Galleri Hantverket
+UID:f6eb12ac7bac@contrarian.fund
+DTSTAMP:20261015T073907Z
+DTSTART;VALUE=DATE:20261024
+DTEND;VALUE=DATE:20261025
+SUMMARY:Opens: Vingar av Tystnad - Keramikkonst [Wings of Silence - Ceramic
+  Art] at Galleri Hantverket
 LOCATION:Götgatan 63\, 116 21 Stockholm
-DESCRIPTION:Peter Schalin\nOn view until 2026-11-26.
-URL:https://gallerihantverket.se/event/peter-schalin-3-dimensionellt-akvare
- llmaleri/
+DESCRIPTION:Susanne Nilsson\nOn view until 2026-11-12.
+URL:https://gallerihantverket.se/event/susanne-nilsson-vingar-av-tystnad/
 END:VEVENT
 END:VCALENDAR
