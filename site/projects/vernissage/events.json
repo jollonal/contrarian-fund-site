@@ -1,63 +1,8 @@
 {
- "generated_at": "2026-10-15T07:39:06+00:00",
+ "generated_at": "2026-10-16T07:26:04+00:00",
  "window_days": 60,
  "venues_tracked": 65,
  "events": [
-  {
-   "id": "e9162f0477f8",
-   "venue_id": "detroit-stockholm",
-   "venue": "Detroit Stockholm",
-   "address": "Roslagsgatan 21, 113 55 Stockholm",
-   "map_url": "https://www.google.com/maps/search/?api=1&query=Detroit%20Stockholm%2C%20Roslagsgatan%2021%2C%20113%2055%20Stockholm",
-   "district": "Vasastan",
-   "title": "SIMULTANEOCITY/GLIMPSE",
-   "title_en": null,
-   "gloss": null,
-   "gloss_source": null,
-   "artists": [
-    "STEPHANIE HARGRAVE",
-    "MARILYN CHARLAT DIX"
-   ],
-   "start_date": "2026-10-15",
-   "end_date": "2026-10-22",
-   "date": "2026-10-15",
-   "opening": {
-    "confirmed": true,
-    "start_time": "17:00",
-    "end_time": "21:00",
-    "text": "Vernissage : 15th Oct 17:00-21:00"
-   },
-   "access": "public",
-   "url": "https://detroitstockholm.info/",
-   "source": "web"
-  },
-  {
-   "id": "cd19592ae54f",
-   "venue_id": "magnus-karlsson",
-   "venue": "Galleri Magnus Karlsson",
-   "address": "Fredsgatan 12, 111 52 Stockholm",
-   "map_url": "https://www.google.com/maps/search/?api=1&query=Galleri%20Magnus%20Karlsson%2C%20Fredsgatan%2012%2C%20111%2052%20Stockholm",
-   "district": "Norrmalm",
-   "title": "Between Hidden and Almost Revealed",
-   "title_en": null,
-   "gloss": null,
-   "gloss_source": null,
-   "artists": [
-    "Alejandro Sintura"
-   ],
-   "start_date": "2026-10-15",
-   "end_date": "2026-11-21",
-   "date": "2026-10-15",
-   "opening": {
-    "confirmed": true,
-    "start_time": "17:00",
-    "end_time": "19:00",
-    "text": "Vernissage och drink torsdag 15 oktober, 17–19"
-   },
-   "access": "public",
-   "url": "https://www.gallerimagnuskarlsson.com/exhibitions/408-alejandro-sintura-between-hidden-and-almost-revealed/",
-   "source": "web"
-  },
   {
    "id": "60cd4b1061a0",
    "venue_id": "idi-galleri",
@@ -168,33 +113,6 @@
    "source": "web"
   },
   {
-   "id": "72e26fc8ed7d",
-   "venue_id": "konsthall-16",
-   "venue": "Konsthall 16",
-   "address": "Djurgårdsbrunnsvägen 26, 115 27 Stockholm",
-   "map_url": "https://www.google.com/maps/search/?api=1&query=Konsthall%2016%2C%20Djurg%C3%A5rdsbrunnsv%C3%A4gen%2026%2C%20115%2027%20Stockholm",
-   "district": "Gärdet",
-   "title": "Nadja Hallström – Mustang/Queens",
-   "title_en": null,
-   "gloss": null,
-   "gloss_source": null,
-   "artists": [
-    "Nadja Hallström"
-   ],
-   "start_date": "2026-10-16",
-   "end_date": "2027-01-24",
-   "date": "2026-10-16",
-   "opening": {
-    "confirmed": false,
-    "start_time": null,
-    "end_time": null,
-    "text": null
-   },
-   "access": "unknown",
-   "url": "https://www.rf.se/riksidrottsmuseum/konsthall-16/utstallningar/kommande-utstallning/upcoming-exhibitions",
-   "source": "web"
-  },
-  {
    "id": "131d3340489f",
    "venue_id": "galleri-grip",
    "venue": "Galleri Grip",
@@ -222,13 +140,13 @@
    "source": "web"
   },
   {
-   "id": "bd9d5a2df007",
+   "id": "da203699e4f0",
    "venue_id": "hera",
    "venue": "Galleri Hera",
    "address": "Hornsgatan 36, 118 20 Stockholm",
    "map_url": "https://www.google.com/maps/search/?api=1&query=Galleri%20Hera%2C%20Hornsgatan%2036%2C%20118%2020%20Stockholm",
    "district": "Södermalm",
-   "title": "Morten Lassen",
+   "title": "Conduit",
    "title_en": null,
    "gloss": null,
    "gloss_source": null,
@@ -365,7 +283,7 @@
    "district": "Östermalm",
    "title": "Tusen sjöars glöd",
    "title_en": null,
-   "gloss": "The Glow of a Thousand Lakes",
+   "gloss": "A Thousand Lakes Glow",
    "gloss_source": "machine",
    "artists": [
     "KARSIKAS",
@@ -720,6 +638,33 @@
    },
    "access": "unknown",
    "url": "https://www.coulisse-gallery.com/",
+   "source": "web"
+  },
+  {
+   "id": "c94b07fa9771",
+   "venue_id": "flach",
+   "venue": "Galleri Flach",
+   "address": "Karlavägen 9, 114 24 Stockholm",
+   "map_url": "https://www.google.com/maps/search/?api=1&query=Galleri%20Flach%2C%20Karlav%C3%A4gen%209%2C%20114%2024%20Stockholm",
+   "district": "Östermalm",
+   "title": "Networks, Surfaces and Allegories",
+   "title_en": null,
+   "gloss": null,
+   "gloss_source": null,
+   "artists": [
+    "Peter Hagdahl"
+   ],
+   "start_date": "2026-11-05",
+   "end_date": "2026-12-12",
+   "date": "2026-11-05",
+   "opening": {
+    "confirmed": false,
+    "start_time": null,
+    "end_time": null,
+    "text": null
+   },
+   "access": "unknown",
+   "url": "https://www.galleriflach.com/peter-hagdahl-networks-surfaces-and-allegories-5-11-12-12-2026/",
    "source": "web"
   },
   {

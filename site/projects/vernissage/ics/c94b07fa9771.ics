@@ -2,7 +2,7 @@ BEGIN:VCALENDAR
 VERSION:2.0
 PRODID:-//contrarian.fund//vernissage//EN
 CALSCALE:GREGORIAN
-X-WR-CALNAME:SIMULTANEOCITY/GLIMPSE
+X-WR-CALNAME:Networks\, Surfaces and Allegories
 BEGIN:VTIMEZONE
 TZID:Europe/Stockholm
 BEGIN:DAYLIGHT
@@ -21,14 +21,14 @@ RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU
 END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
-UID:e9162f0477f8@contrarian.fund
-DTSTAMP:20261015T073907Z
-DTSTART;TZID=Europe/Stockholm:20261015T170000
-DTEND;TZID=Europe/Stockholm:20261015T210000
-SUMMARY:Vernissage: SIMULTANEOCITY/GLIMPSE at Detroit Stockholm
-LOCATION:Roslagsgatan 21\, 113 55 Stockholm
-DESCRIPTION:STEPHANIE HARGRAVE\, MARILYN CHARLAT DIX\nOn view until 2026-10
- -22.
-URL:https://detroitstockholm.info/
+UID:c94b07fa9771@contrarian.fund
+DTSTAMP:20261016T072604Z
+DTSTART;VALUE=DATE:20261105
+DTEND;VALUE=DATE:20261106
+SUMMARY:Opens: Networks\, Surfaces and Allegories at Galleri Flach
+LOCATION:Karlavägen 9\, 114 24 Stockholm
+DESCRIPTION:Peter Hagdahl\nOn view until 2026-12-12.
+URL:https://www.galleriflach.com/peter-hagdahl-networks-surfaces-and-allego
+ ries-5-11-12-12-2026/
 END:VEVENT
 END:VCALENDAR

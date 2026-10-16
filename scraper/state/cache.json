@@ -80,6 +80,10 @@
    "hash": "63c2b4642655db62",
    "result": null
   },
+  "https://www.galleriflach.com/peter-hagdahl-networks-surfaces-and-allegories-5-11-12-12-2026/": {
+   "hash": "e6b06375b948d6e4",
+   "result": null
+  },
   "https://www.galleriglas.se/exhibitions/82-tusen-sjoars-glod-karsikas-koskinen-schirm-suppanen/overview/": {
    "hash": "545c453907675e79",
    "result": null
@@ -680,7 +684,7 @@
  "pages": {
   "http://www.tegen2.se/": {
    "hash": "da7c0a171ddcc0b9",
-   "ok_at": "2026-10-15T07:36:25+00:00",
+   "ok_at": "2026-10-16T07:23:37+00:00",
    "result": [
     {
      "artists": [
@@ -730,7 +734,7 @@
   },
   "https://125kvadrat.com/galleri/utstallning/": {
    "hash": "7ab6e778957f5357",
-   "ok_at": "2026-10-15T07:37:34+00:00",
+   "ok_at": "2026-10-16T07:24:49+00:00",
    "result": [
     {
      "access": "unknown",
@@ -778,12 +782,12 @@
   },
   "https://abantegallery.se/": {
    "hash": "9328f5c08edd0b35",
-   "ok_at": "2026-10-15T07:34:16+00:00",
+   "ok_at": "2026-10-16T07:20:15+00:00",
    "result": []
   },
   "https://antics.se/": {
    "hash": "e44096c978cf7616",
-   "ok_at": "2026-10-15T07:37:09+00:00",
+   "ok_at": "2026-10-16T07:24:22+00:00",
    "result": [
     {
      "city": null,
@@ -857,7 +861,7 @@
   },
   "https://beautravail.se/category/exhibitions/": {
    "hash": "e00aff06d81b31cc",
-   "ok_at": "2026-10-15T07:36:38+00:00",
+   "ok_at": "2026-10-16T07:23:50+00:00",
    "result": [
     {
      "access": "unknown",
@@ -987,7 +991,7 @@
   },
   "https://belenius.com/": {
    "hash": "2b83ba01ef3ea89c",
-   "ok_at": "2026-10-15T07:31:33+00:00",
+   "ok_at": "2026-10-16T07:16:27+00:00",
    "result": [
     {
      "artists": [
@@ -1013,7 +1017,7 @@
   },
   "https://belenius.com/exhibitions/": {
    "hash": "7f80a68ec05087c5",
-   "ok_at": "2026-10-15T07:31:37+00:00",
+   "ok_at": "2026-10-16T07:16:32+00:00",
    "result": [
     {
      "artists": [
@@ -1038,11 +1042,11 @@
    ]
   },
   "https://bjorkholmengallery.com/exhibitions/": {
-   "hash": "0193ea38f40d4715",
-   "ok_at": "2026-10-15T07:32:26+00:00",
+   "hash": "516ab2817ac8cf46",
+   "ok_at": "2026-10-16T07:17:39+00:00",
    "result": [
     {
-     "access": "unknown",
+     "access": "public",
      "artists": [
       "Anders Widoff"
      ],
@@ -1052,45 +1056,21 @@
      "end_date": "2026-11-08",
      "kind": "exhibition",
      "opening": {
-      "date": "2026-10-10",
-      "start_time": "12:00",
-      "text": "Opening Saturday 10 October 12-16”, "
-     },
-     "start_date": "2026-10-10",
-     "title": "den här dagen. Och den här dagen.",
-     "title_en": null,
-     "title_gloss": "this day. and this day."
-    },
-    {
-     "access": "public",
-     "artists": [
-      "Thomas Elovsson",
-      "Daniel Jensen",
-      "Jenny Källman",
-      "Tomas Lundgren",
-      "Anders Widoff"
-     ],
-     "city": null,
-     "confidence": 1,
-     "detail_url": "https://bjorkholmengallery.com/exhibition/market-art-fair-5/",
-     "end_date": "2026-04-26",
-     "kind": "fair",
-     "opening": {
       "date": null,
       "end_time": null,
       "start_time": null,
       "text": null
      },
-     "start_date": "2026-04-24",
-     "title": "Market Art Fair",
+     "start_date": "2026-10-10",
+     "title": "den här dagen. Och den här dagen.",
      "title_en": null,
-     "title_gloss": null
+     "title_gloss": "this day and this day"
     }
    ]
   },
   "https://candyland.se/?cat=10": {
    "hash": "ec280388b21ecb8e",
-   "ok_at": "2026-10-15T07:34:38+00:00",
+   "ok_at": "2026-10-16T07:20:37+00:00",
    "result": [
     {
      "artists": [
@@ -1126,7 +1106,7 @@
   },
   "https://candyland.se/?cat=6": {
    "hash": "73d4496af58a9c17",
-   "ok_at": "2026-10-15T07:34:36+00:00",
+   "ok_at": "2026-10-16T07:20:33+00:00",
    "result": [
     {
      "artists": [
@@ -1162,7 +1142,7 @@
   },
   "https://chgallery.se/exhibitions/": {
    "hash": "3f6690f4d872cd68",
-   "ok_at": "2026-10-15T07:31:59+00:00",
+   "ok_at": "2026-10-16T07:16:54+00:00",
    "result": [
     {
      "access": "public",
@@ -1210,7 +1190,7 @@
   },
   "https://dittelauridsen.com/exhibitions/": {
    "hash": "5b9ea85e0c61eac0",
-   "ok_at": "2026-10-15T07:37:22+00:00",
+   "ok_at": "2026-10-16T07:24:35+00:00",
    "result": [
     {
      "artists": [
@@ -1256,12 +1236,12 @@
   },
   "https://galleri-86-stockholm.webnode.se/": {
    "hash": "eec9f916d4912af1",
-   "ok_at": "2026-10-15T07:38:30+00:00",
+   "ok_at": "2026-10-16T07:25:28+00:00",
    "result": []
   },
   "https://gallerigrip.se/": {
    "hash": "06e68ec071a1cf7a",
-   "ok_at": "2026-10-15T07:38:55+00:00",
+   "ok_at": "2026-10-16T07:25:54+00:00",
    "result": [
     {
      "artists": [
@@ -1287,7 +1267,7 @@
   },
   "https://gallerigrip.se/utst-llningar-2026/": {
    "hash": "c08ba50e67f3bbf2",
-   "ok_at": "2026-10-15T07:38:51+00:00",
+   "ok_at": "2026-10-16T07:25:50+00:00",
    "result": [
     {
      "access": "public",
@@ -1477,7 +1457,7 @@
   },
   "https://gallerihantverket.se/events/": {
    "hash": "6c59193f24651cfb",
-   "ok_at": "2026-10-15T07:38:10+00:00",
+   "ok_at": "2026-10-16T07:25:06+00:00",
    "result": [
     {
      "artists": [
@@ -1583,7 +1563,7 @@
   },
   "https://gallerihelle.com/blogs/aktuell": {
    "hash": "9bcbaf887d982709",
-   "ok_at": "2026-10-15T07:32:44+00:00",
+   "ok_at": "2026-10-16T07:18:30+00:00",
    "result": [
     {
      "access": "unknown",
@@ -1610,7 +1590,7 @@
   },
   "https://gallerihelle.com/blogs/utstallningar": {
    "hash": "d16dfa0e1b881301",
-   "ok_at": "2026-10-15T07:32:48+00:00",
+   "ok_at": "2026-10-16T07:18:34+00:00",
    "result": [
     {
      "access": "unknown",
@@ -1636,14 +1616,17 @@
    ]
   },
   "https://gallerihera.se/": {
-   "hash": "f40edb84e205278c",
-   "ok_at": "2026-10-15T07:33:54+00:00",
+   "hash": "76189ca54919d7cd",
+   "ok_at": "2026-10-16T07:19:56+00:00",
    "result": [
     {
+     "artists": [
+      "Morten Lassen"
+     ],
      "city": "Stockholm",
-     "confidence": 0.8,
+     "confidence": 1,
      "detail_url": null,
-     "end_date": "2026-10-14",
+     "end_date": "2026-11-04",
      "kind": "exhibition",
      "opening": {
       "date": null,
@@ -1651,16 +1634,16 @@
       "start_time": null,
       "text": null
      },
-     "start_date": "2026-09-26",
-     "title": "Dagar och nätter vid havet",
+     "start_date": "2026-10-17",
+     "title": "Conduit",
      "title_en": null,
-     "title_gloss": "Days and nights by the sea”, "
+     "title_gloss": null
     }
    ]
   },
   "https://gallerihera.se/sasongens-program/": {
    "hash": "4e2183eaacbbc5d9",
-   "ok_at": "2026-10-15T07:33:58+00:00",
+   "ok_at": "2026-10-16T07:19:57+00:00",
    "result": [
     {
      "artists": [
@@ -1726,17 +1709,17 @@
   },
   "https://gallerylienhart.se/pages/art-exhibitions": {
    "hash": "1d0a378c210ad330",
-   "ok_at": "2026-10-15T07:39:02+00:00",
+   "ok_at": "2026-10-16T07:25:59+00:00",
    "result": []
   },
   "https://gerdmangallery.com/exhibitions/": {
    "hash": "fc2e07adb82d7da1",
-   "ok_at": "2026-10-15T07:31:50+00:00",
+   "ok_at": "2026-10-16T07:16:45+00:00",
    "result": []
   },
   "https://grafiskasallskapet.se/": {
    "hash": "c33f58ba3b5ee125",
-   "ok_at": "2026-10-15T07:35:52+00:00",
+   "ok_at": "2026-10-16T07:21:24+00:00",
    "result": [
     {
      "access": "unknown",
@@ -1837,7 +1820,7 @@
   },
   "https://grafiskasallskapet.se/kommande/": {
    "hash": "e3b5b39de3bb535a",
-   "ok_at": "2026-10-15T07:35:32+00:00",
+   "ok_at": "2026-10-16T07:21:19+00:00",
    "result": [
     {
      "access": "unknown",
@@ -2059,7 +2042,7 @@
   },
   "https://hotelvilladagmar.com/en/art/": {
    "hash": "6a1aa3e3fa444a5d",
-   "ok_at": "2026-10-15T07:38:47+00:00",
+   "ok_at": "2026-10-16T07:25:46+00:00",
    "result": [
     {
      "artists": [
@@ -2085,7 +2068,7 @@
   },
   "https://idigalleri.org/": {
    "hash": "597eb68118f4f418",
-   "ok_at": "2026-10-15T07:35:15+00:00",
+   "ok_at": "2026-10-16T07:21:02+00:00",
    "result": [
     {
      "city": "Stockholm",
@@ -2148,7 +2131,7 @@
   },
   "https://kaolin.se/sidor/45772-10597-79130-kommande-utstallningar": {
    "hash": "01333ed669939afb",
-   "ok_at": "2026-10-15T07:36:16+00:00",
+   "ok_at": "2026-10-16T07:23:27+00:00",
    "result": [
     {
      "city": "Stockholm",
@@ -2228,7 +2211,7 @@
   },
   "https://kaolin.se/sidor/pagaende-utstallning": {
    "hash": "fa3c3e65a1a7060f",
-   "ok_at": "2026-10-15T07:36:20+00:00",
+   "ok_at": "2026-10-16T07:23:31+00:00",
    "result": [
     {
      "artists": [
@@ -2253,8 +2236,8 @@
    ]
   },
   "https://konstnarshuset.org/": {
-   "hash": "639169fa91eb622c",
-   "ok_at": "2026-10-15T07:36:02+00:00",
+   "hash": "29c03e896fff3183",
+   "ok_at": "2026-10-16T07:23:13+00:00",
    "result": [
     {
      "access": "unknown",
@@ -2273,7 +2256,7 @@
      "start_date": "2026-10-03",
      "title": "ars longa, vita brevis",
      "title_en": null,
-     "title_gloss": "long life, short works"
+     "title_gloss": "long life, short art"
     },
     {
      "access": "unknown",
@@ -2298,7 +2281,7 @@
   },
   "https://konstnarshuset.org/utstallningsprogram-2026/": {
    "hash": "1380cd7d3a845683",
-   "ok_at": "2026-10-15T07:35:58+00:00",
+   "ok_at": "2026-10-16T07:21:33+00:00",
    "result": [
     {
      "artists": [
@@ -2570,7 +2553,7 @@
   },
   "https://kostyal.com/": {
    "hash": "091f91d3e51ed94a",
-   "ok_at": "2026-10-15T07:33:37+00:00",
+   "ok_at": "2026-10-16T07:19:36+00:00",
    "result": [
     {
      "artists": [
@@ -2616,7 +2599,7 @@
   },
   "https://mankovskygallery.com/blogs/exhibitions": {
    "hash": "0c2d0ba54b94609a",
-   "ok_at": "2026-10-15T07:34:29+00:00",
+   "ok_at": "2026-10-16T07:20:28+00:00",
    "result": [
     {
      "city": "Gothenburg",
@@ -2693,12 +2676,12 @@
   },
   "https://mankovskygallery.com/pages/exhibitions-originals": {
    "hash": "131374bed81c2de3",
-   "ok_at": "2026-10-15T07:34:25+00:00",
+   "ok_at": "2026-10-16T07:20:24+00:00",
    "result": []
   },
   "https://nordenhake.com/exhibitions": {
    "hash": "59d6716c0829798f",
-   "ok_at": "2026-10-15T07:33:18+00:00",
+   "ok_at": "2026-10-16T07:19:06+00:00",
    "result": [
     {
      "city": "Berlin",
@@ -2836,12 +2819,12 @@
   },
   "https://parallelcollective.se/en": {
    "hash": "ff56cb5ca013e7b3",
-   "ok_at": "2026-10-15T07:36:29+00:00",
+   "ok_at": "2026-10-16T07:23:41+00:00",
    "result": []
   },
   "https://platformstockholm.com/gallery": {
    "hash": "f7c68ddea27ae680",
-   "ok_at": "2026-10-15T07:36:07+00:00",
+   "ok_at": "2026-10-16T07:23:18+00:00",
    "result": [
     {
      "artists": [
@@ -2867,12 +2850,12 @@
   },
   "https://rockmysoulstockholm.se/": {
    "hash": "2428833bb2e63c48",
-   "ok_at": "2026-10-15T07:38:42+00:00",
+   "ok_at": "2026-10-16T07:25:41+00:00",
    "result": []
   },
   "https://seart.se/SEART/Exhibition.html": {
    "hash": "23da23b312c88b37",
-   "ok_at": "2026-10-15T07:38:34+00:00",
+   "ok_at": "2026-10-16T07:25:32+00:00",
    "result": [
     {
      "artists": [
@@ -2898,7 +2881,7 @@
   },
   "https://slipvillan.org/hem/program.html": {
    "hash": "81b0d004491b8ec8",
-   "ok_at": "2026-10-15T07:35:19+00:00",
+   "ok_at": "2026-10-16T07:21:06+00:00",
    "result": [
     {
      "city": "Stockholm",
@@ -2978,7 +2961,7 @@
   },
   "https://spgallery.se/": {
    "hash": "34bee3581616b656",
-   "ok_at": "2026-10-15T07:34:07+00:00",
+   "ok_at": "2026-10-16T07:20:06+00:00",
    "result": [
     {
      "artists": [
@@ -3004,17 +2987,17 @@
   },
   "https://spgallery.se/exhibitions/": {
    "hash": "8a6f885fc45f9ac6",
-   "ok_at": "2026-10-15T07:34:11+00:00",
+   "ok_at": "2026-10-16T07:20:10+00:00",
    "result": []
   },
   "https://stancegallery.com/exhibitions/": {
    "hash": "5c7c6579662a6a62",
-   "ok_at": "2026-10-15T07:31:54+00:00",
+   "ok_at": "2026-10-16T07:16:50+00:00",
    "result": []
   },
   "https://steinslandberliner.com/shows": {
    "hash": "f9d5e3ebc01af1a4",
-   "ok_at": "2026-10-15T07:32:54+00:00",
+   "ok_at": "2026-10-16T07:18:40+00:00",
    "result": [
     {
      "artists": [
@@ -3080,7 +3063,7 @@
   },
   "https://studio44-stockholm.com/en/": {
    "hash": "da720c3af1d716ae",
-   "ok_at": "2026-10-15T07:35:02+00:00",
+   "ok_at": "2026-10-16T07:20:46+00:00",
    "result": [
     {
      "artists": [
@@ -3147,7 +3130,7 @@
   },
   "https://studio44-stockholm.com/en/39499-2/": {
    "hash": "3c7a642c52ff4c40",
-   "ok_at": "2026-10-15T07:35:04+00:00",
+   "ok_at": "2026-10-16T07:20:50+00:00",
    "result": [
     {
      "artists": [
@@ -3220,7 +3203,7 @@
   },
   "https://studioabc.se/": {
    "hash": "a64025c94bbf14ee",
-   "ok_at": "2026-10-15T07:35:24+00:00",
+   "ok_at": "2026-10-16T07:21:11+00:00",
    "result": [
     {
      "artists": [
@@ -3248,17 +3231,17 @@
   },
   "https://studioabc.se/utstallningar/": {
    "hash": "3995283be252bf1d",
-   "ok_at": "2026-10-15T07:35:28+00:00",
+   "ok_at": "2026-10-16T07:21:15+00:00",
    "result": []
   },
   "https://willas.com/exhibitions": {
    "hash": "6c5741413c2cc075",
-   "ok_at": "2026-10-15T07:38:21+00:00",
+   "ok_at": "2026-10-16T07:25:19+00:00",
    "result": []
   },
   "https://www.amells.com/utstallningar/aktuellt/": {
    "hash": "54bff3922944d4e4",
-   "ok_at": "2026-10-15T07:37:14+00:00",
+   "ok_at": "2026-10-16T07:24:26+00:00",
    "result": [
     {
      "artists": [
@@ -3291,7 +3274,7 @@
   },
   "https://www.amells.com/utstallningar/kommande/": {
    "hash": "335124249786a5f1",
-   "ok_at": "2026-10-15T07:37:17+00:00",
+   "ok_at": "2026-10-16T07:24:30+00:00",
    "result": [
     {
      "access": "public",
@@ -3338,7 +3321,7 @@
   },
   "https://www.andrehn-schiptjenko.com/exhibitions/current/": {
    "hash": "e6ea3f9f147a3a5e",
-   "ok_at": "2026-10-15T07:31:25+00:00",
+   "ok_at": "2026-10-16T07:16:19+00:00",
    "result": [
     {
      "artists": [
@@ -3364,7 +3347,7 @@
   },
   "https://www.andrehn-schiptjenko.com/exhibitions/forthcoming/": {
    "hash": "3d38339de6fb7c4e",
-   "ok_at": "2026-10-15T07:31:28+00:00",
+   "ok_at": "2026-10-16T07:16:23+00:00",
    "result": [
     {
      "city": "Paris",
@@ -3407,17 +3390,17 @@
   },
   "https://www.annabohmangallery.com/": {
    "hash": "f4b2b7f8fc23f5c2",
-   "ok_at": "2026-10-15T07:33:45+00:00",
+   "ok_at": "2026-10-16T07:19:44+00:00",
    "result": []
   },
   "https://www.annabohmangallery.com/exhibitions": {
    "hash": "b1d7dc4b6d7d3d6e",
-   "ok_at": "2026-10-15T07:33:49+00:00",
+   "ok_at": "2026-10-16T07:19:48+00:00",
    "result": []
   },
   "https://www.berggallery.se/exhibitions/": {
    "hash": "20230f6f984c1288",
-   "ok_at": "2026-10-15T07:32:04+00:00",
+   "ok_at": "2026-10-16T07:17:00+00:00",
    "result": [
     {
      "artists": [
@@ -3463,7 +3446,7 @@
   },
   "https://www.blasknada.com/category/utstallningar/": {
    "hash": "4a7bc1155c4fe26b",
-   "ok_at": "2026-10-15T07:36:12+00:00",
+   "ok_at": "2026-10-16T07:23:23+00:00",
    "result": [
     {
      "artists": [
@@ -3546,7 +3529,7 @@
   },
   "https://www.carlingdalenson.com/exhibitions": {
    "hash": "71dc283a4d8d4448",
-   "ok_at": "2026-10-15T07:32:58+00:00",
+   "ok_at": "2026-10-16T07:18:44+00:00",
    "result": [
     {
      "artists": [
@@ -3592,7 +3575,7 @@
   },
   "https://www.cfhill.com/exhibitions": {
    "hash": "f560091fc27c0d4a",
-   "ok_at": "2026-10-15T07:33:26+00:00",
+   "ok_at": "2026-10-16T07:19:15+00:00",
    "result": [
     {
      "artists": [
@@ -3618,12 +3601,12 @@
   },
   "https://www.coulisse-gallery.com/": {
    "hash": "5b80b6dbda57408a",
-   "ok_at": "2026-10-15T07:33:41+00:00",
+   "ok_at": "2026-10-16T07:19:40+00:00",
    "result": []
   },
   "https://www.detroitstockholm.info/current-exhibition": {
    "hash": "16d4684f01937dd9",
-   "ok_at": "2026-10-15T07:34:47+00:00",
+   "ok_at": "2026-10-16T07:20:41+00:00",
    "result": [
     {
      "access": "public",
@@ -3651,12 +3634,12 @@
   },
   "https://www.ekvalltornblom.se/": {
    "hash": "67cc35f565e9b333",
-   "ok_at": "2026-10-15T07:34:20+00:00",
+   "ok_at": "2026-10-16T07:20:19+00:00",
    "result": []
   },
   "https://www.falkenbergskonstskola.se/": {
    "hash": "803e2a6867ef34a0",
-   "ok_at": "2026-10-15T07:36:33+00:00",
+   "ok_at": "2026-10-16T07:23:46+00:00",
    "result": [
     {
      "artists": [
@@ -3709,12 +3692,12 @@
   },
   "https://www.firestormfoundation.art/": {
    "hash": "d680c623ee309b9c",
-   "ok_at": "2026-10-15T07:38:38+00:00",
+   "ok_at": "2026-10-16T07:25:37+00:00",
    "result": []
   },
   "https://www.galleriduerr.com/exhibitions/current/": {
    "hash": "f639b0ab938e03e4",
-   "ok_at": "2026-10-15T07:31:45+00:00",
+   "ok_at": "2026-10-16T07:16:41+00:00",
    "result": [
     {
      "artists": [
@@ -3739,9 +3722,29 @@
    ]
   },
   "https://www.galleriflach.com/category/exhibitions/": {
-   "hash": "8b614bcc73da6879",
-   "ok_at": "2026-10-15T07:32:31+00:00",
+   "hash": "9d4a4589130fea46",
+   "ok_at": "2026-10-16T07:18:13+00:00",
    "result": [
+    {
+     "artists": [
+      "Peter Hagdahl"
+     ],
+     "city": null,
+     "confidence": 1,
+     "detail_url": "https://www.galleriflach.com/peter-hagdahl-networks-surfaces-and-allegories-5-11-12-12-2026/",
+     "end_date": "2026-12-12",
+     "kind": "exhibition",
+     "opening": {
+      "date": null,
+      "end_time": null,
+      "start_time": null,
+      "text": null
+     },
+     "start_date": "2026-11-05",
+     "title": "Networks, Surfaces and Allegories",
+     "title_en": null,
+     "title_gloss": null
+    },
     {
      "artists": [
       "Lisa D Manner",
@@ -3751,7 +3754,7 @@
      "city": "Copenhagen",
      "confidence": 1,
      "detail_url": "https://www.galleriflach.com/enter-art-fair-lisa-d-manner-moa-israelsson-fredrik-wretman-27-27-august-2026/",
-     "end_date": "2026-08-30",
+     "end_date": "2026-08-27",
      "kind": "fair",
      "opening": {
       "date": null,
@@ -3780,7 +3783,7 @@
       "text": null
      },
      "start_date": "2026-04-25",
-     "title": "De levande och döda / The living and the dead",
+     "title": "De levande och döda",
      "title_en": "The living and the dead",
      "title_gloss": null
     },
@@ -3807,30 +3810,10 @@
     },
     {
      "artists": [
-      "Fredrik Sweger"
-     ],
-     "city": null,
-     "confidence": 1,
-     "detail_url": "https://www.galleriflach.com/fredrik-sweger-nothing-to-see-26-3-18-4-2026/",
-     "end_date": "2026-04-18",
-     "kind": "exhibition",
-     "opening": {
-      "date": null,
-      "end_time": null,
-      "start_time": null,
-      "text": null
-     },
-     "start_date": "2026-03-26",
-     "title": "Nothing to See",
-     "title_en": null,
-     "title_gloss": null
-    },
-    {
-     "artists": [
       "Inka & Niclas"
      ],
      "city": null,
-     "confidence": 0,
+     "confidence": 0.5,
      "detail_url": "https://www.galleriflach.com/inka-niclas-g-type-main-sequence-2026/",
      "end_date": null,
      "kind": "exhibition",
@@ -3844,18 +3827,15 @@
      "title": "G – type Main Sequence",
      "title_en": null,
      "title_gloss": null
-    }
-   ]
-  },
-  "https://www.galleriglas.se/exhibitions/current/": {
-   "hash": "030252a0cf069a4d",
-   "ok_at": "2026-10-15T07:32:08+00:00",
-   "result": [
+    },
     {
-     "city": "Stockholm",
+     "artists": [
+      "Peter Hagdahl"
+     ],
+     "city": null,
      "confidence": 1,
-     "detail_url": "https://www.galleriglas.se/exhibitions/81-ann-bonander-looft-skepnader/overview/",
-     "end_date": "2026-10-15",
+     "detail_url": "https://www.galleriflach.com/peter-hagdahl-networks-surfaces-and-allegories-5-11-12-12-2026/",
+     "end_date": "2026-12-12",
      "kind": "exhibition",
      "opening": {
       "date": null,
@@ -3863,16 +3843,21 @@
       "start_time": null,
       "text": null
      },
-     "start_date": "2026-09-23",
-     "title": "Ann Bonander Looft Skepnader",
+     "start_date": "2026-11-05",
+     "title": "Networks, Surfaces and Allegories",
      "title_en": null,
      "title_gloss": null
     }
    ]
   },
+  "https://www.galleriglas.se/exhibitions/current/": {
+   "hash": "11fd7e0a872a6d0e",
+   "ok_at": "2026-10-16T07:17:05+00:00",
+   "result": []
+  },
   "https://www.galleriglas.se/exhibitions/forthcoming/": {
-   "hash": "02c8bf9e1608920b",
-   "ok_at": "2026-10-15T07:32:12+00:00",
+   "hash": "f3ead7ccc28a1d1c",
+   "ok_at": "2026-10-16T07:17:19+00:00",
    "result": [
     {
      "access": "public",
@@ -3896,7 +3881,7 @@
      "start_date": "2026-10-21",
      "title": "Tusen sjöars glöd",
      "title_en": null,
-     "title_gloss": "The glow of a thousand lakes"
+     "title_gloss": "A thousand lakes glow"
     },
     {
      "access": "public",
@@ -3952,7 +3937,7 @@
   },
   "https://www.gallerihedenius.com/utstllningar/currentexhibition": {
    "hash": "40cfabd261cd15f8",
-   "ok_at": "2026-10-15T07:32:40+00:00",
+   "ok_at": "2026-10-16T07:18:21+00:00",
    "result": [
     {
      "access": "public",
@@ -3979,7 +3964,7 @@
   },
   "https://www.gallerihedenius.com/utstllningar/new-portfolio-item": {
    "hash": "1b2354854b728f31",
-   "ok_at": "2026-10-15T07:32:40+00:00",
+   "ok_at": "2026-10-16T07:18:25+00:00",
    "result": [
     {
      "artists": [
@@ -4045,7 +4030,7 @@
   },
   "https://www.gallerimagnuskarlsson.com/exhibitions/current/": {
    "hash": "5307c20c2220886c",
-   "ok_at": "2026-10-15T07:31:09+00:00",
+   "ok_at": "2026-10-16T07:16:06+00:00",
    "result": [
     {
      "access": "public",
@@ -4093,7 +4078,7 @@
   },
   "https://www.gallerimagnuskarlsson.com/exhibitions/forthcoming/": {
    "hash": "a73a3bf88c8512f0",
-   "ok_at": "2026-10-15T07:31:19+00:00",
+   "ok_at": "2026-10-16T07:16:10+00:00",
    "result": [
     {
      "access": "public",
@@ -4141,32 +4126,32 @@
   },
   "https://www.houseofphotography.se/blogs/exhibitions": {
    "hash": "618089a271f07460",
-   "ok_at": "2026-10-15T07:39:06+00:00",
+   "ok_at": "2026-10-16T07:26:04+00:00",
    "result": []
   },
   "https://www.issues.gallery/exhibitions": {
    "hash": "0849d8f9417dddd8",
-   "ok_at": "2026-10-15T07:33:03+00:00",
+   "ok_at": "2026-10-16T07:18:48+00:00",
    "result": []
   },
   "https://www.janwallmark.se/vernissage/": {
    "hash": "c3fd13d27650e85e",
-   "ok_at": "2026-10-15T07:34:03+00:00",
+   "ok_at": "2026-10-16T07:20:02+00:00",
    "result": []
   },
   "https://www.konst.se/gallery": {
    "hash": "02f3c32a7f55b337",
-   "ok_at": "2026-10-15T07:38:26+00:00",
+   "ok_at": "2026-10-16T07:25:24+00:00",
    "result": []
   },
   "https://www.konstochfolk.se/": {
-   "hash": "89026b5fb74f4d43",
-   "ok_at": "2026-10-15T07:37:49+00:00",
+   "hash": "3b94d30ea69a7e3b",
+   "ok_at": "2026-10-16T07:25:02+00:00",
    "result": []
   },
   "https://www.lundberg-sandhagen.com/": {
    "hash": "ecbffaa682e705ef",
-   "ok_at": "2026-10-15T07:36:53+00:00",
+   "ok_at": "2026-10-16T07:24:05+00:00",
    "result": [
     {
      "artists": [
@@ -4212,35 +4197,16 @@
    ]
   },
   "https://www.rf.se/riksidrottsmuseum/konsthall-16": {
-   "hash": "9f3cb5b317714697",
-   "ok_at": "2026-10-15T07:37:01+00:00",
+   "hash": "e8ae6a913abad3bd",
+   "ok_at": "2026-10-16T07:24:18+00:00",
    "result": []
   },
   "https://www.rf.se/riksidrottsmuseum/konsthall-16/utstallningar/kommande-utstallning": {
-   "hash": "a0d80e0ea9040277",
-   "ok_at": "2026-10-15T07:36:57+00:00",
+   "hash": "8115f07d29ae65e3",
+   "ok_at": "2026-10-16T07:24:16+00:00",
    "result": [
     {
-     "artists": [
-      "Nadja Hallström"
-     ],
-     "city": "Stockholm",
-     "confidence": 1,
-     "detail_url": "https://www.rf.se/riksidrottsmuseum/konsthall-16/utstallningar/kommande-utstallning/upcoming-exhibitions",
-     "end_date": "2027-01-24",
-     "kind": "exhibition",
-     "opening": {
-      "date": null,
-      "end_time": null,
-      "start_time": null,
-      "text": null
-     },
-     "start_date": "2026-10-16",
-     "title": "Nadja Hallström – Mustang/Queens",
-     "title_en": "Nadja Hallström – Mustang/Queens",
-     "title_gloss": null
-    },
-    {
+     "access": "unknown",
      "artists": [
       "Sofia Runarsdotter"
      ],
@@ -4258,9 +4224,10 @@
      "start_date": "2027-02-05",
      "title": "Sofia Runarsdotter – Fogbloss",
      "title_en": null,
-     "title_gloss": "Sofia Runarsdotter - Fogbloss"
+     "title_gloss": "Sofia Runarsdotter - Fog Blossom"
     },
     {
+     "access": "unknown",
      "artists": [],
      "city": null,
      "confidence": 1,
@@ -4282,19 +4249,20 @@
   },
   "https://www.richterholtermann.com/": {
    "hash": "81173e6ed75b566a",
-   "ok_at": "2026-10-15T07:37:26+00:00",
+   "ok_at": "2026-10-16T07:24:39+00:00",
    "result": []
   },
   "https://www.richterholtermann.com/gallery": {
    "hash": "73f03fa7d3da9b58",
-   "ok_at": "2026-10-15T07:37:30+00:00",
+   "ok_at": "2026-10-16T07:24:43+00:00",
    "result": []
   },
   "https://www.saskianeumangallery.com/": {
-   "hash": "98eaa16237a53cc8",
-   "ok_at": "2026-10-15T07:33:31+00:00",
+   "hash": "ed5d38b069ed3494",
+   "ok_at": "2026-10-16T07:19:30+00:00",
    "result": [
     {
+     "access": "unknown",
      "artists": [
       "Jonas Nobel"
      ],
@@ -4313,48 +4281,12 @@
      "title": "Seducing Birds and Humans",
      "title_en": null,
      "title_gloss": null
-    },
-    {
-     "artists": [
-      "Kayo Mpoyi",
-      "Mark Dion",
-      "Nadine Byrne",
-      "Tobias Bradford",
-      "Gina Hejdebäck",
-      "Erik Jeor",
-      "Edit Sihlberg",
-      "Jakob Solgren Nordenskiöld",
-      "Harry Anderson",
-      "Dimen Hama Abdulla",
-      "Geraldine Swayne",
-      "Jonas Lipps",
-      "Justin Swinburne",
-      "Pia Ferm",
-      "Susanna Marcus Jablonski",
-      "Niklas Delin",
-      "Emma Jönsson"
-     ],
-     "city": null,
-     "confidence": 0,
-     "detail_url": null,
-     "end_date": null,
-     "kind": "exhibition",
-     "opening": {
-      "date": null,
-      "end_time": null,
-      "start_time": null,
-      "text": null
-     },
-     "start_date": null,
-     "title": "Artissima",
-     "title_en": null,
-     "title_gloss": null
     }
    ]
   },
   "https://www.southnord.com/calendar": {
    "hash": "8fc1be7104c45d66",
-   "ok_at": "2026-10-15T07:36:42+00:00",
+   "ok_at": "2026-10-16T07:23:55+00:00",
    "result": [
     {
      "artists": [
@@ -4776,7 +4708,7 @@
   },
   "https://www.waygallerysthlm.com/exhibitions": {
    "hash": "9b8a038a0460a047",
-   "ok_at": "2026-10-15T07:36:49+00:00",
+   "ok_at": "2026-10-16T07:24:01+00:00",
    "result": [
     {
      "artists": [
@@ -5002,7 +4934,7 @@
   },
   "https://www.wetterlinggallery.com/exhibitions/current/": {
    "hash": "daf1a07a142177d1",
-   "ok_at": "2026-10-15T07:31:41+00:00",
+   "ok_at": "2026-10-16T07:16:37+00:00",
    "result": [
     {
      "access": "public",

@@ -9,7 +9,7 @@ Correct a machine gloss in `scraper/overrides.yaml`.
 | 2026-10-17 | Grafiska Sällskapet | Tillstånd | Condition | machine |
 | 2026-10-17 | Grafiska Sällskapet | Arv | Heritage | machine |
 | 2026-10-17 | Grafiska Sällskapet | Mellanrum | In-between Spaces | machine |
-| 2026-10-21 | Galleri Glas | Tusen sjöars glöd | The Glow of a Thousand Lakes | machine |
+| 2026-10-21 | Galleri Glas | Tusen sjöars glöd | A Thousand Lakes Glow | machine |
 | 2026-10-22 | Galleri Hedenius | VALV | Vault | override |
 | 2026-10-24 | 125kvadrat | Fartyg, fåglar och fyrar | Ships, Birds and Lighthouses | override |
 | 2026-10-24 | Galleri Hantverket | Vingar av Tystnad - Keramikkonst | Wings of Silence - Ceramic Art | machine |
