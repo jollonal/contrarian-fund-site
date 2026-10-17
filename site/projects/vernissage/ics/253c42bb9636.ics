@@ -2,7 +2,7 @@ BEGIN:VCALENDAR
 VERSION:2.0
 PRODID:-//contrarian.fund//vernissage//EN
 CALSCALE:GREGORIAN
-X-WR-CALNAME:Tillstånd
+X-WR-CALNAME:KONTRASTER
 BEGIN:VTIMEZONE
 TZID:Europe/Stockholm
 BEGIN:DAYLIGHT
@@ -21,13 +21,13 @@ RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU
 END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
-UID:3ab421afc491@contrarian.fund
-DTSTAMP:20261016T072604Z
+UID:253c42bb9636@contrarian.fund
+DTSTAMP:20261017T071028Z
 DTSTART;VALUE=DATE:20261017
 DTEND;VALUE=DATE:20261018
-SUMMARY:Opens: Tillstånd [Condition] at Grafiska Sällskapet
-LOCATION:Hornsgatan 6\, 118 20 Stockholm
-DESCRIPTION:Pernilla Jansson\nOn view until 2026-11-04.
-URL:https://grafiskasallskapet.se/
+SUMMARY:Vernissage: KONTRASTER [Contrasts] at Galleri Grip
+LOCATION:Celsiusgatan 2\, 112 30 Stockholm
+DESCRIPTION:Sandra Dahlberg\nOn view until 2026-10-22.
+URL:https://gallerigrip.se/
 END:VEVENT
 END:VCALENDAR

@@ -1,139 +1,30 @@
 {
- "generated_at": "2026-10-16T07:26:04+00:00",
+ "generated_at": "2026-10-17T07:10:28+00:00",
  "window_days": 60,
  "venues_tracked": 65,
  "events": [
   {
-   "id": "60cd4b1061a0",
-   "venue_id": "idi-galleri",
-   "venue": "ID:I galleri",
-   "address": "Tjärhovsgatan 19, 116 28 Stockholm",
-   "map_url": "https://www.google.com/maps/search/?api=1&query=ID%3AI%20galleri%2C%20Tj%C3%A4rhovsgatan%2019%2C%20116%2028%20Stockholm",
-   "district": "Södermalm",
-   "title": "Christine Dahl Helweg-Larsen. Queenning Zhao",
-   "title_en": null,
-   "gloss": null,
-   "gloss_source": null,
-   "artists": [],
-   "start_date": "2026-10-16",
-   "end_date": "2026-11-01",
-   "date": "2026-10-16",
-   "opening": {
-    "confirmed": true,
-    "start_time": "17:00",
-    "end_time": "20:00",
-    "text": "Vernissage 16:e oktober kl 17 – 20"
-   },
-   "access": "unknown",
-   "url": "https://idigalleri.org/",
-   "source": "web"
-  },
-  {
-   "id": "e483921a99c2",
-   "venue_id": "studio-44",
-   "venue": "Studio 44",
-   "address": "Tjärhovsgatan 44 B, 116 28 Stockholm",
-   "map_url": "https://www.google.com/maps/search/?api=1&query=Studio%2044%2C%20Tj%C3%A4rhovsgatan%2044%20B%2C%20116%2028%20Stockholm",
-   "district": "Södermalm",
-   "title": "Thomas Brennan & Maria Lundmark",
-   "title_en": null,
-   "gloss": null,
-   "gloss_source": null,
-   "artists": [
-    "Maria Lundmark",
-    "Thomas Brennan"
-   ],
-   "start_date": "2026-10-16",
-   "end_date": "2026-11-01",
-   "date": "2026-10-16",
-   "opening": {
-    "confirmed": true,
-    "start_time": "17:00",
-    "end_time": "21:00",
-    "text": "Opening"
-   },
-   "access": "unknown",
-   "url": "https://studio44-stockholm.com/39499-2/thomas-brennan-maria-lundmark/",
-   "source": "web"
-  },
-  {
-   "id": "b1ce880fddbf",
-   "venue_id": "konsthallen-abc",
-   "venue": "Konsthallen ABC",
-   "address": "Jämtlandsgatan 161, 162 60 Vällingby",
-   "map_url": "https://www.google.com/maps/search/?api=1&query=Konsthallen%20ABC%2C%20J%C3%A4mtlandsgatan%20161%2C%20162%2060%20V%C3%A4llingby",
-   "district": "Vällingby",
-   "title": "Pull Up the Roots",
-   "title_en": null,
-   "gloss": null,
-   "gloss_source": null,
-   "artists": [
-    "Oleksandra Voronina",
-    "Vitalii Kravets",
-    "Serhii Pohrebitskyi"
-   ],
-   "start_date": "2026-10-16",
-   "end_date": "2026-11-01",
-   "date": "2026-10-16",
-   "opening": {
-    "confirmed": true,
-    "start_time": "18:00",
-    "end_time": "22:00",
-    "text": "18:00 — Opening / Reception"
-   },
-   "access": "unknown",
-   "url": "https://studioabc.se/",
-   "source": "web"
-  },
-  {
-   "id": "583d63893bf0",
-   "venue_id": "cfhill",
-   "venue": "CFHILL",
-   "address": "Riddargatan 13, 114 51 Stockholm",
-   "map_url": "https://www.google.com/maps/search/?api=1&query=CFHILL%2C%20Riddargatan%2013%2C%20114%2051%20Stockholm",
-   "district": "Östermalm",
-   "title": "Les Fruits du mal",
-   "title_en": null,
-   "gloss": "The Fruits of Evil",
-   "gloss_source": "machine",
-   "artists": [
-    "Simone Haack"
-   ],
-   "start_date": "2026-10-16",
-   "end_date": "2026-11-13",
-   "date": "2026-10-16",
-   "opening": {
-    "confirmed": false,
-    "start_time": null,
-    "end_time": null,
-    "text": null
-   },
-   "access": "unknown",
-   "url": "https://www.cfhill.com/",
-   "source": "web"
-  },
-  {
-   "id": "131d3340489f",
+   "id": "253c42bb9636",
    "venue_id": "galleri-grip",
    "venue": "Galleri Grip",
    "address": "Celsiusgatan 2, 112 30 Stockholm",
    "map_url": "https://www.google.com/maps/search/?api=1&query=Galleri%20Grip%2C%20Celsiusgatan%202%2C%20112%2030%20Stockholm",
    "district": "Kungsholmen",
-   "title": "Sandra Dahlberg",
+   "title": "KONTRASTER",
    "title_en": null,
-   "gloss": null,
-   "gloss_source": null,
+   "gloss": "Contrasts",
+   "gloss_source": "machine",
    "artists": [
     "Sandra Dahlberg"
    ],
    "start_date": "2026-10-17",
-   "end_date": null,
+   "end_date": "2026-10-22",
    "date": "2026-10-17",
    "opening": {
-    "confirmed": false,
+    "confirmed": true,
     "start_time": null,
     "end_time": null,
-    "text": null
+    "text": "VERNISSAGE 17 oktober"
    },
    "access": "public",
    "url": "https://gallerigrip.se/",
@@ -191,87 +82,6 @@
    },
    "access": "public",
    "url": "https://www.lundberg-sandhagen.com/",
-   "source": "web"
-  },
-  {
-   "id": "3ab421afc491",
-   "venue_id": "grafiska-sallskapet",
-   "venue": "Grafiska Sällskapet",
-   "address": "Hornsgatan 6, 118 20 Stockholm",
-   "map_url": "https://www.google.com/maps/search/?api=1&query=Grafiska%20S%C3%A4llskapet%2C%20Hornsgatan%206%2C%20118%2020%20Stockholm",
-   "district": "Södermalm",
-   "title": "Tillstånd",
-   "title_en": null,
-   "gloss": "Condition",
-   "gloss_source": "machine",
-   "artists": [
-    "Pernilla Jansson"
-   ],
-   "start_date": "2026-10-17",
-   "end_date": "2026-11-04",
-   "date": "2026-10-17",
-   "opening": {
-    "confirmed": false,
-    "start_time": null,
-    "end_time": null,
-    "text": null
-   },
-   "access": "unknown",
-   "url": "https://grafiskasallskapet.se/",
-   "source": "web"
-  },
-  {
-   "id": "3fdf8a8b921b",
-   "venue_id": "grafiska-sallskapet",
-   "venue": "Grafiska Sällskapet",
-   "address": "Hornsgatan 6, 118 20 Stockholm",
-   "map_url": "https://www.google.com/maps/search/?api=1&query=Grafiska%20S%C3%A4llskapet%2C%20Hornsgatan%206%2C%20118%2020%20Stockholm",
-   "district": "Södermalm",
-   "title": "Arv",
-   "title_en": null,
-   "gloss": "Heritage",
-   "gloss_source": "machine",
-   "artists": [
-    "Grafikklassen, Göteborgs konstskola"
-   ],
-   "start_date": "2026-10-17",
-   "end_date": "2026-11-04",
-   "date": "2026-10-17",
-   "opening": {
-    "confirmed": false,
-    "start_time": null,
-    "end_time": null,
-    "text": null
-   },
-   "access": "unknown",
-   "url": "https://grafiskasallskapet.se/",
-   "source": "web"
-  },
-  {
-   "id": "d24b61ddf06d",
-   "venue_id": "grafiska-sallskapet",
-   "venue": "Grafiska Sällskapet",
-   "address": "Hornsgatan 6, 118 20 Stockholm",
-   "map_url": "https://www.google.com/maps/search/?api=1&query=Grafiska%20S%C3%A4llskapet%2C%20Hornsgatan%206%2C%20118%2020%20Stockholm",
-   "district": "Södermalm",
-   "title": "Mellanrum",
-   "title_en": null,
-   "gloss": "In-between Spaces",
-   "gloss_source": "machine",
-   "artists": [
-    "Anne De Geer"
-   ],
-   "start_date": "2026-10-17",
-   "end_date": "2026-11-04",
-   "date": "2026-10-17",
-   "opening": {
-    "confirmed": false,
-    "start_time": null,
-    "end_time": null,
-    "text": null
-   },
-   "access": "unknown",
-   "url": "https://grafiskasallskapet.se/",
    "source": "web"
   },
   {
@@ -364,35 +174,6 @@
    "source": "web"
   },
   {
-   "id": "059320005c71",
-   "venue_id": "galleri-grip",
-   "venue": "Galleri Grip",
-   "address": "Celsiusgatan 2, 112 30 Stockholm",
-   "map_url": "https://www.google.com/maps/search/?api=1&query=Galleri%20Grip%2C%20Celsiusgatan%202%2C%20112%2030%20Stockholm",
-   "district": "Kungsholmen",
-   "title": "Kirsti Larsson, Per Sundberg & Cecelia Britten-Austin",
-   "title_en": null,
-   "gloss": null,
-   "gloss_source": null,
-   "artists": [
-    "Kirsti Larsson",
-    "Per Sundberg",
-    "Cecelia Britten-Austin"
-   ],
-   "start_date": "2026-10-24",
-   "end_date": null,
-   "date": "2026-10-24",
-   "opening": {
-    "confirmed": false,
-    "start_time": null,
-    "end_time": null,
-    "text": null
-   },
-   "access": "public",
-   "url": "https://gallerigrip.se/",
-   "source": "web"
-  },
-  {
    "id": "f6eb12ac7bac",
    "venue_id": "galleri-hantverket",
    "venue": "Galleri Hantverket",
@@ -471,69 +252,6 @@
    },
    "access": "unknown",
    "url": "https://kaolin.se/",
-   "source": "web"
-  },
-  {
-   "id": "f93162676b2b",
-   "venue_id": "grafiska-sallskapet",
-   "venue": "Grafiska Sällskapet",
-   "address": "Hornsgatan 6, 118 20 Stockholm",
-   "map_url": "https://www.google.com/maps/search/?api=1&query=Grafiska%20S%C3%A4llskapet%2C%20Hornsgatan%206%2C%20118%2020%20Stockholm",
-   "district": "Södermalm",
-   "title": "Norske Grafikere i Oslo, ett urval av 9 grafiker",
-   "title_en": null,
-   "gloss": "Norwegian Printmakers in Oslo, a Selection of 9 Printmakers",
-   "gloss_source": "machine",
-   "artists": [
-    "Alexandra Skarp",
-    "Amalia Årfelt",
-    "Annalena Törnström",
-    "Christer Themptander",
-    "Christina Västerbo",
-    "Helena Laukkanen",
-    "Kristina Stark",
-    "Laurens Rohlfs",
-    "Nina Kerola"
-   ],
-   "start_date": "2026-10-29",
-   "end_date": "2026-11-28",
-   "date": "2026-10-29",
-   "opening": {
-    "confirmed": false,
-    "start_time": null,
-    "end_time": null,
-    "text": null
-   },
-   "access": "unknown",
-   "url": "https://grafiskasallskapet.se/GSimg/pdf/2026.10.29-GS-%20Norske_Grafikere.pdf",
-   "source": "web"
-  },
-  {
-   "id": "561dbf7d86c2",
-   "venue_id": "galleri-grip",
-   "venue": "Galleri Grip",
-   "address": "Celsiusgatan 2, 112 30 Stockholm",
-   "map_url": "https://www.google.com/maps/search/?api=1&query=Galleri%20Grip%2C%20Celsiusgatan%202%2C%20112%2030%20Stockholm",
-   "district": "Kungsholmen",
-   "title": "Pia Wijnbladh och Gunilla Zaar Akne",
-   "title_en": null,
-   "gloss": "Pia Wijnbladh and Gunilla Zaar Akne",
-   "gloss_source": "machine",
-   "artists": [
-    "Pia Wijnbladh",
-    "Gunilla Zaar Akne"
-   ],
-   "start_date": "2026-10-31",
-   "end_date": null,
-   "date": "2026-10-31",
-   "opening": {
-    "confirmed": false,
-    "start_time": null,
-    "end_time": null,
-    "text": null
-   },
-   "access": "public",
-   "url": "https://gallerigrip.se/",
    "source": "web"
   },
   {
@@ -723,16 +441,16 @@
    "source": "web"
   },
   {
-   "id": "8289226dd3ee",
+   "id": "969ae9469819",
    "venue_id": "magnus-karlsson",
    "venue": "Galleri Magnus Karlsson",
    "address": "Fredsgatan 12, 111 52 Stockholm",
    "map_url": "https://www.google.com/maps/search/?api=1&query=Galleri%20Magnus%20Karlsson%2C%20Fredsgatan%2012%2C%20111%2052%20Stockholm",
    "district": "Norrmalm",
-   "title": "Nya målningar / New Paintings",
+   "title": "Comma The inner room of the gallery / Galleriets inre rum",
    "title_en": null,
-   "gloss": null,
-   "gloss_source": null,
+   "gloss": "Comma The Inner Room of the Gallery",
+   "gloss_source": "machine",
    "artists": [
     "Anna Bjerger"
    ],
@@ -743,10 +461,10 @@
     "confirmed": true,
     "start_time": "17:00",
     "end_time": "19:00",
-    "text": "Vernissage fredag 6 november, 17–19"
+    "text": "Vernissage fredag 6 november, 17–19 Reception Friday November 6, 5–7 pm"
    },
    "access": "public",
-   "url": "https://www.gallerimagnuskarlsson.com/exhibitions/410-anna-bjerger-nya-malningar-new-paintings-the-inner-room-of-the-gallery-galleriets/",
+   "url": "https://www.gallerimagnuskarlsson.com/exhibitions/410-anna-bjerger-comma-the-inner-room-of-the-gallery-galleriets/",
    "source": "web"
   },
   {
@@ -855,33 +573,6 @@
    },
    "access": "unknown",
    "url": "https://studio44-stockholm.com/en/39499-2/metafysiska-portratt/",
-   "source": "web"
-  },
-  {
-   "id": "919faa7c6ef4",
-   "venue_id": "galleri-grip",
-   "venue": "Galleri Grip",
-   "address": "Celsiusgatan 2, 112 30 Stockholm",
-   "map_url": "https://www.google.com/maps/search/?api=1&query=Galleri%20Grip%2C%20Celsiusgatan%202%2C%20112%2030%20Stockholm",
-   "district": "Kungsholmen",
-   "title": "Seth Shuwert",
-   "title_en": null,
-   "gloss": null,
-   "gloss_source": null,
-   "artists": [
-    "Seth Shuwert"
-   ],
-   "start_date": "2026-11-07",
-   "end_date": null,
-   "date": "2026-11-07",
-   "opening": {
-    "confirmed": false,
-    "start_time": null,
-    "end_time": null,
-    "text": null
-   },
-   "access": "public",
-   "url": "https://gallerigrip.se/",
    "source": "web"
   },
   {
@@ -1182,19 +873,19 @@
    "source": "web"
   },
   {
-   "id": "24c4b0a90373",
-   "venue_id": "galleri-grip",
-   "venue": "Galleri Grip",
-   "address": "Celsiusgatan 2, 112 30 Stockholm",
-   "map_url": "https://www.google.com/maps/search/?api=1&query=Galleri%20Grip%2C%20Celsiusgatan%202%2C%20112%2030%20Stockholm",
-   "district": "Kungsholmen",
-   "title": "GrupputstÃ¤llning 2 PLATSER KVAR",
+   "id": "5dea009d2726",
+   "venue_id": "125kvadrat",
+   "venue": "125kvadrat",
+   "address": "Kocksgatan 17, 116 24 Stockholm",
+   "map_url": "https://www.google.com/maps/search/?api=1&query=125kvadrat%2C%20Kocksgatan%2017%2C%20116%2024%20Stockholm",
+   "district": "Södermalm",
+   "title": "Medlemmarnas julutställning",
    "title_en": null,
-   "gloss": "Group Exhibition 2 Places Left",
+   "gloss": "Members' Christmas Exhibition",
    "gloss_source": "machine",
    "artists": [],
    "start_date": "2026-11-28",
-   "end_date": null,
+   "end_date": "2026-12-30",
    "date": "2026-11-28",
    "opening": {
     "confirmed": false,
@@ -1202,8 +893,8 @@
     "end_time": null,
     "text": null
    },
-   "access": "public",
-   "url": "https://gallerigrip.se/",
+   "access": "unknown",
+   "url": "https://125kvadrat.com/",
    "source": "web"
   },
   {
@@ -1391,31 +1082,6 @@
    },
    "access": "unknown",
    "url": "https://www.gallerihedenius.com/",
-   "source": "web"
-  },
-  {
-   "id": "7647f5481aff",
-   "venue_id": "galleri-grip",
-   "venue": "Galleri Grip",
-   "address": "Celsiusgatan 2, 112 30 Stockholm",
-   "map_url": "https://www.google.com/maps/search/?api=1&query=Galleri%20Grip%2C%20Celsiusgatan%202%2C%20112%2030%20Stockholm",
-   "district": "Kungsholmen",
-   "title": "GrupputstÃ¤llning 2 PLATSER KVAR",
-   "title_en": null,
-   "gloss": "Group Exhibition 2 Places Left",
-   "gloss_source": "machine",
-   "artists": [],
-   "start_date": "2026-12-12",
-   "end_date": null,
-   "date": "2026-12-12",
-   "opening": {
-    "confirmed": false,
-    "start_time": null,
-    "end_time": null,
-    "text": null
-   },
-   "access": "public",
-   "url": "https://gallerigrip.se/",
    "source": "web"
   },
   {

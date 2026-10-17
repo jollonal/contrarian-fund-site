@@ -2,7 +2,7 @@ BEGIN:VCALENDAR
 VERSION:2.0
 PRODID:-//contrarian.fund//vernissage//EN
 CALSCALE:GREGORIAN
-X-WR-CALNAME:Pia Wijnbladh och Gunilla Zaar Akne
+X-WR-CALNAME:Medlemmarnas julutställning
 BEGIN:VTIMEZONE
 TZID:Europe/Stockholm
 BEGIN:DAYLIGHT
@@ -21,14 +21,14 @@ RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU
 END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
-UID:561dbf7d86c2@contrarian.fund
-DTSTAMP:20261016T072604Z
-DTSTART;VALUE=DATE:20261031
-DTEND;VALUE=DATE:20261101
-SUMMARY:Opens: Pia Wijnbladh och Gunilla Zaar Akne [Pia Wijnbladh and Gunil
- la Zaar Akne] at Galleri Grip
-LOCATION:Celsiusgatan 2\, 112 30 Stockholm
-DESCRIPTION:Pia Wijnbladh\, Gunilla Zaar Akne
-URL:https://gallerigrip.se/
+UID:5dea009d2726@contrarian.fund
+DTSTAMP:20261017T071028Z
+DTSTART;VALUE=DATE:20261128
+DTEND;VALUE=DATE:20261129
+SUMMARY:Opens: Medlemmarnas julutställning [Members' Christmas Exhibition]
+  at 125kvadrat
+LOCATION:Kocksgatan 17\, 116 24 Stockholm
+DESCRIPTION:On view until 2026-12-30.
+URL:https://125kvadrat.com/
 END:VEVENT
 END:VCALENDAR

@@ -2,7 +2,7 @@ BEGIN:VCALENDAR
 VERSION:2.0
 PRODID:-//contrarian.fund//vernissage//EN
 CALSCALE:GREGORIAN
-X-WR-CALNAME:Nya målningar / New Paintings
+X-WR-CALNAME:Comma The inner room of the gallery / Galleriets inre rum
 BEGIN:VTIMEZONE
 TZID:Europe/Stockholm
 BEGIN:DAYLIGHT
@@ -21,15 +21,15 @@ RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU
 END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
-UID:8289226dd3ee@contrarian.fund
-DTSTAMP:20261016T072604Z
+UID:969ae9469819@contrarian.fund
+DTSTAMP:20261017T071028Z
 DTSTART;TZID=Europe/Stockholm:20261106T170000
 DTEND;TZID=Europe/Stockholm:20261106T190000
-SUMMARY:Vernissage: Nya målningar / New Paintings at Galleri Magnus Karlss
- on
+SUMMARY:Vernissage: Comma The inner room of the gallery / Galleriets inre r
+ um [Comma The Inner Room of the Gallery] at Galleri Magnus Karlsson
 LOCATION:Fredsgatan 12\, 111 52 Stockholm
 DESCRIPTION:Anna Bjerger\nOn view until 2026-12-05.
-URL:https://www.gallerimagnuskarlsson.com/exhibitions/410-anna-bjerger-nya-
- malningar-new-paintings-the-inner-room-of-the-gallery-galleriets/
+URL:https://www.gallerimagnuskarlsson.com/exhibitions/410-anna-bjerger-comm
+ a-the-inner-room-of-the-gallery-galleriets/
 END:VEVENT
 END:VCALENDAR
