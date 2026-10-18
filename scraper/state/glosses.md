@@ -4,8 +4,6 @@ Correct a machine gloss in `scraper/overrides.yaml`.
 
 | Date | Gallery | Title | English | Source |
 |---|---|---|---|---|
-| 2026-10-17 | Galleri Grip | KONTRASTER | Contrasts | machine |
-| 2026-10-17 | Galleri Lundberg-Sandhagen | Okända moln | Unknown Clouds | machine |
 | 2026-10-21 | Galleri Glas | Tusen sjöars glöd | A Thousand Lakes Glow | machine |
 | 2026-10-22 | Galleri Hedenius | VALV | Vault | override |
 | 2026-10-24 | 125kvadrat | Fartyg, fåglar och fyrar | Ships, Birds and Lighthouses | override |
