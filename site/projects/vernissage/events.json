@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-10-18T07:23:52+00:00",
+ "generated_at": "2026-10-19T08:00:25+00:00",
  "window_days": 60,
  "venues_tracked": 65,
  "events": [
@@ -63,6 +63,31 @@
    },
    "access": "public",
    "url": "https://www.gallerihedenius.com/",
+   "source": "web"
+  },
+  {
+   "id": "4ece0dbf995e",
+   "venue_id": "blas-och-knada",
+   "venue": "blås & knåda",
+   "address": "Hornsgatan 26, 118 20 Stockholm",
+   "map_url": "https://www.google.com/maps/search/?api=1&query=bl%C3%A5s%20%26%20kn%C3%A5da%2C%20Hornsgatan%2026%2C%20118%2020%20Stockholm",
+   "district": "Södermalm",
+   "title": "Lady of the Grotto",
+   "title_en": null,
+   "gloss": null,
+   "gloss_source": null,
+   "artists": [],
+   "start_date": "2026-10-24",
+   "end_date": "2026-11-14",
+   "date": "2026-10-24",
+   "opening": {
+    "confirmed": true,
+    "start_time": "11:00",
+    "end_time": "16:00",
+    "text": "Vernissage lör 24 okt 11-16"
+   },
+   "access": "public",
+   "url": "https://www.blasknada.com/",
    "source": "web"
   },
   {
