@@ -57,6 +57,10 @@
    "hash": "bde60860ee163d47",
    "result": null
   },
+  "https://nordenhake.com/exhibitions/2026/lap-see-lam": {
+   "hash": "6c5741413c2cc075",
+   "result": null
+  },
   "https://nordenhake.com/exhibitions/2026/paul-faegerskioeld": {
    "hash": "817789251c85b37a",
    "result": {
@@ -684,7 +688,7 @@
  "pages": {
   "http://www.tegen2.se/": {
    "hash": "da7c0a171ddcc0b9",
-   "ok_at": "2026-10-19T07:57:49+00:00",
+   "ok_at": "2026-10-20T07:45:58+00:00",
    "result": [
     {
      "artists": [
@@ -734,7 +738,7 @@
   },
   "https://125kvadrat.com/galleri/utstallning/": {
    "hash": "6eae1118d29afb91",
-   "ok_at": "2026-10-19T07:58:56+00:00",
+   "ok_at": "2026-10-20T07:47:55+00:00",
    "result": [
     {
      "access": "unknown",
@@ -780,12 +784,12 @@
   },
   "https://abantegallery.se/": {
    "hash": "9328f5c08edd0b35",
-   "ok_at": "2026-10-19T07:55:54+00:00",
+   "ok_at": "2026-10-20T07:44:21+00:00",
    "result": []
   },
   "https://antics.se/": {
    "hash": "e44096c978cf7616",
-   "ok_at": "2026-10-19T07:58:28+00:00",
+   "ok_at": "2026-10-20T07:47:29+00:00",
    "result": [
     {
      "city": null,
@@ -859,7 +863,7 @@
   },
   "https://beautravail.se/category/exhibitions/": {
    "hash": "e00aff06d81b31cc",
-   "ok_at": "2026-10-19T07:58:02+00:00",
+   "ok_at": "2026-10-20T07:46:17+00:00",
    "result": [
     {
      "access": "unknown",
@@ -989,7 +993,7 @@
   },
   "https://belenius.com/": {
    "hash": "2b83ba01ef3ea89c",
-   "ok_at": "2026-10-19T07:52:57+00:00",
+   "ok_at": "2026-10-20T07:40:41+00:00",
    "result": [
     {
      "artists": [
@@ -1015,7 +1019,7 @@
   },
   "https://belenius.com/exhibitions/": {
    "hash": "7f80a68ec05087c5",
-   "ok_at": "2026-10-19T07:53:02+00:00",
+   "ok_at": "2026-10-20T07:40:47+00:00",
    "result": [
     {
      "artists": [
@@ -1041,7 +1045,7 @@
   },
   "https://bjorkholmengallery.com/exhibitions/": {
    "hash": "516ab2817ac8cf46",
-   "ok_at": "2026-10-19T07:53:52+00:00",
+   "ok_at": "2026-10-20T07:41:36+00:00",
    "result": [
     {
      "access": "public",
@@ -1068,7 +1072,7 @@
   },
   "https://candyland.se/?cat=10": {
    "hash": "ec280388b21ecb8e",
-   "ok_at": "2026-10-19T07:56:16+00:00",
+   "ok_at": "2026-10-20T07:44:43+00:00",
    "result": [
     {
      "artists": [
@@ -1104,7 +1108,7 @@
   },
   "https://candyland.se/?cat=6": {
    "hash": "73d4496af58a9c17",
-   "ok_at": "2026-10-19T07:56:12+00:00",
+   "ok_at": "2026-10-20T07:44:39+00:00",
    "result": [
     {
      "artists": [
@@ -1140,7 +1144,7 @@
   },
   "https://chgallery.se/exhibitions/": {
    "hash": "0510fb1ef551c1fc",
-   "ok_at": "2026-10-19T07:53:24+00:00",
+   "ok_at": "2026-10-20T07:41:09+00:00",
    "result": [
     {
      "access": "public",
@@ -1188,7 +1192,7 @@
   },
   "https://dittelauridsen.com/exhibitions/": {
    "hash": "5b9ea85e0c61eac0",
-   "ok_at": "2026-10-19T07:58:41+00:00",
+   "ok_at": "2026-10-20T07:47:42+00:00",
    "result": [
     {
      "artists": [
@@ -1234,17 +1238,17 @@
   },
   "https://galleri-86-stockholm.webnode.se/": {
    "hash": "eec9f916d4912af1",
-   "ok_at": "2026-10-19T07:59:41+00:00",
+   "ok_at": "2026-10-20T07:48:31+00:00",
    "result": []
   },
   "https://gallerigrip.se/": {
    "hash": "d88cc9c0e508a518",
-   "ok_at": "2026-10-19T08:00:15+00:00",
+   "ok_at": "2026-10-20T07:49:02+00:00",
    "result": []
   },
   "https://gallerigrip.se/utst-llningar-2026/": {
    "hash": "0fd16e40096b4cbf",
-   "ok_at": "2026-10-19T08:00:11+00:00",
+   "ok_at": "2026-10-20T07:48:58+00:00",
    "result": [
     {
      "access": "public",
@@ -1453,7 +1457,7 @@
   },
   "https://gallerihantverket.se/events/": {
    "hash": "6c59193f24651cfb",
-   "ok_at": "2026-10-19T07:59:19+00:00",
+   "ok_at": "2026-10-20T07:48:10+00:00",
    "result": [
     {
      "artists": [
@@ -1559,7 +1563,7 @@
   },
   "https://gallerihelle.com/blogs/aktuell": {
    "hash": "9bcbaf887d982709",
-   "ok_at": "2026-10-19T07:54:17+00:00",
+   "ok_at": "2026-10-20T07:42:01+00:00",
    "result": [
     {
      "access": "unknown",
@@ -1586,7 +1590,7 @@
   },
   "https://gallerihelle.com/blogs/utstallningar": {
    "hash": "d16dfa0e1b881301",
-   "ok_at": "2026-10-19T07:54:21+00:00",
+   "ok_at": "2026-10-20T07:42:05+00:00",
    "result": [
     {
      "access": "unknown",
@@ -1613,7 +1617,7 @@
   },
   "https://gallerihera.se/": {
    "hash": "76189ca54919d7cd",
-   "ok_at": "2026-10-19T07:55:32+00:00",
+   "ok_at": "2026-10-20T07:43:59+00:00",
    "result": [
     {
      "artists": [
@@ -1639,7 +1643,7 @@
   },
   "https://gallerihera.se/sasongens-program/": {
    "hash": "4e2183eaacbbc5d9",
-   "ok_at": "2026-10-19T07:55:36+00:00",
+   "ok_at": "2026-10-20T07:44:04+00:00",
    "result": [
     {
      "artists": [
@@ -1704,13 +1708,13 @@
    ]
   },
   "https://gallerylienhart.se/pages/art-exhibitions": {
-   "hash": "1d0a378c210ad330",
-   "ok_at": "2026-10-19T08:00:20+00:00",
+   "hash": "b733c69acb658633",
+   "ok_at": "2026-10-20T07:49:07+00:00",
    "result": []
   },
   "https://gerdmangallery.com/exhibitions/": {
    "hash": "4353b1f1bce5d98e",
-   "ok_at": "2026-10-19T07:53:15+00:00",
+   "ok_at": "2026-10-20T07:41:00+00:00",
    "result": [
     {
      "access": "unknown",
@@ -1751,12 +1755,12 @@
   },
   "https://grafiskasallskapet.se/": {
    "hash": "7855a03526927cc8",
-   "ok_at": "2026-10-19T07:57:01+00:00",
+   "ok_at": "2026-10-20T07:45:27+00:00",
    "result": []
   },
   "https://grafiskasallskapet.se/kommande/": {
    "hash": "b6e4ee9bf169f452",
-   "ok_at": "2026-10-19T07:56:55+00:00",
+   "ok_at": "2026-10-20T07:45:23+00:00",
    "result": [
     {
      "access": "unknown",
@@ -1885,8 +1889,8 @@
    ]
   },
   "https://hotelvilladagmar.com/en/art/": {
-   "hash": "6a1aa3e3fa444a5d",
-   "ok_at": "2026-10-19T08:00:07+00:00",
+   "hash": "6a70895b180d83ee",
+   "ok_at": "2026-10-20T07:48:53+00:00",
    "result": [
     {
      "access": "public",
@@ -1908,31 +1912,12 @@
      "title": "Scales of Intimacy",
      "title_en": null,
      "title_gloss": null
-    },
-    {
-     "access": "public",
-     "artists": [],
-     "city": "Stockholm",
-     "confidence": 0.6,
-     "detail_url": "https://hotelvilladagmar.com/wp-content/uploads/2025/05/KIM-BOOKER-2.pdf",
-     "end_date": "2026-06-30",
-     "kind": "exhibition",
-     "opening": {
-      "date": null,
-      "end_time": null,
-      "start_time": null,
-      "text": null
-     },
-     "start_date": "2026-01-01",
-     "title": "EXHIBITION WITH WETTERLING GALLERY",
-     "title_en": null,
-     "title_gloss": null
     }
    ]
   },
   "https://idigalleri.org/": {
    "hash": "597eb68118f4f418",
-   "ok_at": "2026-10-19T07:56:38+00:00",
+   "ok_at": "2026-10-20T07:45:05+00:00",
    "result": [
     {
      "city": "Stockholm",
@@ -1995,7 +1980,7 @@
   },
   "https://kaolin.se/sidor/45772-10597-79130-kommande-utstallningar": {
    "hash": "01333ed669939afb",
-   "ok_at": "2026-10-19T07:57:40+00:00",
+   "ok_at": "2026-10-20T07:45:50+00:00",
    "result": [
     {
      "city": "Stockholm",
@@ -2075,7 +2060,7 @@
   },
   "https://kaolin.se/sidor/pagaende-utstallning": {
    "hash": "fa3c3e65a1a7060f",
-   "ok_at": "2026-10-19T07:57:44+00:00",
+   "ok_at": "2026-10-20T07:45:54+00:00",
    "result": [
     {
      "artists": [
@@ -2101,7 +2086,7 @@
   },
   "https://konstnarshuset.org/": {
    "hash": "29c03e896fff3183",
-   "ok_at": "2026-10-19T07:57:09+00:00",
+   "ok_at": "2026-10-20T07:45:35+00:00",
    "result": [
     {
      "access": "unknown",
@@ -2145,7 +2130,7 @@
   },
   "https://konstnarshuset.org/utstallningsprogram-2026/": {
    "hash": "1380cd7d3a845683",
-   "ok_at": "2026-10-19T07:57:05+00:00",
+   "ok_at": "2026-10-20T07:45:31+00:00",
    "result": [
     {
      "artists": [
@@ -2416,13 +2401,56 @@
    ]
   },
   "https://kostyal.com/": {
-   "hash": "2c69edfd2b38e1ea",
-   "ok_at": "2026-10-19T07:55:15+00:00",
-   "result": []
+   "hash": "9169b626617a1d3b",
+   "ok_at": "2026-10-20T07:43:42+00:00",
+   "result": [
+    {
+     "access": "unknown",
+     "artists": [
+      "Urs Fischer"
+     ],
+     "city": "Stockholm",
+     "confidence": 1,
+     "detail_url": null,
+     "end_date": "2026-11-29",
+     "kind": "exhibition",
+     "opening": {
+      "date": null,
+      "end_time": null,
+      "start_time": null,
+      "text": null
+     },
+     "start_date": "2026-10-16",
+     "title": "THE WORLD WAS ALWAYS ENDING",
+     "title_en": null,
+     "title_gloss": null
+    },
+    {
+     "access": "unknown",
+     "artists": [
+      "Georg Nordmark"
+     ],
+     "city": null,
+     "confidence": 1,
+     "detail_url": "https://kostyal.com/exhibitions/dire-straits-new/",
+     "end_date": "2027-04-11",
+     "kind": "exhibition",
+     "opening": {
+      "date": null,
+      "end_time": null,
+      "start_time": null,
+      "text": null
+     },
+     "start_date": "2026-04-25",
+     "title": "Dire Straits",
+     "title_en": null,
+     "title_gloss": null
+    }
+   ]
   },
   "https://mankovskygallery.com/blogs/exhibitions": {
    "hash": "0c2d0ba54b94609a",
-   "ok_at": "2026-10-19T07:56:07+00:00",
+   "ok_at": "2026-10-20T07:44:34+00:00",
    "result": [
     {
      "city": "Gothenburg",
@@ -2499,31 +2527,15 @@
   },
   "https://mankovskygallery.com/pages/exhibitions-originals": {
    "hash": "131374bed81c2de3",
-   "ok_at": "2026-10-19T07:56:03+00:00",
+   "ok_at": "2026-10-20T07:44:30+00:00",
    "result": []
   },
   "https://nordenhake.com/exhibitions": {
-   "hash": "59d6716c0829798f",
-   "ok_at": "2026-10-19T07:54:54+00:00",
+   "hash": "c749b490fc6d3372",
+   "ok_at": "2026-10-20T07:43:08+00:00",
    "result": [
     {
-     "city": "Berlin",
-     "confidence": 1,
-     "detail_url": "https://nordenhake.com/exhibitions/2026/inaugural-group-exhibition-opening-our-new-location-at-goethestrasse-2-3",
-     "end_date": "2026-10-24",
-     "kind": "exhibition",
-     "opening": {
-      "date": null,
-      "end_time": null,
-      "start_time": null,
-      "text": null
-     },
-     "start_date": "2026-09-10",
-     "title": "Symptoms: Inaugural group exhibition at our new space at Goethestraße 2–3",
-     "title_en": null,
-     "title_gloss": null
-    },
-    {
+     "access": "unknown",
      "artists": [
       "Mirosław Bałka",
       "John Coplans",
@@ -2559,6 +2571,7 @@
      "title_gloss": null
     },
     {
+     "access": "unknown",
      "artists": [
       "Mirosław Bałka"
      ],
@@ -2579,6 +2592,7 @@
      "title_gloss": null
     },
     {
+     "access": "unknown",
      "artists": [
       "lagartijas tiradas al sol"
      ],
@@ -2596,7 +2610,7 @@
      "start_date": "2026-09-03",
      "title": "No es un poema, aunque soñemos muchas cosas",
      "title_en": null,
-     "title_gloss": "It's not a poem, although we dream many things"
+     "title_gloss": "It's not a poem though we dream many things"
     },
     {
      "access": "unknown",
@@ -2619,10 +2633,32 @@
      "title_gloss": null
     },
     {
+     "access": "unknown",
+     "artists": [
+      "Lap-See Lam"
+     ],
+     "city": "Stockholm",
+     "confidence": 1,
+     "detail_url": "https://nordenhake.com/exhibitions/2026/lap-see-lam",
+     "end_date": "2026-12-19",
+     "kind": "exhibition",
+     "opening": {
+      "date": null,
+      "end_time": null,
+      "start_time": null,
+      "text": null
+     },
+     "start_date": "2026-11-12",
+     "title": "Lap-See Lam",
+     "title_en": null,
+     "title_gloss": null
+    },
+    {
+     "access": "unknown",
      "artists": [
       "Ayan Farah"
      ],
-     "city": "Stockholm",
+     "city": "Mexico City",
      "confidence": 1,
      "detail_url": "https://nordenhake.com/exhibitions/2026/ayan-farah",
      "end_date": "2026-11-28",
@@ -2641,13 +2677,33 @@
    ]
   },
   "https://parallelcollective.se/en": {
-   "hash": "ff56cb5ca013e7b3",
-   "ok_at": "2026-10-19T07:57:53+00:00",
-   "result": []
+   "hash": "784b418e09fee384",
+   "ok_at": "2026-10-20T07:46:08+00:00",
+   "result": [
+    {
+     "access": "unknown",
+     "artists": [],
+     "city": "Stockholm",
+     "confidence": 1,
+     "detail_url": "https://parallelcollective.se/en/exhibitions/slask-3-0-frossa",
+     "end_date": "2026-12-20",
+     "kind": "exhibition",
+     "opening": {
+      "date": "2026-11-26",
+      "end_time": null,
+      "start_time": "12:00",
+      "text": null
+     },
+     "start_date": "2026-11-26",
+     "title": "SLASK 3.0: FROSSA",
+     "title_en": null,
+     "title_gloss": null
+    }
+   ]
   },
   "https://platformstockholm.com/gallery": {
    "hash": "f7c68ddea27ae680",
-   "ok_at": "2026-10-19T07:57:14+00:00",
+   "ok_at": "2026-10-20T07:45:40+00:00",
    "result": [
     {
      "artists": [
@@ -2673,12 +2729,12 @@
   },
   "https://rockmysoulstockholm.se/": {
    "hash": "2428833bb2e63c48",
-   "ok_at": "2026-10-19T07:59:54+00:00",
+   "ok_at": "2026-10-20T07:48:44+00:00",
    "result": []
   },
   "https://seart.se/SEART/Exhibition.html": {
    "hash": "23da23b312c88b37",
-   "ok_at": "2026-10-19T07:59:45+00:00",
+   "ok_at": "2026-10-20T07:48:35+00:00",
    "result": [
     {
      "artists": [
@@ -2704,7 +2760,7 @@
   },
   "https://slipvillan.org/hem/program.html": {
    "hash": "81b0d004491b8ec8",
-   "ok_at": "2026-10-19T07:56:42+00:00",
+   "ok_at": "2026-10-20T07:45:10+00:00",
    "result": [
     {
      "city": "Stockholm",
@@ -2784,7 +2840,7 @@
   },
   "https://spgallery.se/": {
    "hash": "34bee3581616b656",
-   "ok_at": "2026-10-19T07:55:46+00:00",
+   "ok_at": "2026-10-20T07:44:16+00:00",
    "result": [
     {
      "artists": [
@@ -2810,17 +2866,17 @@
   },
   "https://spgallery.se/exhibitions/": {
    "hash": "8a6f885fc45f9ac6",
-   "ok_at": "2026-10-19T07:55:50+00:00",
+   "ok_at": "2026-10-20T07:44:17+00:00",
    "result": []
   },
   "https://stancegallery.com/exhibitions/": {
    "hash": "5c7c6579662a6a62",
-   "ok_at": "2026-10-19T07:53:20+00:00",
+   "ok_at": "2026-10-20T07:41:04+00:00",
    "result": []
   },
   "https://steinslandberliner.com/shows": {
    "hash": "f9d5e3ebc01af1a4",
-   "ok_at": "2026-10-19T07:54:27+00:00",
+   "ok_at": "2026-10-20T07:42:11+00:00",
    "result": [
     {
      "artists": [
@@ -2886,7 +2942,7 @@
   },
   "https://studio44-stockholm.com/en/": {
    "hash": "da720c3af1d716ae",
-   "ok_at": "2026-10-19T07:56:25+00:00",
+   "ok_at": "2026-10-20T07:44:52+00:00",
    "result": [
     {
      "artists": [
@@ -2953,7 +3009,7 @@
   },
   "https://studio44-stockholm.com/en/39499-2/": {
    "hash": "3c7a642c52ff4c40",
-   "ok_at": "2026-10-19T07:56:29+00:00",
+   "ok_at": "2026-10-20T07:44:56+00:00",
    "result": [
     {
      "artists": [
@@ -3026,7 +3082,7 @@
   },
   "https://studioabc.se/": {
    "hash": "a64025c94bbf14ee",
-   "ok_at": "2026-10-19T07:56:46+00:00",
+   "ok_at": "2026-10-20T07:45:14+00:00",
    "result": [
     {
      "artists": [
@@ -3054,17 +3110,17 @@
   },
   "https://studioabc.se/utstallningar/": {
    "hash": "3995283be252bf1d",
-   "ok_at": "2026-10-19T07:56:50+00:00",
+   "ok_at": "2026-10-20T07:45:18+00:00",
    "result": []
   },
   "https://willas.com/exhibitions": {
    "hash": "6c5741413c2cc075",
-   "ok_at": "2026-10-19T07:59:32+00:00",
+   "ok_at": "2026-10-20T07:48:23+00:00",
    "result": []
   },
   "https://www.amells.com/utstallningar/aktuellt/": {
    "hash": "54bff3922944d4e4",
-   "ok_at": "2026-10-19T07:58:33+00:00",
+   "ok_at": "2026-10-20T07:47:34+00:00",
    "result": [
     {
      "artists": [
@@ -3097,7 +3153,7 @@
   },
   "https://www.amells.com/utstallningar/kommande/": {
    "hash": "335124249786a5f1",
-   "ok_at": "2026-10-19T07:58:36+00:00",
+   "ok_at": "2026-10-20T07:47:38+00:00",
    "result": [
     {
      "access": "public",
@@ -3144,7 +3200,7 @@
   },
   "https://www.andrehn-schiptjenko.com/exhibitions/current/": {
    "hash": "a4681a9984113f35",
-   "ok_at": "2026-10-19T07:52:48+00:00",
+   "ok_at": "2026-10-20T07:40:33+00:00",
    "result": [
     {
      "access": "public",
@@ -3192,22 +3248,22 @@
   },
   "https://www.andrehn-schiptjenko.com/exhibitions/forthcoming/": {
    "hash": "3588c888550808eb",
-   "ok_at": "2026-10-19T07:52:52+00:00",
+   "ok_at": "2026-10-20T07:40:37+00:00",
    "result": []
   },
   "https://www.annabohmangallery.com/": {
    "hash": "f4b2b7f8fc23f5c2",
-   "ok_at": "2026-10-19T07:55:23+00:00",
+   "ok_at": "2026-10-20T07:43:51+00:00",
    "result": []
   },
   "https://www.annabohmangallery.com/exhibitions": {
    "hash": "b1d7dc4b6d7d3d6e",
-   "ok_at": "2026-10-19T07:55:27+00:00",
+   "ok_at": "2026-10-20T07:43:55+00:00",
    "result": []
   },
   "https://www.berggallery.se/exhibitions/": {
    "hash": "20230f6f984c1288",
-   "ok_at": "2026-10-19T07:53:29+00:00",
+   "ok_at": "2026-10-20T07:41:14+00:00",
    "result": [
     {
      "artists": [
@@ -3253,7 +3309,7 @@
   },
   "https://www.blasknada.com/category/utstallningar/": {
    "hash": "af36bfb001193678",
-   "ok_at": "2026-10-19T07:57:36+00:00",
+   "ok_at": "2026-10-20T07:45:45+00:00",
    "result": [
     {
      "access": "public",
@@ -3335,7 +3391,7 @@
   },
   "https://www.carlingdalenson.com/exhibitions": {
    "hash": "71dc283a4d8d4448",
-   "ok_at": "2026-10-19T07:54:31+00:00",
+   "ok_at": "2026-10-20T07:42:15+00:00",
    "result": [
     {
      "artists": [
@@ -3381,7 +3437,7 @@
   },
   "https://www.cfhill.com/exhibitions": {
    "hash": "f560091fc27c0d4a",
-   "ok_at": "2026-10-19T07:55:02+00:00",
+   "ok_at": "2026-10-20T07:43:24+00:00",
    "result": [
     {
      "artists": [
@@ -3407,12 +3463,12 @@
   },
   "https://www.coulisse-gallery.com/": {
    "hash": "5b80b6dbda57408a",
-   "ok_at": "2026-10-19T07:55:19+00:00",
+   "ok_at": "2026-10-20T07:43:46+00:00",
    "result": []
   },
   "https://www.detroitstockholm.info/current-exhibition": {
    "hash": "16d4684f01937dd9",
-   "ok_at": "2026-10-19T07:56:20+00:00",
+   "ok_at": "2026-10-20T07:44:48+00:00",
    "result": [
     {
      "access": "public",
@@ -3440,12 +3496,12 @@
   },
   "https://www.ekvalltornblom.se/": {
    "hash": "67cc35f565e9b333",
-   "ok_at": "2026-10-19T07:55:58+00:00",
+   "ok_at": "2026-10-20T07:44:26+00:00",
    "result": []
   },
   "https://www.falkenbergskonstskola.se/": {
    "hash": "803e2a6867ef34a0",
-   "ok_at": "2026-10-19T07:57:57+00:00",
+   "ok_at": "2026-10-20T07:46:12+00:00",
    "result": [
     {
      "artists": [
@@ -3498,12 +3554,12 @@
   },
   "https://www.firestormfoundation.art/": {
    "hash": "d680c623ee309b9c",
-   "ok_at": "2026-10-19T07:59:50+00:00",
+   "ok_at": "2026-10-20T07:48:40+00:00",
    "result": []
   },
   "https://www.galleriduerr.com/exhibitions/current/": {
    "hash": "f639b0ab938e03e4",
-   "ok_at": "2026-10-19T07:53:11+00:00",
+   "ok_at": "2026-10-20T07:40:55+00:00",
    "result": [
     {
      "artists": [
@@ -3529,7 +3585,7 @@
   },
   "https://www.galleriflach.com/category/exhibitions/": {
    "hash": "9d4a4589130fea46",
-   "ok_at": "2026-10-19T07:53:58+00:00",
+   "ok_at": "2026-10-20T07:41:41+00:00",
    "result": [
     {
      "artists": [
@@ -3658,12 +3714,12 @@
   },
   "https://www.galleriglas.se/exhibitions/current/": {
    "hash": "11fd7e0a872a6d0e",
-   "ok_at": "2026-10-19T07:53:34+00:00",
+   "ok_at": "2026-10-20T07:41:18+00:00",
    "result": []
   },
   "https://www.galleriglas.se/exhibitions/forthcoming/": {
    "hash": "f3ead7ccc28a1d1c",
-   "ok_at": "2026-10-19T07:53:38+00:00",
+   "ok_at": "2026-10-20T07:41:22+00:00",
    "result": [
     {
      "access": "public",
@@ -3743,7 +3799,7 @@
   },
   "https://www.gallerihedenius.com/utstllningar/currentexhibition": {
    "hash": "40cfabd261cd15f8",
-   "ok_at": "2026-10-19T07:54:09+00:00",
+   "ok_at": "2026-10-20T07:41:52+00:00",
    "result": [
     {
      "access": "public",
@@ -3770,7 +3826,7 @@
   },
   "https://www.gallerihedenius.com/utstllningar/new-portfolio-item": {
    "hash": "1b2354854b728f31",
-   "ok_at": "2026-10-19T07:54:13+00:00",
+   "ok_at": "2026-10-20T07:41:56+00:00",
    "result": [
     {
      "artists": [
@@ -3836,7 +3892,7 @@
   },
   "https://www.gallerimagnuskarlsson.com/exhibitions/current/": {
    "hash": "7930625d9cc543ba",
-   "ok_at": "2026-10-19T07:52:36+00:00",
+   "ok_at": "2026-10-20T07:40:21+00:00",
    "result": [
     {
      "access": "public",
@@ -3884,7 +3940,7 @@
   },
   "https://www.gallerimagnuskarlsson.com/exhibitions/forthcoming/": {
    "hash": "bb92523685bd0dea",
-   "ok_at": "2026-10-19T07:52:40+00:00",
+   "ok_at": "2026-10-20T07:40:25+00:00",
    "result": [
     {
      "access": "public",
@@ -3932,75 +3988,32 @@
   },
   "https://www.houseofphotography.se/blogs/exhibitions": {
    "hash": "618089a271f07460",
-   "ok_at": "2026-10-19T08:00:25+00:00",
+   "ok_at": "2026-10-20T07:49:12+00:00",
    "result": []
   },
   "https://www.issues.gallery/exhibitions": {
    "hash": "0849d8f9417dddd8",
-   "ok_at": "2026-10-19T07:54:35+00:00",
+   "ok_at": "2026-10-20T07:42:19+00:00",
    "result": []
   },
   "https://www.janwallmark.se/vernissage/": {
    "hash": "c3fd13d27650e85e",
-   "ok_at": "2026-10-19T07:55:41+00:00",
+   "ok_at": "2026-10-20T07:44:08+00:00",
    "result": []
   },
   "https://www.konst.se/gallery": {
    "hash": "81d869c8855fe8ca",
-   "ok_at": "2026-10-19T07:59:37+00:00",
+   "ok_at": "2026-10-20T07:48:27+00:00",
    "result": []
   },
   "https://www.konstochfolk.se/": {
-   "hash": "e5931828dea1a57a",
-   "ok_at": "2026-10-19T07:59:15+00:00",
-   "result": [
-    {
-     "access": "unknown",
-     "artists": [
-      "Marie-Louise Ekman"
-     ],
-     "city": null,
-     "confidence": 0.5,
-     "detail_url": null,
-     "end_date": null,
-     "kind": "exhibition",
-     "opening": {
-      "date": null,
-      "end_time": null,
-      "start_time": null,
-      "text": null
-     },
-     "start_date": null,
-     "title": "MARIE-LOUISE EKMAN – MONUMENT",
-     "title_en": null,
-     "title_gloss": "Marie-Louise Ekman Monument"
-    },
-    {
-     "access": "public",
-     "artists": [
-      "Lisa Rinnevuo"
-     ],
-     "city": null,
-     "confidence": 1,
-     "detail_url": "https://www.konstochfolk.se/2026/04/29/lisa-rinnevuo-7/",
-     "end_date": null,
-     "kind": "exhibition",
-     "opening": {
-      "date": "2026-05-21",
-      "end_time": "20:00",
-      "start_time": "16:00",
-      "text": "Lisa Rinnevuo Flygirls and Fairies, målningar I små format. Vernissage på KONSTOCHFOLK 21 maj kl 16-20. Kom och träffa Lisa och ta ett glas bubbel!"
-     },
-     "start_date": null,
-     "title": "Lisa Rinnevuo",
-     "title_en": null,
-     "title_gloss": null
-    }
-   ]
+   "hash": "eef57a11dc571cbe",
+   "ok_at": "2026-10-20T07:48:06+00:00",
+   "result": []
   },
   "https://www.lundberg-sandhagen.com/": {
    "hash": "c43ddad45b196db8",
-   "ok_at": "2026-10-19T07:58:16+00:00",
+   "ok_at": "2026-10-20T07:47:17+00:00",
    "result": [
     {
      "access": "public",
@@ -4027,12 +4040,12 @@
   },
   "https://www.rf.se/riksidrottsmuseum/konsthall-16": {
    "hash": "e8ae6a913abad3bd",
-   "ok_at": "2026-10-19T07:58:24+00:00",
+   "ok_at": "2026-10-20T07:47:25+00:00",
    "result": []
   },
   "https://www.rf.se/riksidrottsmuseum/konsthall-16/utstallningar/kommande-utstallning": {
    "hash": "8115f07d29ae65e3",
-   "ok_at": "2026-10-19T07:58:20+00:00",
+   "ok_at": "2026-10-20T07:47:21+00:00",
    "result": [
     {
      "access": "unknown",
@@ -4078,17 +4091,17 @@
   },
   "https://www.richterholtermann.com/": {
    "hash": "81173e6ed75b566a",
-   "ok_at": "2026-10-19T07:58:45+00:00",
+   "ok_at": "2026-10-20T07:47:46+00:00",
    "result": []
   },
   "https://www.richterholtermann.com/gallery": {
    "hash": "73f03fa7d3da9b58",
-   "ok_at": "2026-10-19T07:58:50+00:00",
+   "ok_at": "2026-10-20T07:47:51+00:00",
    "result": []
   },
   "https://www.saskianeumangallery.com/": {
    "hash": "ed5d38b069ed3494",
-   "ok_at": "2026-10-19T07:55:09+00:00",
+   "ok_at": "2026-10-20T07:43:30+00:00",
    "result": [
     {
      "access": "unknown",
@@ -4114,15 +4127,16 @@
    ]
   },
   "https://www.southnord.com/calendar": {
-   "hash": "8fc1be7104c45d66",
-   "ok_at": "2026-10-19T07:58:07+00:00",
+   "hash": "fbcb26a93fc27abc",
+   "ok_at": "2026-10-20T07:46:36+00:00",
    "result": [
     {
+     "access": "unknown",
      "artists": [
       "Hugo Mugerwa Klockar"
      ],
-     "city": null,
-     "confidence": 1,
+     "city": "Stockholm",
+     "confidence": 0.5,
      "detail_url": "https://www.southnord.com/up-next-2026",
      "end_date": null,
      "kind": "exhibition",
@@ -4138,20 +4152,12 @@
      "title_gloss": null
     },
     {
+     "access": "unknown",
      "artists": [
-      "Adji Dieye",
-      "Akinbode Akinbiyi",
-      "Emeka Ogboh",
-      "Ibrahim Mahama",
-      "Jeannette Ehlers",
-      "Karl Ohiri",
-      "Liisa-Irmelen Liwata",
-      "Loulou Cherinet",
-      "Lungiswa Gqunta",
-      "Sandra Mujinga"
+      "11 remarkable artists"
      ],
      "city": "Helsinki",
-     "confidence": 1,
+     "confidence": 0.5,
      "detail_url": "https://www.southnord.com/artfest-2026-other-side",
      "end_date": null,
      "kind": "exhibition",
@@ -4164,29 +4170,10 @@
      "start_date": null,
      "title": "The Other Side of the Mountain",
      "title_en": null,
-     "title_gloss": "An exhibition about black perspectives on distances and proximities"
-    },
-    {
-     "artists": [
-      "Akinbode Akinbiyi"
-     ],
-     "city": "Helsinki",
-     "confidence": 1,
-     "detail_url": "https://www.southnord.com/artfest-2026-akinbode-akinbiyi-lecture",
-     "end_date": null,
-     "kind": "event",
-     "opening": {
-      "date": null,
-      "end_time": null,
-      "start_time": null,
-      "text": null
-     },
-     "start_date": null,
-     "title": "Akinbode Akinbiyi lecture",
-     "title_en": null,
      "title_gloss": null
     },
     {
+     "access": "public",
      "artists": [
       "four artists"
      ],
@@ -4199,284 +4186,20 @@
       "date": "2026-10-17",
       "end_time": "20:30",
       "start_time": "18:30",
-      "text": "Opening Night"
+      "text": "Opening Night: 17 October 2026"
      },
      "start_date": null,
      "title": "Roots En Route",
      "title_en": null,
-     "title_gloss": "A multi-sensory installation about rootedness and displacement"
-    },
-    {
-     "artists": [],
-     "city": "Helsinki",
-     "confidence": 1,
-     "detail_url": "https://www.southnord.com/artfest-2026-creative-workshop",
-     "end_date": null,
-     "kind": "event",
-     "opening": {
-      "date": null,
-      "end_time": null,
-      "start_time": null,
-      "text": null
-     },
-     "start_date": null,
-     "title": "The Whole of Me - Creative Workshop for kids",
-     "title_en": null,
      "title_gloss": null
     },
     {
-     "artists": [],
-     "city": null,
-     "confidence": 1,
-     "detail_url": "https://www.southnord.com/artfest-2026/art-cruise",
-     "end_date": null,
-     "kind": "event",
-     "opening": {
-      "date": null,
-      "end_time": null,
-      "start_time": null,
-      "text": null
-     },
-     "start_date": null,
-     "title": "Art Cruise Afterwork",
-     "title_en": null,
-     "title_gloss": null
-    },
-    {
-     "artists": [],
-     "city": "Helsinki",
-     "confidence": 1,
-     "detail_url": "https://www.southnord.com/artfest-2026-rosa-clay-day",
-     "end_date": null,
-     "kind": "event",
-     "opening": {
-      "date": null,
-      "end_time": null,
-      "start_time": null,
-      "text": null
-     },
-     "start_date": null,
-     "title": "Rosa Emilia Clay Day",
-     "title_en": null,
-     "title_gloss": null
-    },
-    {
-     "artists": [],
-     "city": "Helsinki",
-     "confidence": 1,
-     "detail_url": "https://www.southnord.com/artfest-2026-center-of-unfinished-business",
-     "end_date": null,
-     "kind": "other",
-     "opening": {
-      "date": null,
-      "end_time": null,
-      "start_time": null,
-      "text": null
-     },
-     "start_date": null,
-     "title": "The C& Center of Unfinished Business",
-     "title_en": null,
-     "title_gloss": null
-    },
-    {
-     "artists": [],
-     "city": "Helsinki",
-     "confidence": 1,
-     "detail_url": "https://www.southnord.com/booklaunch",
-     "end_date": null,
-     "kind": "event",
-     "opening": {
-      "date": null,
-      "end_time": null,
-      "start_time": null,
-      "text": null
-     },
-     "start_date": null,
-     "title": "booklaunch",
-     "title_en": null,
-     "title_gloss": null
-    },
-    {
-     "artists": [
-      "Isabella Shaw"
-     ],
-     "city": "Helsinki",
-     "confidence": 1,
-     "detail_url": "https://www.southnord.com/artfest-2026-deep-listening",
-     "end_date": null,
-     "kind": "event",
-     "opening": {
-      "date": null,
-      "end_time": null,
-      "start_time": null,
-      "text": null
-     },
-     "start_date": null,
-     "title": "deep listening session",
-     "title_en": null,
-     "title_gloss": null
-    },
-    {
-     "artists": [],
-     "city": "Helsinki",
-     "confidence": 1,
-     "detail_url": "https://www.southnord.com/artfest-2026-race-and-racism",
-     "end_date": null,
-     "kind": "event",
-     "opening": {
-      "date": null,
-      "end_time": null,
-      "start_time": null,
-      "text": null
-     },
-     "start_date": null,
-     "title": "Panel discussion on race and racism",
-     "title_en": null,
-     "title_gloss": null
-    },
-    {
-     "artists": [
-      "Sonya Lindfors",
-      "Maryan Abdulkarim"
-     ],
-     "city": "Helsinki",
-     "confidence": 1,
-     "detail_url": "https://www.southnord.com/artfest-2026-dreaming",
-     "end_date": null,
-     "kind": "exhibition",
-     "opening": {
-      "date": null,
-      "end_time": null,
-      "start_time": null,
-      "text": null
-     },
-     "start_date": null,
-     "title": "We Should All Be Dreaming",
-     "title_en": null,
-     "title_gloss": "An art and activism project about the radical potential of dreams"
-    },
-    {
-     "artists": [],
-     "city": null,
-     "confidence": 1,
-     "detail_url": null,
-     "end_date": null,
-     "kind": "other",
-     "opening": {
-      "date": null,
-      "end_time": null,
-      "start_time": null,
-      "text": null
-     },
-     "start_date": null,
-     "title": "embodied politics",
-     "title_en": null,
-     "title_gloss": null
-    },
-    {
-     "artists": [],
-     "city": "Helsinki",
-     "confidence": 1,
-     "detail_url": "https://www.southnord.com/artfest-2026-afro-nordic-literary-festival",
-     "end_date": null,
-     "kind": "event",
-     "opening": {
-      "date": null,
-      "end_time": null,
-      "start_time": null,
-      "text": null
-     },
-     "start_date": null,
-     "title": "Afro-Nordic Literary Festival",
-     "title_en": null,
-     "title_gloss": null
-    },
-    {
-     "artists": [
-      "Emeka Ogboh"
-     ],
-     "city": null,
-     "confidence": 1,
-     "detail_url": "https://www.southnord.com/artfest-2026-black-history",
-     "end_date": null,
-     "kind": "event",
-     "opening": {
-      "date": null,
-      "end_time": null,
-      "start_time": null,
-      "text": null
-     },
-     "start_date": null,
-     "title": "Migratory Notes",
-     "title_en": null,
-     "title_gloss": "A participatory artwork and dinner event about migration and diversity"
-    },
-    {
-     "artists": [
-      "Black archivists, scholars and community organisers"
-     ],
-     "city": null,
-     "confidence": 1,
-     "detail_url": "https://www.southnord.com/artfest-2026-black-history",
-     "end_date": null,
-     "kind": "event",
-     "opening": {
-      "date": null,
-      "end_time": null,
-      "start_time": null,
-      "text": null
-     },
-     "start_date": null,
-     "title": "Panel discussion on Black Nordic history",
-     "title_en": null,
-     "title_gloss": null
-    },
-    {
-     "artists": [
-      "Amina Seid Tahir"
-     ],
-     "city": null,
-     "confidence": 1,
-     "detail_url": null,
-     "end_date": null,
-     "kind": "event",
-     "opening": {
-      "date": null,
-      "end_time": null,
-      "start_time": null,
-      "text": null
-     },
-     "start_date": null,
-     "title": "Maran",
-     "title_en": null,
-     "title_gloss": "A performance about the Nordic mythological figure of the Mare and the instrument krar"
-    },
-    {
-     "artists": [
-      "Amandine Gay"
-     ],
-     "city": "Helsinki",
-     "confidence": 1,
-     "detail_url": "https://www.southnord.com/artfest-2026-screening-ballroom",
-     "end_date": null,
-     "kind": "event",
-     "opening": {
-      "date": null,
-      "end_time": null,
-      "start_time": null,
-      "text": null
-     },
-     "start_date": null,
-     "title": "screening of Ballroom – Danser pour exister",
-     "title_en": null,
-     "title_gloss": null
-    },
-    {
+     "access": "unknown",
      "artists": [
       "Tatenda Chidora"
      ],
      "city": null,
-     "confidence": 1,
+     "confidence": 0.5,
      "detail_url": "https://www.southnord.com/artfest-2026-tatenda-c-if-covid-was-a-colour",
      "end_date": null,
      "kind": "exhibition",
@@ -4489,122 +4212,16 @@
      "start_date": null,
      "title": "If Covid was a Colour",
      "title_en": null,
-     "title_gloss": "A solo exhibition reimagining the pandemic as a canvas for renewal"
-    },
-    {
-     "artists": [
-      "Suinner",
-      "Trabelsi",
-      "Kofu"
-     ],
-     "city": "Helsinki",
-     "confidence": 1,
-     "detail_url": "https://www.southnord.com/artfest-2026-hit-different-en-route",
-     "end_date": null,
-     "kind": "event",
-     "opening": {
-      "date": null,
-      "end_time": null,
-      "start_time": null,
-      "text": null
-     },
-     "start_date": null,
-     "title": "Hit Different",
-     "title_en": null,
-     "title_gloss": "A listening session treating sound as something made together"
-    },
-    {
-     "artists": [
-      "Angel Mugisha"
-     ],
-     "city": "Helsinki",
-     "confidence": 1,
-     "detail_url": "https://www.southnord.com/artfest-2026-angel-money-cowry",
-     "end_date": null,
-     "kind": "exhibition",
-     "opening": {
-      "date": null,
-      "end_time": null,
-      "start_time": null,
-      "text": null
-     },
-     "start_date": "2027-01-01",
-     "title": "Money Cowry",
-     "title_en": null,
-     "title_gloss": "A social play about value and colonialism"
+     "title_gloss": null
     }
    ]
   },
   "https://www.waygallerysthlm.com/exhibitions": {
-   "hash": "9b8a038a0460a047",
-   "ok_at": "2026-10-19T07:58:11+00:00",
+   "hash": "e95af0f2c08ee7d2",
+   "ok_at": "2026-10-20T07:47:13+00:00",
    "result": [
     {
-     "artists": [
-      "Manon Steyaert"
-     ],
-     "city": "Stockholm",
-     "confidence": 1,
-     "detail_url": "https://www.waygallerysthlm.com/manon-steyaert-long-distance-romance-with-memories",
-     "end_date": "2026-11-08",
-     "kind": "exhibition",
-     "opening": {
-      "date": "2026-10-01",
-      "end_time": null,
-      "start_time": null,
-      "text": null
-     },
-     "start_date": "2026-10-01",
-     "title": "Long Distance Romance with Memories",
-     "title_en": null,
-     "title_gloss": null
-    },
-    {
-     "artists": [
-      "Estelle Graf",
-      "Wilda Wennelin",
-      "Amanda Malm"
-     ],
-     "city": "Skanör",
-     "confidence": 1,
-     "detail_url": "https://www.waygallerysthlm.com/skanor-galleri-valvet",
-     "end_date": "2026-08-09",
-     "kind": "exhibition",
-     "opening": {
-      "date": null,
-      "end_time": null,
-      "start_time": null,
-      "text": null
-     },
-     "start_date": "2026-07-25",
-     "title": "Valvet",
-     "title_en": null,
-     "title_gloss": "The Vault"
-    },
-    {
-     "artists": [
-      "Ellen Hedin",
-      "Emma Stocklassa",
-      "Erika Kristofersson Bredberg",
-      "Myrsini Alexandridi"
-     ],
-     "city": "Stockholm",
-     "confidence": 1,
-     "detail_url": "https://www.waygallerysthlm.com/liljeholmen-marievik-kakelhuset",
-     "end_date": "2026-09-09",
-     "kind": "exhibition",
-     "opening": {
-      "date": null,
-      "end_time": null,
-      "start_time": null,
-      "text": null
-     },
-     "start_date": "2026-06-09",
-     "title": "KAKELHUSET",
-     "title_en": null,
-     "title_gloss": "The Tile House"
-    },
-    {
+     "access": "public",
      "artists": [
       "Manon Steyaert"
      ],
@@ -4619,17 +4236,65 @@
       "start_time": null,
       "text": "WAY gallery presents Long Distance Romance with Memories, a new body of work by Manon Steyaert, marking her second solo exhibition at the gallery."
      },
-     "start_date": "2026-09-30",
+     "start_date": "2026-10-01",
      "title": "Long Distance Romance with Memories",
      "title_en": null,
      "title_gloss": null
     },
     {
+     "access": "public",
+     "artists": [
+      "Estelle Graf",
+      "Wilda Wennelin",
+      "Amanda Malm"
+     ],
+     "city": "Skanör",
+     "confidence": 0,
+     "detail_url": "https://www.waygallerysthlm.com/skanor-galleri-valvet",
+     "end_date": "2026-08-09",
+     "kind": "exhibition",
+     "opening": {
+      "date": null,
+      "end_time": null,
+      "start_time": null,
+      "text": null
+     },
+     "start_date": "2026-07-25",
+     "title": "Valvet",
+     "title_en": null,
+     "title_gloss": null
+    },
+    {
+     "access": "public",
+     "artists": [
+      "Ellen Hedin",
+      "Emma Stocklassa",
+      "Erika Kristofersson Bredberg",
+      "Myrsini Alexandridi"
+     ],
+     "city": "Stockholm",
+     "confidence": 0,
+     "detail_url": "https://www.waygallerysthlm.com/liljeholmen-marievik-kakelhuset",
+     "end_date": "2026-09-09",
+     "kind": "exhibition",
+     "opening": {
+      "date": null,
+      "end_time": null,
+      "start_time": null,
+      "text": null
+     },
+     "start_date": "2026-06-09",
+     "title": "KAKELHUSET",
+     "title_en": null,
+     "title_gloss": null
+    },
+    {
+     "access": "public",
      "artists": [
       "Rebecca von Matérn"
      ],
      "city": null,
-     "confidence": 1,
+     "confidence": 0,
      "detail_url": "https://www.waygallerysthlm.com/rebecca-von-matern-in-and-between-exhibition",
      "end_date": "2026-09-19",
      "kind": "exhibition",
@@ -4642,52 +4307,10 @@
      "start_date": "2026-09-09",
      "title": "IN-AND-BETWEEN",
      "title_en": null,
-     "title_gloss": "In and Between"
-    },
-    {
-     "artists": [
-      "Rebecca von Matérn"
-     ],
-     "city": null,
-     "confidence": 1,
-     "detail_url": "https://www.waygallerysthlm.com/rebecca-von-matern-in-and-between-exhibition",
-     "end_date": null,
-     "kind": "exhibition",
-     "opening": {
-      "date": null,
-      "end_time": null,
-      "start_time": null,
-      "text": null
-     },
-     "start_date": null,
-     "title": "In In-and-Between, the artist explores a liminal state—the threshold between movement and stillness, between control and surrender, between what has been and what has yet to take shape.",
-     "title_en": null,
      "title_gloss": null
     },
     {
-     "artists": [
-      "Ellen Hedin",
-      "Emma Stocklassa",
-      "Erika Kristofersson Bredberg",
-      "Myrsini Alexandridi"
-     ],
-     "city": "Stockholm",
-     "confidence": 1,
-     "detail_url": null,
-     "end_date": null,
-     "kind": "exhibition",
-     "opening": {
-      "date": null,
-      "end_time": null,
-      "start_time": null,
-      "text": null
-     },
-     "start_date": null,
-     "title": "Ongoing exhibition - Guest space Marievik Stockholm",
-     "title_en": null,
-     "title_gloss": null
-    },
-    {
+     "access": "unknown",
      "artists": [
       "Tove Eklund",
       "Johan Bjurmar",
@@ -4696,8 +4319,8 @@
       "Elsa Ekman",
       "Rebecca von Matérn"
      ],
-     "city": "Trosa",
-     "confidence": 1,
+     "city": "Västerljung",
+     "confidence": 0,
      "detail_url": "https://www.waygallerysthlm.com/landet-stay",
      "end_date": "2026-09-15",
      "kind": "exhibition",
@@ -4713,38 +4336,14 @@
      "title_gloss": null
     },
     {
-     "artists": [
-      "Tove Eklund",
-      "Johan Bjurmar",
-      "Anna Mörner",
-      "Thyra Weiss",
-      "Elsa Ekman",
-      "Rebecca von Matérn"
-     ],
-     "city": "Trosa",
-     "confidence": 1,
-     "detail_url": "https://www.waygallerysthlm.com/landet-stay",
-     "end_date": null,
-     "kind": "exhibition",
-     "opening": {
-      "date": null,
-      "end_time": null,
-      "start_time": null,
-      "text": null
-     },
-     "start_date": null,
-     "title": "Ongoing exhibition & art residence Landet Stay",
-     "title_en": null,
-     "title_gloss": null
-    },
-    {
+     "access": "public",
      "artists": [
       "Storm Philippa Clarén",
       "Melina Badejo",
       "Madelen Möllard"
      ],
      "city": "Copenhagen",
-     "confidence": 1,
+     "confidence": 0,
      "detail_url": "https://www.waygallerysthlm.com/enter-art-fair",
      "end_date": "2026-08-30",
      "kind": "fair",
@@ -4763,7 +4362,7 @@
   },
   "https://www.wetterlinggallery.com/exhibitions/current/": {
    "hash": "daf1a07a142177d1",
-   "ok_at": "2026-10-19T07:53:07+00:00",
+   "ok_at": "2026-10-20T07:40:51+00:00",
    "result": [
     {
      "access": "public",

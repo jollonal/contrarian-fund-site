@@ -2,7 +2,7 @@ BEGIN:VCALENDAR
 VERSION:2.0
 PRODID:-//contrarian.fund//vernissage//EN
 CALSCALE:GREGORIAN
-X-WR-CALNAME:Ayan Farah
+X-WR-CALNAME:Lap-See Lam
 BEGIN:VTIMEZONE
 TZID:Europe/Stockholm
 BEGIN:DAYLIGHT
@@ -21,13 +21,13 @@ RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU
 END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
-UID:a3e63ac6887a@contrarian.fund
-DTSTAMP:20261019T080025Z
-DTSTART;VALUE=DATE:20261106
-DTEND;VALUE=DATE:20261107
-SUMMARY:Opens: Ayan Farah at Galerie Nordenhake
+UID:6b660a2ccf03@contrarian.fund
+DTSTAMP:20261020T074912Z
+DTSTART;VALUE=DATE:20261112
+DTEND;VALUE=DATE:20261113
+SUMMARY:Opens: Lap-See Lam at Galerie Nordenhake
 LOCATION:Lützengatan 1\, 115 20 Stockholm
-DESCRIPTION:Ayan Farah\nOn view until 2026-11-28.
-URL:https://nordenhake.com/exhibitions/2026/ayan-farah
+DESCRIPTION:Lap-See Lam\nOn view until 2026-12-19.
+URL:https://nordenhake.com/exhibitions/2026/lap-see-lam
 END:VEVENT
 END:VCALENDAR

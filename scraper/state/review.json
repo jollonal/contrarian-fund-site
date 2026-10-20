@@ -132,5 +132,30 @@
    "title_en": null,
    "title_gloss": "Group exhibition 2 places left"
   }
+ },
+ {
+  "venue": "galleri-grip",
+  "problems": [
+   "low confidence"
+  ],
+  "item": {
+   "access": "unknown",
+   "artists": [],
+   "city": null,
+   "confidence": 0.5,
+   "detail_url": null,
+   "end_date": null,
+   "kind": "exhibition",
+   "opening": {
+    "date": null,
+    "end_time": null,
+    "start_time": null,
+    "text": null
+   },
+   "start_date": "2026-12-19",
+   "title": "Julsalong",
+   "title_en": null,
+   "title_gloss": "Christmas salon"
+  }
  }
 ]

@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-10-19T08:00:25+00:00",
+ "generated_at": "2026-10-20T07:49:12+00:00",
  "window_days": 60,
  "venues_tracked": 65,
  "events": [
@@ -412,33 +412,6 @@
    "source": "web"
   },
   {
-   "id": "a3e63ac6887a",
-   "venue_id": "nordenhake",
-   "venue": "Galerie Nordenhake",
-   "address": "Lützengatan 1, 115 20 Stockholm",
-   "map_url": "https://www.google.com/maps/search/?api=1&query=Galerie%20Nordenhake%2C%20L%C3%BCtzengatan%201%2C%20115%2020%20Stockholm",
-   "district": "Östermalm",
-   "title": "Ayan Farah",
-   "title_en": null,
-   "gloss": null,
-   "gloss_source": null,
-   "artists": [
-    "Ayan Farah"
-   ],
-   "start_date": "2026-11-06",
-   "end_date": "2026-11-28",
-   "date": "2026-11-06",
-   "opening": {
-    "confirmed": false,
-    "start_time": null,
-    "end_time": null,
-    "text": null
-   },
-   "access": "unknown",
-   "url": "https://nordenhake.com/exhibitions/2026/ayan-farah",
-   "source": "web"
-  },
-  {
    "id": "35911122f480",
    "venue_id": "hera",
    "venue": "Galleri Hera",
@@ -626,6 +599,33 @@
    "source": "web"
   },
   {
+   "id": "6b660a2ccf03",
+   "venue_id": "nordenhake",
+   "venue": "Galerie Nordenhake",
+   "address": "Lützengatan 1, 115 20 Stockholm",
+   "map_url": "https://www.google.com/maps/search/?api=1&query=Galerie%20Nordenhake%2C%20L%C3%BCtzengatan%201%2C%20115%2020%20Stockholm",
+   "district": "Östermalm",
+   "title": "Lap-See Lam",
+   "title_en": null,
+   "gloss": null,
+   "gloss_source": null,
+   "artists": [
+    "Lap-See Lam"
+   ],
+   "start_date": "2026-11-12",
+   "end_date": "2026-12-19",
+   "date": "2026-11-12",
+   "opening": {
+    "confirmed": false,
+    "start_time": null,
+    "end_time": null,
+    "text": null
+   },
+   "access": "unknown",
+   "url": "https://nordenhake.com/exhibitions/2026/lap-see-lam",
+   "source": "web"
+  },
+  {
    "id": "b72a8fd0e324",
    "venue_id": "galleri-hantverket",
    "venue": "Galleri Hantverket",
@@ -787,6 +787,31 @@
    },
    "access": "unknown",
    "url": "https://www.gallerihedenius.com/",
+   "source": "web"
+  },
+  {
+   "id": "72d0e7fa4796",
+   "venue_id": "parallel-collective",
+   "venue": "Parallel Collective",
+   "address": "Svartensgatan 10, 116 20 Stockholm",
+   "map_url": "https://www.google.com/maps/search/?api=1&query=Parallel%20Collective%2C%20Svartensgatan%2010%2C%20116%2020%20Stockholm",
+   "district": "Södermalm",
+   "title": "SLASK 3.0: FROSSA",
+   "title_en": null,
+   "gloss": null,
+   "gloss_source": null,
+   "artists": [],
+   "start_date": "2026-11-26",
+   "end_date": "2026-12-20",
+   "date": "2026-11-26",
+   "opening": {
+    "confirmed": true,
+    "start_time": "12:00",
+    "end_time": null,
+    "text": null
+   },
+   "access": "unknown",
+   "url": "https://parallelcollective.se/en/exhibitions/slask-3-0-frossa",
    "source": "web"
   },
   {
@@ -1054,6 +1079,31 @@
    },
    "access": "public",
    "url": "https://www.amells.com/",
+   "source": "web"
+  },
+  {
+   "id": "eba91a0c0b14",
+   "venue_id": "grafiska-sallskapet",
+   "venue": "Grafiska Sällskapet",
+   "address": "Hornsgatan 6, 118 20 Stockholm",
+   "map_url": "https://www.google.com/maps/search/?api=1&query=Grafiska%20S%C3%A4llskapet%2C%20Hornsgatan%206%2C%20118%2020%20Stockholm",
+   "district": "Södermalm",
+   "title": "Jul , jul, strålande jul…",
+   "title_en": null,
+   "gloss": "Christmas, Christmas, Brilliant Christmas....",
+   "gloss_source": "machine",
+   "artists": [],
+   "start_date": "2026-12-19",
+   "end_date": "2027-01-12",
+   "date": "2026-12-19",
+   "opening": {
+    "confirmed": false,
+    "start_time": null,
+    "end_time": null,
+    "text": null
+   },
+   "access": "unknown",
+   "url": "https://grafiskasallskapet.se/",
    "source": "web"
   }
  ]
