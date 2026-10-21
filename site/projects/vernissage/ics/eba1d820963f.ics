@@ -22,14 +22,14 @@ END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
 UID:eba1d820963f@contrarian.fund
-DTSTAMP:20261020T074912Z
+DTSTAMP:20261021T075145Z
 DTSTART;TZID=Europe/Stockholm:20261021T170000
 DTEND;TZID=Europe/Stockholm:20261021T190000
-SUMMARY:Vernissage: Tusen sjöars glöd [A Thousand Lakes Glow] at Galleri 
- Glas
+SUMMARY:Vernissage: Tusen sjöars glöd [Glow of a Thousand Lakes] at Galle
+ ri Glas
 LOCATION:Nybrogatan 34\, 114 39 Stockholm
 DESCRIPTION:KARSIKAS\, KOSKINEN\, Karsikas\, Koskinen\, SCHIRM\, SUPPANEN\,
-  Schirm\, Suppanen\nOn view until 2026-11-13.
+  Schirm\, Suppanen\nOn view until 2026-11-20.
 URL:https://www.galleriglas.se/exhibitions/82-tusen-sjoars-glod-karsikas-ko
  skinen-schirm-suppanen/overview/
 END:VEVENT

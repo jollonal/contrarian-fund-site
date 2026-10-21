@@ -22,13 +22,12 @@ END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
 UID:19cc3648bde5@contrarian.fund
-DTSTAMP:20261020T074912Z
+DTSTAMP:20261021T075145Z
 DTSTART;VALUE=DATE:20261118
 DTEND;VALUE=DATE:20261119
 SUMMARY:Opens: Uppåt väggarna [Up the Walls] at Galleri Glas
 LOCATION:Nybrogatan 34\, 114 39 Stockholm
-DESCRIPTION:Ulla Forsell\nOn view until 2026-12-17.
-URL:https://www.galleriglas.se/exhibitions/83-ulla-forsell-uppat-vaggarna/o
- verview/
+DESCRIPTION:Ulla Forsell\nOn view until 2026-12-16.
+URL:https://www.galleriglas.se/
 END:VEVENT
 END:VCALENDAR
