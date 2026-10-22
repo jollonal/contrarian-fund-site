@@ -1,42 +1,8 @@
 {
- "generated_at": "2026-10-21T07:51:45+00:00",
+ "generated_at": "2026-10-22T08:02:22+00:00",
  "window_days": 60,
  "venues_tracked": 65,
  "events": [
-  {
-   "id": "eba1d820963f",
-   "venue_id": "galleri-glas",
-   "venue": "Galleri Glas",
-   "address": "Nybrogatan 34, 114 39 Stockholm",
-   "map_url": "https://www.google.com/maps/search/?api=1&query=Galleri%20Glas%2C%20Nybrogatan%2034%2C%20114%2039%20Stockholm",
-   "district": "Östermalm",
-   "title": "Tusen sjöars glöd",
-   "title_en": null,
-   "gloss": "Glow of a Thousand Lakes",
-   "gloss_source": "machine",
-   "artists": [
-    "KARSIKAS",
-    "KOSKINEN",
-    "Karsikas",
-    "Koskinen",
-    "SCHIRM",
-    "SUPPANEN",
-    "Schirm",
-    "Suppanen"
-   ],
-   "start_date": "2026-10-21",
-   "end_date": "2026-11-20",
-   "date": "2026-10-21",
-   "opening": {
-    "confirmed": true,
-    "start_time": "17:00",
-    "end_time": "19:00",
-    "text": "VERNISSAGE 21 OKTOBER KL. 17.00–19.00"
-   },
-   "access": "public",
-   "url": "https://www.galleriglas.se/exhibitions/82-tusen-sjoars-glod-karsikas-koskinen-schirm-suppanen/overview/",
-   "source": "web+newsletter"
-  },
   {
    "id": "98db6ee37f89",
    "venue_id": "hedenius",
