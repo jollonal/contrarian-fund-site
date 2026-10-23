@@ -4,7 +4,6 @@ Correct a machine gloss in `scraper/overrides.yaml`.
 
 | Date | Gallery | Title | English | Source |
 |---|---|---|---|---|
-| 2026-10-22 | Galleri Hedenius | VALV | Vault | override |
 | 2026-10-24 | 125kvadrat | Fartyg, fåglar och fyrar | Ships, Birds and Lighthouses | override |
 | 2026-10-24 | Galleri Hantverket | Vingar av Tystnad - Keramikkonst | Wings of Silence - Ceramic Art | machine |
 | 2026-10-31 | Slipvillan | Tillit | Trust | machine |

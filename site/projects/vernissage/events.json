@@ -1,36 +1,8 @@
 {
- "generated_at": "2026-10-22T08:02:22+00:00",
+ "generated_at": "2026-10-23T08:00:25+00:00",
  "window_days": 60,
  "venues_tracked": 65,
  "events": [
-  {
-   "id": "98db6ee37f89",
-   "venue_id": "hedenius",
-   "venue": "Galleri Hedenius",
-   "address": "Sturegatan 36, 114 36 Stockholm",
-   "map_url": "https://www.google.com/maps/search/?api=1&query=Galleri%20Hedenius%2C%20Sturegatan%2036%2C%20114%2036%20Stockholm",
-   "district": "Östermalm",
-   "title": "VALV",
-   "title_en": null,
-   "gloss": "Vault",
-   "gloss_source": "override",
-   "artists": [
-    "JURI MARKKULA",
-    "Juri Markkula"
-   ],
-   "start_date": "2026-10-22",
-   "end_date": "2026-11-21",
-   "date": "2026-10-22",
-   "opening": {
-    "confirmed": true,
-    "start_time": "17:00",
-    "end_time": "19:00",
-    "text": "Vernissage torsdagen 22 oktober kl. 17-19"
-   },
-   "access": "public",
-   "url": "https://www.gallerihedenius.com/",
-   "source": "web"
-  },
   {
    "id": "4ece0dbf995e",
    "venue_id": "blas-och-knada",
@@ -220,17 +192,19 @@
    "source": "web"
   },
   {
-   "id": "17216f453138",
+   "id": "b9a916d57547",
    "venue_id": "antics",
    "venue": "Antics",
    "address": "Hudiksvallsgatan 8, 113 30 Stockholm",
    "map_url": "https://www.google.com/maps/search/?api=1&query=Antics%2C%20Hudiksvallsgatan%208%2C%20113%2030%20Stockholm",
    "district": "Vasastan",
-   "title": "David Permén",
+   "title": "Blown Away",
    "title_en": null,
    "gloss": null,
    "gloss_source": null,
-   "artists": [],
+   "artists": [
+    "David Permén"
+   ],
    "start_date": null,
    "end_date": null,
    "date": "2026-11-05",
@@ -241,7 +215,7 @@
     "text": "Opening: November 5"
    },
    "access": "unknown",
-   "url": "https://antics.se/david-permen",
+   "url": "https://antics.se/blown-away-david-permén",
    "source": "web"
   },
   {
@@ -592,33 +566,6 @@
    },
    "access": "public",
    "url": "https://www.amells.com/",
-   "source": "web"
-  },
-  {
-   "id": "6b660a2ccf03",
-   "venue_id": "nordenhake",
-   "venue": "Galerie Nordenhake",
-   "address": "Lützengatan 1, 115 20 Stockholm",
-   "map_url": "https://www.google.com/maps/search/?api=1&query=Galerie%20Nordenhake%2C%20L%C3%BCtzengatan%201%2C%20115%2020%20Stockholm",
-   "district": "Östermalm",
-   "title": "Lap-See Lam",
-   "title_en": null,
-   "gloss": null,
-   "gloss_source": null,
-   "artists": [
-    "Lap-See Lam"
-   ],
-   "start_date": "2026-11-12",
-   "end_date": "2026-12-19",
-   "date": "2026-11-12",
-   "opening": {
-    "confirmed": false,
-    "start_time": null,
-    "end_time": null,
-    "text": null
-   },
-   "access": "unknown",
-   "url": "https://nordenhake.com/exhibitions/2026/lap-see-lam",
    "source": "web"
   },
   {
