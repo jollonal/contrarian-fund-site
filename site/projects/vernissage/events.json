@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-10-23T08:00:25+00:00",
+ "generated_at": "2026-10-24T07:31:01+00:00",
  "window_days": 60,
  "venues_tracked": 65,
  "events": [
@@ -53,6 +53,35 @@
    },
    "access": "unknown",
    "url": "https://125kvadrat.com/galleri/ann-christin-reybekiel/",
+   "source": "web"
+  },
+  {
+   "id": "059320005c71",
+   "venue_id": "galleri-grip",
+   "venue": "Galleri Grip",
+   "address": "Celsiusgatan 2, 112 30 Stockholm",
+   "map_url": "https://www.google.com/maps/search/?api=1&query=Galleri%20Grip%2C%20Celsiusgatan%202%2C%20112%2030%20Stockholm",
+   "district": "Kungsholmen",
+   "title": "Kirsti Larsson, Per Sundberg & Cecelia Britten-Austin",
+   "title_en": null,
+   "gloss": null,
+   "gloss_source": null,
+   "artists": [
+    "Kirsti Larsson",
+    "Per Sundberg",
+    "Cecelia Britten-Austin"
+   ],
+   "start_date": "2026-10-24",
+   "end_date": null,
+   "date": "2026-10-24",
+   "opening": {
+    "confirmed": false,
+    "start_time": null,
+    "end_time": null,
+    "text": null
+   },
+   "access": "unknown",
+   "url": "https://gallerigrip.se/",
    "source": "web"
   },
   {
@@ -137,6 +166,34 @@
    "source": "web"
   },
   {
+   "id": "561dbf7d86c2",
+   "venue_id": "galleri-grip",
+   "venue": "Galleri Grip",
+   "address": "Celsiusgatan 2, 112 30 Stockholm",
+   "map_url": "https://www.google.com/maps/search/?api=1&query=Galleri%20Grip%2C%20Celsiusgatan%202%2C%20112%2030%20Stockholm",
+   "district": "Kungsholmen",
+   "title": "Pia Wijnbladh och Gunilla Zaar Akne",
+   "title_en": null,
+   "gloss": null,
+   "gloss_source": null,
+   "artists": [
+    "Pia Wijnbladh",
+    "Gunilla Zaar Akne"
+   ],
+   "start_date": "2026-10-31",
+   "end_date": null,
+   "date": "2026-10-31",
+   "opening": {
+    "confirmed": false,
+    "start_time": null,
+    "end_time": null,
+    "text": null
+   },
+   "access": "unknown",
+   "url": "https://gallerigrip.se/",
+   "source": "web"
+  },
+  {
    "id": "2f0f2a2d6d0c",
    "venue_id": "slipvillan",
    "venue": "Slipvillan",
@@ -189,6 +246,36 @@
    },
    "access": "public",
    "url": "https://abantegallery.se/",
+   "source": "web"
+  },
+  {
+   "id": "e4afffba65b0",
+   "venue_id": "detroit-stockholm",
+   "venue": "Detroit Stockholm",
+   "address": "Roslagsgatan 21, 113 55 Stockholm",
+   "map_url": "https://www.google.com/maps/search/?api=1&query=Detroit%20Stockholm%2C%20Roslagsgatan%2021%2C%20113%2055%20Stockholm",
+   "district": "Vasastan",
+   "title": "Re-membering",
+   "title_en": null,
+   "gloss": null,
+   "gloss_source": null,
+   "artists": [
+    "Nanna Li",
+    "Jesper Bror Palmqvist",
+    "Åsa Polfjärd",
+    "Ting Wang"
+   ],
+   "start_date": "2026-11-05",
+   "end_date": "2026-11-21",
+   "date": "2026-11-05",
+   "opening": {
+    "confirmed": true,
+    "start_time": "17:00",
+    "end_time": "20:00",
+    "text": "Vernissage : 5th Nov 17:00-20:00"
+   },
+   "access": "public",
+   "url": "https://detroitstockholm.info/",
    "source": "web"
   },
   {
@@ -463,6 +550,60 @@
    "source": "web"
   },
   {
+   "id": "919faa7c6ef4",
+   "venue_id": "galleri-grip",
+   "venue": "Galleri Grip",
+   "address": "Celsiusgatan 2, 112 30 Stockholm",
+   "map_url": "https://www.google.com/maps/search/?api=1&query=Galleri%20Grip%2C%20Celsiusgatan%202%2C%20112%2030%20Stockholm",
+   "district": "Kungsholmen",
+   "title": "Seth Shuwert",
+   "title_en": null,
+   "gloss": null,
+   "gloss_source": null,
+   "artists": [
+    "Seth Shuwert"
+   ],
+   "start_date": "2026-11-07",
+   "end_date": null,
+   "date": "2026-11-07",
+   "opening": {
+    "confirmed": false,
+    "start_time": null,
+    "end_time": null,
+    "text": null
+   },
+   "access": "unknown",
+   "url": "https://gallerigrip.se/",
+   "source": "web"
+  },
+  {
+   "id": "e88e66d8af8e",
+   "venue_id": "steinsland-berliner",
+   "venue": "Gallery Steinsland Berliner",
+   "address": "Bondegatan 70, 116 33 Stockholm",
+   "map_url": "https://www.google.com/maps/search/?api=1&query=Gallery%20Steinsland%20Berliner%2C%20Bondegatan%2070%2C%20116%2033%20Stockholm",
+   "district": "Södermalm",
+   "title": "Seungwoo Park Fight Symphony",
+   "title_en": null,
+   "gloss": null,
+   "gloss_source": null,
+   "artists": [
+    "Seungwoo Park"
+   ],
+   "start_date": "2026-11-07",
+   "end_date": "2026-11-07",
+   "date": "2026-11-07",
+   "opening": {
+    "confirmed": false,
+    "start_time": null,
+    "end_time": null,
+    "text": null
+   },
+   "access": "unknown",
+   "url": "https://steinslandberliner.com/shows/seungwoo-park-fight-symphony",
+   "source": "web"
+  },
+  {
    "id": "22701df4753f",
    "venue_id": "grafiska-sallskapet",
    "venue": "Grafiska Sällskapet",
@@ -566,6 +707,33 @@
    },
    "access": "public",
    "url": "https://www.amells.com/",
+   "source": "web"
+  },
+  {
+   "id": "5661e0a94928",
+   "venue_id": "galleri-grip",
+   "venue": "Galleri Grip",
+   "address": "Celsiusgatan 2, 112 30 Stockholm",
+   "map_url": "https://www.google.com/maps/search/?api=1&query=Galleri%20Grip%2C%20Celsiusgatan%202%2C%20112%2030%20Stockholm",
+   "district": "Kungsholmen",
+   "title": "Seth Shuwert",
+   "title_en": null,
+   "gloss": null,
+   "gloss_source": null,
+   "artists": [
+    "Seth Shuwert"
+   ],
+   "start_date": "2026-11-14",
+   "end_date": null,
+   "date": "2026-11-14",
+   "opening": {
+    "confirmed": false,
+    "start_time": null,
+    "end_time": null,
+    "text": null
+   },
+   "access": "unknown",
+   "url": "https://gallerigrip.se/",
    "source": "web"
   },
   {
@@ -837,6 +1005,31 @@
    "source": "web"
   },
   {
+   "id": "24c4b0a90373",
+   "venue_id": "galleri-grip",
+   "venue": "Galleri Grip",
+   "address": "Celsiusgatan 2, 112 30 Stockholm",
+   "map_url": "https://www.google.com/maps/search/?api=1&query=Galleri%20Grip%2C%20Celsiusgatan%202%2C%20112%2030%20Stockholm",
+   "district": "Kungsholmen",
+   "title": "Grupputställning 2 PLATSER KVAR",
+   "title_en": null,
+   "gloss": "Group Exhibition 2 Places Left",
+   "gloss_source": "machine",
+   "artists": [],
+   "start_date": "2026-11-28",
+   "end_date": null,
+   "date": "2026-11-28",
+   "opening": {
+    "confirmed": false,
+    "start_time": null,
+    "end_time": null,
+    "text": null
+   },
+   "access": "unknown",
+   "url": "https://gallerigrip.se/",
+   "source": "web"
+  },
+  {
    "id": "6f8bf7f1caa8",
    "venue_id": "galleri-hantverket",
    "venue": "Galleri Hantverket",
@@ -1024,6 +1217,31 @@
    "source": "web"
   },
   {
+   "id": "7647f5481aff",
+   "venue_id": "galleri-grip",
+   "venue": "Galleri Grip",
+   "address": "Celsiusgatan 2, 112 30 Stockholm",
+   "map_url": "https://www.google.com/maps/search/?api=1&query=Galleri%20Grip%2C%20Celsiusgatan%202%2C%20112%2030%20Stockholm",
+   "district": "Kungsholmen",
+   "title": "Grupputställning 2 PLATSER KVAR",
+   "title_en": null,
+   "gloss": "Group Exhibition 2 Places Left",
+   "gloss_source": "machine",
+   "artists": [],
+   "start_date": "2026-12-12",
+   "end_date": null,
+   "date": "2026-12-12",
+   "opening": {
+    "confirmed": false,
+    "start_time": null,
+    "end_time": null,
+    "text": null
+   },
+   "access": "unknown",
+   "url": "https://gallerigrip.se/",
+   "source": "web"
+  },
+  {
    "id": "3ff4435457c2",
    "venue_id": "amells",
    "venue": "Åmells Konsthandel",
@@ -1052,6 +1270,31 @@
    "source": "web"
   },
   {
+   "id": "a1e5870d765f",
+   "venue_id": "galleri-grip",
+   "venue": "Galleri Grip",
+   "address": "Celsiusgatan 2, 112 30 Stockholm",
+   "map_url": "https://www.google.com/maps/search/?api=1&query=Galleri%20Grip%2C%20Celsiusgatan%202%2C%20112%2030%20Stockholm",
+   "district": "Kungsholmen",
+   "title": "Julsalong",
+   "title_en": null,
+   "gloss": "Christmas Salon",
+   "gloss_source": "machine",
+   "artists": [],
+   "start_date": "2026-12-19",
+   "end_date": null,
+   "date": "2026-12-19",
+   "opening": {
+    "confirmed": false,
+    "start_time": null,
+    "end_time": null,
+    "text": null
+   },
+   "access": "unknown",
+   "url": "https://gallerigrip.se/",
+   "source": "web"
+  },
+  {
    "id": "eba91a0c0b14",
    "venue_id": "grafiska-sallskapet",
    "venue": "Grafiska Sällskapet",
@@ -1060,7 +1303,7 @@
    "district": "Södermalm",
    "title": "Jul , jul, strålande jul…",
    "title_en": null,
-   "gloss": "Christmas, Christmas, Brilliant Christmas....",
+   "gloss": "Christmas, Christmas, Radiant Christmas....",
    "gloss_source": "machine",
    "artists": [],
    "start_date": "2026-12-19",

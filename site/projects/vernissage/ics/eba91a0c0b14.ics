@@ -22,11 +22,11 @@ END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
 UID:eba91a0c0b14@contrarian.fund
-DTSTAMP:20261023T080025Z
+DTSTAMP:20261024T073101Z
 DTSTART;VALUE=DATE:20261219
 DTEND;VALUE=DATE:20261220
-SUMMARY:Opens: Jul \, jul\, strålande jul… [Christmas\, Christmas\, Bril
- liant Christmas....] at Grafiska Sällskapet
+SUMMARY:Opens: Jul \, jul\, strålande jul… [Christmas\, Christmas\, Radi
+ ant Christmas....] at Grafiska Sällskapet
 LOCATION:Hornsgatan 6\, 118 20 Stockholm
 DESCRIPTION:On view until 2027-01-12.
 URL:https://grafiskasallskapet.se/
