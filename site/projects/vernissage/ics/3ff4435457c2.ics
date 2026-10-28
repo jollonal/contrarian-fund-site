@@ -22,11 +22,11 @@ END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
 UID:3ff4435457c2@contrarian.fund
-DTSTAMP:20261027T080422Z
+DTSTAMP:20261028T084706Z
 DTSTART;VALUE=DATE:20261212
 DTEND;VALUE=DATE:20261213
 SUMMARY:Opens: Magiska vinter! Anna Boberg\, Bruno Liljefors\, m fl [Magica
- l Winter! Anna Boberg\, Bruno Liljefors\, Etc] at Åmells Konsthandel
+ l Winter] at Åmells Konsthandel
 LOCATION:Birger Jarlsgatan 14\, 114 34 Stockholm
 DESCRIPTION:Anna Boberg\, Bruno Liljefors\nOn view until 2027-01-16.
 URL:https://www.amells.com/

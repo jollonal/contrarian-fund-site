@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-10-27T08:04:22+00:00",
+ "generated_at": "2026-10-28T08:47:06+00:00",
  "window_days": 60,
  "venues_tracked": 65,
  "events": [
@@ -141,6 +141,60 @@
    },
    "access": "unknown",
    "url": "https://antics.se/blown-away-david-permén",
+   "source": "web"
+  },
+  {
+   "id": "57f70c6ecd96",
+   "venue_id": "berg",
+   "venue": "Berg Gallery",
+   "address": "Hudiksvallsgatan 8, 113 30 Stockholm",
+   "map_url": "https://www.google.com/maps/search/?api=1&query=Berg%20Gallery%2C%20Hudiksvallsgatan%208%2C%20113%2030%20Stockholm",
+   "district": "Vasastan",
+   "title": "Accumulation Phase",
+   "title_en": null,
+   "gloss": null,
+   "gloss_source": null,
+   "artists": [
+    "Jeroen Erosie"
+   ],
+   "start_date": "2026-11-05",
+   "end_date": "2026-12-19",
+   "date": "2026-11-05",
+   "opening": {
+    "confirmed": false,
+    "start_time": null,
+    "end_time": null,
+    "text": null
+   },
+   "access": "public",
+   "url": "https://www.berggallery.se/exhibitions/133-jeroen-erosie-accumulation-phase/",
+   "source": "web"
+  },
+  {
+   "id": "95f331f0322b",
+   "venue_id": "berg",
+   "venue": "Berg Gallery",
+   "address": "Hudiksvallsgatan 8, 113 30 Stockholm",
+   "map_url": "https://www.google.com/maps/search/?api=1&query=Berg%20Gallery%2C%20Hudiksvallsgatan%208%2C%20113%2030%20Stockholm",
+   "district": "Vasastan",
+   "title": "Synkop",
+   "title_en": null,
+   "gloss": null,
+   "gloss_source": null,
+   "artists": [
+    "Sylvia Naimark"
+   ],
+   "start_date": "2026-11-05",
+   "end_date": "2026-12-19",
+   "date": "2026-11-05",
+   "opening": {
+    "confirmed": false,
+    "start_time": null,
+    "end_time": null,
+    "text": null
+   },
+   "access": "public",
+   "url": "https://www.berggallery.se/exhibitions/134-sylvia-naimark-synkop/",
    "source": "web"
   },
   {
@@ -550,15 +604,15 @@
    "source": "web"
   },
   {
-   "id": "1c9f70338226",
+   "id": "001304adfb90",
    "venue_id": "amells",
    "venue": "Åmells Konsthandel",
    "address": "Birger Jarlsgatan 14, 114 34 Stockholm",
    "map_url": "https://www.google.com/maps/search/?api=1&query=%C3%85mells%20Konsthandel%2C%20Birger%20Jarlsgatan%2014%2C%20114%2034%20Stockholm",
    "district": "Östermalm",
-   "title": "Höstutställning 2026",
+   "title": "Höstutställning",
    "title_en": null,
-   "gloss": "Autumn Exhibition 2026",
+   "gloss": "Autumn Exhibition",
    "gloss_source": "machine",
    "artists": [],
    "start_date": "2026-11-07",
@@ -571,7 +625,7 @@
     "text": null
    },
    "access": "public",
-   "url": "https://www.amells.com/",
+   "url": "https://www.amells.com/data/publications/2026Hostutstallning/html/index.html",
    "source": "web"
   },
   {
@@ -1115,7 +1169,7 @@
    "district": "Östermalm",
    "title": "Magiska vinter! Anna Boberg, Bruno Liljefors, m fl",
    "title_en": null,
-   "gloss": "Magical Winter! Anna Boberg, Bruno Liljefors, Etc",
+   "gloss": "Magical Winter",
    "gloss_source": "machine",
    "artists": [
     "Anna Boberg",

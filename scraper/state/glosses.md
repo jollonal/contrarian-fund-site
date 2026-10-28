@@ -10,7 +10,7 @@ Correct a machine gloss in `scraper/overrides.yaml`.
 | 2026-11-06 | Galleri Magnus Karlsson | Comma The inner room of the gallery / Galleriets inre rum | Comma The Inner Room of the Gallery | machine |
 | 2026-11-07 | Grafiska Sällskapet | Träsnitt | Woodcuts | machine |
 | 2026-11-07 | Grafiska Sällskapet | P O Söderlund minnesutställning | P O Söderlund Memorial Exhibition | machine |
-| 2026-11-07 | Åmells Konsthandel | Höstutställning 2026 | Autumn Exhibition 2026 | machine |
+| 2026-11-07 | Åmells Konsthandel | Höstutställning | Autumn Exhibition | machine |
 | 2026-11-14 | Galleri Hantverket | 3-dimensionellt akvarellmåleri | 3-dimensional Watercolor Painting | machine |
 | 2026-11-18 | Galleri Glas | Uppåt väggarna | Up the Walls | machine |
 | 2026-11-21 | Kaolin | JUL PÅ KAOLIN / Medlemsutställning | CHRISTMAS AT KAOLIN / Members' Exhibition | machine |
@@ -23,6 +23,6 @@ Correct a machine gloss in `scraper/overrides.yaml`.
 | 2026-11-28 | Grafiska Sällskapet | Från golv till tak | From Floor to Ceiling | machine |
 | 2026-11-28 | Slipvillan | Hjälp | Help | machine |
 | 2026-12-12 | Galleri Grip | Grupputställning 2 PLATSER KVAR | Group Exhibition 2 Places Left | machine |
-| 2026-12-12 | Åmells Konsthandel | Magiska vinter! Anna Boberg, Bruno Liljefors, m fl | Magical Winter! Anna Boberg, Bruno Liljefors, Etc | machine |
+| 2026-12-12 | Åmells Konsthandel | Magiska vinter! Anna Boberg, Bruno Liljefors, m fl | Magical Winter | machine |
 | 2026-12-19 | Galleri Grip | Julsalong | Christmas Salon | machine |
 | 2026-12-19 | Grafiska Sällskapet | Jul , jul, strålande jul… | Christmas, Christmas, Radiant Christmas.... | machine |

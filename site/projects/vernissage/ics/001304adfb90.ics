@@ -2,7 +2,7 @@ BEGIN:VCALENDAR
 VERSION:2.0
 PRODID:-//contrarian.fund//vernissage//EN
 CALSCALE:GREGORIAN
-X-WR-CALNAME:Höstutställning 2026
+X-WR-CALNAME:Höstutställning
 BEGIN:VTIMEZONE
 TZID:Europe/Stockholm
 BEGIN:DAYLIGHT
@@ -21,14 +21,14 @@ RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU
 END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
-UID:1c9f70338226@contrarian.fund
-DTSTAMP:20261027T080422Z
+UID:001304adfb90@contrarian.fund
+DTSTAMP:20261028T084706Z
 DTSTART;VALUE=DATE:20261107
 DTEND;VALUE=DATE:20261108
-SUMMARY:Opens: Höstutställning 2026 [Autumn Exhibition 2026] at Åmells K
- onsthandel
+SUMMARY:Opens: Höstutställning [Autumn Exhibition] at Åmells Konsthandel
 LOCATION:Birger Jarlsgatan 14\, 114 34 Stockholm
 DESCRIPTION:On view until 2026-11-28.
-URL:https://www.amells.com/
+URL:https://www.amells.com/data/publications/2026Hostutstallning/html/index
+ .html
 END:VEVENT
 END:VCALENDAR
