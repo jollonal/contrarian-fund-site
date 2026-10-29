@@ -7,7 +7,6 @@ Correct a machine gloss in `scraper/overrides.yaml`.
 | 2026-10-31 | Slipvillan | Tillit | Trust | machine |
 | 2026-11-05 | ABANTE Gallery | Kärt återseende | Dear Reunion | machine |
 | 2026-11-06 | Galleri Helle Knudsen | Våra ... | Our ... | machine |
-| 2026-11-06 | Galleri Magnus Karlsson | Comma The inner room of the gallery / Galleriets inre rum | Comma The Inner Room of the Gallery | machine |
 | 2026-11-07 | Grafiska Sällskapet | Träsnitt | Woodcuts | machine |
 | 2026-11-07 | Grafiska Sällskapet | P O Söderlund minnesutställning | P O Söderlund Memorial Exhibition | machine |
 | 2026-11-07 | Åmells Konsthandel | Höstutställning | Autumn Exhibition | machine |

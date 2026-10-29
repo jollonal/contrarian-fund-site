@@ -22,13 +22,13 @@ END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
 UID:67a477f29b0e@contrarian.fund
-DTSTAMP:20261028T084706Z
+DTSTAMP:20261029T084431Z
 DTSTART;TZID=Europe/Stockholm:20261105T160000
 DTEND;TZID=Europe/Stockholm:20261105T200000
 SUMMARY:Vernissage: Kärt återseende [Dear Reunion] at ABANTE Gallery
 LOCATION:Hornsgatan 44\, 118 21 Stockholm
-DESCRIPTION:Helène Anderson\, Gun-Britt Sundstedt\, Line Bergseth\, Birgit
- ta Sander\nOn view until 2026-11-08.
+DESCRIPTION:Heléne Anderson\, Gun-Britt Sundstedt\, Birgitta Sander\nOn vi
+ ew until 2026-11-08.
 URL:https://abantegallery.se/
 END:VEVENT
 END:VCALENDAR

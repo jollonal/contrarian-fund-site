@@ -22,11 +22,11 @@ END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
 UID:969ae9469819@contrarian.fund
-DTSTAMP:20261028T084706Z
+DTSTAMP:20261029T084431Z
 DTSTART;TZID=Europe/Stockholm:20261106T170000
 DTEND;TZID=Europe/Stockholm:20261106T190000
 SUMMARY:Vernissage: Comma The inner room of the gallery / Galleriets inre r
- um [Comma The Inner Room of the Gallery] at Galleri Magnus Karlsson
+ um at Galleri Magnus Karlsson
 LOCATION:Fredsgatan 12\, 111 52 Stockholm
 DESCRIPTION:Anna Bjerger\nOn view until 2026-12-05.
 URL:https://www.gallerimagnuskarlsson.com/exhibitions/410-anna-bjerger-comm

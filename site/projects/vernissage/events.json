@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-10-28T08:47:06+00:00",
+ "generated_at": "2026-10-29T08:44:31+00:00",
  "window_days": 60,
  "venues_tracked": 65,
  "events": [
@@ -68,9 +68,8 @@
    "gloss": "Dear Reunion",
    "gloss_source": "machine",
    "artists": [
-    "Helène Anderson",
+    "Heléne Anderson",
     "Gun-Britt Sundstedt",
-    "Line Bergseth",
     "Birgitta Sander"
    ],
    "start_date": "2026-11-05",
@@ -80,7 +79,7 @@
     "confirmed": true,
     "start_time": "16:00",
     "end_time": "20:00",
-    "text": "Varmt välkommen till utställningen \" Kärt återseende\" med Helène Anderson."
+    "text": "Varmt välkommen till utställningen \" Kärt återseende\" med Heléne Anderson."
    },
    "access": "public",
    "url": "https://abantegallery.se/",
@@ -114,6 +113,33 @@
    },
    "access": "public",
    "url": "https://detroitstockholm.info/",
+   "source": "web"
+  },
+  {
+   "id": "2019b1fec5f6",
+   "venue_id": "andrehn-schiptjenko",
+   "venue": "Andréhn-Schiptjenko",
+   "address": "Linnégatan 31, 114 47 Stockholm",
+   "map_url": "https://www.google.com/maps/search/?api=1&query=Andr%C3%A9hn-Schiptjenko%2C%20Linn%C3%A9gatan%2031%2C%20114%2047%20Stockholm",
+   "district": "Östermalm",
+   "title": "Shifts Stockholm",
+   "title_en": null,
+   "gloss": null,
+   "gloss_source": null,
+   "artists": [
+    "Sixten Sandra Österberg"
+   ],
+   "start_date": "2026-11-05",
+   "end_date": "2026-12-19",
+   "date": "2026-11-05",
+   "opening": {
+    "confirmed": false,
+    "start_time": null,
+    "end_time": null,
+    "text": null
+   },
+   "access": "public",
+   "url": "https://www.andrehn-schiptjenko.com/exhibitions/144-sixten-sandra-osterberg-shifts-stockholm/",
    "source": "web"
   },
   {
@@ -334,6 +360,33 @@
    "source": "web"
   },
   {
+   "id": "65c309082d51",
+   "venue_id": "candyland",
+   "venue": "Candyland",
+   "address": "Gotlandsgatan 76, 116 38 Stockholm",
+   "map_url": "https://www.google.com/maps/search/?api=1&query=Candyland%2C%20Gotlandsgatan%2076%2C%20116%2038%20Stockholm",
+   "district": "Södermalm",
+   "title": "Ludovar",
+   "title_en": null,
+   "gloss": null,
+   "gloss_source": null,
+   "artists": [
+    "Ludovar"
+   ],
+   "start_date": "2026-11-06",
+   "end_date": "2026-11-15",
+   "date": "2026-11-06",
+   "opening": {
+    "confirmed": true,
+    "start_time": "17:00",
+    "end_time": "22:00",
+    "text": "Vernissage fredag 6 november kl. 17.00–22.00"
+   },
+   "access": "public",
+   "url": "https://candyland.se/?p=5580",
+   "source": "web"
+  },
+  {
    "id": "88611dc27ec0",
    "venue_id": "jan-wallmark",
    "venue": "Galleri Jan Wallmark",
@@ -369,8 +422,8 @@
    "district": "Norrmalm",
    "title": "Comma The inner room of the gallery / Galleriets inre rum",
    "title_en": null,
-   "gloss": "Comma The Inner Room of the Gallery",
-   "gloss_source": "machine",
+   "gloss": null,
+   "gloss_source": null,
    "artists": [
     "Anna Bjerger"
    ],
@@ -381,7 +434,7 @@
     "confirmed": true,
     "start_time": "17:00",
     "end_time": "19:00",
-    "text": "Vernissage fredag 6 november, 17–19 Reception Friday November 6, 5–7 pm"
+    "text": "Vernissage i samband med Gallery Weekend Stockholm Fredag 6 november kl. 17–19"
    },
    "access": "public",
    "url": "https://www.gallerimagnuskarlsson.com/exhibitions/410-anna-bjerger-comma-the-inner-room-of-the-gallery-galleriets/",
@@ -1025,7 +1078,7 @@
     "end_time": null,
     "text": null
    },
-   "access": "public",
+   "access": "unknown",
    "url": "https://www.gallerimagnuskarlsson.com/exhibitions/409-jockum-nordstrom-halet-i-vaggen/",
    "source": "web"
   },
