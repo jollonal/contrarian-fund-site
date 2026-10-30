@@ -2,7 +2,7 @@ BEGIN:VCALENDAR
 VERSION:2.0
 PRODID:-//contrarian.fund//vernissage//EN
 CALSCALE:GREGORIAN
-X-WR-CALNAME:Ludovar
+X-WR-CALNAME:Chthonic
 BEGIN:VTIMEZONE
 TZID:Europe/Stockholm
 BEGIN:DAYLIGHT
@@ -21,13 +21,13 @@ RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU
 END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
-UID:65c309082d51@contrarian.fund
-DTSTAMP:20261029T084431Z
+UID:60352aa0f1a1@contrarian.fund
+DTSTAMP:20261030T085143Z
 DTSTART;TZID=Europe/Stockholm:20261106T170000
 DTEND;TZID=Europe/Stockholm:20261106T220000
-SUMMARY:Vernissage: Ludovar at Candyland
+SUMMARY:Vernissage: Chthonic [Subterranean or Underworld] at Candyland
 LOCATION:Gotlandsgatan 76\, 116 38 Stockholm
 DESCRIPTION:Ludovar\nOn view until 2026-11-15.
-URL:https://candyland.se/?p=5580
+URL:https://candyland.se/?p=5590
 END:VEVENT
 END:VCALENDAR

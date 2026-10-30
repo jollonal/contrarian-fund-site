@@ -2,7 +2,7 @@ BEGIN:VCALENDAR
 VERSION:2.0
 PRODID:-//contrarian.fund//vernissage//EN
 CALSCALE:GREGORIAN
-X-WR-CALNAME:Shifts Stockholm
+X-WR-CALNAME:Innan vintern kommer
 BEGIN:VTIMEZONE
 TZID:Europe/Stockholm
 BEGIN:DAYLIGHT
@@ -21,14 +21,15 @@ RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU
 END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
-UID:2019b1fec5f6@contrarian.fund
-DTSTAMP:20261029T084431Z
-DTSTART;VALUE=DATE:20261105
-DTEND;VALUE=DATE:20261106
-SUMMARY:Opens: Shifts Stockholm at Andréhn-Schiptjenko
-LOCATION:Linnégatan 31\, 114 47 Stockholm
-DESCRIPTION:Sixten Sandra Österberg\nOn view until 2026-12-19.
-URL:https://www.andrehn-schiptjenko.com/exhibitions/144-sixten-sandra-oster
- berg-shifts-stockholm/
+UID:f9ad201527b4@contrarian.fund
+DTSTAMP:20261030T085143Z
+DTSTART;TZID=Europe/Stockholm:20261106T170000
+DTEND;TZID=Europe/Stockholm:20261106T200000
+SUMMARY:Vernissage: Innan vintern kommer [Before Winter Comes] at Galleri K
+ atarina AP
+LOCATION:Katarina Bangata 49\, 116 39 Stockholm
+DESCRIPTION:Ylva Trapp
+URL:https://www.falkenbergskonstskola.se/nyheter/innan-vintern-kommer-ylva-
+ trapp-6-november
 END:VEVENT
 END:VCALENDAR

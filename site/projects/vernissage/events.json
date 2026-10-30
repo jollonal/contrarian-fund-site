@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-10-29T08:44:31+00:00",
+ "generated_at": "2026-10-30T08:51:43+00:00",
  "window_days": 60,
  "venues_tracked": 65,
  "events": [
@@ -86,6 +86,33 @@
    "source": "web"
   },
   {
+   "id": "a69f30eebffd",
+   "venue_id": "andrehn-schiptjenko",
+   "venue": "Andréhn-Schiptjenko",
+   "address": "Linnégatan 31, 114 47 Stockholm",
+   "map_url": "https://www.google.com/maps/search/?api=1&query=Andr%C3%A9hn-Schiptjenko%2C%20Linn%C3%A9gatan%2031%2C%20114%2047%20Stockholm",
+   "district": "Östermalm",
+   "title": "Shifts",
+   "title_en": null,
+   "gloss": null,
+   "gloss_source": null,
+   "artists": [
+    "Sixten Sandra Österberg"
+   ],
+   "start_date": "2026-11-05",
+   "end_date": "2026-12-19",
+   "date": "2026-11-05",
+   "opening": {
+    "confirmed": true,
+    "start_time": "17:00",
+    "end_time": "20:00",
+    "text": "The exhibition opens on Thursday 5 November between 17:00 - 20:00 in the presence of the artist."
+   },
+   "access": "public",
+   "url": "https://www.andrehn-schiptjenko.com/exhibitions/144-sixten-sandra-osterberg-shifts-stockholm/",
+   "source": "web"
+  },
+  {
    "id": "e4afffba65b0",
    "venue_id": "detroit-stockholm",
    "venue": "Detroit Stockholm",
@@ -113,33 +140,6 @@
    },
    "access": "public",
    "url": "https://detroitstockholm.info/",
-   "source": "web"
-  },
-  {
-   "id": "2019b1fec5f6",
-   "venue_id": "andrehn-schiptjenko",
-   "venue": "Andréhn-Schiptjenko",
-   "address": "Linnégatan 31, 114 47 Stockholm",
-   "map_url": "https://www.google.com/maps/search/?api=1&query=Andr%C3%A9hn-Schiptjenko%2C%20Linn%C3%A9gatan%2031%2C%20114%2047%20Stockholm",
-   "district": "Östermalm",
-   "title": "Shifts Stockholm",
-   "title_en": null,
-   "gloss": null,
-   "gloss_source": null,
-   "artists": [
-    "Sixten Sandra Österberg"
-   ],
-   "start_date": "2026-11-05",
-   "end_date": "2026-12-19",
-   "date": "2026-11-05",
-   "opening": {
-    "confirmed": false,
-    "start_time": null,
-    "end_time": null,
-    "text": null
-   },
-   "access": "public",
-   "url": "https://www.andrehn-schiptjenko.com/exhibitions/144-sixten-sandra-osterberg-shifts-stockholm/",
    "source": "web"
   },
   {
@@ -360,16 +360,16 @@
    "source": "web"
   },
   {
-   "id": "65c309082d51",
+   "id": "60352aa0f1a1",
    "venue_id": "candyland",
    "venue": "Candyland",
    "address": "Gotlandsgatan 76, 116 38 Stockholm",
    "map_url": "https://www.google.com/maps/search/?api=1&query=Candyland%2C%20Gotlandsgatan%2076%2C%20116%2038%20Stockholm",
    "district": "Södermalm",
-   "title": "Ludovar",
+   "title": "Chthonic",
    "title_en": null,
-   "gloss": null,
-   "gloss_source": null,
+   "gloss": "Subterranean or Underworld",
+   "gloss_source": "machine",
    "artists": [
     "Ludovar"
    ],
@@ -383,7 +383,7 @@
     "text": "Vernissage fredag 6 november kl. 17.00–22.00"
    },
    "access": "public",
-   "url": "https://candyland.se/?p=5580",
+   "url": "https://candyland.se/?p=5590",
    "source": "web"
   },
   {
@@ -414,6 +414,33 @@
    "source": "web"
   },
   {
+   "id": "f9ad201527b4",
+   "venue_id": "galleri-katarina-ap",
+   "venue": "Galleri Katarina AP",
+   "address": "Katarina Bangata 49, 116 39 Stockholm",
+   "map_url": "https://www.google.com/maps/search/?api=1&query=Galleri%20Katarina%20AP%2C%20Katarina%20Bangata%2049%2C%20116%2039%20Stockholm",
+   "district": "Södermalm",
+   "title": "Innan vintern kommer",
+   "title_en": null,
+   "gloss": "Before Winter Comes",
+   "gloss_source": "machine",
+   "artists": [
+    "Ylva Trapp"
+   ],
+   "start_date": "2026-11-06",
+   "end_date": null,
+   "date": "2026-11-06",
+   "opening": {
+    "confirmed": true,
+    "start_time": "17:00",
+    "end_time": "20:00",
+    "text": "Välkommen på vernissage 6 november 17.00–20.00"
+   },
+   "access": "public",
+   "url": "https://www.falkenbergskonstskola.se/nyheter/innan-vintern-kommer-ylva-trapp-6-november",
+   "source": "web"
+  },
+  {
    "id": "969ae9469819",
    "venue_id": "magnus-karlsson",
    "venue": "Galleri Magnus Karlsson",
@@ -438,6 +465,36 @@
    },
    "access": "public",
    "url": "https://www.gallerimagnuskarlsson.com/exhibitions/410-anna-bjerger-comma-the-inner-room-of-the-gallery-galleriets/",
+   "source": "web"
+  },
+  {
+   "id": "7d80146072aa",
+   "venue_id": "belenius",
+   "venue": "Belenius",
+   "address": "Ulrikagatan 13, 115 23 Stockholm",
+   "map_url": "https://www.google.com/maps/search/?api=1&query=Belenius%2C%20Ulrikagatan%2013%2C%20115%2023%20Stockholm",
+   "district": "Östermalm",
+   "title": "Shapeshifting",
+   "title_en": null,
+   "gloss": null,
+   "gloss_source": null,
+   "artists": [
+    "Dorothea Tanning",
+    "Elsa Thoresen",
+    "Isabelle Zetterström",
+    "Jenny Palén"
+   ],
+   "start_date": "2026-11-06",
+   "end_date": "2026-12-12",
+   "date": "2026-11-06",
+   "opening": {
+    "confirmed": true,
+    "start_time": "18:00",
+    "end_time": "20:00",
+    "text": "Friday, 06.11 at 6 – 8 PM"
+   },
+   "access": "public",
+   "url": "https://belenius.com/exhibitions/217-shapeshifting-dorothea-tanning-elsa-thoresen-isabelle-zetterstrom-jenny-palen/",
    "source": "web"
   },
   {
