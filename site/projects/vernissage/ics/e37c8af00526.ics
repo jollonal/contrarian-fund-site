@@ -2,7 +2,7 @@ BEGIN:VCALENDAR
 VERSION:2.0
 PRODID:-//contrarian.fund//vernissage//EN
 CALSCALE:GREGORIAN
-X-WR-CALNAME:Accumulation Phase
+X-WR-CALNAME:Grupputställning 1 PLATSER KVAR
 BEGIN:VTIMEZONE
 TZID:Europe/Stockholm
 BEGIN:DAYLIGHT
@@ -21,14 +21,14 @@ RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU
 END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
-UID:57f70c6ecd96@contrarian.fund
-DTSTAMP:20261030T085143Z
-DTSTART;VALUE=DATE:20261105
-DTEND;VALUE=DATE:20261106
-SUMMARY:Opens: Accumulation Phase at Berg Gallery
-LOCATION:Hudiksvallsgatan 8\, 113 30 Stockholm
-DESCRIPTION:Jeroen Erosie\nOn view until 2026-12-19.
-URL:https://www.berggallery.se/exhibitions/133-jeroen-erosie-accumulation-p
- hase/
+UID:e37c8af00526@contrarian.fund
+DTSTAMP:20261031T083859Z
+DTSTART;VALUE=DATE:20261212
+DTEND;VALUE=DATE:20261213
+SUMMARY:Opens: Grupputställning 1 PLATSER KVAR [Group Exhibition 1 Places 
+ Left] at Galleri Grip
+LOCATION:Celsiusgatan 2\, 112 30 Stockholm
+DESCRIPTION:
+URL:https://gallerigrip.se/
 END:VEVENT
 END:VCALENDAR

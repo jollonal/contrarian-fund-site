@@ -2,7 +2,7 @@ BEGIN:VCALENDAR
 VERSION:2.0
 PRODID:-//contrarian.fund//vernissage//EN
 CALSCALE:GREGORIAN
-X-WR-CALNAME:Synkop
+X-WR-CALNAME:Jeroen Erosie | Accumulation Phase
 BEGIN:VTIMEZONE
 TZID:Europe/Stockholm
 BEGIN:DAYLIGHT
@@ -21,13 +21,14 @@ RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU
 END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
-UID:95f331f0322b@contrarian.fund
-DTSTAMP:20261030T085143Z
+UID:5d904dd6e085@contrarian.fund
+DTSTAMP:20261031T083859Z
 DTSTART;VALUE=DATE:20261105
 DTEND;VALUE=DATE:20261106
-SUMMARY:Opens: Synkop at Berg Gallery
+SUMMARY:Opens: Jeroen Erosie | Accumulation Phase at Berg Gallery
 LOCATION:Hudiksvallsgatan 8\, 113 30 Stockholm
-DESCRIPTION:Sylvia Naimark\nOn view until 2026-12-19.
-URL:https://www.berggallery.se/exhibitions/134-sylvia-naimark-synkop/
+DESCRIPTION:Jeroen Erosie\nOn view until 2026-12-19.
+URL:https://www.berggallery.se/exhibitions/133-jeroen-erosie-accumulation-p
+ hase/
 END:VEVENT
 END:VCALENDAR

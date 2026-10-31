@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-10-30T08:51:43+00:00",
+ "generated_at": "2026-10-31T08:38:59+00:00",
  "window_days": 60,
  "venues_tracked": 65,
  "events": [
@@ -27,7 +27,7 @@
     "end_time": null,
     "text": null
    },
-   "access": "unknown",
+   "access": "public",
    "url": "https://gallerigrip.se/",
    "source": "web"
   },
@@ -170,13 +170,13 @@
    "source": "web"
   },
   {
-   "id": "57f70c6ecd96",
+   "id": "5d904dd6e085",
    "venue_id": "berg",
    "venue": "Berg Gallery",
    "address": "Hudiksvallsgatan 8, 113 30 Stockholm",
    "map_url": "https://www.google.com/maps/search/?api=1&query=Berg%20Gallery%2C%20Hudiksvallsgatan%208%2C%20113%2030%20Stockholm",
    "district": "Vasastan",
-   "title": "Accumulation Phase",
+   "title": "Jeroen Erosie | Accumulation Phase",
    "title_en": null,
    "gloss": null,
    "gloss_source": null,
@@ -197,13 +197,13 @@
    "source": "web"
   },
   {
-   "id": "95f331f0322b",
+   "id": "6f51b35edb5f",
    "venue_id": "berg",
    "venue": "Berg Gallery",
    "address": "Hudiksvallsgatan 8, 113 30 Stockholm",
    "map_url": "https://www.google.com/maps/search/?api=1&query=Berg%20Gallery%2C%20Hudiksvallsgatan%208%2C%20113%2030%20Stockholm",
    "district": "Vasastan",
-   "title": "Synkop",
+   "title": "Sylvia Naimark | Synkop",
    "title_en": null,
    "gloss": null,
    "gloss_source": null,
@@ -332,6 +332,33 @@
    "source": "web"
   },
   {
+   "id": "3f3a7e136829",
+   "venue_id": "saskia-neuman",
+   "venue": "Saskia Neuman Gallery",
+   "address": "Linnégatan 19, 114 47 Stockholm",
+   "map_url": "https://www.google.com/maps/search/?api=1&query=Saskia%20Neuman%20Gallery%2C%20Linn%C3%A9gatan%2019%2C%20114%2047%20Stockholm",
+   "district": "Östermalm",
+   "title": "En dörr leder till ett öga // A door leads to an eye",
+   "title_en": null,
+   "gloss": null,
+   "gloss_source": null,
+   "artists": [
+    "Matti Hoffner"
+   ],
+   "start_date": "2026-11-05",
+   "end_date": "2026-12-18",
+   "date": "2026-11-05",
+   "opening": {
+    "confirmed": true,
+    "start_time": null,
+    "end_time": null,
+    "text": "Opening Thursday November 5th."
+   },
+   "access": "unknown",
+   "url": "https://www.saskianeumangallery.com/exhibitions/en-dorr-leder-till-ett-oga-a-door-leads-to-an-eye",
+   "source": "web"
+  },
+  {
    "id": "de781fd4d68d",
    "venue_id": "helle-knudsen",
    "venue": "Galleri Helle Knudsen",
@@ -340,7 +367,7 @@
    "district": "Kungsholmen",
    "title": "Våra ...",
    "title_en": null,
-   "gloss": "Our ...",
+   "gloss": "Our Stories",
    "gloss_source": "machine",
    "artists": [
     "Britta Marakatt-Labba",
@@ -353,10 +380,10 @@
     "confirmed": true,
     "start_time": "16:00",
     "end_time": "19:00",
-    "text": "Vernissage: 16–19 (konstnärerna närvarar)', "
+    "text": "Vernissage: 16–19 (konstnärerna närvarar)"
    },
-   "access": "unknown",
-   "url": "https://gallerihelle.com/blogs/utstallningar/vara-historier",
+   "access": "public",
+   "url": "https://gallerihelle.com/blogs/aktuell/vara-historier",
    "source": "web"
   },
   {
@@ -601,7 +628,7 @@
     "end_time": null,
     "text": null
    },
-   "access": "unknown",
+   "access": "public",
    "url": "https://gallerigrip.se/",
    "source": "web"
   },
@@ -761,7 +788,7 @@
     "end_time": null,
     "text": null
    },
-   "access": "unknown",
+   "access": "public",
    "url": "https://gallerigrip.se/",
    "source": "web"
   },
@@ -1034,15 +1061,15 @@
    "source": "web"
   },
   {
-   "id": "24c4b0a90373",
+   "id": "4aaa7d10e877",
    "venue_id": "galleri-grip",
    "venue": "Galleri Grip",
    "address": "Celsiusgatan 2, 112 30 Stockholm",
    "map_url": "https://www.google.com/maps/search/?api=1&query=Galleri%20Grip%2C%20Celsiusgatan%202%2C%20112%2030%20Stockholm",
    "district": "Kungsholmen",
-   "title": "Grupputställning 2 PLATSER KVAR",
+   "title": "Grupputställning 1 PLATSER KVAR",
    "title_en": null,
-   "gloss": "Group Exhibition 2 Places Left",
+   "gloss": "Group Exhibition 1 Places Left",
    "gloss_source": "machine",
    "artists": [],
    "start_date": "2026-11-28",
@@ -1054,7 +1081,7 @@
     "end_time": null,
     "text": null
    },
-   "access": "unknown",
+   "access": "public",
    "url": "https://gallerigrip.se/",
    "source": "web"
   },
@@ -1219,6 +1246,31 @@
    "source": "web"
   },
   {
+   "id": "8800c4126856",
+   "venue_id": "galleri-grip",
+   "venue": "Galleri Grip",
+   "address": "Celsiusgatan 2, 112 30 Stockholm",
+   "map_url": "https://www.google.com/maps/search/?api=1&query=Galleri%20Grip%2C%20Celsiusgatan%202%2C%20112%2030%20Stockholm",
+   "district": "Kungsholmen",
+   "title": "Sundbyberg Art Trail",
+   "title_en": null,
+   "gloss": null,
+   "gloss_source": null,
+   "artists": [],
+   "start_date": "2026-12-05",
+   "end_date": null,
+   "date": "2026-12-05",
+   "opening": {
+    "confirmed": false,
+    "start_time": null,
+    "end_time": null,
+    "text": null
+   },
+   "access": "public",
+   "url": "https://gallerigrip.se/",
+   "source": "web"
+  },
+  {
    "id": "8ee1947b35f4",
    "venue_id": "hedenius",
    "venue": "Galleri Hedenius",
@@ -1246,15 +1298,15 @@
    "source": "web"
   },
   {
-   "id": "7647f5481aff",
+   "id": "e37c8af00526",
    "venue_id": "galleri-grip",
    "venue": "Galleri Grip",
    "address": "Celsiusgatan 2, 112 30 Stockholm",
    "map_url": "https://www.google.com/maps/search/?api=1&query=Galleri%20Grip%2C%20Celsiusgatan%202%2C%20112%2030%20Stockholm",
    "district": "Kungsholmen",
-   "title": "Grupputställning 2 PLATSER KVAR",
+   "title": "Grupputställning 1 PLATSER KVAR",
    "title_en": null,
-   "gloss": "Group Exhibition 2 Places Left",
+   "gloss": "Group Exhibition 1 Places Left",
    "gloss_source": "machine",
    "artists": [],
    "start_date": "2026-12-12",
@@ -1266,7 +1318,7 @@
     "end_time": null,
     "text": null
    },
-   "access": "unknown",
+   "access": "public",
    "url": "https://gallerigrip.se/",
    "source": "web"
   },
@@ -1319,7 +1371,7 @@
     "end_time": null,
     "text": null
    },
-   "access": "unknown",
+   "access": "public",
    "url": "https://gallerigrip.se/",
    "source": "web"
   },

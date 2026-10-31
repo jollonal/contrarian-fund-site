@@ -6,7 +6,7 @@ Correct a machine gloss in `scraper/overrides.yaml`.
 |---|---|---|---|---|
 | 2026-10-31 | Slipvillan | Tillit | Trust | machine |
 | 2026-11-05 | ABANTE Gallery | Kärt återseende | Dear Reunion | machine |
-| 2026-11-06 | Galleri Helle Knudsen | Våra ... | Our ... | machine |
+| 2026-11-06 | Galleri Helle Knudsen | Våra ... | Our Stories | machine |
 | 2026-11-06 | Candyland | Chthonic | Subterranean or Underworld | machine |
 | 2026-11-06 | Galleri Katarina AP | Innan vintern kommer | Before Winter Comes | machine |
 | 2026-11-07 | Grafiska Sällskapet | Träsnitt | Woodcuts | machine |
@@ -18,12 +18,12 @@ Correct a machine gloss in `scraper/overrides.yaml`.
 | 2026-11-21 | Konstnärshuset | Avund & svartsjuka | Envy and Jealousy | machine |
 | 2026-11-25 | Galleri Glas | Uppåt väggarna | Up the Walls | machine |
 | 2026-11-28 | 125kvadrat | Medlemmarnas julutställning | Members' Christmas Exhibition | machine |
-| 2026-11-28 | Galleri Grip | Grupputställning 2 PLATSER KVAR | Group Exhibition 2 Places Left | machine |
+| 2026-11-28 | Galleri Grip | Grupputställning 1 PLATSER KVAR | Group Exhibition 1 Places Left | machine |
 | 2026-11-28 | Galleri Hantverket | Medlemmarnas Julutställning | Members' Christmas Exhibition | machine |
 | 2026-11-28 | Galleri Magnus Karlsson | Hålet i väggen | The Hole in the Wall | machine |
 | 2026-11-28 | Grafiska Sällskapet | Från golv till tak | From Floor to Ceiling | machine |
 | 2026-11-28 | Slipvillan | Hjälp | Help | machine |
-| 2026-12-12 | Galleri Grip | Grupputställning 2 PLATSER KVAR | Group Exhibition 2 Places Left | machine |
+| 2026-12-12 | Galleri Grip | Grupputställning 1 PLATSER KVAR | Group Exhibition 1 Places Left | machine |
 | 2026-12-12 | Åmells Konsthandel | Magiska vinter! Anna Boberg, Bruno Liljefors, m fl | Magical Winter | machine |
 | 2026-12-19 | Galleri Grip | Julsalong | Christmas Salon | machine |
 | 2026-12-19 | Grafiska Sällskapet | Jul , jul, strålande jul… | Christmas, Christmas, Radiant Christmas.... | machine |
