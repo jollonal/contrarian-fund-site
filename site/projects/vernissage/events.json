@@ -1,61 +1,8 @@
 {
- "generated_at": "2026-10-31T08:38:59+00:00",
+ "generated_at": "2026-11-01T09:27:50+00:00",
  "window_days": 60,
  "venues_tracked": 65,
  "events": [
-  {
-   "id": "561dbf7d86c2",
-   "venue_id": "galleri-grip",
-   "venue": "Galleri Grip",
-   "address": "Celsiusgatan 2, 112 30 Stockholm",
-   "map_url": "https://www.google.com/maps/search/?api=1&query=Galleri%20Grip%2C%20Celsiusgatan%202%2C%20112%2030%20Stockholm",
-   "district": "Kungsholmen",
-   "title": "Pia Wijnbladh och Gunilla Zaar Akne",
-   "title_en": null,
-   "gloss": null,
-   "gloss_source": null,
-   "artists": [
-    "Pia Wijnbladh",
-    "Gunilla Zaar Akne"
-   ],
-   "start_date": "2026-10-31",
-   "end_date": null,
-   "date": "2026-10-31",
-   "opening": {
-    "confirmed": false,
-    "start_time": null,
-    "end_time": null,
-    "text": null
-   },
-   "access": "public",
-   "url": "https://gallerigrip.se/",
-   "source": "web"
-  },
-  {
-   "id": "2f0f2a2d6d0c",
-   "venue_id": "slipvillan",
-   "venue": "Slipvillan",
-   "address": "Mälarvarvsbacken 32, 117 33 Stockholm",
-   "map_url": "https://www.google.com/maps/search/?api=1&query=Slipvillan%2C%20M%C3%A4larvarvsbacken%2032%2C%20117%2033%20Stockholm",
-   "district": "Långholmen",
-   "title": "Tillit",
-   "title_en": null,
-   "gloss": "Trust",
-   "gloss_source": "machine",
-   "artists": [],
-   "start_date": "2026-10-31",
-   "end_date": "2026-11-22",
-   "date": "2026-10-31",
-   "opening": {
-    "confirmed": true,
-    "start_time": null,
-    "end_time": null,
-    "text": null
-   },
-   "access": "unknown",
-   "url": "https://slipvillan.org/",
-   "source": "web"
-  },
   {
    "id": "67a477f29b0e",
    "venue_id": "abante",
