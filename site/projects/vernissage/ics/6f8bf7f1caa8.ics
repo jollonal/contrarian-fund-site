@@ -22,13 +22,13 @@ END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
 UID:6f8bf7f1caa8@contrarian.fund
-DTSTAMP:20261101T092750Z
+DTSTAMP:20261102T094330Z
 DTSTART;VALUE=DATE:20261128
 DTEND;VALUE=DATE:20261129
 SUMMARY:Opens: Medlemmarnas Julutställning [Members' Christmas Exhibition]
   at Galleri Hantverket
 LOCATION:Götgatan 63\, 116 21 Stockholm
-DESCRIPTION:Medlemmarna
+DESCRIPTION:
 URL:https://gallerihantverket.se/
 END:VEVENT
 END:VCALENDAR

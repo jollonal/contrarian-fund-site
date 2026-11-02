@@ -8,6 +8,9 @@ Correct a machine gloss in `scraper/overrides.yaml`.
 | 2026-11-06 | Galleri Helle Knudsen | Våra ... | Our Stories | machine |
 | 2026-11-06 | Candyland | Chthonic | Subterranean or Underworld | machine |
 | 2026-11-06 | Galleri Katarina AP | Innan vintern kommer | Before Winter Comes | machine |
+| 2026-11-06 | ID:I galleri | Ett enkelrum i Filipstad | A Single Room in Filipstad | machine |
+| 2026-11-06 | Konsthallen ABC | Woman-from nature to abstraction – En soloutställning med Gunilla Daga | Woman from Nature to Abstraction | machine |
+| 2026-11-06 | Studio 44 | Metafysiska porträtt | Metaphysical Portraits | machine |
 | 2026-11-07 | Grafiska Sällskapet | Träsnitt | Woodcuts | machine |
 | 2026-11-07 | Grafiska Sällskapet | P O Söderlund minnesutställning | P O Söderlund Memorial Exhibition | machine |
 | 2026-11-07 | Åmells Konsthandel | Höstutställning | Autumn Exhibition | machine |

@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-01T09:27:50+00:00",
+ "generated_at": "2026-11-02T09:43:30+00:00",
  "window_days": 60,
  "venues_tracked": 65,
  "events": [
@@ -442,6 +442,88 @@
    "source": "web"
   },
   {
+   "id": "8243ca3f4c90",
+   "venue_id": "idi-galleri",
+   "venue": "ID:I galleri",
+   "address": "Tjärhovsgatan 19, 116 28 Stockholm",
+   "map_url": "https://www.google.com/maps/search/?api=1&query=ID%3AI%20galleri%2C%20Tj%C3%A4rhovsgatan%2019%2C%20116%2028%20Stockholm",
+   "district": "Södermalm",
+   "title": "Ett enkelrum i Filipstad",
+   "title_en": null,
+   "gloss": "A Single Room in Filipstad",
+   "gloss_source": "machine",
+   "artists": [
+    "Simon Blanck"
+   ],
+   "start_date": "2026-11-06",
+   "end_date": "2026-11-22",
+   "date": "2026-11-06",
+   "opening": {
+    "confirmed": true,
+    "start_time": "17:00",
+    "end_time": "20:00",
+    "text": "Vernissage 6 november 17.00-20.00"
+   },
+   "access": "public",
+   "url": "https://idigalleri.org/",
+   "source": "web"
+  },
+  {
+   "id": "4e3bf6af777a",
+   "venue_id": "konsthallen-abc",
+   "venue": "Konsthallen ABC",
+   "address": "Jämtlandsgatan 161, 162 60 Vällingby",
+   "map_url": "https://www.google.com/maps/search/?api=1&query=Konsthallen%20ABC%2C%20J%C3%A4mtlandsgatan%20161%2C%20162%2060%20V%C3%A4llingby",
+   "district": "Vällingby",
+   "title": "Woman-from nature to abstraction – En soloutställning med Gunilla Daga",
+   "title_en": null,
+   "gloss": "Woman from Nature to Abstraction",
+   "gloss_source": "machine",
+   "artists": [
+    "Gunilla Daga"
+   ],
+   "start_date": "2026-11-06",
+   "end_date": "2026-11-22",
+   "date": "2026-11-06",
+   "opening": {
+    "confirmed": true,
+    "start_time": "17:00",
+    "end_time": "20:00",
+    "text": "Vernissage: Fredag 6 november kl. 17-20"
+   },
+   "access": "public",
+   "url": "https://studioabc.se/",
+   "source": "web"
+  },
+  {
+   "id": "b48df2e402ab",
+   "venue_id": "studio-44",
+   "venue": "Studio 44",
+   "address": "Tjärhovsgatan 44 B, 116 28 Stockholm",
+   "map_url": "https://www.google.com/maps/search/?api=1&query=Studio%2044%2C%20Tj%C3%A4rhovsgatan%2044%20B%2C%20116%2028%20Stockholm",
+   "district": "Södermalm",
+   "title": "Metafysiska porträtt",
+   "title_en": null,
+   "gloss": "Metaphysical Portraits",
+   "gloss_source": "machine",
+   "artists": [
+    "Andro Zverev",
+    "Nina Wedberg Thulin"
+   ],
+   "start_date": "2026-11-06",
+   "end_date": "2026-11-22",
+   "date": "2026-11-06",
+   "opening": {
+    "confirmed": true,
+    "start_time": "17:00",
+    "end_time": "22:00",
+    "text": "Opening"
+   },
+   "access": "public",
+   "url": "https://studio44-stockholm.com/en/39499-2/metafysiska-portratt/",
+   "source": "web"
+  },
+  {
    "id": "7d80146072aa",
    "venue_id": "belenius",
    "venue": "Belenius",
@@ -499,60 +581,6 @@
    "source": "web"
   },
   {
-   "id": "6c9e56818fbb",
-   "venue_id": "idi-galleri",
-   "venue": "ID:I galleri",
-   "address": "Tjärhovsgatan 19, 116 28 Stockholm",
-   "map_url": "https://www.google.com/maps/search/?api=1&query=ID%3AI%20galleri%2C%20Tj%C3%A4rhovsgatan%2019%2C%20116%2028%20Stockholm",
-   "district": "Södermalm",
-   "title": "Simon Blanck",
-   "title_en": null,
-   "gloss": null,
-   "gloss_source": null,
-   "artists": [
-    "Simon Blanck"
-   ],
-   "start_date": "2026-11-06",
-   "end_date": "2026-11-22",
-   "date": "2026-11-06",
-   "opening": {
-    "confirmed": false,
-    "start_time": null,
-    "end_time": null,
-    "text": null
-   },
-   "access": "unknown",
-   "url": "https://idigalleri.org/",
-   "source": "web"
-  },
-  {
-   "id": "f8d5e6b2efb8",
-   "venue_id": "studio-44",
-   "venue": "Studio 44",
-   "address": "Tjärhovsgatan 44 B, 116 28 Stockholm",
-   "map_url": "https://www.google.com/maps/search/?api=1&query=Studio%2044%2C%20Tj%C3%A4rhovsgatan%2044%20B%2C%20116%2028%20Stockholm",
-   "district": "Södermalm",
-   "title": "Metaphysical Portraits",
-   "title_en": null,
-   "gloss": null,
-   "gloss_source": null,
-   "artists": [
-    "Andro Zverev"
-   ],
-   "start_date": "2026-11-06",
-   "end_date": "2026-11-22",
-   "date": "2026-11-06",
-   "opening": {
-    "confirmed": false,
-    "start_time": null,
-    "end_time": null,
-    "text": null
-   },
-   "access": "unknown",
-   "url": "https://studio44-stockholm.com/en/39499-2/metafysiska-portratt/",
-   "source": "web"
-  },
-  {
    "id": "919faa7c6ef4",
    "venue_id": "galleri-grip",
    "venue": "Galleri Grip",
@@ -577,6 +605,33 @@
    },
    "access": "public",
    "url": "https://gallerigrip.se/",
+   "source": "web"
+  },
+  {
+   "id": "b650937a2080",
+   "venue_id": "lundberg-sandhagen",
+   "venue": "Galleri Lundberg-Sandhagen",
+   "address": null,
+   "map_url": null,
+   "district": "Vasastan",
+   "title": "Beware of Darkness",
+   "title_en": null,
+   "gloss": null,
+   "gloss_source": null,
+   "artists": [
+    "Sofia Wahl"
+   ],
+   "start_date": "2026-11-07",
+   "end_date": "2026-11-21",
+   "date": "2026-11-07",
+   "opening": {
+    "confirmed": false,
+    "start_time": null,
+    "end_time": null,
+    "text": null
+   },
+   "access": "public",
+   "url": "https://www.lundberg-sandhagen.com/exhibitions/beware-of-darkness",
    "source": "web"
   },
   {
@@ -978,7 +1033,7 @@
     "end_time": null,
     "text": null
    },
-   "access": "unknown",
+   "access": "public",
    "url": "https://idigalleri.org/",
    "source": "web"
   },
@@ -1043,9 +1098,7 @@
    "title_en": null,
    "gloss": "Members' Christmas Exhibition",
    "gloss_source": "machine",
-   "artists": [
-    "Medlemmarna"
-   ],
+   "artists": [],
    "start_date": "2026-11-28",
    "end_date": null,
    "date": "2026-11-28",
