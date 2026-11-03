@@ -22,13 +22,14 @@ END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
 UID:b2043c7b0f56@contrarian.fund
-DTSTAMP:20261102T094330Z
-DTSTART;VALUE=DATE:20261121
-DTEND;VALUE=DATE:20261122
-SUMMARY:Opens: Avund & svartsjuka [Envy and Jealousy] at Konstnärshuset
+DTSTAMP:20261103T094635Z
+DTSTART;TZID=Europe/Stockholm:20261121T130000
+DTEND;TZID=Europe/Stockholm:20261121T160000
+SUMMARY:Vernissage: Avund & svartsjuka [Envy and Jealousy] at Konstnärshus
+ et
 LOCATION:Smålandsgatan 7\, 111 46 Stockholm
-DESCRIPTION:Pontus Djanaieff\, Tang Wen\, Selma Morshedi\, Filippa Nilsson 
- Kallhed\nOn view until 2026-12-12.
+DESCRIPTION:Filippa Nilsson Kallhed\, Pontus Djanaieff\, Selma Morshedi\, T
+ ang Wen\nOn view until 2026-12-12.
 URL:https://konstnarshuset.org/
 END:VEVENT
 END:VCALENDAR
