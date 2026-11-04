@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-03T09:46:35+00:00",
+ "generated_at": "2026-11-04T09:42:00+00:00",
  "window_days": 60,
  "venues_tracked": 65,
  "events": [
@@ -943,7 +943,7 @@
    "gloss": null,
    "gloss_source": null,
    "artists": [
-    "Madeleine Pyk"
+    "MADELEINE PYK"
    ],
    "start_date": "2026-11-25",
    "end_date": "2026-12-06",
@@ -954,7 +954,7 @@
     "end_time": "19:00",
     "text": "Vernissage onsdag 25 november kl. 17-19"
    },
-   "access": "unknown",
+   "access": "public",
    "url": "https://www.gallerihedenius.com/",
    "source": "web"
   },
@@ -1002,9 +1002,9 @@
    "date": "2026-11-26",
    "opening": {
     "confirmed": true,
-    "start_time": "12:00",
+    "start_time": "23:00",
     "end_time": null,
-    "text": null
+    "text": "Monday to Wednesday is build-up and Thursday the vernissage; the gallery is open to the public Thursday to Sunday, and the week ends with take-down on Sunday evening. The vernissages: Thursday 26 November (week 1, 23 to 29 November), Thursday 3 December (week 2, 30 November to 6 December), Thursday 10 December (week 3, 7 to 13 December) and Thursday 17 December (week 4, 14 to 20 December)."
    },
    "access": "public",
    "url": "https://parallelcollective.se/en/exhibitions/slask-3-0-frossa",
@@ -1282,7 +1282,7 @@
    "gloss": null,
    "gloss_source": null,
    "artists": [
-    "Dan Wolgers"
+    "DAN WOLGERS"
    ],
    "start_date": "2026-12-10",
    "end_date": "2027-01-16",
@@ -1293,7 +1293,7 @@
     "end_time": "19:00",
     "text": "Vernissage torsdagen 10 december kl. 17-19"
    },
-   "access": "unknown",
+   "access": "public",
    "url": "https://www.gallerihedenius.com/",
    "source": "web"
   },
