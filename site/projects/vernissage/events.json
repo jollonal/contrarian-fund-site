@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-04T09:42:00+00:00",
+ "generated_at": "2026-11-05T09:43:07+00:00",
  "window_days": 60,
  "venues_tracked": 65,
  "events": [
@@ -171,6 +171,33 @@
    "source": "web"
   },
   {
+   "id": "9165de481a89",
+   "venue_id": "cecilia-hillstrom",
+   "venue": "Cecilia Hillström Gallery",
+   "address": "Hudiksvallsgatan 8, 113 30 Stockholm",
+   "map_url": "https://www.google.com/maps/search/?api=1&query=Cecilia%20Hillstr%C3%B6m%20Gallery%2C%20Hudiksvallsgatan%208%2C%20113%2030%20Stockholm",
+   "district": "Vasastan",
+   "title": "Anatomy of Incidents",
+   "title_en": null,
+   "gloss": null,
+   "gloss_source": null,
+   "artists": [
+    "Christopher Robin Nordström"
+   ],
+   "start_date": "2026-11-05",
+   "end_date": "2026-12-19",
+   "date": "2026-11-05",
+   "opening": {
+    "confirmed": false,
+    "start_time": null,
+    "end_time": null,
+    "text": null
+   },
+   "access": "public",
+   "url": "https://chgallery.se/exhibitions/154-christopher-robin-nordstrom-anatomy-of-incidents/",
+   "source": "web"
+  },
+  {
    "id": "b993644a00b4",
    "venue_id": "coulisse",
    "venue": "Coulisse Gallery",
@@ -225,6 +252,39 @@
    "source": "web"
   },
   {
+   "id": "75b31e119389",
+   "venue_id": "duerr",
+   "venue": "Galleri Duerr",
+   "address": "Hudiksvallsgatan 6, 113 30 Stockholm",
+   "map_url": "https://www.google.com/maps/search/?api=1&query=Galleri%20Duerr%2C%20Hudiksvallsgatan%206%2C%20113%2030%20Stockholm",
+   "district": "Vasastan",
+   "title": "LANDLINES",
+   "title_en": null,
+   "gloss": null,
+   "gloss_source": null,
+   "artists": [
+    "Claire McLaughlin",
+    "Ceara Conway",
+    "Dolores Lyne",
+    "Jo Killalea",
+    "Kevin Griffen",
+    "Noelle Gallagher",
+    "Sarah Ellen Lundy"
+   ],
+   "start_date": "2026-11-05",
+   "end_date": "2026-12-19",
+   "date": "2026-11-05",
+   "opening": {
+    "confirmed": false,
+    "start_time": null,
+    "end_time": null,
+    "text": null
+   },
+   "access": "public",
+   "url": "https://www.galleriduerr.com/exhibitions/98-landlines/overview/",
+   "source": "web"
+  },
+  {
    "id": "c94b07fa9771",
    "venue_id": "flach",
    "venue": "Galleri Flach",
@@ -269,12 +329,12 @@
    "end_date": "2027-01-17",
    "date": "2026-11-05",
    "opening": {
-    "confirmed": true,
+    "confirmed": false,
     "start_time": null,
     "end_time": null,
-    "text": "Öppnar torsdag 5 november"
+    "text": null
    },
-   "access": "unknown",
+   "access": "public",
    "url": "https://platformstockholm.com/gallery/e335f103-5c3f-4f80-be31-2196b12a58da",
    "source": "web"
   },
@@ -578,6 +638,33 @@
    },
    "access": "unknown",
    "url": "https://gallerihera.se/",
+   "source": "web"
+  },
+  {
+   "id": "e8b4a622ebc5",
+   "venue_id": "stance",
+   "venue": "STANCE Gallery",
+   "address": "Storgatan 25, 114 55 Stockholm",
+   "map_url": "https://www.google.com/maps/search/?api=1&query=STANCE%20Gallery%2C%20Storgatan%2025%2C%20114%2055%20Stockholm",
+   "district": "Östermalm",
+   "title": "Washed",
+   "title_en": null,
+   "gloss": null,
+   "gloss_source": null,
+   "artists": [
+    "Dustin Emory"
+   ],
+   "start_date": "2026-11-06",
+   "end_date": "2026-12-18",
+   "date": "2026-11-06",
+   "opening": {
+    "confirmed": false,
+    "start_time": null,
+    "end_time": null,
+    "text": null
+   },
+   "access": "unknown",
+   "url": "https://stancegallery.com/exhibitions/21-washed-dustin-emory/",
    "source": "web"
   },
   {

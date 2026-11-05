@@ -22,10 +22,10 @@ END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
 UID:24426fa60f8e@contrarian.fund
-DTSTAMP:20261104T094200Z
+DTSTAMP:20261105T094307Z
 DTSTART;VALUE=DATE:20261105
 DTEND;VALUE=DATE:20261106
-SUMMARY:Vernissage: The Ecology of Forking Paths at Platform Stockholm
+SUMMARY:Opens: The Ecology of Forking Paths at Platform Stockholm
 LOCATION:Färgkontoret\, Lövholmsgränd 12\, 117 43 Stockholm
 DESCRIPTION:Jonatan T. Wejnold\nOn view until 2027-01-17.
 URL:https://platformstockholm.com/gallery/e335f103-5c3f-4f80-be31-2196b12a5
