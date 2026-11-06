@@ -51,7 +51,7 @@
      Dates are worked out in the browser in Stockholm time (days change at 00:00 CET/CEST). */
   :root { --past60: #5C5A55; --twodays: #C9C9C4; --yesterday: #8A8A85; --today: #1E7B34; --tomorrow: #F2C230; --dayafter: #C62828; }
   .when-filter { display: flex; flex-wrap: wrap; gap: 6px; width: 100%; margin: 0 0 6px; }
-  .when-filter button { color: var(--ink) !important; border: 1px solid var(--ink) !important; padding: 3px 10px !important;
+  .when-filter button { color: var(--ink) !important; border: 1px solid var(--ink) !important; padding: 3px 8px !important;
                         text-decoration: none !important; }
   .when-filter button.dm2 { border-color: var(--twodays) !important; }
   .when-filter button.dm2[aria-pressed="true"] { background: var(--twodays); }
@@ -124,7 +124,7 @@
   .when-row .when-filter { width: auto; margin: 0; }
   .when-row { column-gap: 8px; }
   .filters .map-actions { display: flex; gap: 6px; margin-left: auto; }
-  /* Map buttons: borderless, white on two shades of deep blue (one per function); blue carries no day meaning here. */
+  /* Map buttons (Gallery list, Expand map): borderless, white on two shades of deep blue (one per function); blue carries no day meaning here. */
   .filters .map-actions button { color: #fff; background: var(--action); border: 0; padding: 5px 10px; text-decoration: none; }
   .filters .map-actions #key-toggle { --action: #1F4E79; --action-dark: #163A5C; }
   .filters .map-actions #map-expand { --action: #2E6A9E; --action-dark: #23557F; }
@@ -311,7 +311,7 @@
     </div>
     <label class="confirmed"><input type="checkbox" id="confirmed">Confirmed</label>
     <div class="map-actions">
-      <button type="button" id="key-toggle" aria-expanded="false" aria-controls="map-key">Show gallery list (68)</button>
+      <button type="button" id="key-toggle" aria-expanded="false" aria-controls="map-key">Gallery list (68)</button>
       <button type="button" id="map-expand" aria-expanded="false">Expand map</button>
     </div>
     </div>
@@ -1211,7 +1211,7 @@
   </main>
 
   <footer>
-    <p>58 openings, 21 with confirmed reception times. Last updated 6 November 2026, 10:44.</p>
+    <p>58 openings, 21 with confirmed reception times. Last updated 6 November 2026, 10:45.</p>
     <p><a href="events.ics">Subscribe to the calendar</a> · <a href="https://github.com/jollonal/contrarian-fund-site">Source code</a> · Built by <a href="/">Alfred J. Jollon</a></p>
   </footer>
 </div>
