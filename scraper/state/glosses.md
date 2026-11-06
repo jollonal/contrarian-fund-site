@@ -4,6 +4,7 @@ Correct a machine gloss in `scraper/overrides.yaml`.
 
 | Date | Gallery | Title | English | Source |
 |---|---|---|---|---|
+| 2026-11-05 | ABANTE Gallery | Kärt återseende | Dear Reunion | machine |
 | 2026-11-06 | Galleri Helle Knudsen | Våra historier | Our Stories | gallery |
 | 2026-11-06 | Candyland | Chthonic | Subterranean or Underworld | machine |
 | 2026-11-06 | Galleri Hera | Das andere Zuhause | The Other Home | override |

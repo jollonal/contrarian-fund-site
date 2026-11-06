@@ -1,8 +1,370 @@
 {
- "generated_at": "2026-11-06T07:49:28+00:00",
+ "generated_at": "2026-11-06T08:02:37+00:00",
  "window_days": 60,
  "venues_tracked": 67,
  "events": [
+  {
+   "id": "67a477f29b0e",
+   "venue_id": "abante",
+   "venue": "ABANTE Gallery",
+   "address": "Hornsgatan 44, 118 21 Stockholm",
+   "map_url": "https://www.google.com/maps/search/?api=1&query=ABANTE%20Gallery%2C%20Hornsgatan%2044%2C%20118%2021%20Stockholm",
+   "district": "Södermalm",
+   "title": "Kärt återseende",
+   "title_en": null,
+   "gloss": "Dear Reunion",
+   "gloss_source": "machine",
+   "artists": [
+    "Heléne Anderson",
+    "Gun-Britt Sundstedt",
+    "Birgitta Sander"
+   ],
+   "start_date": "2026-11-05",
+   "end_date": "2026-11-08",
+   "date": "2026-11-05",
+   "opening": {
+    "confirmed": true,
+    "start_time": "16:00",
+    "end_time": "20:00",
+    "text": "Varmt välkommen till utställningen \" Kärt återseende\" med Heléne Anderson."
+   },
+   "access": "public",
+   "url": "https://abantegallery.se/",
+   "source": "web"
+  },
+  {
+   "id": "a69f30eebffd",
+   "venue_id": "andrehn-schiptjenko",
+   "venue": "Andréhn-Schiptjenko",
+   "address": "Linnégatan 31, 114 47 Stockholm",
+   "map_url": "https://www.google.com/maps/search/?api=1&query=Andr%C3%A9hn-Schiptjenko%2C%20Linn%C3%A9gatan%2031%2C%20114%2047%20Stockholm",
+   "district": "Östermalm",
+   "title": "Shifts",
+   "title_en": null,
+   "gloss": null,
+   "gloss_source": null,
+   "artists": [
+    "Sixten Sandra Österberg"
+   ],
+   "start_date": "2026-11-05",
+   "end_date": "2026-12-19",
+   "date": "2026-11-05",
+   "opening": {
+    "confirmed": true,
+    "start_time": "17:00",
+    "end_time": "20:00",
+    "text": "The exhibition opens on Thursday 5 November between 17:00 - 20:00 in the presence of the artist."
+   },
+   "access": "public",
+   "url": "https://www.andrehn-schiptjenko.com/exhibitions/144-sixten-sandra-osterberg-shifts-stockholm/",
+   "source": "web"
+  },
+  {
+   "id": "e4afffba65b0",
+   "venue_id": "detroit-stockholm",
+   "venue": "Detroit Stockholm",
+   "address": "Roslagsgatan 21, 113 55 Stockholm",
+   "map_url": "https://www.google.com/maps/search/?api=1&query=Detroit%20Stockholm%2C%20Roslagsgatan%2021%2C%20113%2055%20Stockholm",
+   "district": "Vasastan",
+   "title": "Re-membering",
+   "title_en": null,
+   "gloss": null,
+   "gloss_source": null,
+   "artists": [
+    "Nanna Li",
+    "Jesper Bror Palmqvist",
+    "Åsa Polfjärd",
+    "Ting Wang"
+   ],
+   "start_date": "2026-11-05",
+   "end_date": "2026-11-21",
+   "date": "2026-11-05",
+   "opening": {
+    "confirmed": true,
+    "start_time": "17:00",
+    "end_time": "20:00",
+    "text": "Vernissage : 5th Nov 17:00-20:00"
+   },
+   "access": "public",
+   "url": "https://detroitstockholm.info/",
+   "source": "web"
+  },
+  {
+   "id": "b9a916d57547",
+   "venue_id": "antics",
+   "venue": "Antics",
+   "address": "Hudiksvallsgatan 8, 113 30 Stockholm",
+   "map_url": "https://www.google.com/maps/search/?api=1&query=Antics%2C%20Hudiksvallsgatan%208%2C%20113%2030%20Stockholm",
+   "district": "Vasastan",
+   "title": "Blown Away",
+   "title_en": null,
+   "gloss": null,
+   "gloss_source": null,
+   "artists": [
+    "David Permén"
+   ],
+   "start_date": null,
+   "end_date": null,
+   "date": "2026-11-05",
+   "opening": {
+    "confirmed": true,
+    "start_time": null,
+    "end_time": null,
+    "text": "Opening: November 5"
+   },
+   "access": "unknown",
+   "url": "https://antics.se/blown-away-david-permén",
+   "source": "web"
+  },
+  {
+   "id": "5d904dd6e085",
+   "venue_id": "berg",
+   "venue": "Berg Gallery",
+   "address": "Hudiksvallsgatan 8, 113 30 Stockholm",
+   "map_url": "https://www.google.com/maps/search/?api=1&query=Berg%20Gallery%2C%20Hudiksvallsgatan%208%2C%20113%2030%20Stockholm",
+   "district": "Vasastan",
+   "title": "Jeroen Erosie | Accumulation Phase",
+   "title_en": null,
+   "gloss": null,
+   "gloss_source": null,
+   "artists": [
+    "Jeroen Erosie"
+   ],
+   "start_date": "2026-11-05",
+   "end_date": "2026-12-19",
+   "date": "2026-11-05",
+   "opening": {
+    "confirmed": false,
+    "start_time": null,
+    "end_time": null,
+    "text": null
+   },
+   "access": "public",
+   "url": "https://www.berggallery.se/exhibitions/133-jeroen-erosie-accumulation-phase/",
+   "source": "web"
+  },
+  {
+   "id": "6f51b35edb5f",
+   "venue_id": "berg",
+   "venue": "Berg Gallery",
+   "address": "Hudiksvallsgatan 8, 113 30 Stockholm",
+   "map_url": "https://www.google.com/maps/search/?api=1&query=Berg%20Gallery%2C%20Hudiksvallsgatan%208%2C%20113%2030%20Stockholm",
+   "district": "Vasastan",
+   "title": "Sylvia Naimark | Synkop",
+   "title_en": null,
+   "gloss": null,
+   "gloss_source": null,
+   "artists": [
+    "Sylvia Naimark"
+   ],
+   "start_date": "2026-11-05",
+   "end_date": "2026-12-19",
+   "date": "2026-11-05",
+   "opening": {
+    "confirmed": false,
+    "start_time": null,
+    "end_time": null,
+    "text": null
+   },
+   "access": "public",
+   "url": "https://www.berggallery.se/exhibitions/134-sylvia-naimark-synkop/",
+   "source": "web"
+  },
+  {
+   "id": "9165de481a89",
+   "venue_id": "cecilia-hillstrom",
+   "venue": "Cecilia Hillström Gallery",
+   "address": "Hudiksvallsgatan 8, 113 30 Stockholm",
+   "map_url": "https://www.google.com/maps/search/?api=1&query=Cecilia%20Hillstr%C3%B6m%20Gallery%2C%20Hudiksvallsgatan%208%2C%20113%2030%20Stockholm",
+   "district": "Vasastan",
+   "title": "Anatomy of Incidents",
+   "title_en": null,
+   "gloss": null,
+   "gloss_source": null,
+   "artists": [
+    "Christopher Robin Nordström"
+   ],
+   "start_date": "2026-11-05",
+   "end_date": "2026-12-19",
+   "date": "2026-11-05",
+   "opening": {
+    "confirmed": false,
+    "start_time": null,
+    "end_time": null,
+    "text": null
+   },
+   "access": "public",
+   "url": "https://chgallery.se/exhibitions/154-christopher-robin-nordstrom-anatomy-of-incidents/",
+   "source": "web"
+  },
+  {
+   "id": "b993644a00b4",
+   "venue_id": "coulisse",
+   "venue": "Coulisse Gallery",
+   "address": "Gävlegatan 10 B, 113 30 Stockholm",
+   "map_url": "https://www.google.com/maps/search/?api=1&query=Coulisse%20Gallery%2C%20G%C3%A4vlegatan%2010%20B%2C%20113%2030%20Stockholm",
+   "district": "Vasastan",
+   "title": "Thom Trojanowski",
+   "title_en": null,
+   "gloss": null,
+   "gloss_source": null,
+   "artists": [
+    "Thom Trojanowski"
+   ],
+   "start_date": "2026-11-05",
+   "end_date": null,
+   "date": "2026-11-05",
+   "opening": {
+    "confirmed": false,
+    "start_time": null,
+    "end_time": null,
+    "text": null
+   },
+   "access": "unknown",
+   "url": "https://www.coulisse-gallery.com/",
+   "source": "manual"
+  },
+  {
+   "id": "c93611b9653e",
+   "venue_id": "coulisse",
+   "venue": "Coulisse Gallery",
+   "address": "Gävlegatan 10 B, 113 30 Stockholm",
+   "map_url": "https://www.google.com/maps/search/?api=1&query=Coulisse%20Gallery%2C%20G%C3%A4vlegatan%2010%20B%2C%20113%2030%20Stockholm",
+   "district": "Vasastan",
+   "title": "Evelina Jonsson",
+   "title_en": null,
+   "gloss": null,
+   "gloss_source": null,
+   "artists": [
+    "Evelina Jonsson"
+   ],
+   "start_date": "2026-11-05",
+   "end_date": null,
+   "date": "2026-11-05",
+   "opening": {
+    "confirmed": false,
+    "start_time": null,
+    "end_time": null,
+    "text": null
+   },
+   "access": "unknown",
+   "url": "https://www.coulisse-gallery.com/",
+   "source": "manual"
+  },
+  {
+   "id": "75b31e119389",
+   "venue_id": "duerr",
+   "venue": "Galleri Duerr",
+   "address": "Hudiksvallsgatan 6, 113 30 Stockholm",
+   "map_url": "https://www.google.com/maps/search/?api=1&query=Galleri%20Duerr%2C%20Hudiksvallsgatan%206%2C%20113%2030%20Stockholm",
+   "district": "Vasastan",
+   "title": "LANDLINES",
+   "title_en": null,
+   "gloss": null,
+   "gloss_source": null,
+   "artists": [
+    "Claire McLaughlin",
+    "Ceara Conway",
+    "Dolores Lyne",
+    "Jo Killalea",
+    "Kevin Griffen",
+    "Noelle Gallagher",
+    "Sarah Ellen Lundy"
+   ],
+   "start_date": "2026-11-05",
+   "end_date": "2026-12-19",
+   "date": "2026-11-05",
+   "opening": {
+    "confirmed": false,
+    "start_time": null,
+    "end_time": null,
+    "text": null
+   },
+   "access": "public",
+   "url": "https://www.galleriduerr.com/exhibitions/98-landlines/overview/",
+   "source": "web"
+  },
+  {
+   "id": "c94b07fa9771",
+   "venue_id": "flach",
+   "venue": "Galleri Flach",
+   "address": "Karlavägen 9, 114 24 Stockholm",
+   "map_url": "https://www.google.com/maps/search/?api=1&query=Galleri%20Flach%2C%20Karlav%C3%A4gen%209%2C%20114%2024%20Stockholm",
+   "district": "Östermalm",
+   "title": "Networks, Surfaces and Allegories",
+   "title_en": null,
+   "gloss": null,
+   "gloss_source": null,
+   "artists": [
+    "Peter Hagdahl"
+   ],
+   "start_date": "2026-11-05",
+   "end_date": "2026-12-12",
+   "date": "2026-11-05",
+   "opening": {
+    "confirmed": false,
+    "start_time": null,
+    "end_time": null,
+    "text": null
+   },
+   "access": "unknown",
+   "url": "https://www.galleriflach.com/peter-hagdahl-networks-surfaces-and-allegories-5-11-12-12-2026/",
+   "source": "web"
+  },
+  {
+   "id": "24426fa60f8e",
+   "venue_id": "platform-stockholm",
+   "venue": "Platform Stockholm",
+   "address": "Färgkontoret, Lövholmsgränd 12, 117 43 Stockholm",
+   "map_url": "https://www.google.com/maps/search/?api=1&query=Platform%20Stockholm%2C%20F%C3%A4rgkontoret%2C%20L%C3%B6vholmsgr%C3%A4nd%2012%2C%20117%2043%20Stockholm",
+   "district": "Liljeholmen",
+   "title": "The Ecology of Forking Paths",
+   "title_en": null,
+   "gloss": null,
+   "gloss_source": null,
+   "artists": [
+    "Jonatan T. Wejnold"
+   ],
+   "start_date": "2026-11-05",
+   "end_date": "2027-01-17",
+   "date": "2026-11-05",
+   "opening": {
+    "confirmed": false,
+    "start_time": null,
+    "end_time": null,
+    "text": null
+   },
+   "access": "public",
+   "url": "https://platformstockholm.com/gallery/e335f103-5c3f-4f80-be31-2196b12a58da",
+   "source": "web"
+  },
+  {
+   "id": "3f3a7e136829",
+   "venue_id": "saskia-neuman",
+   "venue": "Saskia Neuman Gallery",
+   "address": "Linnégatan 19, 114 47 Stockholm",
+   "map_url": "https://www.google.com/maps/search/?api=1&query=Saskia%20Neuman%20Gallery%2C%20Linn%C3%A9gatan%2019%2C%20114%2047%20Stockholm",
+   "district": "Östermalm",
+   "title": "En dörr leder till ett öga // A door leads to an eye",
+   "title_en": null,
+   "gloss": null,
+   "gloss_source": null,
+   "artists": [
+    "Matti Hoffner"
+   ],
+   "start_date": "2026-11-05",
+   "end_date": "2026-12-18",
+   "date": "2026-11-05",
+   "opening": {
+    "confirmed": true,
+    "start_time": null,
+    "end_time": null,
+    "text": "Opening Thursday November 5th."
+   },
+   "access": "unknown",
+   "url": "https://www.saskianeumangallery.com/exhibitions/en-dorr-leder-till-ett-oga-a-door-leads-to-an-eye",
+   "source": "web"
+  },
   {
    "id": "f4e400754f93",
    "venue_id": "anna-bohman",
