@@ -91,6 +91,10 @@
   "lat": 59.3381,
   "lon": 18.091245
  },
+ "Karlavägen 12, 114 31 Stockholm": {
+  "lat": 59.343483,
+  "lon": 18.066562
+ },
  "Karlavägen 15 B, 114 31 Stockholm": {
   "lat": 59.342882,
   "lon": 18.06872
@@ -210,6 +214,10 @@
  "Svartensgatan 10, 116 20 Stockholm": {
   "lat": 59.317418,
   "lon": 18.073571
+ },
+ "Timmermansgatan 40, 118 55 Stockholm": {
+  "lat": 59.315311,
+  "lon": 18.061358
  },
  "Tjärhovsgatan 19, 116 28 Stockholm": {
   "lat": 59.315907,

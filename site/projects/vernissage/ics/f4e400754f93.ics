@@ -2,7 +2,7 @@ BEGIN:VCALENDAR
 VERSION:2.0
 PRODID:-//contrarian.fund//vernissage//EN
 CALSCALE:GREGORIAN
-X-WR-CALNAME:The Ecology of Forking Paths
+X-WR-CALNAME:Lessness(es)
 BEGIN:VTIMEZONE
 TZID:Europe/Stockholm
 BEGIN:DAYLIGHT
@@ -21,14 +21,13 @@ RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU
 END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
-UID:24426fa60f8e@contrarian.fund
-DTSTAMP:20261105T094307Z
-DTSTART;VALUE=DATE:20261105
-DTEND;VALUE=DATE:20261106
-SUMMARY:Opens: The Ecology of Forking Paths at Platform Stockholm
-LOCATION:Färgkontoret\, Lövholmsgränd 12\, 117 43 Stockholm
-DESCRIPTION:Jonatan T. Wejnold\nOn view until 2027-01-17.
-URL:https://platformstockholm.com/gallery/e335f103-5c3f-4f80-be31-2196b12a5
- 8da
+UID:f4e400754f93@contrarian.fund
+DTSTAMP:20261106T074013Z
+DTSTART;TZID=Europe/Stockholm:20261106T120000
+DTEND;TZID=Europe/Stockholm:20261106T190000
+SUMMARY:Vernissage: Lessness(es) at Anna Bohman Gallery
+LOCATION:Karlavägen 15 B\, 114 31 Stockholm
+DESCRIPTION:Maria Miesenberger\nOn view until 2026-12-13.
+URL:https://www.annabohmangallery.com/maria-miesenberger-2026
 END:VEVENT
 END:VCALENDAR

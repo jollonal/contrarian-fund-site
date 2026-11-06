@@ -2,7 +2,7 @@ BEGIN:VCALENDAR
 VERSION:2.0
 PRODID:-//contrarian.fund//vernissage//EN
 CALSCALE:GREGORIAN
-X-WR-CALNAME:Kai Savelsberg
+X-WR-CALNAME:Das andere Zuhause
 BEGIN:VTIMEZONE
 TZID:Europe/Stockholm
 BEGIN:DAYLIGHT
@@ -22,10 +22,10 @@ END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
 UID:35911122f480@contrarian.fund
-DTSTAMP:20261105T094307Z
-DTSTART;VALUE=DATE:20261106
-DTEND;VALUE=DATE:20261107
-SUMMARY:Opens: Kai Savelsberg at Galleri Hera
+DTSTAMP:20261106T074013Z
+DTSTART;TZID=Europe/Stockholm:20261106T170000
+DTEND;TZID=Europe/Stockholm:20261106T190000
+SUMMARY:Vernissage: Das andere Zuhause [The Other Home] at Galleri Hera
 LOCATION:Hornsgatan 36\, 118 20 Stockholm
 DESCRIPTION:Kai Savelsberg\nOn view until 2026-11-25.
 URL:https://gallerihera.se/

@@ -2,7 +2,7 @@ BEGIN:VCALENDAR
 VERSION:2.0
 PRODID:-//contrarian.fund//vernissage//EN
 CALSCALE:GREGORIAN
-X-WR-CALNAME:Våra ...
+X-WR-CALNAME:Våra historier
 BEGIN:VTIMEZONE
 TZID:Europe/Stockholm
 BEGIN:DAYLIGHT
@@ -22,10 +22,10 @@ END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
 UID:de781fd4d68d@contrarian.fund
-DTSTAMP:20261105T094307Z
+DTSTAMP:20261106T074013Z
 DTSTART;TZID=Europe/Stockholm:20261106T160000
 DTEND;TZID=Europe/Stockholm:20261106T190000
-SUMMARY:Vernissage: Våra ... [Our Stories] at Galleri Helle Knudsen
+SUMMARY:Vernissage: Våra historier / Our Stories at Galleri Helle Knudsen
 LOCATION:Hantverkargatan 18-20\, 112 21 Stockholm
 DESCRIPTION:Britta Marakatt-Labba\, Tomas Colbengtson\nOn view until 2026-1
  2-05.
