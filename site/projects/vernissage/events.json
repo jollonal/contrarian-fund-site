@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-06T07:40:13+00:00",
+ "generated_at": "2026-11-06T07:49:28+00:00",
  "window_days": 60,
  "venues_tracked": 67,
  "events": [
@@ -106,7 +106,7 @@
     "confirmed": true,
     "start_time": "17:00",
     "end_time": "19:00",
-    "text": "Opening reception: Friday, 6 November, 5–7 pm (Gallery Weekend programme)"
+    "text": "Opening reception: Friday, 6 November, 5–7 pm (Gallery Weekend program)"
    },
    "access": "unknown",
    "url": "https://gallerihera.se/",
