@@ -8,16 +8,19 @@ import re
 import urllib.parse
 
 from . import llm as L
-from .clean import html_to_text, next_data_text, opening_snippets
+from .clean import atom_feed_text, html_to_text, next_data_text, opening_snippets
 from .fetch import FetchError, Fetcher
 
 log = logging.getLogger("vernissage")
 STALE_DAYS = 14  # reuse a cached extraction this long if a page stops responding
 
 
-def page_text(v: dict, html: str, url: str) -> str:
+def page_text(v: dict, html: str, url: str, today: dt.date | None = None) -> str:
     """Listing text for the LLM. Venues with adapter next_data are read from the page's
-    embedded Next.js data, falling back to the HTML text if that is missing."""
+    embedded Next.js data, falling back to the HTML text if that is missing. Venues with
+    adapter shopify list an Atom feed (/blogs/<name>.atom): its posts from the last 60 days."""
+    if v.get("adapter") == "shopify" and url.endswith(".atom"):
+        return atom_feed_text(html, url, today or dt.date.today()) or "No posts in the last 60 days."
     if v.get("adapter") == "next_data":
         text = next_data_text(html, v.get("next_data_keys"))
         if text:
@@ -62,7 +65,7 @@ def scrape(venues: list[dict], cache: dict, today: dt.date, window: int,
             entry = pages.get(url, {})
             try:
                 html = fetcher.render(url) if v.get("adapter") == "headless" else fetcher.get(url)
-                text = page_text(v, html, url)
+                text = page_text(v, html, url, today)
             except FetchError as e:
                 log.warning("fetch failed %s", e)
                 if _fresh(entry, today):

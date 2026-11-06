@@ -1,9 +1,11 @@
 """Reduce gallery HTML to compact text with absolute links, sized for a small LLM context."""
 from __future__ import annotations
 
+import datetime as dt
 import json
 import re
 import urllib.parse
+import xml.etree.ElementTree as ET
 
 from bs4 import BeautifulSoup
 
@@ -115,3 +117,31 @@ def opening_snippets(text: str, radius: int = 250, limit: int = 3000) -> str:
         else:
             spans.append((a, b))
     return "\n...\n".join(text[a:b] for a, b in spans)[:limit]
+
+
+ATOM = "{http://www.w3.org/2005/Atom}"
+
+
+def atom_feed_text(xml: str, base_url: str, today: dt.date, days: int = 60, per_post: int = 1_500) -> str:
+    """Posts from an Atom feed (Shopify blogs: /blogs/<name>.atom), newest first, published in the
+    last `days` days. Each post's full text is kept (to `per_post` chars), since a blog's listing
+    page shows only titles and excerpts, not exhibition dates."""
+    try:
+        root = ET.fromstring(xml.encode("utf-8") if isinstance(xml, str) else xml)
+    except ET.ParseError:
+        return ""
+    cutoff = today - dt.timedelta(days=days)
+    out = []
+    for e in root.iter(ATOM + "entry"):
+        published = (e.findtext(ATOM + "published") or e.findtext(ATOM + "updated") or "")[:10]
+        try:
+            if dt.date.fromisoformat(published) < cutoff:
+                continue
+        except ValueError:
+            continue
+        title = (e.findtext(ATOM + "title") or "").strip()
+        link = next((a.get("href") for a in e.findall(ATOM + "link") if a.get("rel", "alternate") == "alternate"), None)
+        link = urllib.parse.urljoin(base_url, link) if link else ""
+        body = html_to_text(e.findtext(ATOM + "content") or e.findtext(ATOM + "summary") or "", link or base_url)
+        out.append(f"Post: {title}" + (f" <{link}>" if link else "") + f"\nPublished: {published}\n{body[:per_post]}")
+    return "\n\n".join(out)[:MAX_CHARS]

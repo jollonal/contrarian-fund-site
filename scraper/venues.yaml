@@ -402,13 +402,13 @@ venues:
     name: ed. art
     homepage: https://ed-art.se/
     exhibitions_urls:
-      - https://ed-art.se/blogs/news
+      - https://ed-art.se/blogs/news.atom
     address: Timmermansgatan 40, 118 55 Stockholm
     district: Södermalm
     type: commercial
     adapter: shopify
     opening_text: no
-    notes: Editions shop and showroom (Galleriförbundet member). Exhibitions are announced as news posts, e.g. Jasmin Daryani, Gallery Weekend 2026. Active from 2026-11-06 (user decision; excluded since 2026-10-08).
+    notes: Editions shop and showroom (Galleriförbundet member). Exhibitions are announced as news posts, e.g. Jasmin Daryani, Gallery Weekend 2026. Active from 2026-11-06 (user decision; excluded since 2026-10-08). Read from the blog's Atom feed (shopify adapter), since the listing page has no exhibition dates; posts from the last 60 days, full text.
     status: active
 
   - id: anna-persson
