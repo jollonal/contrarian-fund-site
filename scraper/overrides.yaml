@@ -46,7 +46,8 @@ events:
     url: https://125kvadrat.com/galleri/ann-christin-reybekiel/
   # Gallery Weekend Stockholm 2026, checked against the galleries' own sites on 2026-11-06.
   - venue: anna-bohman
-    title: Lessness(es)
+    corrects: true
+    title: lessness(es)
     artists: [Maria Miesenberger]
     start_date: 2026-11-06
     end_date: 2026-12-13

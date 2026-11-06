@@ -169,6 +169,35 @@ def merge_events(a: dict, b: dict) -> dict:
     return out
 
 
+def _summary(e: dict) -> dict:
+    op = e["opening"]
+    return {"title": e["title"], "start_date": e["start_date"], "date": e["date"],
+            "opening": f"{op['start_time'] or ''}-{op['end_time'] or ''}" if op["confirmed"] else None}
+
+
+def _overlap(a: dict, b: dict) -> bool:
+    arts = lambda e: {x.lower() for x in e["artists"]}
+    ta, tb = _slug(a["title"]), _slug(b["title"])
+    return bool(arts(a) & arts(b)) or (bool(ta and tb) and (ta in tb or tb in ta))
+
+
+def _verified_clash(a: dict, b: dict) -> dict | None:
+    """When a verified hand entry (corrects: true) meets the site's copy of the same show and the
+    two disagree on the opening (date or times), report it. The verified version is still shown.
+    Titles are not compared: hand entries exist to correct garbled scraped titles."""
+    hand = next((e for e in (a, b) if e.get("source") == "manual" and e.get("_corrects")), None)
+    site = b if hand is a else a
+    if hand is None or site.get("source") == "manual":
+        return None
+    h, s = hand["opening"], site["opening"]
+    if not (h["confirmed"] and s["confirmed"]):
+        return None
+    if (hand["date"], h["start_time"], h["end_time"]) == (site["date"], s["start_time"], s["end_time"]):
+        return None
+    return {"venue": hand["venue_id"], "problems": ["site differs from verified entry: opening"],
+            "item": {"verified": _summary(hand), "site": _summary(site)}}
+
+
 def normalize(found: dict[str, list[dict]], venues: list[dict], today: dt.date, window: int,
               overrides: dict | None = None):
     """Return (events, review). Events are deduped, in-window, sorted."""
@@ -190,7 +219,7 @@ def normalize(found: dict[str, list[dict]], venues: list[dict], today: dt.date, 
             op = x.get("opening") or {}
             op_date = _date(op.get("date"))
             day = op_date or start
-            if not day or not (today - dt.timedelta(days=1) <= day <= horizon):  # yesterday kept: still worth a visit
+            if not day or not (today - dt.timedelta(days=2) <= day <= horizon):  # two past days kept: still worth a visit
                 continue  # outside the window: never shown, so never worth reviewing
 
             problems = []
@@ -245,8 +274,17 @@ def normalize(found: dict[str, list[dict]], venues: list[dict], today: dt.date, 
             if prev_id is None:
                 merged[ev["id"]] = ev
             else:
+                clash = _verified_clash(merged[prev_id], ev)
+                if clash:
+                    review.append(clash)
                 merged[prev_id] = merge_events(merged[prev_id], ev)
 
+    for e in merged.values():  # a verified entry the site lists under other dates: flag a possible duplicate
+        if e.get("source") == "manual" and e.get("_corrects"):
+            for o in merged.values():
+                if o is not e and o["venue_id"] == e["venue_id"] and o.get("source") != "manual" and _overlap(o, e):
+                    review.append({"venue": e["venue_id"], "problems": ["verified entry not matched to the site's listing; possible duplicate"],
+                                   "item": {"verified": _summary(e), "site": _summary(o)}})
     for e in merged.values():
         e.pop("_url_given", None)
         e.pop("_corrects", None)

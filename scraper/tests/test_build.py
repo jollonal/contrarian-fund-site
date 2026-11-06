@@ -151,8 +151,37 @@ def test_trailing_full_stop_dropped_from_titles():
     assert tidy_title("No stop") == "No stop"
 
 
-def test_yesterdays_openings_stay_listed_one_day():
+def test_openings_from_the_last_two_days_stay_listed():
     items = [ex(title="Yesterday", start_date="2026-10-06"), ex(title="Two days ago", start_date="2026-10-05"),
-             ex(title="Today", start_date="2026-10-07")]
+             ex(title="Three days ago", start_date="2026-10-04"), ex(title="Today", start_date="2026-10-07")]
     events, _ = normalize({"a": items}, VENUES, TODAY, 60, {})
-    assert [e["title"] for e in events] == ["Yesterday", "Today"]
+    assert [e["title"] for e in events] == ["Two days ago", "Yesterday", "Today"]
+
+
+def test_verified_entry_wins_and_disagreements_are_flagged():
+    import logging
+    from vernissage.__main__ import manual_events
+    site = ex(title="Show", artists=["X"], start_date="2026-10-09",
+              opening={"date": "2026-10-09", "start_time": "18:00", "end_time": "20:00", "text": "Vernissage 18-20"})
+    hand = [{"venue": "a", "corrects": True, "title": "Show", "artists": ["X"], "start_date": "2026-10-09",
+             "opening_date": "2026-10-09", "opening_start": "17:00", "opening_end": "19:00"}]
+    found = {"a": [site]}
+    for vid, item in manual_events(hand, VENUES, logging.getLogger("t")):
+        found[vid].append(item)
+    (e,), review = normalize(found, VENUES, TODAY, 60, {})
+    assert e["opening"]["start_time"] == "17:00"                       # verified version shown
+    assert review and review[0]["problems"] == ["site differs from verified entry: opening"]
+    assert review[0]["item"]["site"]["opening"] == "18:00-20:00"
+    # the site lists the show under another start date: both kept, flagged as a possible duplicate
+    found = {"a": [ex(title="Show", artists=["X"], start_date="2026-10-16")]}
+    for vid, item in manual_events(hand, VENUES, logging.getLogger("t")):
+        found[vid].append(item)
+    events, review = normalize(found, VENUES, TODAY, 60, {})
+    assert len(events) == 2 and "possible duplicate" in review[0]["problems"][0]
+    # agreeing copies: no flag
+    found = {"a": [ex(title="Show", artists=["X"], start_date="2026-10-09",
+                      opening={"date": "2026-10-09", "start_time": "17:00", "end_time": "19:00", "text": "v"})]}
+    for vid, item in manual_events(hand, VENUES, logging.getLogger("t")):
+        found[vid].append(item)
+    _, review = normalize(found, VENUES, TODAY, 60, {})
+    assert review == []

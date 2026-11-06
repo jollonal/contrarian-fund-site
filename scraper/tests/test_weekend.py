@@ -52,7 +52,7 @@ def test_main_page_links_weekend_and_has_day_buttons(tmp_path):
     write_outputs(events, VENUES, tmp_path, dt.date(2026, 11, 6), 60, None, weekend=WK)
     html = (tmp_path / "index.html").read_text(encoding="utf-8")
     assert 'href="gallery-weekend/"' in html and "6–8 November" in html
-    assert 'data-offset="0"' in html and 'data-date="2026-11-06"' in html
+    assert 'data-when="d0"' in html and 'data-when="m2"' in html and 'data-date="2026-11-06"' in html
     write_outputs(events, VENUES, tmp_path, dt.date(2026, 11, 6), 60, None)
     assert 'href="gallery-weekend/"' not in (tmp_path / "index.html").read_text(encoding="utf-8")
 

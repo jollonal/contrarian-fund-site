@@ -31,11 +31,14 @@
   .filters button { font: inherit; color: var(--muted); background: none; border: 0; padding: 0; cursor: pointer; }
   .filters button[aria-pressed="true"] { color: var(--ink); text-decoration: underline; text-underline-offset: 3px; }
   .filters label { margin-left: auto; color: var(--muted); cursor: pointer; }
-  /* Day shortcuts: gray = yesterday, green = today, yellow = tomorrow, red = day after; dates are worked out in the browser (Stockholm time). */
-  :root { --yesterday: #8A8A85; --today: #1E7B34; --tomorrow: #F2C230; --dayafter: #C62828; }
+  /* Day shortcuts: light gray = two days ago, gray = yesterday, green = today, yellow = tomorrow, red = day after.
+     Dates are worked out in the browser in Stockholm time (days change at 00:00 CET/CEST). */
+  :root { --twodays: #C9C9C4; --yesterday: #8A8A85; --today: #1E7B34; --tomorrow: #F2C230; --dayafter: #C62828; }
   .when-filter { display: flex; gap: 6px; width: 100%; margin: 0 0 6px; }
   .when-filter button { color: var(--ink) !important; border: 1px solid var(--ink) !important; padding: 3px 10px !important;
                         text-decoration: none !important; }
+  .when-filter button.dm2 { border-color: var(--twodays) !important; }
+  .when-filter button.dm2[aria-pressed="true"] { background: var(--twodays); }
   .when-filter button.dm1 { border-color: var(--yesterday) !important; }
   .when-filter button.d0 { border-color: var(--today) !important; }
   .when-filter button.d1 { border-color: var(--tomorrow) !important; }
@@ -50,6 +53,7 @@
   .tag.t0 { background: var(--today); color: #fff; }
   .tag.t1 { background: var(--tomorrow); color: var(--ink); }
   .tag.t2 { background: var(--dayafter); color: #fff; }
+  .tag.tm2 { background: var(--twodays); color: var(--ink); }
   .tag.tm1 { background: var(--yesterday); color: #fff; }
   .day { display: grid; grid-template-columns: 200px 1fr; gap: 24px; padding: 28px 0; border-bottom: 1px solid var(--rule); }
   .day h2 { font-size: 15px; font-weight: 400; margin: 2px 0 0; }
@@ -81,11 +85,15 @@
   .dot { display: inline-block; width: 10px; height: 10px; border-radius: 50%; border: 1.5px solid var(--ink);
          background: var(--bg); vertical-align: -1px; margin: 0 4px 0 12px; }
   .dot.on { background: var(--ink); }
-  .legend .dot:first-child { margin-left: 0; }
+  .legend { display: flex; flex-wrap: wrap; gap: 4px 14px; }
+  .legend button { font: inherit; color: var(--muted); background: none; border: 0; padding: 0; cursor: pointer; }
+  .legend button[aria-pressed="true"] { color: var(--ink); text-decoration: underline; text-underline-offset: 3px; }
+  .legend .dot { margin: 0 4px 0 0; }
   .pin span { display: flex; align-items: center; justify-content: center; box-sizing: border-box; width: 22px; height: 22px;
               border-radius: 50%; border: 1.5px solid var(--ink); background: var(--bg); color: var(--ink); font: 600 11px/1 var(--font); }
   .pin.on span { background: var(--ink); color: var(--bg); }
-  /* After .pin.on so the day colors win: gray yesterday, green today, yellow tomorrow, red day after. */
+  /* After .pin.on so the day colors win: light gray two days ago, gray yesterday, green today, yellow tomorrow, red day after. */
+  .dot.dm2, .pin.on.dm2 span { background: var(--twodays); border-color: var(--twodays); color: var(--ink); }
   .dot.dm1, .pin.on.dm1 span { background: var(--yesterday); border-color: var(--yesterday); color: #fff; }
   .dot.d0, .pin.on.d0 span { background: var(--today); border-color: var(--today); color: #fff; }
   .dot.d1, .pin.on.d1 span { background: var(--tomorrow); border-color: var(--tomorrow); color: var(--ink); }
@@ -126,7 +134,15 @@
   <section class="map-wrap" id="map-wrap" aria-label="Map of galleries">
     <div id="map" data-window="{{ window }}" role="region" aria-label="Map of {{ n_points }} galleries. Filled pins have an opening in the next {{ window }} days."></div>
     <div class="map-bar">
-      <span class="legend"><span class="dot dm1"></span>Yesterday<span class="dot d0"></span>Opening today<span class="dot d1"></span>Tomorrow<span class="dot d2"></span>Day after<span class="dot on"></span>Later in the next {{ window }} days<span class="dot"></span>Other galleries</span>
+      <span class="legend" role="group" aria-label="Show on the map and in the list">
+        <button type="button" data-when="m2" aria-pressed="false"><span class="dot dm2"></span><span class="lbl">Two days ago</span></button>
+        <button type="button" data-when="m1" aria-pressed="false"><span class="dot dm1"></span><span class="lbl">Yesterday</span></button>
+        <button type="button" data-when="d0" aria-pressed="false"><span class="dot d0"></span><span class="lbl">Opening today</span></button>
+        <button type="button" data-when="d1" aria-pressed="false"><span class="dot d1"></span><span class="lbl">Tomorrow</span></button>
+        <button type="button" data-when="d2" aria-pressed="false"><span class="dot d2"></span><span class="lbl">Day after tomorrow</span></button>
+        <button type="button" data-when="later" aria-pressed="false"><span class="dot on"></span><span class="lbl">Later in the next {{ window }} days</span></button>
+        <button type="button" data-when="none" aria-pressed="false"><span class="dot"></span><span class="lbl">Other galleries</span></button>
+      </span>
       <span class="map-actions">
         <button type="button" id="key-toggle" aria-expanded="false" aria-controls="map-key">Show gallery list ({{ n_points }})</button>
         <button type="button" id="map-expand" aria-expanded="false">Expand map</button>
@@ -149,10 +165,11 @@
   {% if districts %}
   <nav class="filters" aria-label="Filter">
     <div class="when-filter" role="group" aria-label="Show one day">
-      <button type="button" class="dm1" data-offset="-1" aria-pressed="false">Yesterday</button>
-      <button type="button" class="d0" data-offset="0" aria-pressed="false">Today</button>
-      <button type="button" class="d1" data-offset="1" aria-pressed="false">Tomorrow</button>
-      <button type="button" class="d2" data-offset="2" aria-pressed="false">Day after</button>
+      <button type="button" class="dm2" data-when="m2" aria-pressed="false">Two days ago</button>
+      <button type="button" class="dm1" data-when="m1" aria-pressed="false">Yesterday</button>
+      <button type="button" class="d0" data-when="d0" aria-pressed="false">Today</button>
+      <button type="button" class="d1" data-when="d1" aria-pressed="false">Tomorrow</button>
+      <button type="button" class="d2" data-when="d2" aria-pressed="false">Day after tomorrow</button>
     </div>
     <button type="button" data-district="" aria-pressed="true">All</button>
     {% for d in districts %}<button type="button" data-district="{{ d }}" aria-pressed="false">{{ d }}</button>
@@ -196,67 +213,88 @@
 </div>
 <script>
 (function () {
-  var district = "", confirmedOnly = false, onDate = "";
-  var btns = document.querySelectorAll(".filters button[data-district]");
-  var dayBtns = document.querySelectorAll(".when-filter button");
+  // One selection drives both the list and the map: district, day (or later / none), confirmed only.
+  // Days change at 00:00 Stockholm time (CET/CEST), worked out in the visitor's browser.
+  var sel = { district: "", when: "", confirmedOnly: false };
+  var OFF = { m2: -2, m1: -1, d0: 0, d1: 1, d2: 2 };
   function stockholmDate(offset) {  // YYYY-MM-DD in Stockholm, offset in days
     var d = new Date(new Intl.DateTimeFormat("en-CA", { timeZone: "Europe/Stockholm", year: "numeric",
       month: "2-digit", day: "2-digit" }).format(new Date()) + "T12:00:00Z");
     d.setUTCDate(d.getUTCDate() + offset);
     return d.toISOString().slice(0, 10);
   }
-  window.stockholmDate = stockholmDate;  // also used by the map pins
-  var labels = { "-1": "Yesterday", "0": "Today", "1": "Tomorrow", "2": "Day after tomorrow" };
-  // The list opens at today (midnight Stockholm time, CET/CEST). Yesterday's openings are kept
-  // but shown only with the Yesterday button; anything older is dropped (page built before midnight).
-  var yesterday = stockholmDate(-1);
+  function weekday(iso) { return new Date(iso + "T12:00:00Z").toLocaleDateString("en-US", { weekday: "long", timeZone: "UTC" }); }
+  var dates = {};
+  Object.keys(OFF).forEach(function (k) { dates[k] = stockholmDate(OFF[k]); });
+  window.vernissageDates = dates;  // shared with the map
+  window.vernissageSel = sel;
+  var tagText = { m2: "Two days ago", m1: "Yesterday", d0: "Today", d1: "Tomorrow", d2: "Day after tomorrow" };
+  var tagCls = { m2: "tm2", m1: "tm1", d0: "t0", d1: "t1", d2: "t2" };
+  // Outer days carry their weekday name on the buttons and in the legend.
+  document.querySelectorAll('[data-when="m2"], [data-when="d2"]').forEach(function (b) {
+    var lbl = b.querySelector(".lbl") || b; lbl.textContent = weekday(dates[b.dataset.when]);
+  });
+  // Days before today stay hidden until chosen; anything older than two days is dropped
+  // (the page may have been built before midnight).
   document.querySelectorAll(".day[data-date]").forEach(function (day) {
-    if (day.dataset.date < yesterday) { day.dataset.stale = "1"; day.hidden = true; }
-    else if (day.dataset.date === yesterday) { day.dataset.past = "1"; day.hidden = true; }
-  });
-  dayBtns.forEach(function (b) {
-    var n = +b.dataset.offset, iso = stockholmDate(n);
-    b.dataset.date = iso;
-    var day = document.querySelector('.day[data-date="' + iso + '"]');
-    if (day) {
-      var tag = day.querySelector(".tag");
-      if (tag) { tag.textContent = labels[n]; tag.className = "tag t" + (n < 0 ? "m1" : n); }
-      var count = day.querySelectorAll(".ev").length;
-      b.textContent += " (" + count + ")";
-    } else {
-      b.disabled = true; b.title = "No openings that day";
-    }
-    b.addEventListener("click", function () {
-      onDate = onDate === iso ? "" : iso;
-      dayBtns.forEach(function (x) { x.setAttribute("aria-pressed", x.dataset.date === onDate ? "true" : "false"); });
-      apply();
+    var d = day.dataset.date;
+    if (d < dates.m2) day.dataset.stale = "1";
+    else if (d < dates.d0) day.dataset.past = "1";
+    Object.keys(OFF).forEach(function (k) {
+      if (d === dates[k]) { var t = day.querySelector(".tag"); if (t) { t.textContent = tagText[k]; t.className = "tag " + tagCls[k]; } }
     });
+    if (day.dataset.stale || day.dataset.past) day.hidden = true;
   });
-  var box = document.getElementById("confirmed");
+  document.querySelectorAll(".when-filter button").forEach(function (b) {
+    var day = document.querySelector('.day[data-date="' + dates[b.dataset.when] + '"]');
+    if (day) b.textContent += " (" + day.querySelectorAll(".ev").length + ")";
+    else { b.disabled = true; b.title = "No openings that day"; }
+  });
+  function dayVisible(d) {
+    var w = sel.when;
+    if (OFF.hasOwnProperty(w)) return d === dates[w];
+    if (w === "later") return d > dates.d2;
+    if (w === "none") return false;
+    return d >= dates.d0;
+  }
   function apply() {
     var shown = 0;
     document.querySelectorAll(".day").forEach(function (day) {
       var any = false;
       day.querySelectorAll(".ev").forEach(function (ev) {
-        var ok = (!district || ev.dataset.district === district) && (!confirmedOnly || ev.dataset.confirmed === "1");
+        var ok = (!sel.district || ev.dataset.district === sel.district) && (!sel.confirmedOnly || ev.dataset.confirmed === "1");
         ev.hidden = !ok; any = any || ok;
       });
-      if (onDate && day.dataset.date !== onDate) any = false;
-      if (day.dataset.stale || (day.dataset.past && onDate !== day.dataset.date)) any = false;
+      if (day.dataset.stale || !dayVisible(day.dataset.date)) any = false;
       day.hidden = !any; if (any) shown++;
     });
     var none = document.getElementById("none");
-    if (none) none.hidden = shown > 0 || !document.querySelector(".day");
+    if (none) {
+      none.textContent = sel.when === "none" ? "These galleries have no openings listed. See the map." : "No openings match this filter.";
+      none.hidden = shown > 0 || !document.querySelector(".day");
+    }
+    if (window.vernissageMap) window.vernissageMap.filter(sel);
   }
-  btns.forEach(function (b) {
+  window.vernissageApply = apply;
+  document.querySelectorAll("[data-when]").forEach(function (b) {
     b.addEventListener("click", function () {
-      district = b.dataset.district;
-      btns.forEach(function (x) { x.setAttribute("aria-pressed", x === b ? "true" : "false"); });
+      sel.when = sel.when === b.dataset.when ? "" : b.dataset.when;
+      document.querySelectorAll("[data-when]").forEach(function (x) {
+        x.setAttribute("aria-pressed", x.dataset.when === sel.when ? "true" : "false");
+      });
       apply();
-      if (window.vernissageMap) window.vernissageMap.showDistrict(district);  // map follows the district filter
     });
   });
-  if (box) box.addEventListener("change", function () { confirmedOnly = box.checked; apply(); });
+  var btns = document.querySelectorAll(".filters button[data-district]");
+  btns.forEach(function (b) {
+    b.addEventListener("click", function () {
+      sel.district = b.dataset.district;
+      btns.forEach(function (x) { x.setAttribute("aria-pressed", x === b ? "true" : "false"); });
+      apply();
+    });
+  });
+  var box = document.getElementById("confirmed");
+  if (box) box.addEventListener("change", function () { sel.confirmedOnly = box.checked; apply(); });
 })();
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -273,7 +311,7 @@ document.addEventListener("DOMContentLoaded", function () {
   }
   function link(href, text) { var a = node("a", null, text); a.href = href; a.rel = "noopener"; a.target = "_blank"; return a; }
   var markers = {}, all = [], central = [];
-  var near = window.stockholmDate ? [-1, 0, 1, 2].map(window.stockholmDate) : [];
+  var D = window.vernissageDates || null;
   pts.forEach(function (p) {
     var box = node("div", "pop");
     box.appendChild(node("p", "pop-name", p.n + ". " + p.name));
@@ -294,11 +332,16 @@ document.addEventListener("DOMContentLoaded", function () {
     if (p.url) { var wp = node("p"); wp.appendChild(link(p.url, "Gallery website")); box.appendChild(wp); }
     // Soonest upcoming opening: today green, tomorrow yellow, day after red, later black.
     // Gray only when yesterday's opening is the gallery's only one in the list.
-    var has = function (iso) { return p.openings.some(function (o) { return o.iso === iso; }); };
+    // Soonest upcoming opening: today green, tomorrow yellow, day after red, later black.
+    // Only when every opening has passed: gray if the latest was yesterday, light gray if two days ago.
+    var isos = p.openings.map(function (o) { return o.iso; });
+    p.isos = isos;
     var cls = "", soon = -1;
-    [1, 2, 3].forEach(function (k) { if (soon < 0 && near.length && has(near[k])) soon = k - 1; });
-    if (soon >= 0) cls = " d" + soon;
-    else if (near.length && p.openings.length && p.openings.every(function (o) { return o.iso <= near[0]; })) cls = " dm1";
+    if (D) {
+      ["d0", "d1", "d2"].forEach(function (k, i) { if (soon < 0 && isos.indexOf(D[k]) >= 0) soon = i; });
+      if (soon >= 0) cls = " d" + soon;
+      else if (isos.length && isos.every(function (x) { return x < D.d0; })) cls = isos.indexOf(D.m1) >= 0 ? " dm1" : " dm2";
+    }
     var icon = L.divIcon({ className: "pin" + (p.openings.length ? " on" : "") + cls,
                            html: "<span>" + p.n + "</span>", iconSize: [22, 22], iconAnchor: [11, 11], popupAnchor: [0, -12] });
     markers[p.id] = L.marker([p.lat, p.lon], { icon: icon, title: p.n + ". " + p.name, alt: p.n + ". " + p.name,
@@ -310,15 +353,23 @@ document.addEventListener("DOMContentLoaded", function () {
   fitAll();
 
   // District filter: show only that district's pins and zoom to them; "All" restores everything.
-  window.vernissageMap = { showDistrict: function (d) {
-    var shown = [];
+  function matchesWhen(p, w) {
+    if (!w || !D) return true;
+    if (D.hasOwnProperty(w)) return p.isos.indexOf(D[w]) >= 0;
+    if (w === "later") return p.isos.some(function (x) { return x > D.d2; });
+    if (w === "none") return !p.isos.length;
+    return true;
+  }
+  window.vernissageMap = { filter: function (sel) {
+    var shown = [], d = sel.district, w = sel.when;
     pts.forEach(function (p) {
-      var m = markers[p.id], on = !d || p.district === d;
+      var m = markers[p.id], on = (!d || p.district === d) && matchesWhen(p, w);
       if (on) { if (!map.hasLayer(m)) m.addTo(map); shown.push([p.lat, p.lon]); }
       else { m.closePopup(); map.removeLayer(m); }
     });
     document.querySelectorAll(".key-group").forEach(function (g) { g.hidden = !!d && g.dataset.district !== d; });
-    if (!d) fitAll();
+    if (!d && !w) fitAll();
+    else if (!shown.length) return;
     else if (shown.length === 1) map.setView(shown[0], 15);
     else if (shown.length) map.fitBounds(shown, { padding: [24, 24], maxZoom: 16 });
   } };
