@@ -7,6 +7,10 @@
 #   venue (id from venues.yaml) or gallery (name, for galleries not in venues.yaml),
 #   address / district / site (override or supply), kind (Opening, Reception, Talk,
 #   Tour, Performance, Presentation, Preview), title, artists, note.
+#   Openings, receptions and previews at galleries in venues.yaml also go on the main list,
+#   as verified entries (their times win over the gallery site's), unless overrides.yaml
+#   already has a hand entry for that show. For a reception during a show that opened
+#   earlier, give show_start (and show_end) so it merges with the site's listing.
 # on_view: shows open all weekend with no event listed; same place fields.
 # For a new year, replace the dates, hours, events and on_view lists.
 
@@ -73,6 +77,8 @@ events:
     kind: Reception
     title: HERE I AM
     artists: [Nathalia Edenmont]
+    show_start: 2026-10-07
+    show_end: 2026-11-15
     note: The program asks for an RSVP by email (address on the program page). Sparkling wine. Show runs until 15 November.
   - date: 2026-11-06
     start: "16:00"

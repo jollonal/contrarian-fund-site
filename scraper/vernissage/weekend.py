@@ -49,6 +49,59 @@ def _place(item: dict, by_id: dict) -> dict:
     }
 
 
+OPENING_KINDS = {"Opening", "Reception", "Preview"}
+
+
+def main_list_events(wk: dict | None, venues: list[dict], hand: list[tuple[str, dict]]) -> list[tuple[str, dict]]:
+    """Openings, receptions and previews from the Gallery Weekend program, shaped like verified
+    hand entries (corrects: true) so they join the main list and win over a scraped copy's
+    opening. Skipped: galleries not in venues.yaml, and shows already given a hand entry in
+    overrides.yaml (that entry is more specific). A reception for a show that opened earlier
+    needs `show_start` (and ideally `show_end`) so it merges with the site's copy."""
+    if not wk:
+        return []
+    ids = {v["id"] for v in venues}
+    low = lambda xs: {str(x).lower() for x in xs or []}
+    slug = lambda t: "".join(c for c in str(t or "").lower() if c.isalnum())
+
+    def covered(vid, item):
+        for hv, h in hand:
+            if hv != vid:
+                continue
+            if low(h["artists"]) & low(item.get("artists")):
+                return True
+            a, b = slug(h["title"]), slug(item.get("title"))
+            if a and b and (a in b or b in a):
+                return True
+        return False
+
+    out = []
+    for item in wk.get("events", []):
+        vid = item.get("venue")
+        if item.get("kind") not in OPENING_KINDS or vid not in ids or not item.get("title") or covered(vid, item):
+            continue
+        day = _d(item["date"])
+        kind = item["kind"]
+        out.append((vid, {
+            "source": "manual",
+            "corrects": True,
+            "title": str(item["title"]),
+            "title_en": None,
+            "venue_name": item.get("gallery"),
+            "artists": [str(x) for x in item.get("artists") or []],
+            "start_date": str(item.get("show_start") or day),
+            "end_date": str(item["show_end"]) if item.get("show_end") else None,
+            "kind": "exhibition",
+            "detail_url": item.get("url"),
+            "opening": {"date": day.isoformat(), "start_time": item.get("start"), "end_time": item.get("end"),
+                        "text": f"{kind} (Gallery Weekend program)",
+                        "label": "Reception" if kind == "Reception" else None},
+            "access": "unknown",
+            "confidence": 1,
+        }))
+    return out
+
+
 def _time(item: dict) -> str:
     s, e = item.get("start"), item.get("end")
     return f"{s}–{e}" if s and e else (s or "")

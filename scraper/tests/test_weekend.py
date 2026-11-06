@@ -82,3 +82,24 @@ def test_hand_correction_wins_but_placeholder_yields():
         found[vid].append(item)
     (e,), _ = normalize(found, VENUES, dt.date(2026, 11, 6), 60, {})
     assert e["title"] == "Våra ..."                            # placeholder: the site's title wins
+
+
+def test_weekend_openings_join_main_list_unless_hand_entry_exists():
+    from vernissage import weekend as W
+    venues = [{"id": "w", "name": "W"}, {"id": "a", "name": "A"}, {"id": "h", "name": "H"}]
+    wk = {"events": [
+        {"date": dt.date(2026, 11, 6), "venue": "w", "kind": "Reception", "start": "16:00", "end": "18:00",
+         "title": "HERE I AM", "artists": ["N"], "show_start": dt.date(2026, 10, 7), "show_end": dt.date(2026, 11, 15)},
+        {"date": dt.date(2026, 11, 6), "venue": "a", "gallery": "A, project space", "kind": "Opening",
+         "start": "16:00", "end": "19:00", "title": "Mini", "artists": ["D"]},
+        {"date": dt.date(2026, 11, 6), "venue": "h", "kind": "Opening", "start": "17:00", "title": "Covered", "artists": ["K"]},
+        {"date": dt.date(2026, 11, 7), "venue": "a", "kind": "Talk", "start": "13:00", "title": "Talk", "artists": ["D"]},
+        {"date": dt.date(2026, 11, 5), "gallery": "Visiting", "kind": "Preview", "title": "X"},
+    ]}
+    hand = [("h", {"title": "Covered show", "artists": ["K"]})]
+    out = dict(W.main_list_events(wk, venues, hand))
+    assert set(out) == {"w", "a"}
+    w = out["w"]
+    assert w["corrects"] and w["start_date"] == "2026-10-07" and w["end_date"] == "2026-11-15"
+    assert w["opening"]["date"] == "2026-11-06" and w["opening"]["label"] == "Reception"
+    assert out["a"]["venue_name"] == "A, project space" and out["a"]["opening"]["label"] is None

@@ -98,7 +98,10 @@ def main() -> int:
 
     ov_path = ROOT / "overrides.yaml"
     ov = (yaml.safe_load(ov_path.read_text(encoding="utf-8")) or {}) if ov_path.exists() else {}
-    for vid, item in manual_events(ov.get("events"), venues, log):
+    from . import weekend as W
+    wk = W.load(ROOT / "weekend.yaml")
+    hand = manual_events(ov.get("events"), venues, log)
+    for vid, item in hand + W.main_list_events(wk, venues, hand):  # overrides.yaml first, then the program
         found.setdefault(vid, []).append(item)
     events, review = normalize(found, venues, today, a.window, ov.get("glosses") or {})
     (ROOT / "state" / "glosses.md").write_text(gloss_report(events), encoding="utf-8")
@@ -107,8 +110,6 @@ def main() -> int:
     on_map = [v for v in venues if v.get("status") == "active" or v.get("newsletter")]
     for vid, (lat, lon) in locate(on_map, ROOT / "state" / "geocode.json", today).items():
         next(v for v in venues if v["id"] == vid).update(lat=lat, lon=lon)
-    from . import weekend as W
-    wk = W.load(ROOT / "weekend.yaml")
     W.write(wk, venues, SITE, today)
     past = opening_history(ROOT / "state" / "history.json", found, events, today)
     write_outputs(events, venues, SITE, today, a.window, os.environ.get("REPO_URL"),

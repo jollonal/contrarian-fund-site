@@ -245,7 +245,7 @@
           {% set artists = e.artists | join(", ") %}
           {% if artists and artists != e.title %}<p class="artists">{{ artists }}</p>{% endif %}
           {% if e.opening.confirmed %}
-            <p class="when">Vernissage{% if e.opening.start_time %} {{ e.opening.start_time }}{% if e.opening.end_time %} to {{ e.opening.end_time }}{% endif %}{% endif %}{% if e.access == "invite" %}, by invitation{% endif %}</p>
+            <p class="when">{{ e.opening.label or "Vernissage" }}{% if e.opening.start_time %} {{ e.opening.start_time }}{% if e.opening.end_time %} to {{ e.opening.end_time }}{% endif %}{% endif %}{% if e.access == "invite" %}, by invitation{% endif %}</p>
           {% else %}
             <p class="when unconfirmed">Exhibition opens. Reception details not published.</p>
           {% endif %}

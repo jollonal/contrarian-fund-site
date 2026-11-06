@@ -161,8 +161,9 @@ def merge_events(a: dict, b: dict) -> dict:
             out[k] = hand[k]
         if hand.get("_url_given"):
             out["url"] = hand["url"]
-        if hand["opening"]["confirmed"]:
-            out["opening"], out["date"] = hand["opening"], hand["date"]
+        same = lambda o, d: (d, o["start_time"], o["end_time"])
+        if hand["opening"]["confirmed"] and same(hand["opening"], hand["date"]) != same(out["opening"], out["date"]):
+            out["opening"], out["date"] = hand["opening"], hand["date"]  # the site's own wording kept when they agree
         out["id"] = (b if hand is a else a)["id"]  # keep the scraped id: calendar entries stay stable
     sources = {s for e in (a, b) for s in e.get("source", "web").split("+")} - {"manual"}
     out["source"] = "+".join(x for x in ("web", "newsletter") if x in sources) or "manual"
@@ -225,7 +226,7 @@ def normalize(found: dict[str, list[dict]], venues: list[dict], today: dt.date, 
             problems = []
             if start and end and start > end:
                 problems.append("start after end")
-            if op_date and start and abs((op_date - start).days) > 14:
+            if op_date and start and abs((op_date - start).days) > 14 and not op.get("label"):  # a reception mid-run is fine
                 problems.append("opening far from start")
             explicit = bool(op_date and _time(op.get("start_time")) and OPENING_TEXT.search(op.get("text") or ""))
             if float(x.get("confidence") or 0) < MIN_CONFIDENCE and not explicit:
@@ -245,7 +246,7 @@ def normalize(found: dict[str, list[dict]], venues: list[dict], today: dt.date, 
             ev = {
                 "id": hashlib.sha1(key.encode()).hexdigest()[:12],
                 "venue_id": vid,
-                "venue": v["name"],
+                "venue": x.get("venue_name") or v["name"],
                 "address": v.get("address"),
                 "map_url": map_url(v["name"], v.get("address")),
                 "district": v.get("district"),
@@ -269,6 +270,8 @@ def normalize(found: dict[str, list[dict]], venues: list[dict], today: dt.date, 
                 "_url_given": bool(x.get("detail_url")),
                 "_corrects": bool(x.get("corrects")),
             }
+            if op_date and op.get("label"):
+                ev["opening"]["label"] = op["label"]  # e.g. "Reception"; shown instead of "Vernissage"
             prev_id = ev["id"] if ev["id"] in merged else next(
                 (k for k, e in merged.items() if same_show(e, ev)), None)
             if prev_id is None:
@@ -364,7 +367,7 @@ def _vevent(e: dict, stamp: str) -> list[str]:
     else:
         nxt = (dt.date.fromisoformat(e["date"]) + dt.timedelta(days=1)).isoformat().replace("-", "")
         when = [f"DTSTART;VALUE=DATE:{d}", f"DTEND;VALUE=DATE:{nxt}"]
-    label = "Vernissage" if op["confirmed"] else "Opens"
+    label = (op.get("label") or "Vernissage") if op["confirmed"] else "Opens"
     desc = ", ".join(e["artists"])
     if e["end_date"]:
         desc += f"\nOn view until {e['end_date']}."
@@ -447,6 +450,8 @@ def map_points(events: list[dict], venues: list[dict], past: dict[str, list[str]
             t = e["opening"]["start_time"] if e["opening"]["confirmed"] else None
             if t and e["opening"]["end_time"]:
                 t += " to " + e["opening"]["end_time"]
+            if t and e["opening"].get("label"):
+                t = f'{e["opening"]["label"].lower()} {t}'
             opens.append({"date": f"{d.strftime('%a')} {d.day} {d.strftime('%b')}", "iso": d.isoformat(),
                           "title": display_title(e),
                           "time": t})
