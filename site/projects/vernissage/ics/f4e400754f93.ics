@@ -2,7 +2,7 @@ BEGIN:VCALENDAR
 VERSION:2.0
 PRODID:-//contrarian.fund//vernissage//EN
 CALSCALE:GREGORIAN
-X-WR-CALNAME:Lessness(es)
+X-WR-CALNAME:lessness(es)
 BEGIN:VTIMEZONE
 TZID:Europe/Stockholm
 BEGIN:DAYLIGHT
@@ -22,10 +22,10 @@ END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
 UID:f4e400754f93@contrarian.fund
-DTSTAMP:20261106T081012Z
+DTSTAMP:20261106T082841Z
 DTSTART;TZID=Europe/Stockholm:20261106T120000
 DTEND;TZID=Europe/Stockholm:20261106T190000
-SUMMARY:Vernissage: Lessness(es) at Anna Bohman Gallery
+SUMMARY:Vernissage: lessness(es) at Anna Bohman Gallery
 LOCATION:Karlavägen 15 B\, 114 31 Stockholm
 DESCRIPTION:Maria Miesenberger\nOn view until 2026-12-13.
 URL:https://www.annabohmangallery.com/maria-miesenberger-2026

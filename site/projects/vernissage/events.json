@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-06T08:10:12+00:00",
+ "generated_at": "2026-11-06T08:28:41+00:00",
  "window_days": 60,
  "venues_tracked": 67,
  "events": [
@@ -372,7 +372,7 @@
    "address": "Karlavägen 15 B, 114 31 Stockholm",
    "map_url": "https://www.google.com/maps/search/?api=1&query=Anna%20Bohman%20Gallery%2C%20Karlav%C3%A4gen%2015%20B%2C%20114%2031%20Stockholm",
    "district": "Östermalm",
-   "title": "Lessness(es)",
+   "title": "lessness(es)",
    "title_en": null,
    "gloss": null,
    "gloss_source": null,
