@@ -36,15 +36,17 @@
   .filters button[aria-pressed="true"] { color: var(--ink); text-decoration: underline; text-underline-offset: 3px; }
   .filters label { color: var(--muted); cursor: pointer; }
   .district-row { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; width: 100%; margin: 10px 0 0; }
-  .filters .district-row button { font-size: 15px; font-weight: 500; color: var(--ink); background: #fff;
-                                  border: 1px solid var(--rule); padding: 4px 12px; text-decoration: none; }
-  .filters .district-row button:hover { border-color: var(--ink); }
-  .filters .district-row button[aria-pressed="true"] { background: var(--ink); color: #fff; border-color: var(--ink); }
-  .filters .district-row label { display: inline-flex; align-items: center; gap: 6px; font-size: 15px; font-weight: 500;
-                                 color: var(--ink); padding: 4px 12px; border: 1px solid var(--rule); background: #fff;
-                                 margin-left: 8px; }
-  .filters .district-row label:has(input:checked) { border-color: var(--ink); }
-  .filters .district-row input { margin: 0; accent-color: var(--ink); }
+  /* Districts: borderless fills graded light to darker from Östermalm outward (list order); selected = black. */
+  .filters .district-row button { font-size: 15px; font-weight: 500; color: var(--ink); background: var(--shade, #F6F4EF);
+                                  border: 0; padding: 5px 12px; text-decoration: none; }
+  .filters .district-row button:hover { box-shadow: inset 0 0 0 1px var(--ink); }
+  .filters .district-row button[aria-pressed="true"] { background: var(--ink); color: #fff; }
+  /* Confirmed: borderless toggle between the day buttons and the map buttons; black when on. */
+  .filters .confirmed { display: inline-flex; align-items: center; font-weight: 500; color: var(--ink); background: #E8E6E0;
+                        padding: 3px 10px; cursor: pointer; border: 1px solid transparent; }
+  .filters .confirmed:has(input:checked) { background: var(--ink); color: #fff; }
+  .filters .confirmed:has(input:focus-visible) { outline: 2px solid var(--ink); outline-offset: 2px; }
+  .filters .confirmed input { position: absolute; opacity: 0; width: 1px; height: 1px; margin: 0; }
   /* Day shortcuts: light gray = two days ago, gray = yesterday, green = today, yellow = tomorrow, red = day after.
      Dates are worked out in the browser in Stockholm time (days change at 00:00 CET/CEST). */
   :root { --past60: #5C5A55; --twodays: #C9C9C4; --yesterday: #8A8A85; --today: #1E7B34; --tomorrow: #F2C230; --dayafter: #C62828; }
@@ -120,9 +122,10 @@
   .when-row { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-start; gap: 8px 16px;
               width: 100%; margin: 0 0 6px; }
   .when-row .when-filter { width: auto; margin: 0; }
+  .when-row { column-gap: 8px; }
   .filters .map-actions { display: flex; gap: 6px; margin-left: auto; }
   /* Map buttons: borderless, white on two shades of deep blue (one per function); blue carries no day meaning here. */
-  .filters .map-actions button { color: #fff; background: var(--action); border: 0; padding: 5px 12px; text-decoration: none; }
+  .filters .map-actions button { color: #fff; background: var(--action); border: 0; padding: 5px 10px; text-decoration: none; }
   .filters .map-actions #key-toggle { --action: #1F4E79; --action-dark: #163A5C; }
   .filters .map-actions #map-expand { --action: #2E6A9E; --action-dark: #23557F; }
   .filters .map-actions button:hover, .filters .map-actions button:focus-visible,
@@ -158,7 +161,6 @@
     .day { grid-template-columns: 1fr; gap: 12px; }
     .when-filter { flex-wrap: wrap; }
     header p.notice { padding: 10px 14px; }
-    .filters .district-row label { margin-left: 0; }
     #map { height: 300px; }
     .key-groups { grid-template-columns: 1fr; }
   }
@@ -214,6 +216,7 @@
       <button type="button" class="d1" data-when="d1" aria-pressed="false">Tomorrow</button>
       <button type="button" class="d2" data-when="d2" aria-pressed="false">Day after tomorrow</button>
     </div>
+    <label class="confirmed"><input type="checkbox" id="confirmed">Confirmed</label>
     {% if n_points %}<div class="map-actions">
       <button type="button" id="key-toggle" aria-expanded="false" aria-controls="map-key">Show gallery list ({{ n_points }})</button>
       <button type="button" id="map-expand" aria-expanded="false">Expand map</button>
@@ -221,9 +224,9 @@
     </div>
     <div class="district-row" role="group" aria-label="Neighborhood">
     <button type="button" data-district="" aria-pressed="true">All</button>
-    {% for d in districts %}<button type="button" data-district="{{ d }}" aria-pressed="false">{{ d }}</button>
+    {% set shades = ["#F1EFEA", "#ECE9E3", "#E7E4DD", "#E2DED6", "#DDD9D0", "#D8D3C9", "#D3CEC3", "#CEC8BC", "#C9C3B6"] %}
+    {% for d in districts %}<button type="button" data-district="{{ d }}" aria-pressed="false" style="--shade: {{ shades[loop.index0] if loop.index0 < shades|length else shades[-1] }}">{{ d }}</button>
     {% endfor %}
-    <label><input type="checkbox" id="confirmed"> Confirmed vernissages only</label>
     </div>
   </nav>
   {% endif %}
