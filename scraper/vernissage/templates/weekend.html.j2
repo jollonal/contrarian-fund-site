@@ -24,12 +24,13 @@
   .day h2 { font-size: 15px; font-weight: 400; margin: 2px 0 0; }
   .day h2 span { display: block; color: var(--muted); }
   .day.past .ev { color: var(--muted); }
-  :root { --today: #1E7B34; --tomorrow: #F2C230; }
+  :root { --yesterday: #8A8A85; --today: #1E7B34; --tomorrow: #F2C230; --dayafter: #C62828; }
   .tag { display: inline-block; margin-top: 6px; padding: 1px 8px; font-size: 12px; letter-spacing: 0.04em; font-style: normal; }
   .tag:empty { display: none; }
   .tag.t0 { background: var(--today); color: #fff; }
   .tag.t1 { background: var(--tomorrow); color: var(--ink); }
-  .tag.t2 { border: 1px solid var(--ink); }
+  .tag.t2 { background: var(--dayafter); color: #fff; }
+  .tag.tm1 { background: var(--yesterday); color: #fff; }
   .ev { padding: 0 0 24px; }
   .ev:last-child { padding-bottom: 0; }
   .ev .venue { font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; margin: 0 0 4px; }
@@ -106,13 +107,15 @@
   </footer>
 </div>
 <script>
-(function () {  /* green = today, yellow = tomorrow, in Stockholm time; past days greyed in the browser too */
+(function () {  /* gray = yesterday, green = today, yellow = tomorrow, red = day after, in Stockholm time; past days grayed in the browser too */
   var t = new Intl.DateTimeFormat("en-CA", { timeZone: "Europe/Stockholm", year: "numeric", month: "2-digit",
     day: "2-digit" }).format(new Date());
   var labels = ["Today", "Tomorrow", "Day after tomorrow"];
   document.querySelectorAll(".day[data-date]").forEach(function (day) {
     var n = Math.round((Date.parse(day.dataset.date + "T12:00:00Z") - Date.parse(t + "T12:00:00Z")) / 864e5);
-    if (n < 0) { day.classList.add("past"); return; }
+    if (n < 0) { day.classList.add("past"); }
+    if (n === -1) { var y = day.querySelector(".tag"); y.textContent = "Yesterday"; y.className = "tag tm1"; return; }
+    if (n < 0) return;
     if (n <= 2) { var tag = day.querySelector(".tag"); tag.textContent = labels[n]; tag.className = "tag t" + n; }
   });
 })();

@@ -190,7 +190,7 @@ def normalize(found: dict[str, list[dict]], venues: list[dict], today: dt.date, 
             op = x.get("opening") or {}
             op_date = _date(op.get("date"))
             day = op_date or start
-            if not day or not (today <= day <= horizon):
+            if not day or not (today - dt.timedelta(days=1) <= day <= horizon):  # yesterday kept: still worth a visit
                 continue  # outside the window: never shown, so never worth reviewing
 
             problems = []

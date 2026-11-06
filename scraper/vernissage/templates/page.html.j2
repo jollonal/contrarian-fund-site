@@ -27,22 +27,26 @@
   .filters button { font: inherit; color: var(--muted); background: none; border: 0; padding: 0; cursor: pointer; }
   .filters button[aria-pressed="true"] { color: var(--ink); text-decoration: underline; text-underline-offset: 3px; }
   .filters label { margin-left: auto; color: var(--muted); cursor: pointer; }
-  /* Day shortcuts: green = today, yellow = tomorrow; dates are worked out in the browser (Stockholm time). */
-  :root { --today: #1E7B34; --tomorrow: #F2C230; }
+  /* Day shortcuts: gray = yesterday, green = today, yellow = tomorrow, red = day after; dates are worked out in the browser (Stockholm time). */
+  :root { --yesterday: #8A8A85; --today: #1E7B34; --tomorrow: #F2C230; --dayafter: #C62828; }
   .when-filter { display: flex; gap: 6px; width: 100%; margin: 0 0 6px; }
   .when-filter button { color: var(--ink) !important; border: 1px solid var(--ink) !important; padding: 3px 10px !important;
                         text-decoration: none !important; }
+  .when-filter button.dm1 { border-color: var(--yesterday) !important; }
   .when-filter button.d0 { border-color: var(--today) !important; }
   .when-filter button.d1 { border-color: var(--tomorrow) !important; }
   .when-filter button.d0[aria-pressed="true"] { background: var(--today); color: #fff !important; }
   .when-filter button.d1[aria-pressed="true"] { background: var(--tomorrow); }
-  .when-filter button.d2[aria-pressed="true"] { background: var(--ink); color: var(--bg) !important; }
+  .when-filter button.d2 { border-color: var(--dayafter) !important; }
+  .when-filter button.dm1[aria-pressed="true"] { background: var(--yesterday); color: #fff !important; }
+  .when-filter button.d2[aria-pressed="true"] { background: var(--dayafter); color: #fff !important; }
   .when-filter button:disabled { opacity: 0.4; cursor: default; }
   .tag { display: inline-block; margin-top: 6px; padding: 1px 8px; font-size: 12px; letter-spacing: 0.04em; font-style: normal; }
   .tag:empty { display: none; }
   .tag.t0 { background: var(--today); color: #fff; }
   .tag.t1 { background: var(--tomorrow); color: var(--ink); }
-  .tag.t2 { border: 1px solid var(--ink); }
+  .tag.t2 { background: var(--dayafter); color: #fff; }
+  .tag.tm1 { background: var(--yesterday); color: #fff; }
   .day { display: grid; grid-template-columns: 200px 1fr; gap: 24px; padding: 28px 0; border-bottom: 1px solid var(--rule); }
   .day h2 { font-size: 15px; font-weight: 400; margin: 2px 0 0; }
   .day h2 span { display: block; color: var(--muted); }
@@ -74,12 +78,14 @@
          background: var(--bg); vertical-align: -1px; margin: 0 4px 0 12px; }
   .dot.on { background: var(--ink); }
   .legend .dot:first-child { margin-left: 0; }
-  .dot.d0, .pin.d0 span { background: var(--today); border-color: var(--today); color: #fff; }
-  .dot.d1, .pin.d1 span { background: var(--tomorrow); border-color: var(--tomorrow); color: var(--ink); }
-  .dot.d2, .pin.d2 span { background: var(--dayafter); border-color: var(--dayafter); color: #fff; }
   .pin span { display: flex; align-items: center; justify-content: center; box-sizing: border-box; width: 22px; height: 22px;
               border-radius: 50%; border: 1.5px solid var(--ink); background: var(--bg); color: var(--ink); font: 600 11px/1 var(--font); }
   .pin.on span { background: var(--ink); color: var(--bg); }
+  /* After .pin.on so the day colors win: gray yesterday, green today, yellow tomorrow, red day after. */
+  .dot.dm1, .pin.on.dm1 span { background: var(--yesterday); border-color: var(--yesterday); color: #fff; }
+  .dot.d0, .pin.on.d0 span { background: var(--today); border-color: var(--today); color: #fff; }
+  .dot.d1, .pin.on.d1 span { background: var(--tomorrow); border-color: var(--tomorrow); color: var(--ink); }
+  .dot.d2, .pin.on.d2 span { background: var(--dayafter); border-color: var(--dayafter); color: #fff; }
   .key { margin: 12px 0 0; font-size: 14px; }
   .map-actions { display: flex; gap: 8px; flex-wrap: wrap; }
   .key-group { margin: 14px 0 0; break-inside: avoid; }
@@ -116,7 +122,7 @@
   <section class="map-wrap" id="map-wrap" aria-label="Map of galleries">
     <div id="map" data-window="{{ window }}" role="region" aria-label="Map of {{ n_points }} galleries. Filled pins have an opening in the next {{ window }} days."></div>
     <div class="map-bar">
-      <span class="legend"><span class="dot d0"></span>Opening today<span class="dot d1"></span>Tomorrow<span class="dot d2"></span>Day after<span class="dot on"></span>Later in the next {{ window }} days<span class="dot"></span>Other galleries</span>
+      <span class="legend"><span class="dot dm1"></span>Yesterday<span class="dot d0"></span>Opening today<span class="dot d1"></span>Tomorrow<span class="dot d2"></span>Day after<span class="dot on"></span>Later in the next {{ window }} days<span class="dot"></span>Other galleries</span>
       <span class="map-actions">
         <button type="button" id="key-toggle" aria-expanded="false" aria-controls="map-key">Show gallery list ({{ n_points }})</button>
         <button type="button" id="map-expand" aria-expanded="false">Expand map</button>
@@ -139,6 +145,7 @@
   {% if districts %}
   <nav class="filters" aria-label="Filter">
     <div class="when-filter" role="group" aria-label="Show one day">
+      <button type="button" class="dm1" data-offset="-1" aria-pressed="false">Yesterday</button>
       <button type="button" class="d0" data-offset="0" aria-pressed="false">Today</button>
       <button type="button" class="d1" data-offset="1" aria-pressed="false">Tomorrow</button>
       <button type="button" class="d2" data-offset="2" aria-pressed="false">Day after</button>
@@ -195,14 +202,18 @@
     return d.toISOString().slice(0, 10);
   }
   window.stockholmDate = stockholmDate;  // also used by the map pins
-  var labels = ["Today", "Tomorrow", "Day after tomorrow"];
+  var labels = { "-1": "Yesterday", "0": "Today", "1": "Tomorrow", "2": "Day after tomorrow" };
+  var oldest = stockholmDate(-1);
+  document.querySelectorAll(".day[data-date]").forEach(function (day) {  // built before midnight: drop days now older than yesterday
+    if (day.dataset.date < oldest) { day.dataset.stale = "1"; day.hidden = true; }
+  });
   dayBtns.forEach(function (b) {
     var n = +b.dataset.offset, iso = stockholmDate(n);
     b.dataset.date = iso;
     var day = document.querySelector('.day[data-date="' + iso + '"]');
     if (day) {
       var tag = day.querySelector(".tag");
-      if (tag) { tag.textContent = labels[n]; tag.className = "tag t" + n; }
+      if (tag) { tag.textContent = labels[n]; tag.className = "tag t" + (n < 0 ? "m1" : n); }
       var count = day.querySelectorAll(".ev").length;
       b.textContent += " (" + count + ")";
     } else {
@@ -224,6 +235,7 @@
         ev.hidden = !ok; any = any || ok;
       });
       if (onDate && day.dataset.date !== onDate) any = false;
+      if (day.dataset.stale) any = false;
       day.hidden = !any; if (any) shown++;
     });
     var none = document.getElementById("none");
@@ -254,7 +266,7 @@ document.addEventListener("DOMContentLoaded", function () {
   }
   function link(href, text) { var a = node("a", null, text); a.href = href; a.rel = "noopener"; a.target = "_blank"; return a; }
   var markers = {}, all = [], central = [];
-  var near = window.stockholmDate ? [0, 1, 2].map(window.stockholmDate) : [];
+  var near = window.stockholmDate ? [-1, 0, 1, 2].map(window.stockholmDate) : [];
   pts.forEach(function (p) {
     var box = node("div", "pop");
     box.appendChild(node("p", "pop-name", p.n + ". " + p.name));
@@ -273,12 +285,14 @@ document.addEventListener("DOMContentLoaded", function () {
       box.appendChild(node("p", "pop-none", "No openings in the next " + days + " days."));
     }
     if (p.url) { var wp = node("p"); wp.appendChild(link(p.url, "Gallery website")); box.appendChild(wp); }
-    // Soonest opening today (green), tomorrow (yellow) or the day after (red); later ones stay black.
-    var soon = -1;
-    [0, 1, 2].forEach(function (k) {
-      if (soon < 0 && p.openings.some(function (o) { return o.iso === near[k]; })) soon = k;
-    });
-    var icon = L.divIcon({ className: "pin" + (p.openings.length ? " on" : "") + (soon >= 0 ? " d" + soon : ""),
+    // Soonest upcoming opening: today green, tomorrow yellow, day after red, later black.
+    // Gray only when yesterday's opening is the gallery's only one in the list.
+    var has = function (iso) { return p.openings.some(function (o) { return o.iso === iso; }); };
+    var cls = "", soon = -1;
+    [1, 2, 3].forEach(function (k) { if (soon < 0 && near.length && has(near[k])) soon = k - 1; });
+    if (soon >= 0) cls = " d" + soon;
+    else if (near.length && p.openings.length && p.openings.every(function (o) { return o.iso <= near[0]; })) cls = " dm1";
+    var icon = L.divIcon({ className: "pin" + (p.openings.length ? " on" : "") + cls,
                            html: "<span>" + p.n + "</span>", iconSize: [22, 22], iconAnchor: [11, 11], popupAnchor: [0, -12] });
     markers[p.id] = L.marker([p.lat, p.lon], { icon: icon, title: p.n + ". " + p.name, alt: p.n + ". " + p.name,
                                                zIndexOffset: soon >= 0 ? 2000 - soon * 100 : (p.openings.length ? 1000 : 0) })

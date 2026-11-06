@@ -149,3 +149,10 @@ def test_trailing_full_stop_dropped_from_titles():
     assert tidy_title("Wait for it...") == "Wait for it..."
     assert tidy_title("Wait for it…") == "Wait for it…"
     assert tidy_title("No stop") == "No stop"
+
+
+def test_yesterdays_openings_stay_listed_one_day():
+    items = [ex(title="Yesterday", start_date="2026-10-06"), ex(title="Two days ago", start_date="2026-10-05"),
+             ex(title="Today", start_date="2026-10-07")]
+    events, _ = normalize({"a": items}, VENUES, TODAY, 60, {})
+    assert [e["title"] for e in events] == ["Yesterday", "Today"]
