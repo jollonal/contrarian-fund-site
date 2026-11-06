@@ -1,1 +1,22 @@
-[]
+[
+ {
+  "venue": "hera",
+  "problems": [
+   "site differs from verified entry: opening"
+  ],
+  "item": {
+   "verified": {
+    "title": "Das andere Zuhause",
+    "start_date": "2026-11-06",
+    "date": "2026-11-06",
+    "opening": "17:00-19:00"
+   },
+   "site": {
+    "title": "DAS ANDERE ZUHAUSE",
+    "start_date": "2026-11-06",
+    "date": "2026-11-06",
+    "opening": "17:00-20:00"
+   }
+  }
+ }
+]

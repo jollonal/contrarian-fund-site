@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-06T09:12:23+00:00",
+ "generated_at": "2026-11-06T09:37:41+00:00",
  "window_days": 60,
  "venues_tracked": 67,
  "events": [
@@ -448,7 +448,7 @@
    "source": "web"
   },
   {
-   "id": "35911122f480",
+   "id": "4fcc5f02f181",
    "venue_id": "hera",
    "venue": "Galleri Hera",
    "address": "Hornsgatan 36, 118 20 Stockholm",
@@ -470,7 +470,7 @@
     "end_time": "19:00",
     "text": "Opening reception: Friday, 6 November, 5–7 pm (Gallery Weekend program)"
    },
-   "access": "unknown",
+   "access": "public",
    "url": "https://gallerihera.se/",
    "source": "web"
   },
@@ -529,7 +529,7 @@
    "source": "web"
   },
   {
-   "id": "969ae9469819",
+   "id": "8f87ef81e39a",
    "venue_id": "magnus-karlsson",
    "venue": "Galleri Magnus Karlsson",
    "address": "Fredsgatan 12, 111 52 Stockholm",
@@ -616,7 +616,7 @@
    "address": "Tjärhovsgatan 44 B, 116 28 Stockholm",
    "map_url": "https://www.google.com/maps/search/?api=1&query=Studio%2044%2C%20Tj%C3%A4rhovsgatan%2044%20B%2C%20116%2028%20Stockholm",
    "district": "Södermalm",
-   "title": "Metafysiska porträtt",
+   "title": "Metafysiska portratt",
    "title_en": null,
    "gloss": "Metaphysical Portraits",
    "gloss_source": "machine",
@@ -631,7 +631,7 @@
     "confirmed": true,
     "start_time": "17:00",
     "end_time": "22:00",
-    "text": "Opening"
+    "text": "Opening Friday November 6 17:00 – 22:00"
    },
    "access": "public",
    "url": "https://studio44-stockholm.com/en/39499-2/metafysiska-portratt/",
@@ -690,7 +690,7 @@
     "end_time": null,
     "text": null
    },
-   "access": "unknown",
+   "access": "public",
    "url": "https://stancegallery.com/exhibitions/21-washed-dustin-emory/",
    "source": "web"
   },
@@ -962,6 +962,60 @@
    "access": "public",
    "url": "https://www.galleriglas.se/",
    "source": "newsletter"
+  },
+  {
+   "id": "18c0cbe7111e",
+   "venue_id": "studio-44",
+   "venue": "Studio 44",
+   "address": "Tjärhovsgatan 44 B, 116 28 Stockholm",
+   "map_url": "https://www.google.com/maps/search/?api=1&query=Studio%2044%2C%20Tj%C3%A4rhovsgatan%2044%20B%2C%20116%2028%20Stockholm",
+   "district": "Södermalm",
+   "title": "What happens to the heart",
+   "title_en": null,
+   "gloss": null,
+   "gloss_source": null,
+   "artists": [
+    "Christina Hedlund",
+    "Karl Moin Jansson",
+    "Ingela Friedner",
+    "Eva Larsson",
+    "Christina Göthesson",
+    "Kicki Berg",
+    "Gunilla Mauritz",
+    "Gunilla Leander",
+    "Kristina Häll",
+    "Ana María Beaulieu Laguardia",
+    "Maria Lundmark",
+    "Kjell Hansson",
+    "Katarina Warrenstein",
+    "Ana María Almada De Álvarez",
+    "Catrin Lundqvist",
+    "Sara Casten Carlberg",
+    "Helena Norell",
+    "Maria Bordeanu",
+    "Maria Zetterstrand",
+    "Susanne Högdahl Holm",
+    "Thomas Brennan",
+    "Carolina Hindsjö",
+    "Kenneth Pils",
+    "Molly Uddén",
+    "Lotta Ekelund",
+    "Lotte Nilsson-Välimaa",
+    "Miriam Klyvare",
+    "Sanna Haverinen"
+   ],
+   "start_date": "2026-11-17",
+   "end_date": "2026-12-20",
+   "date": "2026-11-17",
+   "opening": {
+    "confirmed": false,
+    "start_time": null,
+    "end_time": null,
+    "text": null
+   },
+   "access": "public",
+   "url": "https://studio44-stockholm.com/en/39499-2/what-happens-to-the-heart/",
+   "source": "web"
   },
   {
    "id": "19cc3648bde5",
@@ -1276,7 +1330,7 @@
     "end_time": null,
     "text": null
    },
-   "access": "unknown",
+   "access": "public",
    "url": "https://www.gallerimagnuskarlsson.com/exhibitions/409-jockum-nordstrom-halet-i-vaggen/",
    "source": "web"
   },
@@ -1357,6 +1411,31 @@
    },
    "access": "unknown",
    "url": "https://slipvillan.org/",
+   "source": "web"
+  },
+  {
+   "id": "249ce561682b",
+   "venue_id": "anna-persson",
+   "venue": "Anna Persson Gallery",
+   "address": "Karlavägen 12, 114 31 Stockholm",
+   "map_url": "https://www.google.com/maps/search/?api=1&query=Anna%20Persson%20Gallery%2C%20Karlav%C3%A4gen%2012%2C%20114%2031%20Stockholm",
+   "district": "Östermalm",
+   "title": "WINTER SHOW",
+   "title_en": null,
+   "gloss": null,
+   "gloss_source": null,
+   "artists": [],
+   "start_date": "2026-12-02",
+   "end_date": "2027-01-16",
+   "date": "2026-12-02",
+   "opening": {
+    "confirmed": false,
+    "start_time": null,
+    "end_time": null,
+    "text": null
+   },
+   "access": "unknown",
+   "url": "https://annapersson.com/exhibition/winter-group-show/",
    "source": "web"
   },
   {

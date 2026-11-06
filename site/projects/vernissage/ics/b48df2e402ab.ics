@@ -2,7 +2,7 @@ BEGIN:VCALENDAR
 VERSION:2.0
 PRODID:-//contrarian.fund//vernissage//EN
 CALSCALE:GREGORIAN
-X-WR-CALNAME:Metafysiska porträtt
+X-WR-CALNAME:Metafysiska portratt
 BEGIN:VTIMEZONE
 TZID:Europe/Stockholm
 BEGIN:DAYLIGHT
@@ -22,11 +22,11 @@ END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
 UID:b48df2e402ab@contrarian.fund
-DTSTAMP:20261106T091223Z
+DTSTAMP:20261106T093741Z
 DTSTART;TZID=Europe/Stockholm:20261106T170000
 DTEND;TZID=Europe/Stockholm:20261106T220000
-SUMMARY:Vernissage: Metafysiska porträtt [Metaphysical Portraits] at Studi
- o 44
+SUMMARY:Vernissage: Metafysiska portratt [Metaphysical Portraits] at Studio
+  44
 LOCATION:Tjärhovsgatan 44 B\, 116 28 Stockholm
 DESCRIPTION:Andro Zverev\, Nina Wedberg Thulin\nOn view until 2026-11-22.
 URL:https://studio44-stockholm.com/en/39499-2/metafysiska-portratt/
