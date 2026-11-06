@@ -17,7 +17,7 @@ start: 2026-11-06
 end: 2026-11-08
 announce_days: 14
 checked: 6 November 2026
-summary: "Galleries open Friday 12:00–19:00, Saturday 12:00–18:00 and Sunday 12:00–16:00. Presented by Svenska Galleriförbundet. Several galleries from outside Stockholm show together at Hudiksvallsgatan 6."
+summary: "Galleries open Friday 12:00–19:00, Saturday 12:00–18:00, and Sunday 12:00–16:00. Presented by Svenska Galleriförbundet. Several galleries from outside Stockholm show together at Hudiksvallsgatan 6."
 hours:
   "2026-11-06": "12:00–19:00"
   "2026-11-07": "12:00–18:00"
@@ -82,7 +82,7 @@ events:
     kind: Opening
     title: Who's Afraid of the Past? Fuck You!
     artists: [Jacob Dahlgren]
-    note: Mini-exhibition of printed invitations, photographs and posters from before 2004. Drinks.
+    note: Mini-exhibition of printed invitations, photographs, and posters from before 2004. Drinks.
   - date: 2026-11-06
     start: "16:00"
     end: "19:00"
@@ -197,7 +197,7 @@ events:
     kind: Presentation
     title: Networks, Surfaces and Allegories
     artists: [Peter Hagdahl]
-    note: Introduction of the artist, the exhibition and the gallery program. Address as given in the program.
+    note: Introduction of the artist, the exhibition, and the gallery program. Address as given in the program.
   - date: 2026-11-08
     start: "15:00"
     venue: bjorkholmen
