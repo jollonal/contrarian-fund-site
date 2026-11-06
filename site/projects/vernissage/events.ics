@@ -22,7 +22,7 @@ END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
 UID:67a477f29b0e@contrarian.fund
-DTSTAMP:20261106T080237Z
+DTSTAMP:20261106T080722Z
 DTSTART;TZID=Europe/Stockholm:20261105T160000
 DTEND;TZID=Europe/Stockholm:20261105T200000
 SUMMARY:Vernissage: Kärt återseende [Dear Reunion] at ABANTE Gallery
@@ -33,7 +33,7 @@ URL:https://abantegallery.se/
 END:VEVENT
 BEGIN:VEVENT
 UID:a69f30eebffd@contrarian.fund
-DTSTAMP:20261106T080237Z
+DTSTAMP:20261106T080722Z
 DTSTART;TZID=Europe/Stockholm:20261105T170000
 DTEND;TZID=Europe/Stockholm:20261105T200000
 SUMMARY:Vernissage: Shifts at Andréhn-Schiptjenko
@@ -44,7 +44,7 @@ URL:https://www.andrehn-schiptjenko.com/exhibitions/144-sixten-sandra-oster
 END:VEVENT
 BEGIN:VEVENT
 UID:e4afffba65b0@contrarian.fund
-DTSTAMP:20261106T080237Z
+DTSTAMP:20261106T080722Z
 DTSTART;TZID=Europe/Stockholm:20261105T170000
 DTEND;TZID=Europe/Stockholm:20261105T200000
 SUMMARY:Vernissage: Re-membering at Detroit Stockholm
@@ -55,7 +55,7 @@ URL:https://detroitstockholm.info/
 END:VEVENT
 BEGIN:VEVENT
 UID:b9a916d57547@contrarian.fund
-DTSTAMP:20261106T080237Z
+DTSTAMP:20261106T080722Z
 DTSTART;VALUE=DATE:20261105
 DTEND;VALUE=DATE:20261106
 SUMMARY:Vernissage: Blown Away at Antics
@@ -65,7 +65,7 @@ URL:https://antics.se/blown-away-david-permén
 END:VEVENT
 BEGIN:VEVENT
 UID:5d904dd6e085@contrarian.fund
-DTSTAMP:20261106T080237Z
+DTSTAMP:20261106T080722Z
 DTSTART;VALUE=DATE:20261105
 DTEND;VALUE=DATE:20261106
 SUMMARY:Opens: Jeroen Erosie | Accumulation Phase at Berg Gallery
@@ -76,7 +76,7 @@ URL:https://www.berggallery.se/exhibitions/133-jeroen-erosie-accumulation-p
 END:VEVENT
 BEGIN:VEVENT
 UID:6f51b35edb5f@contrarian.fund
-DTSTAMP:20261106T080237Z
+DTSTAMP:20261106T080722Z
 DTSTART;VALUE=DATE:20261105
 DTEND;VALUE=DATE:20261106
 SUMMARY:Opens: Sylvia Naimark | Synkop at Berg Gallery
@@ -86,7 +86,7 @@ URL:https://www.berggallery.se/exhibitions/134-sylvia-naimark-synkop/
 END:VEVENT
 BEGIN:VEVENT
 UID:9165de481a89@contrarian.fund
-DTSTAMP:20261106T080237Z
+DTSTAMP:20261106T080722Z
 DTSTART;VALUE=DATE:20261105
 DTEND;VALUE=DATE:20261106
 SUMMARY:Opens: Anatomy of Incidents at Cecilia Hillström Gallery
@@ -97,7 +97,7 @@ URL:https://chgallery.se/exhibitions/154-christopher-robin-nordstrom-anatom
 END:VEVENT
 BEGIN:VEVENT
 UID:b993644a00b4@contrarian.fund
-DTSTAMP:20261106T080237Z
+DTSTAMP:20261106T080722Z
 DTSTART;VALUE=DATE:20261105
 DTEND;VALUE=DATE:20261106
 SUMMARY:Opens: Thom Trojanowski at Coulisse Gallery
@@ -107,7 +107,7 @@ URL:https://www.coulisse-gallery.com/
 END:VEVENT
 BEGIN:VEVENT
 UID:c93611b9653e@contrarian.fund
-DTSTAMP:20261106T080237Z
+DTSTAMP:20261106T080722Z
 DTSTART;VALUE=DATE:20261105
 DTEND;VALUE=DATE:20261106
 SUMMARY:Opens: Evelina Jonsson at Coulisse Gallery
@@ -117,7 +117,7 @@ URL:https://www.coulisse-gallery.com/
 END:VEVENT
 BEGIN:VEVENT
 UID:75b31e119389@contrarian.fund
-DTSTAMP:20261106T080237Z
+DTSTAMP:20261106T080722Z
 DTSTART;VALUE=DATE:20261105
 DTEND;VALUE=DATE:20261106
 SUMMARY:Opens: LANDLINES at Galleri Duerr
@@ -129,7 +129,7 @@ URL:https://www.galleriduerr.com/exhibitions/98-landlines/overview/
 END:VEVENT
 BEGIN:VEVENT
 UID:c94b07fa9771@contrarian.fund
-DTSTAMP:20261106T080237Z
+DTSTAMP:20261106T080722Z
 DTSTART;VALUE=DATE:20261105
 DTEND;VALUE=DATE:20261106
 SUMMARY:Opens: Networks\, Surfaces and Allegories at Galleri Flach
@@ -140,7 +140,7 @@ URL:https://www.galleriflach.com/peter-hagdahl-networks-surfaces-and-allego
 END:VEVENT
 BEGIN:VEVENT
 UID:24426fa60f8e@contrarian.fund
-DTSTAMP:20261106T080237Z
+DTSTAMP:20261106T080722Z
 DTSTART;VALUE=DATE:20261105
 DTEND;VALUE=DATE:20261106
 SUMMARY:Opens: The Ecology of Forking Paths at Platform Stockholm
@@ -151,7 +151,7 @@ URL:https://platformstockholm.com/gallery/e335f103-5c3f-4f80-be31-2196b12a5
 END:VEVENT
 BEGIN:VEVENT
 UID:3f3a7e136829@contrarian.fund
-DTSTAMP:20261106T080237Z
+DTSTAMP:20261106T080722Z
 DTSTART;VALUE=DATE:20261105
 DTEND;VALUE=DATE:20261106
 SUMMARY:Vernissage: En dörr leder till ett öga // A door leads to an eye 
@@ -163,7 +163,7 @@ URL:https://www.saskianeumangallery.com/exhibitions/en-dorr-leder-till-ett-
 END:VEVENT
 BEGIN:VEVENT
 UID:f4e400754f93@contrarian.fund
-DTSTAMP:20261106T080237Z
+DTSTAMP:20261106T080722Z
 DTSTART;TZID=Europe/Stockholm:20261106T120000
 DTEND;TZID=Europe/Stockholm:20261106T190000
 SUMMARY:Vernissage: Lessness(es) at Anna Bohman Gallery
@@ -173,7 +173,7 @@ URL:https://www.annabohmangallery.com/maria-miesenberger-2026
 END:VEVENT
 BEGIN:VEVENT
 UID:de781fd4d68d@contrarian.fund
-DTSTAMP:20261106T080237Z
+DTSTAMP:20261106T080722Z
 DTSTART;TZID=Europe/Stockholm:20261106T160000
 DTEND;TZID=Europe/Stockholm:20261106T190000
 SUMMARY:Vernissage: Våra historier / Our Stories at Galleri Helle Knudsen
@@ -184,7 +184,7 @@ URL:https://gallerihelle.com/blogs/aktuell/vara-historier
 END:VEVENT
 BEGIN:VEVENT
 UID:60352aa0f1a1@contrarian.fund
-DTSTAMP:20261106T080237Z
+DTSTAMP:20261106T080722Z
 DTSTART;TZID=Europe/Stockholm:20261106T170000
 DTEND;TZID=Europe/Stockholm:20261106T220000
 SUMMARY:Vernissage: Chthonic [Subterranean or Underworld] at Candyland
@@ -194,7 +194,7 @@ URL:https://candyland.se/?p=5590
 END:VEVENT
 BEGIN:VEVENT
 UID:35911122f480@contrarian.fund
-DTSTAMP:20261106T080237Z
+DTSTAMP:20261106T080722Z
 DTSTART;TZID=Europe/Stockholm:20261106T170000
 DTEND;TZID=Europe/Stockholm:20261106T190000
 SUMMARY:Vernissage: Das andere Zuhause [The Other Home] at Galleri Hera
@@ -204,7 +204,7 @@ URL:https://gallerihera.se/
 END:VEVENT
 BEGIN:VEVENT
 UID:88611dc27ec0@contrarian.fund
-DTSTAMP:20261106T080237Z
+DTSTAMP:20261106T080722Z
 DTSTART;TZID=Europe/Stockholm:20261106T170000
 DTEND;TZID=Europe/Stockholm:20261106T190000
 SUMMARY:Vernissage: Wildlife at Galleri Jan Wallmark
@@ -214,7 +214,7 @@ URL:https://www.janwallmark.se/
 END:VEVENT
 BEGIN:VEVENT
 UID:f9ad201527b4@contrarian.fund
-DTSTAMP:20261106T080237Z
+DTSTAMP:20261106T080722Z
 DTSTART;TZID=Europe/Stockholm:20261106T170000
 DTEND;TZID=Europe/Stockholm:20261106T200000
 SUMMARY:Vernissage: Innan vintern kommer [Before Winter Comes] at Galleri K
@@ -226,7 +226,7 @@ URL:https://www.falkenbergskonstskola.se/nyheter/innan-vintern-kommer-ylva-
 END:VEVENT
 BEGIN:VEVENT
 UID:969ae9469819@contrarian.fund
-DTSTAMP:20261106T080237Z
+DTSTAMP:20261106T080722Z
 DTSTART;TZID=Europe/Stockholm:20261106T170000
 DTEND;TZID=Europe/Stockholm:20261106T190000
 SUMMARY:Vernissage: Comma at Galleri Magnus Karlsson
@@ -237,7 +237,7 @@ URL:https://www.gallerimagnuskarlsson.com/exhibitions/410-anna-bjerger-comm
 END:VEVENT
 BEGIN:VEVENT
 UID:8243ca3f4c90@contrarian.fund
-DTSTAMP:20261106T080237Z
+DTSTAMP:20261106T080722Z
 DTSTART;TZID=Europe/Stockholm:20261106T170000
 DTEND;TZID=Europe/Stockholm:20261106T200000
 SUMMARY:Vernissage: Ett enkelrum i Filipstad [A Single Room in Filipstad] a
@@ -248,7 +248,7 @@ URL:https://idigalleri.org/
 END:VEVENT
 BEGIN:VEVENT
 UID:4e3bf6af777a@contrarian.fund
-DTSTAMP:20261106T080237Z
+DTSTAMP:20261106T080722Z
 DTSTART;TZID=Europe/Stockholm:20261106T170000
 DTEND;TZID=Europe/Stockholm:20261106T200000
 SUMMARY:Vernissage: Woman-from nature to abstraction – En soloutställnin
@@ -259,7 +259,7 @@ URL:https://studioabc.se/
 END:VEVENT
 BEGIN:VEVENT
 UID:b48df2e402ab@contrarian.fund
-DTSTAMP:20261106T080237Z
+DTSTAMP:20261106T080722Z
 DTSTART;TZID=Europe/Stockholm:20261106T170000
 DTEND;TZID=Europe/Stockholm:20261106T220000
 SUMMARY:Vernissage: Metafysiska porträtt [Metaphysical Portraits] at Studi
@@ -270,7 +270,7 @@ URL:https://studio44-stockholm.com/en/39499-2/metafysiska-portratt/
 END:VEVENT
 BEGIN:VEVENT
 UID:7d80146072aa@contrarian.fund
-DTSTAMP:20261106T080237Z
+DTSTAMP:20261106T080722Z
 DTSTART;TZID=Europe/Stockholm:20261106T180000
 DTEND;TZID=Europe/Stockholm:20261106T200000
 SUMMARY:Vernissage: Shapeshifting at Belenius
@@ -282,7 +282,7 @@ URL:https://belenius.com/exhibitions/217-shapeshifting-dorothea-tanning-els
 END:VEVENT
 BEGIN:VEVENT
 UID:e8b4a622ebc5@contrarian.fund
-DTSTAMP:20261106T080237Z
+DTSTAMP:20261106T080722Z
 DTSTART;VALUE=DATE:20261106
 DTEND;VALUE=DATE:20261107
 SUMMARY:Opens: Washed at STANCE Gallery
@@ -292,7 +292,7 @@ URL:https://stancegallery.com/exhibitions/21-washed-dustin-emory/
 END:VEVENT
 BEGIN:VEVENT
 UID:919faa7c6ef4@contrarian.fund
-DTSTAMP:20261106T080237Z
+DTSTAMP:20261106T080722Z
 DTSTART;VALUE=DATE:20261107
 DTEND;VALUE=DATE:20261108
 SUMMARY:Opens: Seth Shuwert at Galleri Grip
@@ -302,7 +302,7 @@ URL:https://gallerigrip.se/
 END:VEVENT
 BEGIN:VEVENT
 UID:b650937a2080@contrarian.fund
-DTSTAMP:20261106T080237Z
+DTSTAMP:20261106T080722Z
 DTSTART;VALUE=DATE:20261107
 DTEND;VALUE=DATE:20261108
 SUMMARY:Opens: Beware of Darkness at Galleri Lundberg-Sandhagen
@@ -312,7 +312,7 @@ URL:https://www.lundberg-sandhagen.com/exhibitions/beware-of-darkness
 END:VEVENT
 BEGIN:VEVENT
 UID:e88e66d8af8e@contrarian.fund
-DTSTAMP:20261106T080237Z
+DTSTAMP:20261106T080722Z
 DTSTART;VALUE=DATE:20261107
 DTEND;VALUE=DATE:20261108
 SUMMARY:Opens: Seungwoo Park Fight Symphony at Gallery Steinsland Berliner
@@ -322,7 +322,7 @@ URL:https://steinslandberliner.com/shows/seungwoo-park-fight-symphony
 END:VEVENT
 BEGIN:VEVENT
 UID:22701df4753f@contrarian.fund
-DTSTAMP:20261106T080237Z
+DTSTAMP:20261106T080722Z
 DTSTART;VALUE=DATE:20261107
 DTEND;VALUE=DATE:20261108
 SUMMARY:Opens: Träsnitt [Woodcuts] at Grafiska Sällskapet
@@ -332,7 +332,7 @@ URL:https://grafiskasallskapet.se/
 END:VEVENT
 BEGIN:VEVENT
 UID:5e10c1566299@contrarian.fund
-DTSTAMP:20261106T080237Z
+DTSTAMP:20261106T080722Z
 DTSTART;VALUE=DATE:20261107
 DTEND;VALUE=DATE:20261108
 SUMMARY:Opens: Herbarium at Grafiska Sällskapet
@@ -342,7 +342,7 @@ URL:https://grafiskasallskapet.se/
 END:VEVENT
 BEGIN:VEVENT
 UID:f90622c8f253@contrarian.fund
-DTSTAMP:20261106T080237Z
+DTSTAMP:20261106T080722Z
 DTSTART;VALUE=DATE:20261107
 DTEND;VALUE=DATE:20261108
 SUMMARY:Opens: P O Söderlund minnesutställning [P O Söderlund Memorial E
@@ -353,7 +353,7 @@ URL:https://grafiskasallskapet.se/
 END:VEVENT
 BEGIN:VEVENT
 UID:001304adfb90@contrarian.fund
-DTSTAMP:20261106T080237Z
+DTSTAMP:20261106T080722Z
 DTSTART;VALUE=DATE:20261107
 DTEND;VALUE=DATE:20261108
 SUMMARY:Opens: Höstutställning [Autumn Exhibition] at Åmells Konsthandel
@@ -364,7 +364,7 @@ URL:https://www.amells.com/data/publications/2026Hostutstallning/html/index
 END:VEVENT
 BEGIN:VEVENT
 UID:5661e0a94928@contrarian.fund
-DTSTAMP:20261106T080237Z
+DTSTAMP:20261106T080722Z
 DTSTART;VALUE=DATE:20261114
 DTEND;VALUE=DATE:20261115
 SUMMARY:Opens: Seth Shuwert at Galleri Grip
@@ -374,7 +374,7 @@ URL:https://gallerigrip.se/
 END:VEVENT
 BEGIN:VEVENT
 UID:b72a8fd0e324@contrarian.fund
-DTSTAMP:20261106T080237Z
+DTSTAMP:20261106T080722Z
 DTSTART;VALUE=DATE:20261114
 DTEND;VALUE=DATE:20261115
 SUMMARY:Opens: 3-dimensionellt akvarellmåleri [3-dimensional Watercolor Pa
@@ -386,7 +386,7 @@ URL:https://gallerihantverket.se/event/peter-schalin-3-dimensionellt-akvare
 END:VEVENT
 BEGIN:VEVENT
 UID:62dc4a7ea218@contrarian.fund
-DTSTAMP:20261106T080237Z
+DTSTAMP:20261106T080722Z
 DTSTART;VALUE=DATE:20261115
 DTEND;VALUE=DATE:20261116
 SUMMARY:Opens: Precession through glass at Galleri Glas
@@ -396,7 +396,7 @@ URL:https://www.galleriglas.se/
 END:VEVENT
 BEGIN:VEVENT
 UID:19cc3648bde5@contrarian.fund
-DTSTAMP:20261106T080237Z
+DTSTAMP:20261106T080722Z
 DTSTART;VALUE=DATE:20261118
 DTEND;VALUE=DATE:20261119
 SUMMARY:Opens: Uppåt väggarna [Up the Walls] at Galleri Glas
@@ -406,7 +406,7 @@ URL:https://www.galleriglas.se/
 END:VEVENT
 BEGIN:VEVENT
 UID:b2043c7b0f56@contrarian.fund
-DTSTAMP:20261106T080237Z
+DTSTAMP:20261106T080722Z
 DTSTART;TZID=Europe/Stockholm:20261121T130000
 DTEND;TZID=Europe/Stockholm:20261121T160000
 SUMMARY:Vernissage: Avund & svartsjuka [Envy and Jealousy] at Konstnärshus
@@ -418,7 +418,7 @@ URL:https://konstnarshuset.org/
 END:VEVENT
 BEGIN:VEVENT
 UID:2f95f0e85db6@contrarian.fund
-DTSTAMP:20261106T080237Z
+DTSTAMP:20261106T080722Z
 DTSTART;VALUE=DATE:20261121
 DTEND;VALUE=DATE:20261122
 SUMMARY:Opens: JUL PÅ KAOLIN / Medlemsutställning [CHRISTMAS AT KAOLIN / 
@@ -429,7 +429,7 @@ URL:https://kaolin.se/
 END:VEVENT
 BEGIN:VEVENT
 UID:97955ba84cae@contrarian.fund
-DTSTAMP:20261106T080237Z
+DTSTAMP:20261106T080722Z
 DTSTART;TZID=Europe/Stockholm:20261125T170000
 DTEND;TZID=Europe/Stockholm:20261125T190000
 SUMMARY:Vernissage: 90 × 90 at Galleri Hedenius
@@ -439,7 +439,7 @@ URL:https://www.gallerihedenius.com/
 END:VEVENT
 BEGIN:VEVENT
 UID:99886642c798@contrarian.fund
-DTSTAMP:20261106T080237Z
+DTSTAMP:20261106T080722Z
 DTSTART;VALUE=DATE:20261125
 DTEND;VALUE=DATE:20261126
 SUMMARY:Opens: Uppåt väggarna [Up the Walls] at Galleri Glas
@@ -450,7 +450,7 @@ URL:https://www.galleriglas.se/exhibitions/83-ulla-forsell-uppat-vaggarna/o
 END:VEVENT
 BEGIN:VEVENT
 UID:72d0e7fa4796@contrarian.fund
-DTSTAMP:20261106T080237Z
+DTSTAMP:20261106T080722Z
 DTSTART;TZID=Europe/Stockholm:20261126T230000
 DTEND;TZID=Europe/Stockholm:20261126T230000
 SUMMARY:Vernissage: SLASK 3.0: FROSSA at Parallel Collective
@@ -460,7 +460,7 @@ URL:https://parallelcollective.se/en/exhibitions/slask-3-0-frossa
 END:VEVENT
 BEGIN:VEVENT
 UID:834aa7e9c814@contrarian.fund
-DTSTAMP:20261106T080237Z
+DTSTAMP:20261106T080722Z
 DTSTART;VALUE=DATE:20261127
 DTEND;VALUE=DATE:20261128
 SUMMARY:Opens: Molekyl at ID:I galleri
@@ -470,7 +470,7 @@ URL:https://idigalleri.org/
 END:VEVENT
 BEGIN:VEVENT
 UID:5dea009d2726@contrarian.fund
-DTSTAMP:20261106T080237Z
+DTSTAMP:20261106T080722Z
 DTSTART;VALUE=DATE:20261128
 DTEND;VALUE=DATE:20261129
 SUMMARY:Opens: Medlemmarnas julutställning [Members' Christmas Exhibition]
@@ -481,7 +481,7 @@ URL:https://125kvadrat.com/
 END:VEVENT
 BEGIN:VEVENT
 UID:4aaa7d10e877@contrarian.fund
-DTSTAMP:20261106T080237Z
+DTSTAMP:20261106T080722Z
 DTSTART;VALUE=DATE:20261128
 DTEND;VALUE=DATE:20261129
 SUMMARY:Opens: Grupputställning 1 PLATSER KVAR [Group Exhibition 1 Places 
@@ -492,7 +492,7 @@ URL:https://gallerigrip.se/
 END:VEVENT
 BEGIN:VEVENT
 UID:6f8bf7f1caa8@contrarian.fund
-DTSTAMP:20261106T080237Z
+DTSTAMP:20261106T080722Z
 DTSTART;VALUE=DATE:20261128
 DTEND;VALUE=DATE:20261129
 SUMMARY:Opens: Medlemmarnas Julutställning [Members' Christmas Exhibition]
@@ -503,7 +503,7 @@ URL:https://gallerihantverket.se/
 END:VEVENT
 BEGIN:VEVENT
 UID:00f8791b3be2@contrarian.fund
-DTSTAMP:20261106T080237Z
+DTSTAMP:20261106T080722Z
 DTSTART;VALUE=DATE:20261128
 DTEND;VALUE=DATE:20261129
 SUMMARY:Opens: Gunilla Hammar at Galleri Hera
@@ -513,7 +513,7 @@ URL:https://gallerihera.se/
 END:VEVENT
 BEGIN:VEVENT
 UID:1f6ed3574640@contrarian.fund
-DTSTAMP:20261106T080237Z
+DTSTAMP:20261106T080722Z
 DTSTART;VALUE=DATE:20261128
 DTEND;VALUE=DATE:20261129
 SUMMARY:Opens: Hålet i väggen [The Hole in the Wall] at Galleri Magnus Ka
@@ -525,7 +525,7 @@ URL:https://www.gallerimagnuskarlsson.com/exhibitions/409-jockum-nordstrom-
 END:VEVENT
 BEGIN:VEVENT
 UID:5d70fafc2ec5@contrarian.fund
-DTSTAMP:20261106T080237Z
+DTSTAMP:20261106T080722Z
 DTSTART;VALUE=DATE:20261128
 DTEND;VALUE=DATE:20261129
 SUMMARY:Opens: Från golv till tak [From Floor to Ceiling] at Grafiska Säl
@@ -536,7 +536,7 @@ URL:https://grafiskasallskapet.se/
 END:VEVENT
 BEGIN:VEVENT
 UID:b8ead8f67710@contrarian.fund
-DTSTAMP:20261106T080237Z
+DTSTAMP:20261106T080722Z
 DTSTART;VALUE=DATE:20261128
 DTEND;VALUE=DATE:20261129
 SUMMARY:Opens: Black Box Manual Instruction at Grafiska Sällskapet
@@ -546,7 +546,7 @@ URL:https://grafiskasallskapet.se/
 END:VEVENT
 BEGIN:VEVENT
 UID:79f3d311554e@contrarian.fund
-DTSTAMP:20261106T080237Z
+DTSTAMP:20261106T080722Z
 DTSTART;VALUE=DATE:20261128
 DTEND;VALUE=DATE:20261129
 SUMMARY:Vernissage: Vi ville väl [We Wanted To] at Slipvillan
@@ -556,7 +556,7 @@ URL:https://slipvillan.org/
 END:VEVENT
 BEGIN:VEVENT
 UID:8800c4126856@contrarian.fund
-DTSTAMP:20261106T080237Z
+DTSTAMP:20261106T080722Z
 DTSTART;VALUE=DATE:20261205
 DTEND;VALUE=DATE:20261206
 SUMMARY:Opens: Sundbyberg Art Trail at Galleri Grip
@@ -566,7 +566,7 @@ URL:https://gallerigrip.se/
 END:VEVENT
 BEGIN:VEVENT
 UID:8ee1947b35f4@contrarian.fund
-DTSTAMP:20261106T080237Z
+DTSTAMP:20261106T080722Z
 DTSTART;TZID=Europe/Stockholm:20261210T170000
 DTEND;TZID=Europe/Stockholm:20261210T190000
 SUMMARY:Vernissage: WOLGERS + DUCHAMP = SANT at Galleri Hedenius
@@ -576,7 +576,7 @@ URL:https://www.gallerihedenius.com/
 END:VEVENT
 BEGIN:VEVENT
 UID:e37c8af00526@contrarian.fund
-DTSTAMP:20261106T080237Z
+DTSTAMP:20261106T080722Z
 DTSTART;VALUE=DATE:20261212
 DTEND;VALUE=DATE:20261213
 SUMMARY:Opens: Grupputställning 1 PLATSER KVAR [Group Exhibition 1 Places 
@@ -587,7 +587,7 @@ URL:https://gallerigrip.se/
 END:VEVENT
 BEGIN:VEVENT
 UID:3ff4435457c2@contrarian.fund
-DTSTAMP:20261106T080237Z
+DTSTAMP:20261106T080722Z
 DTSTART;VALUE=DATE:20261212
 DTEND;VALUE=DATE:20261213
 SUMMARY:Opens: Magiska vinter! Anna Boberg\, Bruno Liljefors\, m fl [Magica
@@ -598,7 +598,7 @@ URL:https://www.amells.com/
 END:VEVENT
 BEGIN:VEVENT
 UID:a1e5870d765f@contrarian.fund
-DTSTAMP:20261106T080237Z
+DTSTAMP:20261106T080722Z
 DTSTART;VALUE=DATE:20261219
 DTEND;VALUE=DATE:20261220
 SUMMARY:Opens: Julsalong [Christmas Salon] at Galleri Grip
@@ -608,7 +608,7 @@ URL:https://gallerigrip.se/
 END:VEVENT
 BEGIN:VEVENT
 UID:eba91a0c0b14@contrarian.fund
-DTSTAMP:20261106T080237Z
+DTSTAMP:20261106T080722Z
 DTSTART;VALUE=DATE:20261219
 DTEND;VALUE=DATE:20261220
 SUMMARY:Opens: Jul \, jul\, strålande jul… [Christmas\, Christmas\, Radi
