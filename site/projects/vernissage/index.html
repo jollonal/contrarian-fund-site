@@ -1213,7 +1213,7 @@
   </main>
 
   <footer>
-    <p>58 openings, 21 with confirmed reception times. Last updated 6 November 2026, 10:57.</p>
+    <p>58 openings, 21 with confirmed reception times. Last updated 6 November 2026, 11:23.</p>
     <p><a href="events.ics">Subscribe to the calendar</a> · <a href="https://github.com/jollonal/contrarian-fund-site">Source code</a> · Built by <a href="/">Alfred J. Jollon</a></p>
   </footer>
 </div>
@@ -1388,6 +1388,7 @@ document.addEventListener("DOMContentLoaded", function () {
     var shown = [], d = sel.district, w = sel.when;
     pts.forEach(function (p) {
       var m = markers[p.id], on = (!d || p.district === d) && matchesWhen(p, w);
+      m.__shown = on;
       if (on) { if (!map.hasLayer(m)) m.addTo(map); shown.push([p.lat, p.lon]); }
       else { m.closePopup(); map.removeLayer(m); }
     });
@@ -1425,8 +1426,18 @@ document.addEventListener("DOMContentLoaded", function () {
   document.querySelectorAll(".key button[data-pin]").forEach(function (b) {
     b.addEventListener("click", function () {
       var m = markers[b.dataset.pin]; if (!m) return;
+      // A gallery the current day or district filter hides is shown just while its popup is open.
+      if (!map.hasLayer(m)) {
+        m.addTo(map);
+        m.once("popupclose", function () { if (m.__shown === false) map.removeLayer(m); });
+      }
       el.scrollIntoView({ behavior: "smooth", block: "center" });
-      home = false; map.setView(m.getLatLng(), 16); m.openPopup();
+      // Jump without animation (opening a popup mid-animation pans to stale positions), open the popup,
+      // then center the pin and its popup together so the gallery sits in the middle of the map.
+      var ll = m.getLatLng(), z = Math.max(map.getZoom(), 16);
+      home = false; map.setView(ll, z, { animate: false }); m.openPopup();
+      var pe = m.getPopup() && m.getPopup().getElement(), h = pe ? pe.offsetHeight + 12 : 0;
+      map.setView(map.unproject(map.project(ll, z).subtract([0, h / 2]), z), z, { animate: false });
     });
   });
 });
