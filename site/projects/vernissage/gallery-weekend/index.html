@@ -35,13 +35,16 @@
   .tag.t2 { background: var(--dayafter); color: #fff; }
   .tag.tm1 { background: var(--yesterday); color: #fff; }
   .tag.tm2 { background: var(--twodays); color: var(--ink); }
-  .ev { padding: 0 0 24px; }
+  /* Listing, as on the main page: gallery (bold caps), title (serif), artists (medium), event and time (bold), note, address (muted). */
+  .ev { padding: 0 0 22px; }
+  .ev + .ev { border-top: 1px solid var(--rule); padding-top: 22px; }
   .ev:last-child { padding-bottom: 0; }
-  .ev .venue { font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; margin: 0 0 4px; }
-  .ev h3 { font-size: 20px; font-weight: 400; line-height: 1.25; margin: 0; }
-  .ev .artists { margin: 2px 0 0; }
-  .ev .when { margin: 8px 0 0; font-size: 15px; }
-  .ev .note { margin: 2px 0 0; font-size: 14px; }
+  .ev .venue { font-size: 13px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; margin: 0 0 6px; }
+  .ev h3 { font-family: "Iowan Old Style", "Palatino Linotype", Palatino, "Book Antiqua", Georgia, serif;
+           font-size: 25px; font-weight: 600; line-height: 1.2; margin: 0; }
+  .ev .artists { margin: 4px 0 0; font-size: 17px; font-weight: 500; }
+  .ev .when { margin: 10px 0 0; font-size: 15px; font-weight: 700; }
+  .ev .note { margin: 2px 0 0; font-size: 15px; color: #2F2F2C; }
   .ev .meta { margin: 2px 0 0; font-size: 14px; color: var(--muted); }
   .view h2 { font-size: 15px; font-weight: 400; margin: 2px 0 0; }
   .view h4 { font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; font-weight: 400; margin: 0 0 6px; }
