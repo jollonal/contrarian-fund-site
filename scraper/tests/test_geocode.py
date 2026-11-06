@@ -69,3 +69,17 @@ def test_map_points_numbered_by_district_with_openings():
     assert z["openings"][0] == {"date": "Wed 21 Oct", "iso": "2026-10-21", "title": "Show", "time": "17:00 to 19:00"}
     assert z["map_url"].startswith("https://www.google.com/maps/search/") and z["central"]
     assert z["floor"] == "1st floor" and pts[0]["floor"] is None
+
+
+def test_opening_history_keeps_sixty_days(tmp_path):
+    import datetime as dt, json
+    from vernissage.build import opening_history
+    path = tmp_path / "history.json"
+    path.write_text(json.dumps({"a": ["2026-08-01", "2026-10-20"], "gone": ["2026-07-01"]}))
+    found = {"b": [{"title": "Running show", "start_date": "2026-10-30", "kind": "exhibition"},
+                   {"title": "Old show", "start_date": "2026-06-01", "kind": "exhibition"}]}
+    events = [{"venue_id": "a", "date": "2026-11-07"}]
+    past = opening_history(path, found, events, dt.date(2026, 11, 6))
+    assert past == {"a": ["2026-10-20"], "b": ["2026-10-30"]}          # only before today, within 60 days
+    saved = json.loads(path.read_text())
+    assert saved["a"] == ["2026-10-20", "2026-11-07"] and "gone" not in saved   # upcoming kept for later runs

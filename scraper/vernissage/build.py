@@ -408,9 +408,32 @@ def district_rank(d: str | None) -> tuple:
     return (DISTRICT_ORDER.index(d), "") if d in DISTRICT_ORDER else (len(DISTRICT_ORDER), d.lower())
 
 
-def map_points(events: list[dict], venues: list[dict]) -> list[dict]:
+def opening_history(path: Path, found: dict[str, list[dict]], events: list[dict], today: dt.date,
+                    keep_days: int = 60) -> dict[str, list[str]]:
+    """Opening dates per gallery, remembered between runs in state/history.json so the map can
+    show galleries that opened something in the last `keep_days` days, after the show has left
+    the list. Fed by every listed event and by scraped shows that opened recently (still running).
+    Returns {venue_id: [YYYY-MM-DD, ...]} for dates before today within the period."""
+    hist: dict[str, list[str]] = json.loads(path.read_text(encoding="utf-8")) if path.exists() else {}
+    first = today - dt.timedelta(days=keep_days)
+    seen: dict[str, set] = {k: set(v) for k, v in hist.items()}
+    for e in events:
+        seen.setdefault(e["venue_id"], set()).add(e["date"])
+    for vid, items in found.items():
+        for x in items:
+            d = _date((x.get("opening") or {}).get("date")) or _date(x.get("start_date"))
+            if d and first <= d < today and x.get("kind", "exhibition") == "exhibition":
+                seen.setdefault(vid, set()).add(d.isoformat())
+    kept = {k: sorted(x for x in v if x >= first.isoformat()) for k, v in seen.items()}
+    kept = {k: v for k, v in kept.items() if v}
+    path.write_text(json.dumps(kept, indent=1, sort_keys=True), encoding="utf-8")
+    return {k: [x for x in v if x < today.isoformat()] for k, v in kept.items()}
+
+
+def map_points(events: list[dict], venues: list[dict], past: dict[str, list[str]] | None = None) -> list[dict]:
     """One numbered point per gallery with coordinates, grouped by district for the key.
-    Each carries its openings in the window, for the pop-up."""
+    Each carries its openings in the window, for the pop-up, and its earlier opening dates
+    (past 60 days) for the map colors."""
     by_venue: dict[str, list[dict]] = {}
     for e in events:
         by_venue.setdefault(e["venue_id"], []).append(e)
@@ -432,6 +455,7 @@ def map_points(events: list[dict], venues: list[dict]) -> list[dict]:
             "n": n, "id": v["id"], "name": v["name"], "district": v.get("district") or "Other",
             "address": v.get("address"), "floor": v.get("floor"), "map_url": map_url(v["name"], v.get("address")),
             "url": v.get("homepage"), "lat": v["lat"], "lon": v["lon"], "openings": opens,
+            "past": (past or {}).get(v["id"], []),
             "central": (dlat * dlat + dlon * dlon) ** 0.5 < 0.06,  # roughly within 7 km of the center
         })
     return points
@@ -439,7 +463,8 @@ def map_points(events: list[dict], venues: list[dict]) -> list[dict]:
 
 # ---------- outputs ----------
 def write_outputs(events: list[dict], venues: list[dict], out_dir: Path, today: dt.date,
-                  window: int, repo_url: str | None, weekend: dict | None = None) -> None:
+                  window: int, repo_url: str | None, weekend: dict | None = None,
+                  past: dict[str, list[str]] | None = None) -> None:
     """weekend: when given, the main page links to its program page (see weekend.py)."""
     out_dir.mkdir(parents=True, exist_ok=True)
     generated = dt.datetime.now(dt.timezone.utc).isoformat(timespec="seconds")
@@ -466,7 +491,7 @@ def write_outputs(events: list[dict], venues: list[dict], out_dir: Path, today: 
         days.setdefault(e["date"], []).append(e)
     districts = sorted({e["district"] for e in events if e["district"]}, key=district_rank)
     stockholm_now = dt.datetime.now(ZoneInfo("Europe/Stockholm"))
-    points = map_points(events, venues)
+    points = map_points(events, venues, past)
     key: dict[str, list[dict]] = {}
     for p in points:
         key.setdefault(p["district"], []).append(p)

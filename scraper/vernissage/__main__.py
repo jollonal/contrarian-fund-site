@@ -16,7 +16,7 @@ from zoneinfo import ZoneInfo
 
 import yaml
 
-from .build import gloss_report, normalize, write_outputs
+from .build import gloss_report, normalize, opening_history, write_outputs
 from .fetch import Fetcher
 from .llm import LLM
 
@@ -110,8 +110,9 @@ def main() -> int:
     from . import weekend as W
     wk = W.load(ROOT / "weekend.yaml")
     W.write(wk, venues, SITE, today)
+    past = opening_history(ROOT / "state" / "history.json", found, events, today)
     write_outputs(events, venues, SITE, today, a.window, os.environ.get("REPO_URL"),
-                  weekend=wk if W.is_announced(wk, today) else None)
+                  weekend=wk if W.is_announced(wk, today) else None, past=past)
     log.info("%d events (%d confirmed openings), %d for review, %s LLM calls, ~%s neurons",
              len(events), sum(e["opening"]["confirmed"] for e in events), len(review),
              llm.calls if llm else 0, f"{llm.neurons:,.0f}" if llm else 0)
