@@ -2,7 +2,7 @@ BEGIN:VCALENDAR
 VERSION:2.0
 PRODID:-//contrarian.fund//vernissage//EN
 CALSCALE:GREGORIAN
-X-WR-CALNAME:En dörr leder till ett öga // A door leads to an eye
+X-WR-CALNAME:If I Could Squeeze the Universe into a Ball
 BEGIN:VTIMEZONE
 TZID:Europe/Stockholm
 BEGIN:DAYLIGHT
@@ -21,15 +21,15 @@ RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU
 END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
-UID:3f3a7e136829@contrarian.fund
-DTSTAMP:20261106T102519Z
+UID:358fa67e7948@contrarian.fund
+DTSTAMP:20261106T103636Z
 DTSTART;VALUE=DATE:20261105
 DTEND;VALUE=DATE:20261106
-SUMMARY:Vernissage: En dörr leder till ett öga // A door leads to an eye 
- at Saskia Neuman Gallery
+SUMMARY:Opens: If I Could Squeeze the Universe into a Ball at Saskia Neuman
+  Gallery
 LOCATION:Linnégatan 19\, 114 47 Stockholm
-DESCRIPTION:Matti Hoffner\nOn view until 2026-12-18.
-URL:https://www.saskianeumangallery.com/exhibitions/en-dorr-leder-till-ett-
- oga-a-door-leads-to-an-eye
+DESCRIPTION:Lily Hargreaves\nOn view until 2026-12-18.
+URL:https://www.saskianeumangallery.com/exhibitions/if-i-could-squeeze-the-
+ universe-into-a-ball
 END:VEVENT
 END:VCALENDAR

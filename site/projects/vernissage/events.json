@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-06T10:25:19+00:00",
+ "generated_at": "2026-11-06T10:36:36+00:00",
  "window_days": 60,
  "venues_tracked": 67,
  "events": [
@@ -339,30 +339,30 @@
    "source": "web"
   },
   {
-   "id": "3f3a7e136829",
+   "id": "358fa67e7948",
    "venue_id": "saskia-neuman",
    "venue": "Saskia Neuman Gallery",
    "address": "Linnégatan 19, 114 47 Stockholm",
    "map_url": "https://www.google.com/maps/search/?api=1&query=Saskia%20Neuman%20Gallery%2C%20Linn%C3%A9gatan%2019%2C%20114%2047%20Stockholm",
    "district": "Östermalm",
-   "title": "En dörr leder till ett öga // A door leads to an eye",
+   "title": "If I Could Squeeze the Universe into a Ball",
    "title_en": null,
    "gloss": null,
    "gloss_source": null,
    "artists": [
-    "Matti Hoffner"
+    "Lily Hargreaves"
    ],
    "start_date": "2026-11-05",
    "end_date": "2026-12-18",
    "date": "2026-11-05",
    "opening": {
-    "confirmed": true,
+    "confirmed": false,
     "start_time": null,
     "end_time": null,
-    "text": "Opening Thursday November 5th."
+    "text": null
    },
    "access": "unknown",
-   "url": "https://www.saskianeumangallery.com/exhibitions/en-dorr-leder-till-ett-oga-a-door-leads-to-an-eye",
+   "url": "https://www.saskianeumangallery.com/exhibitions/if-i-could-squeeze-the-universe-into-a-ball",
    "source": "web"
   },
   {
