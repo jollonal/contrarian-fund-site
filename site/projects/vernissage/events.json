@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-06T11:06:34+00:00",
+ "generated_at": "2026-11-06T11:26:11+00:00",
  "window_days": 60,
  "venues_tracked": 67,
  "events": [
@@ -57,6 +57,33 @@
    },
    "access": "public",
    "url": "https://www.andrehn-schiptjenko.com/exhibitions/144-sixten-sandra-osterberg-shifts-stockholm/",
+   "source": "web"
+  },
+  {
+   "id": "9165de481a89",
+   "venue_id": "cecilia-hillstrom",
+   "venue": "Cecilia Hillström Gallery",
+   "address": "Hudiksvallsgatan 8, 113 30 Stockholm",
+   "map_url": "https://www.google.com/maps/search/?api=1&query=Cecilia%20Hillstr%C3%B6m%20Gallery%2C%20Hudiksvallsgatan%208%2C%20113%2030%20Stockholm",
+   "district": "Vasastan",
+   "title": "Anatomy of Incidents",
+   "title_en": null,
+   "gloss": null,
+   "gloss_source": null,
+   "artists": [
+    "Christopher Robin Nordström"
+   ],
+   "start_date": "2026-11-05",
+   "end_date": "2026-12-19",
+   "date": "2026-11-05",
+   "opening": {
+    "confirmed": true,
+    "start_time": "17:00",
+    "end_time": "20:00",
+    "text": "Opening (Gallery Weekend program)"
+   },
+   "access": "public",
+   "url": "https://chgallery.se/exhibitions/154-christopher-robin-nordstrom-anatomy-of-incidents/",
    "source": "web"
   },
   {
@@ -195,33 +222,6 @@
    },
    "access": "public",
    "url": "https://www.berggallery.se/exhibitions/134-sylvia-naimark-synkop/",
-   "source": "web"
-  },
-  {
-   "id": "9165de481a89",
-   "venue_id": "cecilia-hillstrom",
-   "venue": "Cecilia Hillström Gallery",
-   "address": "Hudiksvallsgatan 8, 113 30 Stockholm",
-   "map_url": "https://www.google.com/maps/search/?api=1&query=Cecilia%20Hillstr%C3%B6m%20Gallery%2C%20Hudiksvallsgatan%208%2C%20113%2030%20Stockholm",
-   "district": "Vasastan",
-   "title": "Anatomy of Incidents",
-   "title_en": null,
-   "gloss": null,
-   "gloss_source": null,
-   "artists": [
-    "Christopher Robin Nordström"
-   ],
-   "start_date": "2026-11-05",
-   "end_date": "2026-12-19",
-   "date": "2026-11-05",
-   "opening": {
-    "confirmed": false,
-    "start_time": null,
-    "end_time": null,
-    "text": null
-   },
-   "access": "public",
-   "url": "https://chgallery.se/exhibitions/154-christopher-robin-nordstrom-anatomy-of-incidents/",
    "source": "web"
   },
   {
@@ -420,6 +420,33 @@
    "source": "manual"
   },
   {
+   "id": "0948b871fda1",
+   "venue_id": "andrehn-schiptjenko",
+   "venue": "Andréhn-Schiptjenko, ASAP project space",
+   "address": "Linnégatan 31, 114 47 Stockholm",
+   "map_url": "https://www.google.com/maps/search/?api=1&query=Andr%C3%A9hn-Schiptjenko%2C%20Linn%C3%A9gatan%2031%2C%20114%2047%20Stockholm",
+   "district": "Östermalm",
+   "title": "Who's Afraid of the Past? Fuck You!",
+   "title_en": null,
+   "gloss": null,
+   "gloss_source": null,
+   "artists": [
+    "Jacob Dahlgren"
+   ],
+   "start_date": "2026-11-06",
+   "end_date": null,
+   "date": "2026-11-06",
+   "opening": {
+    "confirmed": true,
+    "start_time": "16:00",
+    "end_time": "19:00",
+    "text": "Opening (Gallery Weekend program)"
+   },
+   "access": "unknown",
+   "url": "https://www.andrehn-schiptjenko.com/",
+   "source": "manual"
+  },
+  {
    "id": "de781fd4d68d",
    "venue_id": "helle-knudsen",
    "venue": "Galleri Helle Knudsen",
@@ -446,6 +473,34 @@
    "access": "public",
    "url": "https://gallerihelle.com/blogs/aktuell/vara-historier",
    "source": "web"
+  },
+  {
+   "id": "2ffda298aaba",
+   "venue_id": "wetterling",
+   "venue": "Wetterling Gallery",
+   "address": "Nybrogatan 20, 114 39 Stockholm",
+   "map_url": "https://www.google.com/maps/search/?api=1&query=Wetterling%20Gallery%2C%20Nybrogatan%2020%2C%20114%2039%20Stockholm",
+   "district": "Östermalm",
+   "title": "HERE I AM",
+   "title_en": null,
+   "gloss": null,
+   "gloss_source": null,
+   "artists": [
+    "Nathalia Edenmont"
+   ],
+   "start_date": "2026-10-07",
+   "end_date": "2026-11-15",
+   "date": "2026-11-06",
+   "opening": {
+    "confirmed": true,
+    "start_time": "16:00",
+    "end_time": "18:00",
+    "text": "Reception (Gallery Weekend program)",
+    "label": "Reception"
+   },
+   "access": "unknown",
+   "url": "https://www.wetterlinggallery.com/",
+   "source": "manual"
   },
   {
    "id": "60352aa0f1a1",

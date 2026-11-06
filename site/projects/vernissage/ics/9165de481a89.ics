@@ -22,10 +22,10 @@ END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
 UID:9165de481a89@contrarian.fund
-DTSTAMP:20261106T110634Z
-DTSTART;VALUE=DATE:20261105
-DTEND;VALUE=DATE:20261106
-SUMMARY:Opens: Anatomy of Incidents at Cecilia Hillström Gallery
+DTSTAMP:20261106T112611Z
+DTSTART;TZID=Europe/Stockholm:20261105T170000
+DTEND;TZID=Europe/Stockholm:20261105T200000
+SUMMARY:Vernissage: Anatomy of Incidents at Cecilia Hillström Gallery
 LOCATION:Hudiksvallsgatan 8\, 113 30 Stockholm
 DESCRIPTION:Christopher Robin Nordström\nOn view until 2026-12-19.
 URL:https://chgallery.se/exhibitions/154-christopher-robin-nordstrom-anatom
