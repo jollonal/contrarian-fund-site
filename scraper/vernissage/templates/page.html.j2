@@ -207,9 +207,12 @@
   }
   window.stockholmDate = stockholmDate;  // also used by the map pins
   var labels = { "-1": "Yesterday", "0": "Today", "1": "Tomorrow", "2": "Day after tomorrow" };
-  var oldest = stockholmDate(-1);
-  document.querySelectorAll(".day[data-date]").forEach(function (day) {  // built before midnight: drop days now older than yesterday
-    if (day.dataset.date < oldest) { day.dataset.stale = "1"; day.hidden = true; }
+  // The list opens at today (midnight Stockholm time, CET/CEST). Yesterday's openings are kept
+  // but shown only with the Yesterday button; anything older is dropped (page built before midnight).
+  var yesterday = stockholmDate(-1);
+  document.querySelectorAll(".day[data-date]").forEach(function (day) {
+    if (day.dataset.date < yesterday) { day.dataset.stale = "1"; day.hidden = true; }
+    else if (day.dataset.date === yesterday) { day.dataset.past = "1"; day.hidden = true; }
   });
   dayBtns.forEach(function (b) {
     var n = +b.dataset.offset, iso = stockholmDate(n);
@@ -239,7 +242,7 @@
         ev.hidden = !ok; any = any || ok;
       });
       if (onDate && day.dataset.date !== onDate) any = false;
-      if (day.dataset.stale) any = false;
+      if (day.dataset.stale || (day.dataset.past && onDate !== day.dataset.date)) any = false;
       day.hidden = !any; if (any) shown++;
     });
     var none = document.getElementById("none");
