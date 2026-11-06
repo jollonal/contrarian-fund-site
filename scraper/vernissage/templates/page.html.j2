@@ -100,7 +100,11 @@
               width: 100%; margin: 0 0 6px; }
   .when-row .when-filter { width: auto; margin: 0; }
   .filters .map-actions { display: flex; gap: 6px; margin-left: auto; }
-  .filters .map-actions button { color: var(--ink); border: 1px solid var(--ink); padding: 3px 10px; text-decoration: none; }
+  /* Map buttons: borderless, white on deep blue, a color that carries no day meaning on this page. */
+  .filters .map-actions button { --action: #1F4E79; color: #fff; background: var(--action); border: 0; padding: 5px 12px;
+                                 text-decoration: none; }
+  .filters .map-actions button:hover, .filters .map-actions button:focus-visible { background: #163A5C; }
+  .filters .map-actions button[aria-expanded="true"] { background: #163A5C; }
   .pin span { display: flex; align-items: center; justify-content: center; box-sizing: border-box; width: 22px; height: 22px;
               border-radius: 50%; border: 1.5px solid var(--ink); background: var(--bg); color: var(--ink); font: 600 11px/1 var(--font); }
   .pin.on span { background: var(--ink); color: var(--bg); }
