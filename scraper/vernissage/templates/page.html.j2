@@ -107,9 +107,11 @@
   .map-wrap.full #map { flex: 1; height: auto; }
   .map-wrap.full .key { display: none; }
   .map-close { display: none; }
+  /* Close map: borderless, white on black (red is reserved for "day after tomorrow"). */
   .map-wrap.full .map-close { display: block; position: absolute; top: 22px; right: 22px; z-index: 1001; font: inherit;
-                              font-size: 14px; color: var(--ink); background: var(--bg); border: 1px solid var(--ink);
-                              padding: 4px 10px; cursor: pointer; }
+                              font-size: 15px; font-weight: 600; color: #fff; background: var(--ink); border: 0;
+                              padding: 8px 14px; cursor: pointer; box-shadow: 0 1px 4px rgba(0, 0, 0, 0.35); }
+  .map-wrap.full .map-close:hover, .map-wrap.full .map-close:focus-visible { background: #333; }
   .dot { display: inline-block; width: 10px; height: 10px; border-radius: 50%; border: 1.5px solid var(--ink);
          background: var(--bg); vertical-align: -1px; margin: 0 4px 0 12px; }
   .dot.on { background: var(--ink); }
@@ -407,8 +409,21 @@ document.addEventListener("DOMContentLoaded", function () {
                      .addTo(map).bindPopup(box);
     all.push([p.lat, p.lon]); if (p.central) central.push([p.lat, p.lon]);
   });
-  function fitAll() { map.fitBounds(central.length ? central : all, { padding: [24, 24] }); }
+  // Home view: all central galleries. Until the visitor drags the map or a filter moves it, the + button zooms
+  // in on the middle of the gallery cluster (median position), not on the middle of the bounding box.
+  var base = central.length ? central : all, home = true, homeCenter = null;
+  function median(a) { var s = a.slice().sort(function (x, y) { return x - y; }), n = s.length;
+                       return n % 2 ? s[(n - 1) / 2] : (s[n / 2 - 1] + s[n / 2]) / 2; }
+  if (base.length) homeCenter = [median(base.map(function (x) { return x[0]; })), median(base.map(function (x) { return x[1]; }))];
+  function fitAll() { map.fitBounds(base, { padding: [24, 24] }); home = true; }
   fitAll();
+  map.on("dragstart", function () { home = false; });
+  el.addEventListener("click", function (e) {
+    var zin = e.target.closest && e.target.closest(".leaflet-control-zoom-in");
+    if (!zin || !home || !homeCenter || zin.classList.contains("leaflet-disabled")) return;
+    e.preventDefault(); e.stopPropagation();  // capture phase: runs before Leaflet's own zoom-in handler
+    map.setView(homeCenter, Math.min(map.getZoom() + 1, map.getMaxZoom()));
+  }, true);
 
   // District filter: show only that district's pins and zoom to them; "All" restores everything.
   function matchesWhen(p, w) {
@@ -429,8 +444,8 @@ document.addEventListener("DOMContentLoaded", function () {
     document.querySelectorAll(".key-group").forEach(function (g) { g.hidden = !!d && g.dataset.district !== d; });
     if (!d && !w) fitAll();
     else if (!shown.length) return;
-    else if (shown.length === 1) map.setView(shown[0], 15);
-    else if (shown.length) map.fitBounds(shown, { padding: [24, 24], maxZoom: 16 });
+    else if (shown.length === 1) { home = false; map.setView(shown[0], 15); }
+    else { home = false; map.fitBounds(shown, { padding: [24, 24], maxZoom: 16 }); }
   } };
 
   var keyBtn = document.getElementById("key-toggle"), keyBox = document.getElementById("map-key");
@@ -461,7 +476,7 @@ document.addEventListener("DOMContentLoaded", function () {
     b.addEventListener("click", function () {
       var m = markers[b.dataset.pin]; if (!m) return;
       el.scrollIntoView({ behavior: "smooth", block: "center" });
-      map.setView(m.getLatLng(), 16); m.openPopup();
+      home = false; map.setView(m.getLatLng(), 16); m.openPopup();
     });
   });
 });
