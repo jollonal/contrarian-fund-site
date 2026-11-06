@@ -386,14 +386,15 @@ def map_points(events: list[dict], venues: list[dict]) -> list[dict]:
             t = e["opening"]["start_time"] if e["opening"]["confirmed"] else None
             if t and e["opening"]["end_time"]:
                 t += " to " + e["opening"]["end_time"]
-            opens.append({"date": f"{d.strftime('%a')} {d.day} {d.strftime('%b')}", "title": display_title(e),
+            opens.append({"date": f"{d.strftime('%a')} {d.day} {d.strftime('%b')}", "iso": d.isoformat(),
+                          "title": display_title(e),
                           "time": t})
         dlat, dlon = v["lat"] - CENTRE[0], (v["lon"] - CENTRE[1]) * 0.5
         points.append({
             "n": n, "id": v["id"], "name": v["name"], "district": v.get("district") or "Other",
             "address": v.get("address"), "floor": v.get("floor"), "map_url": map_url(v["name"], v.get("address")),
             "url": v.get("homepage"), "lat": v["lat"], "lon": v["lon"], "openings": opens,
-            "central": (dlat * dlat + dlon * dlon) ** 0.5 < 0.06,  # roughly within 7 km of the centre
+            "central": (dlat * dlat + dlon * dlon) ** 0.5 < 0.06,  # roughly within 7 km of the center
         })
     return points
 
@@ -401,7 +402,7 @@ def map_points(events: list[dict], venues: list[dict]) -> list[dict]:
 # ---------- outputs ----------
 def write_outputs(events: list[dict], venues: list[dict], out_dir: Path, today: dt.date,
                   window: int, repo_url: str | None, weekend: dict | None = None) -> None:
-    """weekend: when given, the main page links to its programme page (see weekend.py)."""
+    """weekend: when given, the main page links to its program page (see weekend.py)."""
     out_dir.mkdir(parents=True, exist_ok=True)
     generated = dt.datetime.now(dt.timezone.utc).isoformat(timespec="seconds")
     active = [v for v in venues if v.get("status") == "active"]

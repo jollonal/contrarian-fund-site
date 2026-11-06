@@ -64,7 +64,7 @@ Titles stay in the original language. If the gallery publishes its own English t
 
 Above the district filter, **Today** (green), **Tomorrow** (yellow) and **Day after** show one day's openings and tag that day in the list. The dates are worked out in the visitor's browser in Stockholm time, so they stay right even when the nightly run is late.
 
-`scraper/weekend.yaml` is a hand-kept programme for an event weekend such as Gallery Weekend Stockholm: openings, talks, tours and performances by day, plus shows on view with no event. It is rendered to `site/projects/vernissage/gallery-weekend/` and the main page links to it from `announce_days` before the first day until the last. Galleries from venues.yaml are referenced by id; visiting galleries are given a name and address. Saving the file rebuilds the page from cache in about two minutes, with no AI calls. For another year, replace the dates, hours, events and on_view lists.
+`scraper/weekend.yaml` is a hand-kept program for an event weekend such as Gallery Weekend Stockholm: openings, talks, tours and performances by day, plus shows on view with no event. It is rendered to `site/projects/vernissage/gallery-weekend/` and the main page links to it from `announce_days` before the first day until the last. Galleries from venues.yaml are referenced by id; visiting galleries are given a name and address. Saving the file rebuilds the page from cache in about two minutes, with no AI calls. For another year, replace the dates, hours, events and on_view lists.
 
 ## Map
 

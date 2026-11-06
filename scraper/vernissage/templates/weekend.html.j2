@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>{{ wk.name }} {{ start.year }}: programme</title>
+<title>{{ wk.name }} {{ start.year }}: program</title>
 <meta name="description" content="{{ wk.name }}, {{ start.day }}{% if start.month != end.month %} {{ start.strftime('%B') }}{% endif %}–{{ end.day }} {{ end.strftime('%B %Y') }}: openings, talks, tours and performances by day.">
 <link rel="icon" href="/favicon.png">
 <style>
@@ -60,7 +60,7 @@
   <header>
     <h1>{{ wk.name }}</h1>
     <p>{{ start.day }}{% if start.month != end.month %} {{ start.strftime('%B') }}{% endif %}–{{ end.day }} {{ end.strftime('%B %Y') }}. {{ wk.summary }}</p>
-    <p>Programme from <a href="{{ wk.url }}" rel="noopener">{{ wk.url | replace('https://', '') | replace('www.', '') }}</a>{% if checked %}, checked against the galleries' own sites on {{ checked }}{% endif %}.</p>
+    <p>Program from <a href="{{ wk.url }}" rel="noopener">{{ wk.url | replace('https://', '') | replace('www.', '') }}</a>{% if checked %}, checked against the galleries' own sites on {{ checked }}{% endif %}.</p>
   </header>
 
   <main>
@@ -101,7 +101,7 @@
   </main>
 
   <footer>
-    <p>Times are as published by the organiser and the galleries. Check with the gallery before travelling.</p>
+    <p>Times are as published by the organizer and the galleries. Check with the gallery before traveling.</p>
     <p><a href="../">Stockholm Vernissages</a> · Built by <a href="/">Alfred J. Jollon</a></p>
   </footer>
 </div>

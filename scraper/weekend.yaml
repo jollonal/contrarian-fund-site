@@ -32,7 +32,7 @@ events:
     kind: Opening
     title: Shifts
     artists: [Sixten Sandra Österberg]
-    note: Programme title Omvandlingar. Artist present.
+    note: Program title Omvandlingar. Artist present.
   - date: 2026-11-05
     start: "17:00"
     end: "20:00"
@@ -73,7 +73,7 @@ events:
     kind: Reception
     title: HERE I AM
     artists: [Nathalia Edenmont]
-    note: The programme asks for an RSVP by email (address on the programme page). Sparkling wine. Show runs until 15 November.
+    note: The program asks for an RSVP by email (address on the program page). Sparkling wine. Show runs until 15 November.
   - date: 2026-11-06
     start: "16:00"
     end: "19:00"
@@ -97,7 +97,7 @@ events:
     kind: Talk
     title: Inherited Words
     artists: [Maria Friberg]
-    note: In conversation with Ashik Zaman (SKF/Konstnärshuset, C-print). Listed in the programme; not on the gallery's own site.
+    note: In conversation with Ashik Zaman (SKF/Konstnärshuset, C-print). Listed in the program; not on the gallery's own site.
   - date: 2026-11-06
     start: "17:00"
     end: "19:00"
@@ -113,7 +113,7 @@ events:
     kind: Opening
     title: Comma
     artists: [Anna Bjerger]
-    note: "In the inner room (programme title: New Paintings). Also showing: Alejandro Sintura, Between Hidden and Almost Revealed."
+    note: "In the inner room (program title: New Paintings). Also showing: Alejandro Sintura, Between Hidden and Almost Revealed."
   - date: 2026-11-06
     start: "18:00"
     end: "20:00"
@@ -197,7 +197,7 @@ events:
     kind: Presentation
     title: Networks, Surfaces and Allegories
     artists: [Peter Hagdahl]
-    note: Introduction of the artist, the exhibition and the gallery programme. Address as given in the programme.
+    note: Introduction of the artist, the exhibition and the gallery program. Address as given in the program.
   - date: 2026-11-08
     start: "15:00"
     venue: bjorkholmen
@@ -226,7 +226,7 @@ on_view:
     title: Landlines
     artists: [Claire McLaughlin, Dolores Lyne, Jo Killalea, Kevin Griffin, Noelle Gallagher, Sarah Ellen Lundy]
     address: Gävlegatan 10 B, 113 30 Stockholm
-    note: Curated by Alannah Robins. Address as given in the programme.
+    note: Curated by Alannah Robins. Address as given in the program.
   - gallery: Elastic Gallery (Jädraås)
     site: https://www.elasticgallery.com
     address: Hudiksvallsgatan 6, 113 30 Stockholm
@@ -244,7 +244,7 @@ on_view:
     address: Hudiksvallsgatan 6, 113 30 Stockholm
     district: Vasastan
     artists: [Henrik Ekesiöö, Jörgen Svensson, Klas Barbrosson]
-    note: Klas Barbrosson is listed on the gallery's site, not in the programme.
+    note: Klas Barbrosson is listed on the gallery's site, not in the program.
   - venue: kostyal
     title: THE WORLD WAS ALWAYS ENDING
     artists: [Urs Fischer]
@@ -284,4 +284,4 @@ on_view:
     artists: [Jeff Cowen]
     address: Västra Trädgårdsgatan 15, Stockholm
     district: Norrmalm
-    note: Address as given in the programme.
+    note: Address as given in the program.

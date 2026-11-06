@@ -102,7 +102,7 @@ def _key(msg_id: str) -> str:
 
 def read_newsletters(venues: list[dict], cache: dict, today: dt.date, llm: L.LLM) -> dict[str, list[dict]]:
     """Return {venue_id: [exhibition, ...]} from new and remembered newsletters; updates cache."""
-    # excluded venues (closed, moved away, no programme) are ignored unless marked newsletter: true
+    # excluded venues (closed, moved away, no program) are ignored unless marked newsletter: true
     venues = [v for v in venues if v.get("status") != "excluded" or v.get("newsletter")]
     store = cache.setdefault("mail", {})
     cutoff = (today - dt.timedelta(days=KEEP_DAYS)).isoformat()

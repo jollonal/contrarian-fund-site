@@ -1,4 +1,4 @@
-"""Gallery Weekend page: a hand-kept programme (scraper/weekend.yaml) rendered as its own page,
+"""Gallery Weekend page: a hand-kept program (scraper/weekend.yaml) rendered as its own page,
 day by day, with talks, tours and performances that the main list leaves out.
 
 The main page links to it from `announce_days` before the weekend until its last day.

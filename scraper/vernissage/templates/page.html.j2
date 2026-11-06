@@ -72,7 +72,11 @@
   .map-bar button { font: inherit; color: var(--ink); background: none; border: 1px solid var(--ink); padding: 4px 10px; cursor: pointer; }
   .dot { display: inline-block; width: 10px; height: 10px; border-radius: 50%; border: 1.5px solid var(--ink);
          background: var(--bg); vertical-align: -1px; margin: 0 4px 0 12px; }
-  .dot.on { background: var(--ink); margin-left: 0; }
+  .dot.on { background: var(--ink); }
+  .legend .dot:first-child { margin-left: 0; }
+  .dot.d0, .pin.d0 span { background: var(--today); border-color: var(--today); color: #fff; }
+  .dot.d1, .pin.d1 span { background: var(--tomorrow); border-color: var(--tomorrow); color: var(--ink); }
+  .dot.d2, .pin.d2 span { background: var(--dayafter); border-color: var(--dayafter); color: #fff; }
   .pin span { display: flex; align-items: center; justify-content: center; box-sizing: border-box; width: 22px; height: 22px;
               border-radius: 50%; border: 1.5px solid var(--ink); background: var(--bg); color: var(--ink); font: 600 11px/1 var(--font); }
   .pin.on span { background: var(--ink); color: var(--bg); }
@@ -105,14 +109,14 @@
   <header>
     <h1>Stockholm Vernissages</h1>
     <p>Exhibition openings at {{ n_venues }} Stockholm galleries over the next {{ window }} days. Updated nightly.</p>
-    {% if weekend %}<p class="notice"><a href="{{ weekend.slug or 'gallery-weekend' }}/">{{ weekend.name }}, {{ weekend.start.day }}{% if weekend.start.month != weekend.end.month %} {{ weekend.start.strftime('%B') }}{% endif %}–{{ weekend.end.day }} {{ weekend.end.strftime('%B') }}: full programme of openings, talks and tours</a></p>{% endif %}
+    {% if weekend %}<p class="notice"><a href="{{ weekend.slug or 'gallery-weekend' }}/">{{ weekend.name }}, {{ weekend.start.day }}{% if weekend.start.month != weekend.end.month %} {{ weekend.start.strftime('%B') }}{% endif %}–{{ weekend.end.day }} {{ weekend.end.strftime('%B') }}: full program of openings, talks and tours</a></p>{% endif %}
   </header>
 
   {% if n_points %}
   <section class="map-wrap" id="map-wrap" aria-label="Map of galleries">
     <div id="map" data-window="{{ window }}" role="region" aria-label="Map of {{ n_points }} galleries. Filled pins have an opening in the next {{ window }} days."></div>
     <div class="map-bar">
-      <span><span class="dot on"></span>Opening in the next {{ window }} days<span class="dot"></span>Other galleries</span>
+      <span class="legend"><span class="dot d0"></span>Opening today<span class="dot d1"></span>Tomorrow<span class="dot d2"></span>Day after<span class="dot on"></span>Later in the next {{ window }} days<span class="dot"></span>Other galleries</span>
       <span class="map-actions">
         <button type="button" id="key-toggle" aria-expanded="false" aria-controls="map-key">Show gallery list ({{ n_points }})</button>
         <button type="button" id="map-expand" aria-expanded="false">Expand map</button>
@@ -190,6 +194,7 @@
     d.setUTCDate(d.getUTCDate() + offset);
     return d.toISOString().slice(0, 10);
   }
+  window.stockholmDate = stockholmDate;  // also used by the map pins
   var labels = ["Today", "Tomorrow", "Day after tomorrow"];
   dayBtns.forEach(function (b) {
     var n = +b.dataset.offset, iso = stockholmDate(n);
@@ -249,6 +254,7 @@ document.addEventListener("DOMContentLoaded", function () {
   }
   function link(href, text) { var a = node("a", null, text); a.href = href; a.rel = "noopener"; a.target = "_blank"; return a; }
   var markers = {}, all = [], central = [];
+  var near = window.stockholmDate ? [0, 1, 2].map(window.stockholmDate) : [];
   pts.forEach(function (p) {
     var box = node("div", "pop");
     box.appendChild(node("p", "pop-name", p.n + ". " + p.name));
@@ -267,10 +273,16 @@ document.addEventListener("DOMContentLoaded", function () {
       box.appendChild(node("p", "pop-none", "No openings in the next " + days + " days."));
     }
     if (p.url) { var wp = node("p"); wp.appendChild(link(p.url, "Gallery website")); box.appendChild(wp); }
-    var icon = L.divIcon({ className: "pin" + (p.openings.length ? " on" : ""), html: "<span>" + p.n + "</span>",
-                           iconSize: [22, 22], iconAnchor: [11, 11], popupAnchor: [0, -12] });
+    // Soonest opening today (green), tomorrow (yellow) or the day after (red); later ones stay black.
+    var soon = -1;
+    [0, 1, 2].forEach(function (k) {
+      if (soon < 0 && p.openings.some(function (o) { return o.iso === near[k]; })) soon = k;
+    });
+    var icon = L.divIcon({ className: "pin" + (p.openings.length ? " on" : "") + (soon >= 0 ? " d" + soon : ""),
+                           html: "<span>" + p.n + "</span>", iconSize: [22, 22], iconAnchor: [11, 11], popupAnchor: [0, -12] });
     markers[p.id] = L.marker([p.lat, p.lon], { icon: icon, title: p.n + ". " + p.name, alt: p.n + ". " + p.name,
-                                               zIndexOffset: p.openings.length ? 1000 : 0 }).addTo(map).bindPopup(box);
+                                               zIndexOffset: soon >= 0 ? 2000 - soon * 100 : (p.openings.length ? 1000 : 0) })
+                     .addTo(map).bindPopup(box);
     all.push([p.lat, p.lon]); if (p.central) central.push([p.lat, p.lon]);
   });
   function fitAll() { map.fitBounds(central.length ? central : all, { padding: [24, 24] }); }

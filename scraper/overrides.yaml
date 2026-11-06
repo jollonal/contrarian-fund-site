@@ -64,7 +64,7 @@ events:
     opening_date: 2026-11-06
     opening_start: "17:00"
     opening_end: "19:00"
-    opening_text: "Opening reception: Friday, 6 November, 5–7 pm (Gallery Weekend programme)"
+    opening_text: "Opening reception: Friday, 6 November, 5–7 pm (Gallery Weekend program)"
   - venue: magnus-karlsson
     corrects: true
     title: Comma

@@ -66,6 +66,6 @@ def test_map_points_numbered_by_district_with_openings():
     pts = map_points([ev], venues)
     assert [p["id"] for p in pts] == ["a", "z"] and [p["n"] for p in pts] == [1, 2]  # Östermalm before Södermalm
     z = pts[1]
-    assert z["openings"][0] == {"date": "Wed 21 Oct", "title": "Show", "time": "17:00 to 19:00"}
+    assert z["openings"][0] == {"date": "Wed 21 Oct", "iso": "2026-10-21", "title": "Show", "time": "17:00 to 19:00"}
     assert z["map_url"].startswith("https://www.google.com/maps/search/") and z["central"]
     assert z["floor"] == "1st floor" and pts[0]["floor"] is None
