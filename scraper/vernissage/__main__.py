@@ -35,7 +35,10 @@ def manual_events(entries, venues: list[dict], log) -> list[tuple[str, dict]]:
             log.warning("overrides.yaml: skipped event %r (needs a known venue, title and start_date)", e)
             continue
         out.append((vid, {
+            "source": "manual",
+            "corrects": bool(e.get("corrects")),
             "title": str(e["title"]),
+            "title_en": str(e["title_en"]) if e.get("title_en") else None,
             "artists": [str(x) for x in e.get("artists") or []],
             "start_date": str(e["start_date"]),
             "end_date": str(e["end_date"]) if e.get("end_date") else None,
@@ -104,7 +107,11 @@ def main() -> int:
     on_map = [v for v in venues if v.get("status") == "active" or v.get("newsletter")]
     for vid, (lat, lon) in locate(on_map, ROOT / "state" / "geocode.json", today).items():
         next(v for v in venues if v["id"] == vid).update(lat=lat, lon=lon)
-    write_outputs(events, venues, SITE, today, a.window, os.environ.get("REPO_URL"))
+    from . import weekend as W
+    wk = W.load(ROOT / "weekend.yaml")
+    W.write(wk, venues, SITE, today)
+    write_outputs(events, venues, SITE, today, a.window, os.environ.get("REPO_URL"),
+                  weekend=wk if W.is_announced(wk, today) else None)
     log.info("%d events (%d confirmed openings), %d for review, %s LLM calls, ~%s neurons",
              len(events), sum(e["opening"]["confirmed"] for e in events), len(review),
              llm.calls if llm else 0, f"{llm.neurons:,.0f}" if llm else 0)

@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{{ wk.name }} {{ start.year }}: programme</title>
+<meta name="description" content="{{ wk.name }}, {{ start.day }}{% if start.month != end.month %} {{ start.strftime('%B') }}{% endif %}–{{ end.day }} {{ end.strftime('%B %Y') }}: openings, talks, tours and performances by day.">
+<link rel="icon" href="/favicon.png">
+<style>
+  :root {
+    --bg: #FAFAF7; --ink: #111111; --muted: #6B6B66; --rule: #DADAD4;
+    --font: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  }
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body { margin: 0; background: var(--bg); color: var(--ink); font: 16px/1.45 var(--font); }
+  a { color: inherit; text-decoration-thickness: 1px; text-underline-offset: 3px; }
+  .wrap { max-width: 960px; margin: 0 auto; padding: 56px 24px 80px; }
+  .back { font-size: 14px; color: var(--muted); margin: 0 0 24px; }
+  header h1 { font-size: 32px; font-weight: 400; letter-spacing: -0.01em; margin: 0 0 8px; }
+  header p { color: var(--muted); margin: 0 0 4px; max-width: 620px; }
+  main { margin-top: 40px; border-top: 1px solid var(--ink); }
+  .day { display: grid; grid-template-columns: 200px 1fr; gap: 24px; padding: 28px 0; border-bottom: 1px solid var(--rule); }
+  .day h2 { font-size: 15px; font-weight: 400; margin: 2px 0 0; }
+  .day h2 span { display: block; color: var(--muted); }
+  .day.past .ev { color: var(--muted); }
+  :root { --today: #1E7B34; --tomorrow: #F2C230; }
+  .tag { display: inline-block; margin-top: 6px; padding: 1px 8px; font-size: 12px; letter-spacing: 0.04em; font-style: normal; }
+  .tag:empty { display: none; }
+  .tag.t0 { background: var(--today); color: #fff; }
+  .tag.t1 { background: var(--tomorrow); color: var(--ink); }
+  .tag.t2 { border: 1px solid var(--ink); }
+  .ev { padding: 0 0 24px; }
+  .ev:last-child { padding-bottom: 0; }
+  .ev .venue { font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; margin: 0 0 4px; }
+  .ev h3 { font-size: 20px; font-weight: 400; line-height: 1.25; margin: 0; }
+  .ev .artists { margin: 2px 0 0; }
+  .ev .when { margin: 8px 0 0; font-size: 15px; }
+  .ev .note { margin: 2px 0 0; font-size: 14px; }
+  .ev .meta { margin: 2px 0 0; font-size: 14px; color: var(--muted); }
+  .view h2 { font-size: 15px; font-weight: 400; margin: 2px 0 0; }
+  .view h4 { font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; font-weight: 400; margin: 0 0 6px; }
+  .view .group { margin: 0 0 20px; }
+  .view .group:last-child { margin-bottom: 0; }
+  .view ul { list-style: none; margin: 0; padding: 0; }
+  .view li { margin: 0 0 10px; }
+  .view li .meta { font-size: 14px; color: var(--muted); }
+  footer { margin-top: 48px; font-size: 13px; color: var(--muted); }
+  footer p { margin: 0 0 4px; }
+  @media (max-width: 640px) {
+    .wrap { padding: 32px 16px 56px; }
+    header h1 { font-size: 26px; }
+    .day { grid-template-columns: 1fr; gap: 12px; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <p class="back"><a href="../">Stockholm Vernissages</a></p>
+  <header>
+    <h1>{{ wk.name }}</h1>
+    <p>{{ start.day }}{% if start.month != end.month %} {{ start.strftime('%B') }}{% endif %}–{{ end.day }} {{ end.strftime('%B %Y') }}. {{ wk.summary }}</p>
+    <p>Programme from <a href="{{ wk.url }}" rel="noopener">{{ wk.url | replace('https://', '') | replace('www.', '') }}</a>{% if checked %}, checked against the galleries' own sites on {{ checked }}{% endif %}.</p>
+  </header>
+
+  <main>
+  {% for day in days %}
+    <section class="day{% if day.past %} past{% endif %}" data-date="{{ day.date.isoformat() }}">
+      <h2>{{ day.date.strftime("%A") }}<span>{{ day.date.day }} {{ day.date.strftime("%B") }}</span>{% if day.past %}<span>Past</span>{% elif day.hours %}<span>Galleries open {{ day.hours }}</span>{% endif %}<em class="tag"></em></h2>
+      <div>
+      {% for x in day["items"] %}
+        <article class="ev">
+          <p class="venue">{% if x.site %}<a href="{{ x.site }}" rel="noopener">{{ x.gallery }}</a>{% else %}{{ x.gallery }}{% endif %}{% if x.district %} · {{ x.district }}{% endif %}</p>
+          {% if x.title %}<h3>{{ x.title }}</h3>{% endif %}
+          {% set artists = (x.artists or []) | join(", ") %}
+          {% if artists and artists != x.title %}<p class="artists">{{ artists }}</p>{% endif %}
+          <p class="when">{{ x.kind }}{% if x.time %}, {{ x.time }}{% else %}, time not given{% endif %}</p>
+          {% if x.note %}<p class="note">{{ x.note }}</p>{% endif %}
+          {% if x.address %}<p class="meta"><a href="{{ x.map_url }}" rel="noopener">{{ x.address }}</a>{% if x.floor %}, {{ x.floor }}{% endif %}</p>{% endif %}
+        </article>
+      {% endfor %}
+      </div>
+    </section>
+  {% endfor %}
+  {% if on_view %}
+    <section class="day view">
+      <h2>On view all weekend<span>No event listed</span></h2>
+      <div>
+      {% for district, items in on_view %}
+        <div class="group"><h4>{{ district }}</h4><ul>
+        {% for x in items %}
+          <li>{% if x.site %}<a href="{{ x.site }}" rel="noopener">{{ x.gallery }}</a>{% else %}{{ x.gallery }}{% endif %}{% if x.title %}: {{ x.title }}{% endif %}{% set artists = (x.artists or []) | join(", ") %}{% if artists and artists != x.title %}{% if x.title %}, {% else %}: {% endif %}{{ artists }}{% endif %}
+            {% if x.note %}<br><span class="meta">{{ x.note }}</span>{% endif %}
+            {% if x.address %}<br><span class="meta"><a href="{{ x.map_url }}" rel="noopener">{{ x.address }}</a>{% if x.floor %}, {{ x.floor }}{% endif %}</span>{% endif %}</li>
+        {% endfor %}
+        </ul></div>
+      {% endfor %}
+      </div>
+    </section>
+  {% endif %}
+  </main>
+
+  <footer>
+    <p>Times are as published by the organiser and the galleries. Check with the gallery before travelling.</p>
+    <p><a href="../">Stockholm Vernissages</a> · Built by <a href="/">Alfred J. Jollon</a></p>
+  </footer>
+</div>
+<script>
+(function () {  /* green = today, yellow = tomorrow, in Stockholm time; past days greyed in the browser too */
+  var t = new Intl.DateTimeFormat("en-CA", { timeZone: "Europe/Stockholm", year: "numeric", month: "2-digit",
+    day: "2-digit" }).format(new Date());
+  var labels = ["Today", "Tomorrow", "Day after tomorrow"];
+  document.querySelectorAll(".day[data-date]").forEach(function (day) {
+    var n = Math.round((Date.parse(day.dataset.date + "T12:00:00Z") - Date.parse(t + "T12:00:00Z")) / 864e5);
+    if (n < 0) { day.classList.add("past"); return; }
+    if (n <= 2) { var tag = day.querySelector(".tag"); tag.textContent = labels[n]; tag.className = "tag t" + n; }
+  });
+})();
+</script>
+</body>
+</html>

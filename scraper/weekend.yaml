@@ -1,0 +1,287 @@
+# Gallery Weekend page (hand-kept). Rendered to /projects/vernissage/gallery-weekend/ and
+# linked from the main page from `announce_days` before `start` until `end`.
+# Saving this file on GitHub rebuilds and redeploys the page in about two minutes, no AI.
+#
+# events: one entry per dated event. Fields:
+#   date (YYYY-MM-DD), start and end (quoted "HH:MM"; leave out if not published),
+#   venue (id from venues.yaml) or gallery (name, for galleries not in venues.yaml),
+#   address / district / site (override or supply), kind (Opening, Reception, Talk,
+#   Tour, Performance, Presentation, Preview), title, artists, note.
+# on_view: shows open all weekend with no event listed; same place fields.
+# For a new year, replace the dates, hours, events and on_view lists.
+
+name: Gallery Weekend Stockholm
+url: https://gallery-weekend-stockholm.com
+slug: gallery-weekend
+start: 2026-11-06
+end: 2026-11-08
+announce_days: 14
+checked: 6 November 2026
+summary: "Galleries open Friday 12:00–19:00, Saturday 12:00–18:00 and Sunday 12:00–16:00. Presented by Svenska Galleriförbundet. Several galleries from outside Stockholm show together at Hudiksvallsgatan 6."
+hours:
+  "2026-11-06": "12:00–19:00"
+  "2026-11-07": "12:00–18:00"
+  "2026-11-08": "12:00–16:00"
+
+events:
+  # Thursday 5 November: previews
+  - date: 2026-11-05
+    start: "17:00"
+    end: "20:00"
+    venue: andrehn-schiptjenko
+    kind: Opening
+    title: Shifts
+    artists: [Sixten Sandra Österberg]
+    note: Programme title Omvandlingar. Artist present.
+  - date: 2026-11-05
+    start: "17:00"
+    end: "20:00"
+    venue: cecilia-hillstrom
+    kind: Opening
+    title: Anatomy of Incidents
+    artists: [Christopher Robin Nordström]
+    note: "Also showing: Linnea Rygaard, Area 51."
+  - date: 2026-11-05
+    start: "17:00"
+    end: "20:00"
+    venue: saskia-neuman
+    kind: Opening
+    title: En dörr leder till ett öga / A Door Leads to an Eye
+    artists: [Matti Hoffner]
+    note: "Also showing: Lily Hargreaves, If I Could Squeeze the Universe into a Ball."
+  - date: 2026-11-05
+    gallery: Arnstedt (Östra Karup)
+    site: null
+    address: Hudiksvallsgatan 6, 113 30 Stockholm
+    district: Vasastan
+    kind: Preview
+    artists: [Gabriel Karlsson, Viktor Kopp, Marcus Matt]
+
+  # Friday 6 November
+  - date: 2026-11-06
+    start: "12:00"
+    end: "19:00"
+    venue: anna-bohman
+    kind: Opening
+    title: Lessness(es)
+    artists: [Maria Miesenberger]
+    note: Artist present.
+  - date: 2026-11-06
+    start: "16:00"
+    end: "18:00"
+    venue: wetterling
+    kind: Reception
+    title: HERE I AM
+    artists: [Nathalia Edenmont]
+    note: The programme asks for an RSVP by email (address on the programme page). Sparkling wine. Show runs until 15 November.
+  - date: 2026-11-06
+    start: "16:00"
+    end: "19:00"
+    venue: andrehn-schiptjenko
+    gallery: Andréhn-Schiptjenko, ASAP project space
+    kind: Opening
+    title: Who's Afraid of the Past? Fuck You!
+    artists: [Jacob Dahlgren]
+    note: Mini-exhibition of printed invitations, photographs and posters from before 2004. Drinks.
+  - date: 2026-11-06
+    start: "16:00"
+    end: "19:00"
+    venue: helle-knudsen
+    kind: Opening
+    title: Våra historier / Our Stories
+    artists: [Britta Marakatt-Labba, Tomas Colbengtson]
+    note: Both artists present.
+  - date: 2026-11-06
+    start: "17:00"
+    venue: anna-persson
+    kind: Talk
+    title: Inherited Words
+    artists: [Maria Friberg]
+    note: In conversation with Ashik Zaman (SKF/Konstnärshuset, C-print). Listed in the programme; not on the gallery's own site.
+  - date: 2026-11-06
+    start: "17:00"
+    end: "19:00"
+    venue: hera
+    kind: Opening
+    title: Das andere Zuhause
+    artists: [Kai Savelsberg]
+    note: Painting. Gallery open until 20:00. Artist talk on Saturday.
+  - date: 2026-11-06
+    start: "17:00"
+    end: "19:00"
+    venue: magnus-karlsson
+    kind: Opening
+    title: Comma
+    artists: [Anna Bjerger]
+    note: "In the inner room (programme title: New Paintings). Also showing: Alejandro Sintura, Between Hidden and Almost Revealed."
+  - date: 2026-11-06
+    start: "18:00"
+    end: "20:00"
+    venue: belenius
+    kind: Opening
+    title: Shapeshifting
+    artists: [Elsa Thoresen, Dorothea Tanning, Jenny Palén, Isabelle Zetterström]
+    note: Co-curated with Roland-Philippe Kretzschmar (The Art Bystander).
+
+  # Saturday 7 November
+  - date: 2026-11-07
+    start: "13:00"
+    venue: helle-knudsen
+    kind: Talk
+    title: Våra historier / Our Stories
+    artists: [Tomas Colbengtson]
+  - date: 2026-11-07
+    start: "13:00"
+    venue: hera
+    kind: Talk
+    title: Das andere Zuhause
+    artists: [Kai Savelsberg]
+  - date: 2026-11-07
+    start: "13:00"
+    venue: magnus-karlsson
+    kind: Tour
+    title: Comma
+    artists: [Anna Bjerger]
+    note: The artist shows the exhibition.
+  - date: 2026-11-07
+    start: "14:00"
+    end: "14:30"
+    venue: wetterling
+    kind: Tour
+    title: HERE I AM
+    artists: [Nathalia Edenmont]
+    note: Guided tour from photography to the recent marble sculptures.
+  - date: 2026-11-07
+    start: "15:00"
+    end: "16:00"
+    venue: ed-art
+    kind: Talk
+    title: Immolation
+    artists: [Jasmin Daryani]
+    note: Show open 6 to 8 November only.
+  - date: 2026-11-07
+    start: "15:00"
+    venue: galleri-glas
+    kind: Talk
+    title: Tusen sjöars glöd
+    artists: [Karsikas, Koskinen, Schirm, Suppanen]
+    note: A meeting between literature and glass art, with Akt Förlag.
+  - date: 2026-11-07
+    start: "15:00"
+    venue: hedenius
+    kind: Tour
+    title: VALV
+    artists: [Juri Markkula]
+    note: Guided tour with the artist.
+  - date: 2026-11-07
+    start: "16:00"
+    end: "17:00"
+    venue: steinsland-berliner
+    kind: Performance
+    title: Fight Symphony
+    artists: [Seungwoo Park]
+    note: "Followed by a 30-minute artist talk. Tickets via Billetto. Also: release of Sibille Attar's zine Amor Fati. Vol 1: The Love Issue."
+
+  # Sunday 8 November
+  - date: 2026-11-08
+    start: "12:30"
+    venue: helle-knudsen
+    kind: Talk
+    title: Våra historier / Our Stories
+    artists: [Britta Marakatt-Labba]
+  - date: 2026-11-08
+    start: "14:00"
+    venue: flach
+    address: Hudiksvallsgatan 4, Stockholm
+    district: Vasastan
+    kind: Presentation
+    title: Networks, Surfaces and Allegories
+    artists: [Peter Hagdahl]
+    note: Introduction of the artist, the exhibition and the gallery programme. Address as given in the programme.
+  - date: 2026-11-08
+    start: "15:00"
+    venue: bjorkholmen
+    kind: Presentation
+    title: den här dagen. Och den här dagen.
+    artists: [Anders Widoff]
+    note: The artist presents the exhibition.
+
+on_view:
+  - venue: berg
+    title: Synkop
+    artists: [Sylvia Naimark]
+    note: "Also: Jeroen Erosie, Accumulation Phase."
+  - venue: carling-dalenson
+    title: Mind Bubbles & More
+    artists: [Erwin Wurm]
+  - gallery: Galleri Carlson Starck (Falsterbo)
+    site: https://www.carlsonstarck.com
+    address: Hudiksvallsgatan 6, 113 30 Stockholm
+    district: Vasastan
+    artists: [Henrik Johansson, Julius Nord, Anna Tedestam]
+  - venue: coulisse
+    artists: [Evelina Jonsson, Thom Trojanowski]
+    note: Two solo exhibitions.
+  - venue: duerr
+    title: Landlines
+    artists: [Claire McLaughlin, Dolores Lyne, Jo Killalea, Kevin Griffin, Noelle Gallagher, Sarah Ellen Lundy]
+    address: Gävlegatan 10 B, 113 30 Stockholm
+    note: Curated by Alannah Robins. Address as given in the programme.
+  - gallery: Elastic Gallery (Jädraås)
+    site: https://www.elasticgallery.com
+    address: Hudiksvallsgatan 6, 113 30 Stockholm
+    district: Vasastan
+    note: Exhibition to be announced.
+  - venue: gerdman
+    title: "Malmö: Vol. 1"
+  - gallery: Galleri Hammarén (Gothenburg)
+    site: https://www.gallerihammaren.se
+    address: Hudiksvallsgatan 6, 113 30 Stockholm
+    district: Vasastan
+    artists: [Katrin Westman, Ida-Lovisa Rudolfsson, Maie Wisur, Veronica Odsvik]
+  - gallery: Cora Hillebrand Gallery (Gothenburg)
+    site: https://corahillebrand.se
+    address: Hudiksvallsgatan 6, 113 30 Stockholm
+    district: Vasastan
+    artists: [Henrik Ekesiöö, Jörgen Svensson, Klas Barbrosson]
+    note: Klas Barbrosson is listed on the gallery's site, not in the programme.
+  - venue: kostyal
+    title: THE WORLD WAS ALWAYS ENDING
+    artists: [Urs Fischer]
+    note: Reached by SL boat 80.
+  - venue: larsen-warner
+    title: Evighetens skog
+    artists: [Ludvig Helin]
+  - venue: nordenhake
+    title: Being
+    artists: [Mirosław Bałka]
+  - venue: anna-persson
+    title: Inherited Words
+    artists: [Maria Friberg]
+    note: Until 14 November. Talk on Friday at 17:00.
+  - gallery: Galleri Ping-Pong (Malmö)
+    site: https://galleripingpong.se
+    address: Hudiksvallsgatan 6, 113 30 Stockholm
+    district: Vasastan
+    artists: [Marianne Andersson Embäck, Jasmine Christensson, Carin Alegre Castegren, Andreas Nordström, Johan Röing]
+  - venue: richter-holtermann
+    artists: [Tova Tilliander, William Reed, Kevin Judge]
+  - venue: stance
+    note: Exhibition to be announced.
+  - gallery: Galleri Thomassen (Gothenburg)
+    site: https://www.gallerithomassen.se
+    address: Hudiksvallsgatan 6, 113 30 Stockholm
+    district: Vasastan
+    artists: [Joel Danielsson, Hein Spellmann, Jesper Lindgren]
+  - venue: jan-wallmark
+    title: Wildlife
+    artists: [Björn Bernström]
+  - venue: way-gallery
+    title: Long Distance Romance with Memories
+    artists: [Manon Steyaert]
+  - venue: willas
+    title: Impermanence and Intervals
+    artists: [Jeff Cowen]
+    address: Västra Trädgårdsgatan 15, Stockholm
+    district: Norrmalm
+    note: Address as given in the programme.

@@ -58,7 +58,13 @@ Because the repo and its logs are public, nothing from an email is logged or com
 
 Titles stay in the original language. If the gallery publishes its own English title, it is shown after a slash. Otherwise the model's English translation is shown in [brackets], marking it as a machine gloss. Glosses are cleaned before display (stray quotes and punctuation, notes in parentheses, alternatives after a slash) and set in title case, Chicago style.
 
-`scraper/state/glosses.md` lists every English title currently on the page. To correct one, add the original title and the replacement to `scraper/overrides.yaml` (or `""` to hide the gloss). Saving that file on GitHub rebuilds and redeploys the page from cache in about two minutes, with no AI calls. The same file's `events:` list adds shows by hand when a gallery announces one the scraper cannot read; the format is described at the top of the file.
+`scraper/state/glosses.md` lists every English title currently on the page. To correct one, add the original title and the replacement to `scraper/overrides.yaml` (or `""` to hide the gloss). Saving that file on GitHub rebuilds and redeploys the page from cache in about two minutes, with no AI calls. The same file's `events:` list adds shows by hand when a gallery announces one the scraper cannot read; the format is described at the top of the file. An entry marked `corrects: true` fixes the scraped copy of the same show (its title, link and opening win); without it the gallery's own version wins.
+
+## Day buttons and Gallery Weekend
+
+Above the district filter, **Today** (green), **Tomorrow** (yellow) and **Day after** show one day's openings and tag that day in the list. The dates are worked out in the visitor's browser in Stockholm time, so they stay right even when the nightly run is late.
+
+`scraper/weekend.yaml` is a hand-kept programme for an event weekend such as Gallery Weekend Stockholm: openings, talks, tours and performances by day, plus shows on view with no event. It is rendered to `site/projects/vernissage/gallery-weekend/` and the main page links to it from `announce_days` before the first day until the last. Galleries from venues.yaml are referenced by id; visiting galleries are given a name and address. Saving the file rebuilds the page from cache in about two minutes, with no AI calls. For another year, replace the dates, hours, events and on_view lists.
 
 ## Map
 

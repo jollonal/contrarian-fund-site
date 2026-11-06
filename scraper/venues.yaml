@@ -401,11 +401,28 @@ venues:
   - id: ed-art
     name: ed. art
     homepage: https://ed-art.se/
+    exhibitions_urls:
+      - https://ed-art.se/blogs/news
     address: Timmermansgatan 40, 118 55 Stockholm
     district: Södermalm
     type: commercial
-    notes: Editions shop and showroom; no exhibition programme.
-    status: excluded
+    adapter: shopify
+    opening_text: no
+    notes: Editions shop and showroom (Galleriförbundet member). Exhibitions are announced as news posts, e.g. Jasmin Daryani, Gallery Weekend 2026. Active from 2026-11-06 (user decision; excluded since 2026-10-08).
+    status: active
+
+  - id: anna-persson
+    name: Anna Persson Gallery
+    homepage: https://annapersson.com/
+    exhibitions_urls:
+      - https://annapersson.com/exhibitions/
+    address: Karlavägen 12, 114 31 Stockholm
+    district: Östermalm
+    type: commercial
+    adapter: static
+    opening_text: no
+    notes: Current, Upcoming and Previous sections on one page. Added 2026-11-06 from the Gallery Weekend programme (user decision).
+    status: active
 
   - id: mankovsky
     name: Mankovsky Gallery

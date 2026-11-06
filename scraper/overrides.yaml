@@ -16,10 +16,13 @@
 #   opening_date, opening_start, opening_end (quoted, e.g. "17:00"), opening_text are optional.
 #   An opening counts as confirmed only when opening_date is given. If the scraper later
 #   finds the same show (same start date, shared artist), the two are merged.
+#   title_en: the gallery's own English title. corrects: true makes the entry fix the
+#   scraped copy (its title, link and opening win); without it the site's version wins.
 #   Remove an entry once the show has opened.
 
 glosses:
   "VALV": "Vault"
+  "Das andere Zuhause": "The Other Home"
   "Fartyg, fåglar och fyrar": "Ships, Birds and Lighthouses"
 
 events:
@@ -41,3 +44,37 @@ events:
     start_date: 2026-10-24
     end_date: 2026-11-22
     url: https://125kvadrat.com/galleri/ann-christin-reybekiel/
+  # Gallery Weekend Stockholm 2026, checked against the galleries' own sites on 2026-11-06.
+  - venue: anna-bohman
+    title: Lessness(es)
+    artists: [Maria Miesenberger]
+    start_date: 2026-11-06
+    end_date: 2026-12-13
+    opening_date: 2026-11-06
+    opening_start: "12:00"
+    opening_end: "19:00"
+    opening_text: Opening Friday 6 November, 12–7 pm, in the presence of the artist
+    url: https://www.annabohmangallery.com/maria-miesenberger-2026
+  - venue: hera
+    corrects: true
+    title: Das andere Zuhause
+    artists: [Kai Savelsberg]
+    start_date: 2026-11-06
+    end_date: 2026-11-25
+    opening_date: 2026-11-06
+    opening_start: "17:00"
+    opening_end: "19:00"
+    opening_text: "Opening reception: Friday, 6 November, 5–7 pm (Gallery Weekend programme)"
+  - venue: magnus-karlsson
+    corrects: true
+    title: Comma
+    artists: [Anna Bjerger]
+    start_date: 2026-11-06
+    end_date: 2026-12-05
+  - venue: helle-knudsen
+    corrects: true
+    title: Våra historier
+    title_en: Our Stories
+    artists: [Britta Marakatt-Labba, Tomas Colbengtson]
+    start_date: 2026-11-06
+    end_date: 2026-12-05

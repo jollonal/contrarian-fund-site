@@ -21,11 +21,28 @@
   .wrap { max-width: 960px; margin: 0 auto; padding: 56px 24px 80px; }
   header h1 { font-size: 32px; font-weight: 400; letter-spacing: -0.01em; margin: 0 0 8px; }
   header p { color: var(--muted); margin: 0; max-width: 560px; }
+  header p.notice { color: var(--ink); margin: 16px 0 0; padding: 10px 14px; border: 1px solid var(--ink); display: inline-block; max-width: none; }
   .filters { display: flex; flex-wrap: wrap; gap: 6px 18px; align-items: baseline;
              margin: 40px 0 0; padding: 0 0 16px; border-bottom: 1px solid var(--ink); font-size: 14px; }
   .filters button { font: inherit; color: var(--muted); background: none; border: 0; padding: 0; cursor: pointer; }
   .filters button[aria-pressed="true"] { color: var(--ink); text-decoration: underline; text-underline-offset: 3px; }
   .filters label { margin-left: auto; color: var(--muted); cursor: pointer; }
+  /* Day shortcuts: green = today, yellow = tomorrow; dates are worked out in the browser (Stockholm time). */
+  :root { --today: #1E7B34; --tomorrow: #F2C230; }
+  .when-filter { display: flex; gap: 6px; width: 100%; margin: 0 0 6px; }
+  .when-filter button { color: var(--ink) !important; border: 1px solid var(--ink) !important; padding: 3px 10px !important;
+                        text-decoration: none !important; }
+  .when-filter button.d0 { border-color: var(--today) !important; }
+  .when-filter button.d1 { border-color: var(--tomorrow) !important; }
+  .when-filter button.d0[aria-pressed="true"] { background: var(--today); color: #fff !important; }
+  .when-filter button.d1[aria-pressed="true"] { background: var(--tomorrow); }
+  .when-filter button.d2[aria-pressed="true"] { background: var(--ink); color: var(--bg) !important; }
+  .when-filter button:disabled { opacity: 0.4; cursor: default; }
+  .tag { display: inline-block; margin-top: 6px; padding: 1px 8px; font-size: 12px; letter-spacing: 0.04em; font-style: normal; }
+  .tag:empty { display: none; }
+  .tag.t0 { background: var(--today); color: #fff; }
+  .tag.t1 { background: var(--tomorrow); color: var(--ink); }
+  .tag.t2 { border: 1px solid var(--ink); }
   .day { display: grid; grid-template-columns: 200px 1fr; gap: 24px; padding: 28px 0; border-bottom: 1px solid var(--rule); }
   .day h2 { font-size: 15px; font-weight: 400; margin: 2px 0 0; }
   .day h2 span { display: block; color: var(--muted); }
@@ -88,6 +105,7 @@
   <header>
     <h1>Stockholm Vernissages</h1>
     <p>Exhibition openings at {{ n_venues }} Stockholm galleries over the next {{ window }} days. Updated nightly.</p>
+    {% if weekend %}<p class="notice"><a href="{{ weekend.slug or 'gallery-weekend' }}/">{{ weekend.name }}, {{ weekend.start.day }}{% if weekend.start.month != weekend.end.month %} {{ weekend.start.strftime('%B') }}{% endif %}–{{ weekend.end.day }} {{ weekend.end.strftime('%B') }}: full programme of openings, talks and tours</a></p>{% endif %}
   </header>
 
   {% if n_points %}
@@ -116,6 +134,11 @@
 
   {% if districts %}
   <nav class="filters" aria-label="Filter">
+    <div class="when-filter" role="group" aria-label="Show one day">
+      <button type="button" class="d0" data-offset="0" aria-pressed="false">Today</button>
+      <button type="button" class="d1" data-offset="1" aria-pressed="false">Tomorrow</button>
+      <button type="button" class="d2" data-offset="2" aria-pressed="false">Day after</button>
+    </div>
     <button type="button" data-district="" aria-pressed="true">All</button>
     {% for d in districts %}<button type="button" data-district="{{ d }}" aria-pressed="false">{{ d }}</button>
     {% endfor %}
@@ -125,8 +148,8 @@
 
   <main>
   {% for day, events in days %}
-    <section class="day">
-      <h2>{{ day.strftime("%A") }}<span>{{ day.day }} {{ day.strftime("%B") }}</span></h2>
+    <section class="day" data-date="{{ day.isoformat() }}">
+      <h2>{{ day.strftime("%A") }}<span>{{ day.day }} {{ day.strftime("%B") }}</span><em class="tag"></em></h2>
       <div>
       {% for e in events %}
         <article class="ev" data-district="{{ e.district or '' }}" data-confirmed="{{ 1 if e.opening.confirmed else 0 }}">
@@ -158,8 +181,34 @@
 </div>
 <script>
 (function () {
-  var district = "", confirmedOnly = false;
-  var btns = document.querySelectorAll(".filters button");
+  var district = "", confirmedOnly = false, onDate = "";
+  var btns = document.querySelectorAll(".filters button[data-district]");
+  var dayBtns = document.querySelectorAll(".when-filter button");
+  function stockholmDate(offset) {  // YYYY-MM-DD in Stockholm, offset in days
+    var d = new Date(new Intl.DateTimeFormat("en-CA", { timeZone: "Europe/Stockholm", year: "numeric",
+      month: "2-digit", day: "2-digit" }).format(new Date()) + "T12:00:00Z");
+    d.setUTCDate(d.getUTCDate() + offset);
+    return d.toISOString().slice(0, 10);
+  }
+  var labels = ["Today", "Tomorrow", "Day after tomorrow"];
+  dayBtns.forEach(function (b) {
+    var n = +b.dataset.offset, iso = stockholmDate(n);
+    b.dataset.date = iso;
+    var day = document.querySelector('.day[data-date="' + iso + '"]');
+    if (day) {
+      var tag = day.querySelector(".tag");
+      if (tag) { tag.textContent = labels[n]; tag.className = "tag t" + n; }
+      var count = day.querySelectorAll(".ev").length;
+      b.textContent += " (" + count + ")";
+    } else {
+      b.disabled = true; b.title = "No openings that day";
+    }
+    b.addEventListener("click", function () {
+      onDate = onDate === iso ? "" : iso;
+      dayBtns.forEach(function (x) { x.setAttribute("aria-pressed", x.dataset.date === onDate ? "true" : "false"); });
+      apply();
+    });
+  });
   var box = document.getElementById("confirmed");
   function apply() {
     var shown = 0;
@@ -169,6 +218,7 @@
         var ok = (!district || ev.dataset.district === district) && (!confirmedOnly || ev.dataset.confirmed === "1");
         ev.hidden = !ok; any = any || ok;
       });
+      if (onDate && day.dataset.date !== onDate) any = false;
       day.hidden = !any; if (any) shown++;
     });
     var none = document.getElementById("none");

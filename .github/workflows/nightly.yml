@@ -14,6 +14,7 @@ on:
     paths:
       - "site/**"                # edits to the main site deploy immediately
       - "scraper/overrides.yaml" # gloss corrections rebuild the page from cache, no AI calls
+      - "scraper/weekend.yaml"   # Gallery Weekend programme edits rebuild from cache, no AI calls
       - "scraper/vernissage/**"  # code and template changes rebuild from cache, no AI calls
 
 permissions:

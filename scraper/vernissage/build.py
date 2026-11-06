@@ -143,7 +143,9 @@ def same_show(a: dict, b: dict) -> bool:
 
 
 def merge_events(a: dict, b: dict) -> dict:
-    """Keep the website's title and link; take a confirmed opening from whichever has one."""
+    """Keep the website's title and link; take a confirmed opening from whichever has one.
+    A hand entry from overrides.yaml marked `corrects: true` wins on title, link (if it gives
+    one) and confirmed opening; an unmarked hand entry is a placeholder and yields to the site."""
     web, other = (a, b) if a.get("source") != "newsletter" or b.get("source") == "newsletter" else (b, a)
     out = dict(web)
     out["artists"] = sorted(set(a["artists"]) | set(b["artists"]))
@@ -153,8 +155,17 @@ def merge_events(a: dict, b: dict) -> dict:
     if out["access"] == "unknown":
         out["access"] = other["access"]
     out["end_date"] = out["end_date"] or other["end_date"]
-    if a.get("source") != b.get("source"):
-        out["source"] = "web+newsletter"
+    hand = next((e for e in (a, b) if e.get("source") == "manual" and e.get("_corrects")), None)
+    if hand is not None:
+        for k in ("title", "title_en", "gloss", "gloss_source"):
+            out[k] = hand[k]
+        if hand.get("_url_given"):
+            out["url"] = hand["url"]
+        if hand["opening"]["confirmed"]:
+            out["opening"], out["date"] = hand["opening"], hand["date"]
+        out["id"] = (b if hand is a else a)["id"]  # keep the scraped id: calendar entries stay stable
+    sources = {s for e in (a, b) for s in e.get("source", "web").split("+")} - {"manual"}
+    out["source"] = "+".join(x for x in ("web", "newsletter") if x in sources) or "manual"
     return out
 
 
@@ -225,7 +236,9 @@ def normalize(found: dict[str, list[dict]], venues: list[dict], today: dt.date, 
                 },
                 "access": x.get("access") if x.get("access") in ("public", "invite") else "unknown",
                 "url": x.get("detail_url") or v["homepage"],
-                "source": "newsletter" if x.get("source") == "newsletter" else "web",
+                "source": x.get("source") if x.get("source") in ("newsletter", "manual") else "web",
+                "_url_given": bool(x.get("detail_url")),
+                "_corrects": bool(x.get("corrects")),
             }
             prev_id = ev["id"] if ev["id"] in merged else next(
                 (k for k, e in merged.items() if same_show(e, ev)), None)
@@ -234,6 +247,9 @@ def normalize(found: dict[str, list[dict]], venues: list[dict], today: dt.date, 
             else:
                 merged[prev_id] = merge_events(merged[prev_id], ev)
 
+    for e in merged.values():
+        e.pop("_url_given", None)
+        e.pop("_corrects", None)
     events = sorted(merged.values(), key=lambda e: (e["date"], e["opening"]["start_time"] or "99", e["venue"]))
     return events, review
 
@@ -384,7 +400,8 @@ def map_points(events: list[dict], venues: list[dict]) -> list[dict]:
 
 # ---------- outputs ----------
 def write_outputs(events: list[dict], venues: list[dict], out_dir: Path, today: dt.date,
-                  window: int, repo_url: str | None) -> None:
+                  window: int, repo_url: str | None, weekend: dict | None = None) -> None:
+    """weekend: when given, the main page links to its programme page (see weekend.py)."""
     out_dir.mkdir(parents=True, exist_ok=True)
     generated = dt.datetime.now(dt.timezone.utc).isoformat(timespec="seconds")
     active = [v for v in venues if v.get("status") == "active"]
@@ -423,6 +440,7 @@ def write_outputs(events: list[dict], venues: list[dict], out_dir: Path, today: 
         n_venues=len(points) or len(active), updated=stockholm_now.strftime("%-d %B %Y, %H:%M"),
         repo_url=repo_url, key=key_columns, n_points=len(points),
         map_json=json.dumps(points, ensure_ascii=False).replace("</", "<\\/"),
+        weekend=weekend,
     )
     (out_dir / "index.html").write_text(html, encoding="utf-8")
 
