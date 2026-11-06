@@ -34,7 +34,17 @@
              margin: 40px 0 0; padding: 0 0 16px; border-bottom: 1px solid var(--ink); font-size: 14px; }
   .filters button { font: inherit; color: var(--muted); background: none; border: 0; padding: 0; cursor: pointer; }
   .filters button[aria-pressed="true"] { color: var(--ink); text-decoration: underline; text-underline-offset: 3px; }
-  .filters label { margin-left: auto; color: var(--muted); cursor: pointer; }
+  .filters label { color: var(--muted); cursor: pointer; }
+  .district-row { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; width: 100%; margin: 10px 0 0; }
+  .filters .district-row button { font-size: 15px; font-weight: 500; color: var(--ink); background: #fff;
+                                  border: 1px solid var(--rule); padding: 4px 12px; text-decoration: none; }
+  .filters .district-row button:hover { border-color: var(--ink); }
+  .filters .district-row button[aria-pressed="true"] { background: var(--ink); color: #fff; border-color: var(--ink); }
+  .filters .district-row label { display: inline-flex; align-items: center; gap: 6px; font-size: 15px; font-weight: 500;
+                                 color: var(--ink); padding: 4px 12px; border: 1px solid var(--rule); background: #fff;
+                                 margin-left: 8px; }
+  .filters .district-row label:has(input:checked) { border-color: var(--ink); }
+  .filters .district-row input { margin: 0; accent-color: var(--ink); }
   /* Day shortcuts: light gray = two days ago, gray = yesterday, green = today, yellow = tomorrow, red = day after.
      Dates are worked out in the browser in Stockholm time (days change at 00:00 CET/CEST). */
   :root { --past60: #5C5A55; --twodays: #C9C9C4; --yesterday: #8A8A85; --today: #1E7B34; --tomorrow: #F2C230; --dayafter: #C62828; }
@@ -51,7 +61,14 @@
   .when-filter button.d2 { border-color: var(--dayafter) !important; }
   .when-filter button.dm1[aria-pressed="true"] { background: var(--yesterday); color: #fff !important; }
   .when-filter button.d2[aria-pressed="true"] { background: var(--dayafter); color: #fff !important; }
-  .when-filter button:disabled { opacity: 0.4; cursor: default; }
+  /* Unpressed: tinted fill of the day color (opaque); pressed: solid day color. */
+  .when-filter button { font-weight: 500 !important; }
+  .when-filter button.dm2:not([aria-pressed="true"]) { background: #EDEDEA; }
+  .when-filter button.dm1:not([aria-pressed="true"]) { background: #E2E2DF; }
+  .when-filter button.d0:not([aria-pressed="true"]) { background: #DCEDE0; }
+  .when-filter button.d1:not([aria-pressed="true"]) { background: #FCF0C8; }
+  .when-filter button.d2:not([aria-pressed="true"]) { background: #F6DADA; }
+  .when-filter button:disabled { opacity: 0.5; cursor: default; }
   .tag { display: inline-block; margin-top: 6px; padding: 1px 8px; font-size: 12px; letter-spacing: 0.04em; font-style: normal; }
   .tag:empty { display: none; }
   .tag.t0 { background: var(--today); color: #fff; }
@@ -62,14 +79,18 @@
   .day { display: grid; grid-template-columns: 200px 1fr; gap: 24px; padding: 28px 0; border-bottom: 1px solid var(--rule); }
   .day h2 { font-size: 15px; font-weight: 400; margin: 2px 0 0; }
   .day h2 span { display: block; color: var(--muted); }
-  .ev { padding: 0 0 24px; }
+  /* Listing: gallery (bold caps), title (serif), artists (medium), vernissage (bold), dates, address (muted). */
+  .ev { padding: 0 0 22px; }
+  .ev + .ev { border-top: 1px solid var(--rule); padding-top: 22px; }
   .ev:last-child { padding-bottom: 0; }
-  .ev .venue { font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; margin: 0 0 4px; }
-  .ev h3 { font-size: 22px; font-weight: 400; line-height: 1.25; margin: 0; }
-  .ev h3 .gloss { color: var(--muted); }
-  .ev .artists { margin: 2px 0 0; }
-  .ev .when { margin: 8px 0 0; font-size: 15px; }
-  .ev .when.unconfirmed { color: var(--muted); }
+  .ev .venue { font-size: 13px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; margin: 0 0 6px; }
+  .ev h3 { font-family: "Iowan Old Style", "Palatino Linotype", Palatino, "Book Antiqua", Georgia, serif;
+           font-size: 25px; font-weight: 600; line-height: 1.2; margin: 0; }
+  .ev h3 .gloss { color: var(--muted); font-weight: 400; }
+  .ev .artists { margin: 4px 0 0; font-size: 17px; font-weight: 500; }
+  .ev .when { margin: 10px 0 0; font-size: 15px; font-weight: 700; }
+  .ev .when.unconfirmed { color: var(--muted); font-weight: 400; font-style: italic; }
+  .ev .dates { margin: 2px 0 0; font-size: 15px; color: #2F2F2C; }
   .ev .meta { margin: 2px 0 0; font-size: 14px; color: var(--muted); }
   .ev .links { margin: 8px 0 0; font-size: 14px; display: flex; gap: 18px; }
   .empty { padding: 40px 0; color: var(--muted); }
@@ -137,7 +158,7 @@
     .day { grid-template-columns: 1fr; gap: 12px; }
     .when-filter { flex-wrap: wrap; }
     header p.notice { padding: 10px 14px; }
-    .filters label { margin-left: 0; width: 100%; }
+    .filters .district-row label { margin-left: 0; }
     #map { height: 300px; }
     .key-groups { grid-template-columns: 1fr; }
   }
@@ -198,10 +219,12 @@
       <button type="button" id="map-expand" aria-expanded="false">Expand map</button>
     </div>{% endif %}
     </div>
+    <div class="district-row" role="group" aria-label="Neighborhood">
     <button type="button" data-district="" aria-pressed="true">All</button>
     {% for d in districts %}<button type="button" data-district="{{ d }}" aria-pressed="false">{{ d }}</button>
     {% endfor %}
     <label><input type="checkbox" id="confirmed"> Confirmed vernissages only</label>
+    </div>
   </nav>
   {% endif %}
 
@@ -221,7 +244,8 @@
           {% else %}
             <p class="when unconfirmed">Exhibition opens. Reception details not published.</p>
           {% endif %}
-          <p class="meta">{% if e.end_date %}Until {{ e.end_date | longdate }}. {% endif %}{% if e.address %}<a href="{{ e.map_url }}" rel="noopener">{{ e.address }}</a>{% endif %}</p>
+          {% if e.end_date %}<p class="dates">On view until {{ e.end_date | longdate }}</p>{% endif %}
+          {% if e.address %}<p class="meta"><a href="{{ e.map_url }}" rel="noopener">{{ e.address }}</a></p>{% endif %}
           <p class="links"><a href="{{ e.url }}" rel="noopener">Gallery page</a><a href="ics/{{ e.id }}.ics">Add to calendar</a></p>
         </article>
       {% endfor %}
