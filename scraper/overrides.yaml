@@ -79,3 +79,24 @@ events:
     artists: [Britta Marakatt-Labba, Tomas Colbengtson]
     start_date: 2026-11-06
     end_date: 2026-12-05
+  # Saskia Neuman homepage dropped this show's dates on 2026-11-06; time from the
+  # Gallery Weekend program (Thursday previews, 17:00-20:00).
+  - venue: saskia-neuman
+    corrects: true
+    title: En dörr leder till ett öga
+    title_en: A Door Leads to an Eye
+    artists: [Matti Hoffner]
+    start_date: 2026-11-05
+    opening_date: 2026-11-05
+    opening_start: "17:00"
+    opening_end: "20:00"
+    opening_text: "Opening Thursday 5 November, 17:00-20:00 (Gallery Weekend program)"
+    url: https://www.saskianeumangallery.com/exhibitions/en-dorr-leder-till-ett-oga-a-door-leads-to-an-eye
+  # ed. art news post, 27 October 2026: Gallery Weekend only, 6 to 8 November. No vernissage
+  # time published; artist talk Saturday 7 November 15:00-16:00 (on the weekend page).
+  - venue: ed-art
+    title: Immolation
+    artists: [Jasmin Daryani]
+    start_date: 2026-11-06
+    end_date: 2026-11-08
+    url: https://ed-art.se/blogs/news/gallery-weekend-2026-jasmin-daryani
