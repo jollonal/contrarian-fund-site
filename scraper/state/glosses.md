@@ -22,12 +22,9 @@ Correct a machine gloss in `scraper/overrides.yaml`.
 | 2026-11-21 | Kaolin | JUL PÅ KAOLIN / Medlemsutställning | CHRISTMAS AT KAOLIN / Members' Exhibition | machine |
 | 2026-11-25 | Galleri Glas | Uppåt väggarna | Up the Walls | machine |
 | 2026-11-28 | 125kvadrat | Medlemmarnas julutställning | Members' Christmas Exhibition | machine |
-| 2026-11-28 | Galleri Grip | Grupputställning 1 PLATSER KVAR | Group Exhibition 1 Places Left | machine |
 | 2026-11-28 | Galleri Hantverket | Medlemmarnas Julutställning | Members' Christmas Exhibition | machine |
 | 2026-11-28 | Galleri Magnus Karlsson | Hålet i väggen | The Hole in the Wall | machine |
 | 2026-11-28 | Grafiska Sällskapet | Från golv till tak | From Floor to Ceiling | machine |
 | 2026-11-28 | Slipvillan | Vi ville väl | We Wanted To | machine |
-| 2026-12-12 | Galleri Grip | Grupputställning 1 PLATSER KVAR | Group Exhibition 1 Places Left | machine |
 | 2026-12-12 | Åmells Konsthandel | Magiska vinter! Anna Boberg, Bruno Liljefors, m fl | Magical Winter | machine |
-| 2026-12-19 | Galleri Grip | Julsalong | Christmas Salon | machine |
 | 2026-12-19 | Grafiska Sällskapet | Jul , jul, strålande jul… | Christmas, Christmas, Radiant Christmas.... | machine |

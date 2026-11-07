@@ -1,0 +1,40 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//contrarian.fund//vernissage//EN
+CALSCALE:GREGORIAN
+X-WR-CALNAME:What happens to the heart
+BEGIN:VTIMEZONE
+TZID:Europe/Stockholm
+BEGIN:DAYLIGHT
+TZOFFSETFROM:+0100
+TZOFFSETTO:+0200
+TZNAME:CEST
+DTSTART:19700329T020000
+RRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=-1SU
+END:DAYLIGHT
+BEGIN:STANDARD
+TZOFFSETFROM:+0200
+TZOFFSETTO:+0100
+TZNAME:CET
+DTSTART:19701025T030000
+RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU
+END:STANDARD
+END:VTIMEZONE
+BEGIN:VEVENT
+UID:9707de0a91d0@contrarian.fund
+DTSTAMP:20261107T090127Z
+DTSTART;VALUE=DATE:20261127
+DTEND;VALUE=DATE:20261128
+SUMMARY:Opens: What happens to the heart at Studio 44
+LOCATION:Tjärhovsgatan 44 B\, 116 28 Stockholm
+DESCRIPTION:Ana María Almada De Álvarez\, Ana María Beaulieu Laguardia\,
+  Carolina Hindsjö\, Catrin Lundqvist\, Christina Göthesson\, Christina H
+ edlund\, Eva Larsson\, Gunilla Leander\, Gunilla Mauritz\, Helena Norell\,
+  Ingela Friedner\, Karl Moin Jansson\, Katarina Warrenstein\, Kenneth Pils
+ \, Kicki Berg\, Kjell Hansson\, Kristina Häll\, Lotta Ekelund\, Lotte Nil
+ sson-Välimaa\, Maria Bordeanu\, Maria Lundmark\, Maria Zetterstrand\, Mir
+ iam Klyvare\, Molly Uddén\, Sanna Haverinen\, Sara Casten Carlberg\, Susa
+ nne Högdahl Holm\, Thomas Brennan\nOn view until 2026-12-20.
+URL:https://studio44-stockholm.com/en/39499-2/what-happens-to-the-heart/
+END:VEVENT
+END:VCALENDAR

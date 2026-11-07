@@ -2,7 +2,7 @@ BEGIN:VCALENDAR
 VERSION:2.0
 PRODID:-//contrarian.fund//vernissage//EN
 CALSCALE:GREGORIAN
-X-WR-CALNAME:Evelina Jonsson
+X-WR-CALNAME:Towards Whatever
 BEGIN:VTIMEZONE
 TZID:Europe/Stockholm
 BEGIN:DAYLIGHT
@@ -21,13 +21,13 @@ RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU
 END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
-UID:c93611b9653e@contrarian.fund
-DTSTAMP:20261106T112611Z
+UID:58926728873f@contrarian.fund
+DTSTAMP:20261107T090127Z
 DTSTART;VALUE=DATE:20261105
 DTEND;VALUE=DATE:20261106
-SUMMARY:Opens: Evelina Jonsson at Coulisse Gallery
+SUMMARY:Opens: Towards Whatever at Coulisse Gallery
 LOCATION:Gävlegatan 10 B\, 113 30 Stockholm
-DESCRIPTION:Evelina Jonsson
+DESCRIPTION:Evelina Jonsson\nOn view until 2026-12-18.
 URL:https://www.coulisse-gallery.com/
 END:VEVENT
 END:VCALENDAR

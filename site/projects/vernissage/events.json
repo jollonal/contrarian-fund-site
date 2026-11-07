@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-06T11:26:11+00:00",
+ "generated_at": "2026-11-07T09:01:27+00:00",
  "window_days": 60,
  "venues_tracked": 67,
  "events": [
@@ -225,13 +225,13 @@
    "source": "web"
   },
   {
-   "id": "b993644a00b4",
+   "id": "51dbd259b90f",
    "venue_id": "coulisse",
    "venue": "Coulisse Gallery",
    "address": "Gävlegatan 10 B, 113 30 Stockholm",
    "map_url": "https://www.google.com/maps/search/?api=1&query=Coulisse%20Gallery%2C%20G%C3%A4vlegatan%2010%20B%2C%20113%2030%20Stockholm",
    "district": "Vasastan",
-   "title": "Thom Trojanowski",
+   "title": "Sympathetic Magic",
    "title_en": null,
    "gloss": null,
    "gloss_source": null,
@@ -239,7 +239,7 @@
     "Thom Trojanowski"
    ],
    "start_date": "2026-11-05",
-   "end_date": null,
+   "end_date": "2026-12-18",
    "date": "2026-11-05",
    "opening": {
     "confirmed": false,
@@ -249,16 +249,16 @@
    },
    "access": "unknown",
    "url": "https://www.coulisse-gallery.com/",
-   "source": "manual"
+   "source": "web"
   },
   {
-   "id": "c93611b9653e",
+   "id": "58926728873f",
    "venue_id": "coulisse",
    "venue": "Coulisse Gallery",
    "address": "Gävlegatan 10 B, 113 30 Stockholm",
    "map_url": "https://www.google.com/maps/search/?api=1&query=Coulisse%20Gallery%2C%20G%C3%A4vlegatan%2010%20B%2C%20113%2030%20Stockholm",
    "district": "Vasastan",
-   "title": "Evelina Jonsson",
+   "title": "Towards Whatever",
    "title_en": null,
    "gloss": null,
    "gloss_source": null,
@@ -266,7 +266,7 @@
     "Evelina Jonsson"
    ],
    "start_date": "2026-11-05",
-   "end_date": null,
+   "end_date": "2026-12-18",
    "date": "2026-11-05",
    "opening": {
     "confirmed": false,
@@ -276,7 +276,7 @@
    },
    "access": "unknown",
    "url": "https://www.coulisse-gallery.com/",
-   "source": "manual"
+   "source": "web"
   },
   {
    "id": "75b31e119389",
@@ -713,7 +713,7 @@
     "confirmed": true,
     "start_time": "17:00",
     "end_time": "22:00",
-    "text": "Opening Friday November 6 17:00 – 22:00"
+    "text": "Opening"
    },
    "access": "public",
    "url": "https://studio44-stockholm.com/en/39499-2/metafysiska-portratt/",
@@ -818,13 +818,13 @@
     "Seth Shuwert"
    ],
    "start_date": "2026-11-07",
-   "end_date": null,
+   "end_date": "2026-11-19",
    "date": "2026-11-07",
    "opening": {
-    "confirmed": false,
-    "start_time": null,
+    "confirmed": true,
+    "start_time": "13:00",
     "end_time": null,
-    "text": null
+    "text": "Vernissage 7/11 kl. 13"
    },
    "access": "public",
    "url": "https://gallerigrip.se/",
@@ -991,33 +991,6 @@
    "source": "web"
   },
   {
-   "id": "5661e0a94928",
-   "venue_id": "galleri-grip",
-   "venue": "Galleri Grip",
-   "address": "Celsiusgatan 2, 112 30 Stockholm",
-   "map_url": "https://www.google.com/maps/search/?api=1&query=Galleri%20Grip%2C%20Celsiusgatan%202%2C%20112%2030%20Stockholm",
-   "district": "Kungsholmen",
-   "title": "Seth Shuwert",
-   "title_en": null,
-   "gloss": null,
-   "gloss_source": null,
-   "artists": [
-    "Seth Shuwert"
-   ],
-   "start_date": "2026-11-14",
-   "end_date": null,
-   "date": "2026-11-14",
-   "opening": {
-    "confirmed": false,
-    "start_time": null,
-    "end_time": null,
-    "text": null
-   },
-   "access": "public",
-   "url": "https://gallerigrip.se/",
-   "source": "web"
-  },
-  {
    "id": "b72a8fd0e324",
    "venue_id": "galleri-hantverket",
    "venue": "Galleri Hantverket",
@@ -1071,60 +1044,6 @@
    "access": "public",
    "url": "https://www.galleriglas.se/",
    "source": "newsletter"
-  },
-  {
-   "id": "18c0cbe7111e",
-   "venue_id": "studio-44",
-   "venue": "Studio 44",
-   "address": "Tjärhovsgatan 44 B, 116 28 Stockholm",
-   "map_url": "https://www.google.com/maps/search/?api=1&query=Studio%2044%2C%20Tj%C3%A4rhovsgatan%2044%20B%2C%20116%2028%20Stockholm",
-   "district": "Södermalm",
-   "title": "What happens to the heart",
-   "title_en": null,
-   "gloss": null,
-   "gloss_source": null,
-   "artists": [
-    "Christina Hedlund",
-    "Karl Moin Jansson",
-    "Ingela Friedner",
-    "Eva Larsson",
-    "Christina Göthesson",
-    "Kicki Berg",
-    "Gunilla Mauritz",
-    "Gunilla Leander",
-    "Kristina Häll",
-    "Ana María Beaulieu Laguardia",
-    "Maria Lundmark",
-    "Kjell Hansson",
-    "Katarina Warrenstein",
-    "Ana María Almada De Álvarez",
-    "Catrin Lundqvist",
-    "Sara Casten Carlberg",
-    "Helena Norell",
-    "Maria Bordeanu",
-    "Maria Zetterstrand",
-    "Susanne Högdahl Holm",
-    "Thomas Brennan",
-    "Carolina Hindsjö",
-    "Kenneth Pils",
-    "Molly Uddén",
-    "Lotta Ekelund",
-    "Lotte Nilsson-Välimaa",
-    "Miriam Klyvare",
-    "Sanna Haverinen"
-   ],
-   "start_date": "2026-11-17",
-   "end_date": "2026-12-20",
-   "date": "2026-11-17",
-   "opening": {
-    "confirmed": false,
-    "start_time": null,
-    "end_time": null,
-    "text": null
-   },
-   "access": "public",
-   "url": "https://studio44-stockholm.com/en/39499-2/what-happens-to-the-heart/",
-   "source": "web"
   },
   {
    "id": "19cc3648bde5",
@@ -1315,6 +1234,60 @@
    "source": "web"
   },
   {
+   "id": "9707de0a91d0",
+   "venue_id": "studio-44",
+   "venue": "Studio 44",
+   "address": "Tjärhovsgatan 44 B, 116 28 Stockholm",
+   "map_url": "https://www.google.com/maps/search/?api=1&query=Studio%2044%2C%20Tj%C3%A4rhovsgatan%2044%20B%2C%20116%2028%20Stockholm",
+   "district": "Södermalm",
+   "title": "What happens to the heart",
+   "title_en": null,
+   "gloss": null,
+   "gloss_source": null,
+   "artists": [
+    "Ana María Almada De Álvarez",
+    "Ana María Beaulieu Laguardia",
+    "Carolina Hindsjö",
+    "Catrin Lundqvist",
+    "Christina Göthesson",
+    "Christina Hedlund",
+    "Eva Larsson",
+    "Gunilla Leander",
+    "Gunilla Mauritz",
+    "Helena Norell",
+    "Ingela Friedner",
+    "Karl Moin Jansson",
+    "Katarina Warrenstein",
+    "Kenneth Pils",
+    "Kicki Berg",
+    "Kjell Hansson",
+    "Kristina Häll",
+    "Lotta Ekelund",
+    "Lotte Nilsson-Välimaa",
+    "Maria Bordeanu",
+    "Maria Lundmark",
+    "Maria Zetterstrand",
+    "Miriam Klyvare",
+    "Molly Uddén",
+    "Sanna Haverinen",
+    "Sara Casten Carlberg",
+    "Susanne Högdahl Holm",
+    "Thomas Brennan"
+   ],
+   "start_date": "2026-11-27",
+   "end_date": "2026-12-20",
+   "date": "2026-11-27",
+   "opening": {
+    "confirmed": false,
+    "start_time": null,
+    "end_time": null,
+    "text": null
+   },
+   "access": "public",
+   "url": "https://studio44-stockholm.com/en/39499-2/what-happens-to-the-heart/",
+   "source": "web"
+  },
+  {
    "id": "5dea009d2726",
    "venue_id": "125kvadrat",
    "venue": "125kvadrat",
@@ -1337,31 +1310,6 @@
    },
    "access": "unknown",
    "url": "https://125kvadrat.com/",
-   "source": "web"
-  },
-  {
-   "id": "4aaa7d10e877",
-   "venue_id": "galleri-grip",
-   "venue": "Galleri Grip",
-   "address": "Celsiusgatan 2, 112 30 Stockholm",
-   "map_url": "https://www.google.com/maps/search/?api=1&query=Galleri%20Grip%2C%20Celsiusgatan%202%2C%20112%2030%20Stockholm",
-   "district": "Kungsholmen",
-   "title": "Grupputställning 1 PLATSER KVAR",
-   "title_en": null,
-   "gloss": "Group Exhibition 1 Places Left",
-   "gloss_source": "machine",
-   "artists": [],
-   "start_date": "2026-11-28",
-   "end_date": null,
-   "date": "2026-11-28",
-   "opening": {
-    "confirmed": false,
-    "start_time": null,
-    "end_time": null,
-    "text": null
-   },
-   "access": "public",
-   "url": "https://gallerigrip.se/",
    "source": "web"
   },
   {
@@ -1548,31 +1496,6 @@
    "source": "web"
   },
   {
-   "id": "8800c4126856",
-   "venue_id": "galleri-grip",
-   "venue": "Galleri Grip",
-   "address": "Celsiusgatan 2, 112 30 Stockholm",
-   "map_url": "https://www.google.com/maps/search/?api=1&query=Galleri%20Grip%2C%20Celsiusgatan%202%2C%20112%2030%20Stockholm",
-   "district": "Kungsholmen",
-   "title": "Sundbyberg Art Trail",
-   "title_en": null,
-   "gloss": null,
-   "gloss_source": null,
-   "artists": [],
-   "start_date": "2026-12-05",
-   "end_date": null,
-   "date": "2026-12-05",
-   "opening": {
-    "confirmed": false,
-    "start_time": null,
-    "end_time": null,
-    "text": null
-   },
-   "access": "public",
-   "url": "https://gallerigrip.se/",
-   "source": "web"
-  },
-  {
    "id": "8ee1947b35f4",
    "venue_id": "hedenius",
    "venue": "Galleri Hedenius",
@@ -1597,31 +1520,6 @@
    },
    "access": "public",
    "url": "https://www.gallerihedenius.com/",
-   "source": "web"
-  },
-  {
-   "id": "e37c8af00526",
-   "venue_id": "galleri-grip",
-   "venue": "Galleri Grip",
-   "address": "Celsiusgatan 2, 112 30 Stockholm",
-   "map_url": "https://www.google.com/maps/search/?api=1&query=Galleri%20Grip%2C%20Celsiusgatan%202%2C%20112%2030%20Stockholm",
-   "district": "Kungsholmen",
-   "title": "Grupputställning 1 PLATSER KVAR",
-   "title_en": null,
-   "gloss": "Group Exhibition 1 Places Left",
-   "gloss_source": "machine",
-   "artists": [],
-   "start_date": "2026-12-12",
-   "end_date": null,
-   "date": "2026-12-12",
-   "opening": {
-    "confirmed": false,
-    "start_time": null,
-    "end_time": null,
-    "text": null
-   },
-   "access": "public",
-   "url": "https://gallerigrip.se/",
    "source": "web"
   },
   {
@@ -1650,31 +1548,6 @@
    },
    "access": "public",
    "url": "https://www.amells.com/",
-   "source": "web"
-  },
-  {
-   "id": "a1e5870d765f",
-   "venue_id": "galleri-grip",
-   "venue": "Galleri Grip",
-   "address": "Celsiusgatan 2, 112 30 Stockholm",
-   "map_url": "https://www.google.com/maps/search/?api=1&query=Galleri%20Grip%2C%20Celsiusgatan%202%2C%20112%2030%20Stockholm",
-   "district": "Kungsholmen",
-   "title": "Julsalong",
-   "title_en": null,
-   "gloss": "Christmas Salon",
-   "gloss_source": "machine",
-   "artists": [],
-   "start_date": "2026-12-19",
-   "end_date": null,
-   "date": "2026-12-19",
-   "opening": {
-    "confirmed": false,
-    "start_time": null,
-    "end_time": null,
-    "text": null
-   },
-   "access": "public",
-   "url": "https://gallerigrip.se/",
    "source": "web"
   },
   {

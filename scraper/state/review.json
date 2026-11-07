@@ -18,5 +18,105 @@
     "opening": "10:00-19:00"
    }
   }
+ },
+ {
+  "venue": "galleri-grip",
+  "problems": [
+   "low confidence"
+  ],
+  "item": {
+   "title": "Perus Ambassad",
+   "title_en": null,
+   "title_gloss": null,
+   "artists": [],
+   "start_date": "2026-11-21",
+   "end_date": null,
+   "city": null,
+   "kind": "exhibition",
+   "detail_url": null,
+   "opening": {
+    "date": null,
+    "start_time": null,
+    "end_time": null,
+    "text": null
+   },
+   "access": "unknown",
+   "confidence": 0.5
+  }
+ },
+ {
+  "venue": "galleri-grip",
+  "problems": [
+   "low confidence"
+  ],
+  "item": {
+   "title": "Grupputställning 1 PLATSER KVAR",
+   "title_en": null,
+   "title_gloss": "Group exhibition 1 places left",
+   "artists": [],
+   "start_date": "2026-11-28",
+   "end_date": null,
+   "city": null,
+   "kind": "exhibition",
+   "detail_url": null,
+   "opening": {
+    "date": null,
+    "start_time": null,
+    "end_time": null,
+    "text": null
+   },
+   "access": "unknown",
+   "confidence": 0.5
+  }
+ },
+ {
+  "venue": "galleri-grip",
+  "problems": [
+   "low confidence"
+  ],
+  "item": {
+   "title": "Grupputställning 1 PLATSER KVAR",
+   "title_en": null,
+   "title_gloss": "Group exhibition 1 places left",
+   "artists": [],
+   "start_date": "2026-12-12",
+   "end_date": null,
+   "city": null,
+   "kind": "exhibition",
+   "detail_url": null,
+   "opening": {
+    "date": null,
+    "start_time": null,
+    "end_time": null,
+    "text": null
+   },
+   "access": "unknown",
+   "confidence": 0.5
+  }
+ },
+ {
+  "venue": "galleri-grip",
+  "problems": [
+   "low confidence"
+  ],
+  "item": {
+   "title": "Julsalong",
+   "title_en": null,
+   "title_gloss": "Christmas salon",
+   "artists": [],
+   "start_date": "2026-12-19",
+   "end_date": null,
+   "city": null,
+   "kind": "exhibition",
+   "detail_url": null,
+   "opening": {
+    "date": null,
+    "start_time": null,
+    "end_time": null,
+    "text": null
+   },
+   "access": "unknown",
+   "confidence": 0.5
+  }
  }
 ]

@@ -2,7 +2,7 @@ BEGIN:VCALENDAR
 VERSION:2.0
 PRODID:-//contrarian.fund//vernissage//EN
 CALSCALE:GREGORIAN
-X-WR-CALNAME:Grupputställning 1 PLATSER KVAR
+X-WR-CALNAME:Sympathetic Magic
 BEGIN:VTIMEZONE
 TZID:Europe/Stockholm
 BEGIN:DAYLIGHT
@@ -21,14 +21,13 @@ RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU
 END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
-UID:4aaa7d10e877@contrarian.fund
-DTSTAMP:20261106T112611Z
-DTSTART;VALUE=DATE:20261128
-DTEND;VALUE=DATE:20261129
-SUMMARY:Opens: Grupputställning 1 PLATSER KVAR [Group Exhibition 1 Places 
- Left] at Galleri Grip
-LOCATION:Celsiusgatan 2\, 112 30 Stockholm
-DESCRIPTION:
-URL:https://gallerigrip.se/
+UID:51dbd259b90f@contrarian.fund
+DTSTAMP:20261107T090127Z
+DTSTART;VALUE=DATE:20261105
+DTEND;VALUE=DATE:20261106
+SUMMARY:Opens: Sympathetic Magic at Coulisse Gallery
+LOCATION:Gävlegatan 10 B\, 113 30 Stockholm
+DESCRIPTION:Thom Trojanowski\nOn view until 2026-12-18.
+URL:https://www.coulisse-gallery.com/
 END:VEVENT
 END:VCALENDAR
